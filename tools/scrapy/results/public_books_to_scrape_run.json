@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scrapy",
+    "runspider",
+    "spiders/public_books_spider.py",
+    "-O",
+    "artifacts/raw/public_books_to_scrape.json",
+    "-s",
+    "LOG_FILE=artifacts/logs/public_books_to_scrape.log",
+    "-s",
+    "FEED_EXPORT_ENCODING=utf-8"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 2.053,
+  "stdout": "",
+  "stderr": "",
+  "output_path": "artifacts/raw/public_books_to_scrape.json",
+  "log_path": "artifacts/logs/public_books_to_scrape.log"
+}

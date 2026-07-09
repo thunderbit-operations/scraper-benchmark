@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scrapy",
+    "runspider",
+    "spiders/local_article_spider.py",
+    "-O",
+    "artifacts/raw/local_article.json",
+    "-s",
+    "LOG_FILE=artifacts/logs/local_article.log",
+    "-s",
+    "FEED_EXPORT_ENCODING=utf-8"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.416,
+  "stdout": "",
+  "stderr": "",
+  "output_path": "artifacts/raw/local_article.json",
+  "log_path": "artifacts/logs/local_article.log"
+}

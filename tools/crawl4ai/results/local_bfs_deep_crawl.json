@@ -1,0 +1,52 @@
+{
+  "url": "http://127.0.0.1:53342",
+  "success": true,
+  "elapsed_seconds": 3.239,
+  "page_count": 5,
+  "depth_counts": {
+    "0": 1,
+    "1": 4
+  },
+  "pages": [
+    {
+      "url": "http://127.0.0.1:53342",
+      "success": true,
+      "status_code": 200,
+      "depth": 0,
+      "markdown_chars": 269,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/article/1",
+      "success": true,
+      "status_code": 200,
+      "depth": 1,
+      "markdown_chars": 673,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/static/catalog?page=1",
+      "success": true,
+      "status_code": 200,
+      "depth": 1,
+      "markdown_chars": 789,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/dynamic/catalog",
+      "success": false,
+      "status_code": 200,
+      "depth": 1,
+      "markdown_chars": 46,
+      "error_message": "Blocked by anti-bot protection: Structural: minimal_text on small page (1344 bytes, 45 chars visible)"
+    },
+    {
+      "url": "http://127.0.0.1:53342/failure/500",
+      "success": false,
+      "status_code": 500,
+      "depth": 1,
+      "markdown_chars": 38,
+      "error_message": "Blocked by anti-bot protection: Structural: minimal_text on small page (178 bytes, 27 chars visible)"
+    }
+  ]
+}

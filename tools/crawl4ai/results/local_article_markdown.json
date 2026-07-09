@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "url": "http://127.0.0.1:53342/article/1",
+    "success": true,
+    "status_code": 200,
+    "elapsed_seconds": 0.752,
+    "markdown_chars": 673,
+    "error_message": "",
+    "extracted_type": null,
+    "article_body_hits": {
+      "title": true,
+      "paragraphs_found": 3,
+      "paragraphs_expected": 3,
+      "boilerplate_present": true
+    }
+  },
+  "extracted_content": null,
+  "markdown_preview": "Home | Products | Pricing | Login\n# How Operations Teams Evaluate Web Scraping Tools\nBy Thunderbit Research Lab on 2026-07-07\nModern scraping tools are no longer judged only by whether they can download HTML.\nA useful evaluation checks setup friction, JavaScript rendering, structured output, retry behavior, and how cleanly the result can feed downstream AI or spreadsheet workflows.\nThis fixture intentionally includes navigation, related links, and promotional text so extraction quality can be inspected instead of assumed.\n## Related links\n[Static catalog](http://127.0.0.1:53342/static/catalog?page=1)\nSubscribe to our fictional newsletter.\nCopyright fixture footer.\n"
+}

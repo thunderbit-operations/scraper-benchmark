@@ -1,0 +1,265 @@
+{
+  "run_started_at": "2026-07-07T12:17:52.054417+00:00",
+  "tool": "crawl4ai",
+  "crawl4ai_version": "0.9.0",
+  "python": "3.14.2 (v3.14.2:df793163d58, Dec  5 2025, 12:18:06) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "fixture_base_url": "http://127.0.0.1:53342",
+  "tests": {
+    "official_quickstart_example_com": {
+      "url": "https://example.com",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 1.81,
+      "markdown_chars": 166,
+      "error_message": "",
+      "extracted_type": null
+    },
+    "local_static_markdown": {
+      "url": "http://127.0.0.1:53342/static/catalog?page=1",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 0.731,
+      "markdown_chars": 789,
+      "error_message": "",
+      "extracted_type": null,
+      "product_recall": {
+        "found_count": 6,
+        "expected_count": 6,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "local_static_css_extraction": {
+      "url": "http://127.0.0.1:53342/static/catalog?page=1",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 0.74,
+      "markdown_chars": 789,
+      "error_message": "",
+      "extracted_type": "list",
+      "product_recall": {
+        "found_count": 6,
+        "expected_count": 6,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "local_dynamic_markdown_wait": {
+      "url": "http://127.0.0.1:53342/dynamic/catalog",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 1.559,
+      "markdown_chars": 399,
+      "error_message": "",
+      "extracted_type": null,
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "local_dynamic_css_extraction": {
+      "url": "http://127.0.0.1:53342/dynamic/catalog",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 1.561,
+      "markdown_chars": 399,
+      "error_message": "",
+      "extracted_type": "list",
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "local_article_markdown": {
+      "url": "http://127.0.0.1:53342/article/1",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 0.752,
+      "markdown_chars": 673,
+      "error_message": "",
+      "extracted_type": null,
+      "article_body_hits": {
+        "title": true,
+        "paragraphs_found": 3,
+        "paragraphs_expected": 3,
+        "boilerplate_present": true
+      }
+    },
+    "local_dynamic_screenshot": {
+      "url": "http://127.0.0.1:53342/dynamic/catalog",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 1.578,
+      "markdown_chars": 399,
+      "error_message": "",
+      "extracted_type": null,
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1.0,
+        "missing": []
+      },
+      "screenshot_path": "results/screenshots/local_dynamic_screenshot.png",
+      "screenshot_bytes": 46886
+    },
+    "local_failure_500": {
+      "url": "http://127.0.0.1:53342/failure/500",
+      "success": false,
+      "status_code": 500,
+      "elapsed_seconds": 0.745,
+      "markdown_chars": 38,
+      "error_message": "Blocked by anti-bot protection: Structural: minimal_text on small page (178 bytes, 27 chars visible)",
+      "extracted_type": null
+    },
+    "public_books_to_scrape": {
+      "url": "https://books.toscrape.com/",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 2.425,
+      "markdown_chars": 13476,
+      "error_message": "",
+      "extracted_type": null
+    },
+    "public_quotes_js": {
+      "url": "https://quotes.toscrape.com/js/",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 3.111,
+      "markdown_chars": 1666,
+      "error_message": "",
+      "extracted_type": null
+    },
+    "public_quotes_js_screenshot": {
+      "url": "https://quotes.toscrape.com/js/",
+      "success": true,
+      "status_code": 200,
+      "elapsed_seconds": 2.125,
+      "markdown_chars": 1666,
+      "error_message": "",
+      "extracted_type": null,
+      "screenshot_path": "results/screenshots/public_quotes_js_screenshot.png",
+      "screenshot_bytes": 65388
+    },
+    "local_arun_many_product_details": {
+      "urls": [
+        "http://127.0.0.1:53342/product/1",
+        "http://127.0.0.1:53342/product/2",
+        "http://127.0.0.1:53342/product/3",
+        "http://127.0.0.1:53342/product/4",
+        "http://127.0.0.1:53342/product/5",
+        "http://127.0.0.1:53342/product/6"
+      ],
+      "success": true,
+      "elapsed_seconds": 3.76,
+      "pages": [
+        {
+          "url": "http://127.0.0.1:53342/product/1",
+          "success": true,
+          "status_code": 200,
+          "markdown_chars": 85,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/product/4",
+          "success": true,
+          "status_code": 200,
+          "markdown_chars": 85,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/product/5",
+          "success": true,
+          "status_code": 200,
+          "markdown_chars": 80,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/product/3",
+          "success": true,
+          "status_code": 200,
+          "markdown_chars": 86,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/product/2",
+          "success": true,
+          "status_code": 200,
+          "markdown_chars": 80,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/product/6",
+          "success": true,
+          "status_code": 200,
+          "markdown_chars": 86,
+          "error_message": ""
+        }
+      ],
+      "product_detail_recall": {
+        "found_count": 6,
+        "expected_count": 6,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "local_bfs_deep_crawl": {
+      "url": "http://127.0.0.1:53342",
+      "success": true,
+      "elapsed_seconds": 3.239,
+      "page_count": 5,
+      "depth_counts": {
+        "0": 1,
+        "1": 4
+      },
+      "pages": [
+        {
+          "url": "http://127.0.0.1:53342",
+          "success": true,
+          "status_code": 200,
+          "depth": 0,
+          "markdown_chars": 269,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/article/1",
+          "success": true,
+          "status_code": 200,
+          "depth": 1,
+          "markdown_chars": 673,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/static/catalog?page=1",
+          "success": true,
+          "status_code": 200,
+          "depth": 1,
+          "markdown_chars": 789,
+          "error_message": ""
+        },
+        {
+          "url": "http://127.0.0.1:53342/dynamic/catalog",
+          "success": false,
+          "status_code": 200,
+          "depth": 1,
+          "markdown_chars": 46,
+          "error_message": "Blocked by anti-bot protection: Structural: minimal_text on small page (1344 bytes, 45 chars visible)"
+        },
+        {
+          "url": "http://127.0.0.1:53342/failure/500",
+          "success": false,
+          "status_code": 500,
+          "depth": 1,
+          "markdown_chars": 38,
+          "error_message": "Blocked by anti-bot protection: Structural: minimal_text on small page (178 bytes, 27 chars visible)"
+        }
+      ]
+    }
+  },
+  "run_finished_at": "2026-07-07T12:18:17.746098+00:00",
+  "total_elapsed_seconds": 26.368
+}

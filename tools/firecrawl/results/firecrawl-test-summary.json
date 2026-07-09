@@ -1,0 +1,37 @@
+{
+  "run_started_at": "2026-07-09T03:18:48.078833+00:00",
+  "tool": "firecrawl",
+  "mode": "self_hosted_docker",
+  "api": "http://localhost:3002",
+  "tests": {
+    "scrape_static_markdown": {
+      "url": "https://books.toscrape.com/",
+      "tested_on": "2026-07-09T03:18:49.835409+00:00",
+      "http_status": 200,
+      "success": true,
+      "markdown_chars": 9222,
+      "has_metadata": true,
+      "title": "\n    All products | Books to Scrape - Sandbox\n",
+      "elapsed_seconds": 1.73
+    },
+    "scrape_js_markdown": {
+      "url": "https://quotes.toscrape.com/js/",
+      "tested_on": "2026-07-09T03:18:51.760400+00:00",
+      "http_status": 200,
+      "success": true,
+      "markdown_chars": 1574,
+      "mentions_author_einstein": true,
+      "note": "JS page; Firecrawl self-host renders it via the bundled playwright-service.",
+      "elapsed_seconds": 1.92
+    },
+    "scrape_error_case": {
+      "url": "invalid host",
+      "tested_on": "2026-07-09T03:18:52.886907+00:00",
+      "success": true,
+      "http_status": 500,
+      "structured_error_body": "{\"success\":false,\"code\":\"SCRAPE_ALL_ENGINES_FAILED\",\"error\":\"All scraping engines failed to retrieve content from this URL. Engines tried: [playwright, fetch]. This usually happens when: (1) The URL is invalid or the page doesn't exist (404), (2) The website is blocking automated access, (3) The website is down or unreachable, (4) The page requires authentication. Double check the URL is correct and accessible in a browser. Check your server logs for more detailed error information from each engine.\"}",
+      "note": "API surfaced an HTTP error status for the bad target."
+    }
+  },
+  "run_completed_at": "2026-07-09T03:18:52.886937+00:00"
+}

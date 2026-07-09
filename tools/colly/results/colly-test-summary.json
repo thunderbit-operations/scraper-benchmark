@@ -1,0 +1,75 @@
+{
+  "fixture_base_url": "http://127.0.0.1:63820",
+  "go_version": "",
+  "run_completed_at": "2026-07-09T02:58:56Z",
+  "run_started_at": "2026-07-09T02:58:54Z",
+  "tests": {
+    "local_article": {
+      "elapsed_seconds": 0.000280333,
+      "paragraphs_expected": 3,
+      "paragraphs_found": 3,
+      "success": true,
+      "title_found": true,
+      "url": "http://127.0.0.1:63820/article/1"
+    },
+    "local_crawl_graph": {
+      "depth_counts": {
+        "0": 1,
+        "1": 3,
+        "2": 7,
+        "3": 6
+      },
+      "elapsed_seconds": 0.002385833,
+      "note": "colly.MaxDepth(2) + AbsoluteURL crawl.",
+      "pages_seen": 17,
+      "success": true,
+      "url": "http://127.0.0.1:63820"
+    },
+    "local_dynamic_api": {
+      "elapsed_seconds": 0.000216708,
+      "items": 8,
+      "recall": 1,
+      "success": true,
+      "url": "http://127.0.0.1:63820/api/dynamic-products"
+    },
+    "local_dynamic_page_no_js": {
+      "elapsed_seconds": 0.000204584,
+      "expected_limitation_observed": true,
+      "note": "Colly is HTTP-only and does not execute JavaScript.",
+      "product_cards_found": 0,
+      "success": true,
+      "url": "http://127.0.0.1:63820/dynamic/catalog"
+    },
+    "local_failure_500": {
+      "confirmed_status": 500,
+      "elapsed_seconds": 0.000203125,
+      "note": "Colly routes non-2xx to OnError with the response status code.",
+      "success": true,
+      "url": "http://127.0.0.1:63820/failure/500"
+    },
+    "local_static_catalog": {
+      "elapsed_seconds": 0.002250208,
+      "items": 12,
+      "pagination_followed": true,
+      "recall": 1,
+      "success": true,
+      "url": "http://127.0.0.1:63820/static/catalog?page=1"
+    },
+    "public_books_to_scrape": {
+      "elapsed_seconds": 0.972738917,
+      "items": 20,
+      "success": true,
+      "tested_on": "2026-07-09T02:58:55Z",
+      "url": "https://books.toscrape.com/"
+    },
+    "public_quotes_js_no_render": {
+      "elapsed_seconds": 0.907083958,
+      "expected_limitation_observed": true,
+      "quote_nodes_found": 0,
+      "success": true,
+      "tested_on": "2026-07-09T02:58:56Z",
+      "url": "https://quotes.toscrape.com/js/"
+    }
+  },
+  "tool": "colly"
+}

@@ -1,0 +1,85 @@
+{
+  "run_started_at": "2026-07-09T02:54:30.406057+00:00",
+  "tool": "scrapling",
+  "scrapling_version": "0.4.10",
+  "fixture_base_url": "http://127.0.0.1:62550",
+  "tests": {
+    "local_static_catalog": {
+      "url": "http://127.0.0.1:62550/static/catalog?page=1",
+      "success": true,
+      "items": 12,
+      "pagination_followed": true,
+      "recall": 1.0,
+      "elapsed_seconds": 0.008
+    },
+    "local_article": {
+      "url": "http://127.0.0.1:62550/article/1",
+      "success": true,
+      "title_found": true,
+      "paragraphs_found": 3,
+      "paragraphs_expected": 3,
+      "elapsed_seconds": 0.001
+    },
+    "local_dynamic_page_no_js": {
+      "url": "http://127.0.0.1:62550/dynamic/catalog",
+      "success": true,
+      "expected_limitation_observed": true,
+      "product_cards_found": 0,
+      "note": "HTTP Fetcher does not run JS; use Scrapling's DynamicFetcher (browser) for JS pages.",
+      "elapsed_seconds": 0.001
+    },
+    "local_dynamic_api": {
+      "url": "http://127.0.0.1:62550/api/dynamic-products",
+      "success": true,
+      "items": 8,
+      "recall": 1.0,
+      "elapsed_seconds": 0.001
+    },
+    "local_failure_500": {
+      "url": "http://127.0.0.1:62550/failure/500",
+      "success": true,
+      "confirmed_status": 500,
+      "note": "Fetcher returns a response object exposing the status.",
+      "elapsed_seconds": 0.001
+    },
+    "adaptive_selector_relocation": {
+      "urls": [
+        "http://127.0.0.1:62550/adaptive/v1",
+        "http://127.0.0.1:62550/adaptive/v2"
+      ],
+      "success": true,
+      "note": "Scrapling's headline feature: after the target class is renamed, a plain selector misses but adaptive re-matching re-locates the same elements.",
+      "v1_saved_count": 3,
+      "v2_plain_selector_hits": 0,
+      "v2_adaptive_relocated_count": 1,
+      "adaptive_recovered_after_class_rename": true,
+      "relocated_matches_all_v1": false,
+      "v1_names": [
+        "Scrapling Fixture Product 01",
+        "Scrapling Fixture Product 02",
+        "Scrapling Fixture Product 03"
+      ],
+      "relocated_names": [
+        "Scrapling Fixture Product 01"
+      ],
+      "observation": "Plain selector broke after the class rename (0 hits); adaptive re-matching recovered the tracked element(s). In this 3-element synthetic test it relocated the first saved element, not all three — auto-match is element-tracking, tune percentage/usage for multi-element cases.",
+      "elapsed_seconds": 0.023
+    },
+    "public_books_to_scrape": {
+      "url": "https://books.toscrape.com/",
+      "tested_on": "2026-07-09T02:54:31.223138+00:00",
+      "success": true,
+      "items": 20,
+      "elapsed_seconds": 0.783
+    },
+    "public_quotes_js_no_render": {
+      "url": "https://quotes.toscrape.com/js/",
+      "tested_on": "2026-07-09T02:54:31.823439+00:00",
+      "success": true,
+      "expected_limitation_observed": true,
+      "quote_nodes_found": 0,
+      "elapsed_seconds": 0.6
+    }
+  },
+  "run_completed_at": "2026-07-09T02:54:31.823479+00:00"
+}

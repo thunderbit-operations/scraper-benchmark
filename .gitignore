@@ -1,0 +1,21 @@
+# Dependencies — never commit; each tool's README says how to install
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Third-party source clones used during self-host tests (e.g. Firecrawl) — not ours to redistribute
+**/firecrawl-src/
+**/*-src/
+
+# OS / editor noise
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local run scratch
+*.log
+tmp/

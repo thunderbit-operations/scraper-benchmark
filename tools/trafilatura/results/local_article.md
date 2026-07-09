@@ -1,0 +1,7 @@
+# How Operations Teams Evaluate Web Scraping Tools
+
+Modern scraping tools are judged by repeatable extraction, not by popularity alone.
+
+A useful evaluation checks setup friction, selectors, crawl control, output shape, error handling, and operational controls.
+
+This fixture includes navigation, related links, and footer text so targeted extraction can be verified against ground truth.

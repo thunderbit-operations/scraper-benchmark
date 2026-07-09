@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "url": "https://example.com",
+    "success": true,
+    "status_code": 200,
+    "elapsed_seconds": 1.81,
+    "markdown_chars": 166,
+    "error_message": "",
+    "extracted_type": null
+  },
+  "extracted_content": null,
+  "markdown_preview": "# Example Domain\nThis domain is for use in documentation examples without needing permission. Avoid use in operations.\n[Learn more](https://iana.org/domains/example)\n"
+}

@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "url": "http://127.0.0.1:53342/static/catalog?page=1",
+    "success": true,
+    "status_code": 200,
+    "elapsed_seconds": 0.731,
+    "markdown_chars": 789,
+    "error_message": "",
+    "extracted_type": null,
+    "product_recall": {
+      "found_count": 6,
+      "expected_count": 6,
+      "recall": 1.0,
+      "missing": []
+    }
+  },
+  "extracted_content": null,
+  "markdown_preview": "[Home](http://127.0.0.1:53342/) | [Research article](http://127.0.0.1:53342/article/1)\n# Static Product Catalog\n## Fixture Product 01\ncommerce\n$23.20\n2 stars\n[View detail](http://127.0.0.1:53342/product/1)\n## Fixture Product 02\nops\n$26.90\n3 stars\n[View detail](http://127.0.0.1:53342/product/2)\n## Fixture Product 03\nanalytics\n$30.60\n4 stars\n[View detail](http://127.0.0.1:53342/product/3)\n## Fixture Product 04\ncommerce\n$34.30\n5 stars\n[View detail](http://127.0.0.1:53342/product/4)\n## Fixture Product 05\nops\n$38.00\n1 stars\n[View detail](http://127.0.0.1:53342/product/5)\n## Fixture Product 06\nanalytics\n$41.70\n2 stars\n[View detail](http://127.0.0.1:53342/product/6) [Next page](http://127.0.0.1:53342/static/catalog?page=2) Footer boilerplate that should not be treated as product data.\n"
+}

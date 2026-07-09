@@ -1,0 +1,3 @@
+[
+{"source": "quotes_toscrape_js_without_js_rendering", "url": "https://quotes.toscrape.com/js/", "status": 200, "quote_nodes_found": 0, "script_count": 2, "body_chars": 5806, "note": "Scrapy did not execute client-side JavaScript; CSS selectors for rendered quote nodes found no quote cards."}
+]

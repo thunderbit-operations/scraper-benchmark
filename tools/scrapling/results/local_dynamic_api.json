@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Scrapling Fixture Product 01",
+    "price": 17.9,
+    "rating": 2,
+    "category": "commerce"
+  },
+  {
+    "id": 2,
+    "name": "Scrapling Fixture Product 02",
+    "price": 20.8,
+    "rating": 3,
+    "category": "ops"
+  },
+  {
+    "id": 3,
+    "name": "Scrapling Fixture Product 03",
+    "price": 23.7,
+    "rating": 4,
+    "category": "analytics"
+  },
+  {
+    "id": 4,
+    "name": "Scrapling Fixture Product 04",
+    "price": 26.6,
+    "rating": 5,
+    "category": "commerce"
+  },
+  {
+    "id": 5,
+    "name": "Scrapling Fixture Product 05",
+    "price": 29.5,
+    "rating": 1,
+    "category": "ops"
+  },
+  {
+    "id": 6,
+    "name": "Scrapling Fixture Product 06",
+    "price": 32.4,
+    "rating": 2,
+    "category": "analytics"
+  },
+  {
+    "id": 7,
+    "name": "Scrapling Fixture Product 07",
+    "price": 35.3,
+    "rating": 3,
+    "category": "commerce"
+  },
+  {
+    "id": 8,
+    "name": "Scrapling Fixture Product 08",
+    "price": 38.2,
+    "rating": 4,
+    "category": "ops"
+  }
+]

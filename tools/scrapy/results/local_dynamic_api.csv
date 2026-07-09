@@ -1,0 +1,9 @@
+category,name,price,product_id,rating,source,url
+commerce,Scrapy Fixture Product 01,17.9,1,2,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+ops,Scrapy Fixture Product 02,20.8,2,3,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+analytics,Scrapy Fixture Product 03,23.7,3,4,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+commerce,Scrapy Fixture Product 04,26.6,4,5,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+ops,Scrapy Fixture Product 05,29.5,5,1,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+analytics,Scrapy Fixture Product 06,32.4,6,2,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+commerce,Scrapy Fixture Product 07,35.3,7,3,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products
+ops,Scrapy Fixture Product 08,38.2,8,4,local_dynamic_api,http://127.0.0.1:56964/api/dynamic-products

@@ -1,0 +1,25 @@
+Static Product Catalog
+Trafilatura Fixture Product 01
+$18.00
+Trafilatura Fixture Product 02
+$21.00
+Trafilatura Fixture Product 03
+$24.00
+Trafilatura Fixture Product 04
+$27.00
+Trafilatura Fixture Product 05
+$30.00
+Trafilatura Fixture Product 06
+$33.00
+Trafilatura Fixture Product 07
+$36.00
+Trafilatura Fixture Product 08
+$39.00
+Trafilatura Fixture Product 09
+$42.00
+Trafilatura Fixture Product 10
+$45.00
+Trafilatura Fixture Product 11
+$48.00
+Trafilatura Fixture Product 12
+$51.00

@@ -1,0 +1,7 @@
+{
+  "name": "puppeteer-material-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": { "puppeteer": "24.16.0" }
+}

@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "url": "http://127.0.0.1:53342/static/catalog?page=1",
+    "success": true,
+    "status_code": 200,
+    "elapsed_seconds": 0.74,
+    "markdown_chars": 789,
+    "error_message": "",
+    "extracted_type": "list",
+    "product_recall": {
+      "found_count": 6,
+      "expected_count": 6,
+      "recall": 1.0,
+      "missing": []
+    }
+  },
+  "extracted_content": [
+    {
+      "name": "Fixture Product 01",
+      "category": "commerce",
+      "price": "$23.20",
+      "rating": "2 stars",
+      "detail_url": "/product/1"
+    },
+    {
+      "name": "Fixture Product 02",
+      "category": "ops",
+      "price": "$26.90",
+      "rating": "3 stars",
+      "detail_url": "/product/2"
+    },
+    {
+      "name": "Fixture Product 03",
+      "category": "analytics",
+      "price": "$30.60",
+      "rating": "4 stars",
+      "detail_url": "/product/3"
+    },
+    {
+      "name": "Fixture Product 04",
+      "category": "commerce",
+      "price": "$34.30",
+      "rating": "5 stars",
+      "detail_url": "/product/4"
+    },
+    {
+      "name": "Fixture Product 05",
+      "category": "ops",
+      "price": "$38.00",
+      "rating": "1 stars",
+      "detail_url": "/product/5"
+    },
+    {
+      "name": "Fixture Product 06",
+      "category": "analytics",
+      "price": "$41.70",
+      "rating": "2 stars",
+      "detail_url": "/product/6"
+    }
+  ],
+  "markdown_preview": "[Home](http://127.0.0.1:53342/) | [Research article](http://127.0.0.1:53342/article/1)\n# Static Product Catalog\n## Fixture Product 01\ncommerce\n$23.20\n2 stars\n[View detail](http://127.0.0.1:53342/product/1)\n## Fixture Product 02\nops\n$26.90\n3 stars\n[View detail](http://127.0.0.1:53342/product/2)\n## Fixture Product 03\nanalytics\n$30.60\n4 stars\n[View detail](http://127.0.0.1:53342/product/3)\n## Fixture Product 04\ncommerce\n$34.30\n5 stars\n[View detail](http://127.0.0.1:53342/product/4)\n## Fixture Product 05\nops\n$38.00\n1 stars\n[View detail](http://127.0.0.1:53342/product/5)\n## Fixture Product 06\nanalytics\n$41.70\n2 stars\n[View detail](http://127.0.0.1:53342/product/6) [Next page](http://127.0.0.1:53342/static/catalog?page=2) Footer boilerplate that should not be treated as product data.\n"
+}

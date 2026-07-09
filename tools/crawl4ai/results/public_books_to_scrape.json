@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "url": "https://books.toscrape.com/",
+    "success": true,
+    "status_code": 200,
+    "elapsed_seconds": 2.425,
+    "markdown_chars": 13476,
+    "error_message": "",
+    "extracted_type": null
+  },
+  "extracted_content": null,
+  "markdown_preview": "[Books to Scrape](https://books.toscrape.com/index.html) We love being scraped!\n  * [Home](https://books.toscrape.com/index.html)\n  * All products\n\n\n  * [ Books ](https://books.toscrape.com/catalogue/category/books_1/index.html)\n    * [ Travel ](https://books.toscrape.com/catalogue/category/books/travel_2/index.html)\n    * [ Mystery ](https://books.toscrape.com/catalogue/category/books/mystery_3/index.html)\n    * [ Historical Fiction ](https://books.toscrape.com/catalogue/category/books/historical-fiction_4/index.html)\n    * [ Sequential Art ](https://books.toscrape.com/catalogue/category/books/sequential-art_5/index.html)\n    * [ Classics ](https://books.toscrape.com/catalogue/category/books/classics_6/index.html)\n    * [ Philosophy ](https://books.toscrape.com/catalogue/category/books/philosophy_7/index.html)\n    * [ Romance ](https://books.toscrape.com/catalogue/category/books/romance_8/index.html)\n    * [ Womens Fiction ](https://books.toscrape.com/catalogue/category/books/womens-fiction_9/index.html)\n    * [ Fiction ](https://books.toscrape.com/catalogue/category/books/fiction_10/index.html)\n    * [ Childrens ](https://books.toscrape.com/catalogue/category/books/childrens_11/i"
+}

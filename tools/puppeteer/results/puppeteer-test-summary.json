@@ -1,0 +1,94 @@
+{
+  "run_started_at": "2026-07-09T02:37:17.022Z",
+  "tool": "puppeteer",
+  "puppeteer_version": "24.16.0",
+  "node": "v22.22.3",
+  "platform": "Darwin 25.5.0 arm64",
+  "fixture_base_url": "http://127.0.0.1:57729",
+  "tests": {
+    "local_static_catalog": {
+      "url": "http://127.0.0.1:57729/static/catalog?page=1",
+      "success": true,
+      "items": 12,
+      "pagination_followed": true,
+      "product_recall": {
+        "found_count": 12,
+        "expected_count": 12,
+        "recall": 1,
+        "missing": []
+      },
+      "elapsed_seconds": 0.399
+    },
+    "local_article": {
+      "url": "http://127.0.0.1:57729/article/1",
+      "success": true,
+      "title_found": true,
+      "paragraphs_found": 3,
+      "paragraphs_expected": 3,
+      "boilerplate_available_but_separated": true,
+      "elapsed_seconds": 0.223
+    },
+    "local_dynamic_rendered": {
+      "url": "http://127.0.0.1:57729/dynamic/catalog",
+      "success": true,
+      "items": 8,
+      "status_text": "Loaded 8 products",
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1,
+        "missing": []
+      },
+      "screenshot": "results/screenshots/local_dynamic_puppeteer.png",
+      "elapsed_seconds": 0.797
+    },
+    "local_dynamic_api": {
+      "url": "http://127.0.0.1:57729/api/dynamic-products",
+      "success": true,
+      "items": 8,
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1,
+        "missing": []
+      },
+      "note": "In-page fetch reaches the API without scraping the DOM.",
+      "elapsed_seconds": 0.13
+    },
+    "local_failure_500": {
+      "url": "http://127.0.0.1:57729/failure/500",
+      "success": true,
+      "confirmed_status": 500,
+      "note": "goto returns a response; status is inspectable, no throw on 500.",
+      "elapsed_seconds": 0.241
+    },
+    "local_crawl_graph": {
+      "url": "http://127.0.0.1:57729",
+      "success": true,
+      "pages_seen": 12,
+      "depth_counts": {
+        "0": 1,
+        "1": 4,
+        "2": 7
+      },
+      "note": "Puppeteer has no built-in crawl queue; BFS was hand-written.",
+      "elapsed_seconds": 0.777
+    },
+    "public_books_to_scrape": {
+      "url": "https://books.toscrape.com/",
+      "tested_on": "2026-07-09T02:37:24.569Z",
+      "success": true,
+      "items": 20,
+      "elapsed_seconds": 2.12
+    },
+    "public_quotes_js_rendered": {
+      "url": "https://quotes.toscrape.com/js/",
+      "tested_on": "2026-07-09T02:37:26.255Z",
+      "success": true,
+      "items": 10,
+      "note": "JS-rendered quotes; Puppeteer renders them natively.",
+      "elapsed_seconds": 1.686
+    }
+  },
+  "run_completed_at": "2026-07-09T02:37:26.255Z"
+}

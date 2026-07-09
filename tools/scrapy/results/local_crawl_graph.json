@@ -1,0 +1,13 @@
+[
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964", "status": 200, "depth": 0, "title": "Fixture Home", "links_found": 4},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/article/1", "status": 200, "depth": 1, "title": "How Operations Teams Evaluate Web Scraping Tools", "links_found": 1},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/dynamic/catalog", "status": 200, "depth": 1, "title": "Dynamic Catalog", "links_found": 0},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/static/catalog?page=1", "status": 200, "depth": 1, "title": "Static Catalog Page 1", "links_found": 9},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/static/catalog?page=2", "status": 200, "depth": 2, "title": "Static Catalog Page 2", "links_found": 8},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/product/6", "status": 200, "depth": 2, "title": "Scrapy Fixture Product 06", "links_found": 0},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/product/5", "status": 200, "depth": 2, "title": "Scrapy Fixture Product 05", "links_found": 0},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/product/4", "status": 200, "depth": 2, "title": "Scrapy Fixture Product 04", "links_found": 0},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/product/3", "status": 200, "depth": 2, "title": "Scrapy Fixture Product 03", "links_found": 0},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/product/2", "status": 200, "depth": 2, "title": "Scrapy Fixture Product 02", "links_found": 0},
+{"source": "local_crawl_graph", "url": "http://127.0.0.1:56964/product/1", "status": 200, "depth": 2, "title": "Scrapy Fixture Product 01", "links_found": 0}
+]

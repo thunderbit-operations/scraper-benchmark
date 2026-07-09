@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scrapy",
+    "runspider",
+    "spiders/quickstart_quotes_spider.py",
+    "-O",
+    "artifacts/raw/quickstart_quotes.json",
+    "-s",
+    "LOG_FILE=artifacts/logs/quickstart_quotes.log",
+    "-s",
+    "FEED_EXPORT_ENCODING=utf-8"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 3.465,
+  "stdout": "",
+  "stderr": "",
+  "output_path": "artifacts/raw/quickstart_quotes.json",
+  "log_path": "artifacts/logs/quickstart_quotes.log"
+}

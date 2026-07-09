@@ -1,0 +1,31 @@
+{
+  "article": {
+    "title": "How Operations Teams Evaluate Web Scraping Tools",
+    "author": "Thunderbit Research Lab",
+    "date": "2026-07-09",
+    "body_paragraphs": [
+      "Modern scraping tools are judged by repeatable extraction, not by popularity alone.",
+      "A useful evaluation checks setup friction, selectors, crawl control, output shape, error handling, and operational controls.",
+      "This fixture includes navigation, related links, and footer text so targeted extraction can be verified against ground truth."
+    ]
+  },
+  "boilerplate": {
+    "nav": "Home Products Pricing Login",
+    "aside": "Subscribe to our fictional newsletter.",
+    "footer": "Copyright fixture footer."
+  },
+  "catalog_products": [
+    "Trafilatura Fixture Product 01",
+    "Trafilatura Fixture Product 02",
+    "Trafilatura Fixture Product 03",
+    "Trafilatura Fixture Product 04",
+    "Trafilatura Fixture Product 05",
+    "Trafilatura Fixture Product 06",
+    "Trafilatura Fixture Product 07",
+    "Trafilatura Fixture Product 08",
+    "Trafilatura Fixture Product 09",
+    "Trafilatura Fixture Product 10",
+    "Trafilatura Fixture Product 11",
+    "Trafilatura Fixture Product 12"
+  ]
+}

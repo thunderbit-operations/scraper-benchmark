@@ -1,0 +1,52 @@
+{
+  "run_started_at": "2026-07-09T02:43:40.879181+00:00",
+  "tool": "trafilatura",
+  "trafilatura_version": "2.1.0",
+  "fixture_base_url": "http://127.0.0.1:59595",
+  "tests": {
+    "local_article": {
+      "url": "http://127.0.0.1:59595/article/1",
+      "success": true,
+      "title_found": true,
+      "paragraphs_found": 3,
+      "paragraphs_expected": 3,
+      "boilerplate_removed": true,
+      "boilerplate_leaked_sections": [],
+      "metadata_author": "Thunderbit Research Lab",
+      "metadata_date": "2026-07-09",
+      "outputs": [
+        "local_article.txt",
+        "local_article.md",
+        "local_article.json"
+      ],
+      "elapsed_seconds": 0.007
+    },
+    "local_catalog_limitation": {
+      "url": "http://127.0.0.1:59595/catalog",
+      "success": true,
+      "note": "trafilatura returns readable text (product names + prices appear) but as an unstructured blob, not id/name/price/rating rows.",
+      "products_named_in_text_output": 12,
+      "products_total": 12,
+      "structured_rows_returned": 0,
+      "extracted_chars": 478,
+      "interpretation": "Text is recovered; structure is not. For structured catalog scraping a parser/selector tool is still required. This is the real boundary, not a total failure.",
+      "elapsed_seconds": 0.064
+    },
+    "local_failure_500": {
+      "url": "http://127.0.0.1:59595/failure/500",
+      "success": true,
+      "fetch_url_returned_none": true,
+      "note": "fetch_url returns None on server error instead of raising.",
+      "elapsed_seconds": 30.012
+    },
+    "public_books_product": {
+      "url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+      "tested_on": "2026-07-09T02:44:11.715182+00:00",
+      "success": true,
+      "extracted_chars": 1324,
+      "note": "Books to Scrape product page has a prose description block; used as the allowed demo-site content target.",
+      "elapsed_seconds": 0.753
+    }
+  },
+  "run_completed_at": "2026-07-09T02:44:11.715226+00:00"
+}

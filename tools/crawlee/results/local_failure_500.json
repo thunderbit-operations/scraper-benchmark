@@ -1,0 +1,10 @@
+{
+  "crawler": "CheerioCrawler",
+  "confirmed_status": 500,
+  "crawlee_failed_requests": [
+    {
+      "url": "http://127.0.0.1:53279/failure/500",
+      "error_message": "500 - Internal Server Error: Intentional fixture failure"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Colly Fixture Product 01",
+    "price": 17.89,
+    "rating": 2,
+    "category": "commerce"
+  },
+  {
+    "id": 2,
+    "name": "Colly Fixture Product 02",
+    "price": 20.8,
+    "rating": 3,
+    "category": "ops"
+  },
+  {
+    "id": 3,
+    "name": "Colly Fixture Product 03",
+    "price": 23.7,
+    "rating": 4,
+    "category": "analytics"
+  },
+  {
+    "id": 4,
+    "name": "Colly Fixture Product 04",
+    "price": 26.6,
+    "rating": 5,
+    "category": "commerce"
+  },
+  {
+    "id": 5,
+    "name": "Colly Fixture Product 05",
+    "price": 29.5,
+    "rating": 1,
+    "category": "ops"
+  },
+  {
+    "id": 6,
+    "name": "Colly Fixture Product 06",
+    "price": 32.4,
+    "rating": 2,
+    "category": "analytics"
+  },
+  {
+    "id": 7,
+    "name": "Colly Fixture Product 07",
+    "price": 35.29,
+    "rating": 3,
+    "category": "commerce"
+  },
+  {
+    "id": 8,
+    "name": "Colly Fixture Product 08",
+    "price": 38.2,
+    "rating": 4,
+    "category": "ops"
+  },
+  {
+    "id": 9,
+    "name": "Colly Fixture Product 09",
+    "price": 41.1,
+    "rating": 5,
+    "category": "analytics"
+  },
+  {
+    "id": 10,
+    "name": "Colly Fixture Product 10",
+    "price": 44,
+    "rating": 1,
+    "category": "commerce"
+  },
+  {
+    "id": 11,
+    "name": "Colly Fixture Product 11",
+    "price": 46.9,
+    "rating": 2,
+    "category": "ops"
+  },
+  {
+    "id": 12,
+    "name": "Colly Fixture Product 12",
+    "price": 49.8,
+    "rating": 3,
+    "category": "analytics"
+  }
+]

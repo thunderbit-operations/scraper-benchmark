@@ -1,0 +1,156 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Scrapy Fixture Product 01",
+      "price": 17.9,
+      "rating": 2,
+      "category": "commerce"
+    },
+    {
+      "id": 2,
+      "name": "Scrapy Fixture Product 02",
+      "price": 20.8,
+      "rating": 3,
+      "category": "ops"
+    },
+    {
+      "id": 3,
+      "name": "Scrapy Fixture Product 03",
+      "price": 23.7,
+      "rating": 4,
+      "category": "analytics"
+    },
+    {
+      "id": 4,
+      "name": "Scrapy Fixture Product 04",
+      "price": 26.6,
+      "rating": 5,
+      "category": "commerce"
+    },
+    {
+      "id": 5,
+      "name": "Scrapy Fixture Product 05",
+      "price": 29.5,
+      "rating": 1,
+      "category": "ops"
+    },
+    {
+      "id": 6,
+      "name": "Scrapy Fixture Product 06",
+      "price": 32.4,
+      "rating": 2,
+      "category": "analytics"
+    },
+    {
+      "id": 7,
+      "name": "Scrapy Fixture Product 07",
+      "price": 35.3,
+      "rating": 3,
+      "category": "commerce"
+    },
+    {
+      "id": 8,
+      "name": "Scrapy Fixture Product 08",
+      "price": 38.2,
+      "rating": 4,
+      "category": "ops"
+    },
+    {
+      "id": 9,
+      "name": "Scrapy Fixture Product 09",
+      "price": 41.1,
+      "rating": 5,
+      "category": "analytics"
+    },
+    {
+      "id": 10,
+      "name": "Scrapy Fixture Product 10",
+      "price": 44.0,
+      "rating": 1,
+      "category": "commerce"
+    },
+    {
+      "id": 11,
+      "name": "Scrapy Fixture Product 11",
+      "price": 46.9,
+      "rating": 2,
+      "category": "ops"
+    },
+    {
+      "id": 12,
+      "name": "Scrapy Fixture Product 12",
+      "price": 49.8,
+      "rating": 3,
+      "category": "analytics"
+    }
+  ],
+  "article": {
+    "title": "How Operations Teams Evaluate Web Scraping Tools",
+    "author": "Thunderbit Research Lab",
+    "date": "2026-07-07",
+    "body_paragraphs": [
+      "Modern scraping tools are judged by repeatable extraction, not by popularity alone.",
+      "A useful evaluation checks setup friction, selectors, crawl control, output shape, error handling, and operational controls.",
+      "This fixture includes navigation, related links, and footer text so targeted extraction can be verified against ground truth."
+    ]
+  },
+  "dynamic_products": [
+    {
+      "id": 1,
+      "name": "Scrapy Fixture Product 01",
+      "price": 17.9,
+      "rating": 2,
+      "category": "commerce"
+    },
+    {
+      "id": 2,
+      "name": "Scrapy Fixture Product 02",
+      "price": 20.8,
+      "rating": 3,
+      "category": "ops"
+    },
+    {
+      "id": 3,
+      "name": "Scrapy Fixture Product 03",
+      "price": 23.7,
+      "rating": 4,
+      "category": "analytics"
+    },
+    {
+      "id": 4,
+      "name": "Scrapy Fixture Product 04",
+      "price": 26.6,
+      "rating": 5,
+      "category": "commerce"
+    },
+    {
+      "id": 5,
+      "name": "Scrapy Fixture Product 05",
+      "price": 29.5,
+      "rating": 1,
+      "category": "ops"
+    },
+    {
+      "id": 6,
+      "name": "Scrapy Fixture Product 06",
+      "price": 32.4,
+      "rating": 2,
+      "category": "analytics"
+    },
+    {
+      "id": 7,
+      "name": "Scrapy Fixture Product 07",
+      "price": 35.3,
+      "rating": 3,
+      "category": "commerce"
+    },
+    {
+      "id": 8,
+      "name": "Scrapy Fixture Product 08",
+      "price": 38.2,
+      "rating": 4,
+      "category": "ops"
+    }
+  ]
+}

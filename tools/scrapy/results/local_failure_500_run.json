@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scrapy",
+    "runspider",
+    "spiders/local_failure_spider.py",
+    "-O",
+    "artifacts/raw/local_failure_500.json",
+    "-s",
+    "LOG_FILE=artifacts/logs/local_failure_500.log",
+    "-s",
+    "FEED_EXPORT_ENCODING=utf-8"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 0.424,
+  "stdout": "",
+  "stderr": "",
+  "output_path": "artifacts/raw/local_failure_500.json",
+  "log_path": "artifacts/logs/local_failure_500.log"
+}

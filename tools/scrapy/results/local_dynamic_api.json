@@ -1,0 +1,10 @@
+[
+{"source": "local_dynamic_api", "product_id": 1, "name": "Scrapy Fixture Product 01", "category": "commerce", "price": 17.9, "rating": 2, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 2, "name": "Scrapy Fixture Product 02", "category": "ops", "price": 20.8, "rating": 3, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 3, "name": "Scrapy Fixture Product 03", "category": "analytics", "price": 23.7, "rating": 4, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 4, "name": "Scrapy Fixture Product 04", "category": "commerce", "price": 26.6, "rating": 5, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 5, "name": "Scrapy Fixture Product 05", "category": "ops", "price": 29.5, "rating": 1, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 6, "name": "Scrapy Fixture Product 06", "category": "analytics", "price": 32.4, "rating": 2, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 7, "name": "Scrapy Fixture Product 07", "category": "commerce", "price": 35.3, "rating": 3, "url": "http://127.0.0.1:56964/api/dynamic-products"},
+{"source": "local_dynamic_api", "product_id": 8, "name": "Scrapy Fixture Product 08", "category": "ops", "price": 38.2, "rating": 4, "url": "http://127.0.0.1:56964/api/dynamic-products"}
+]

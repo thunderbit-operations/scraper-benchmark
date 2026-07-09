@@ -1,0 +1,61 @@
+{
+  "status_text": "Loaded 8 products",
+  "products": [
+    {
+      "id": 1,
+      "name": "Playwright Fixture Product 01",
+      "category": "commerce",
+      "price": 17.9,
+      "rating": 2
+    },
+    {
+      "id": 2,
+      "name": "Playwright Fixture Product 02",
+      "category": "ops",
+      "price": 20.8,
+      "rating": 3
+    },
+    {
+      "id": 3,
+      "name": "Playwright Fixture Product 03",
+      "category": "analytics",
+      "price": 23.7,
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "name": "Playwright Fixture Product 04",
+      "category": "commerce",
+      "price": 26.6,
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "name": "Playwright Fixture Product 05",
+      "category": "ops",
+      "price": 29.5,
+      "rating": 1
+    },
+    {
+      "id": 6,
+      "name": "Playwright Fixture Product 06",
+      "category": "analytics",
+      "price": 32.4,
+      "rating": 2
+    },
+    {
+      "id": 7,
+      "name": "Playwright Fixture Product 07",
+      "category": "commerce",
+      "price": 35.3,
+      "rating": 3
+    },
+    {
+      "id": 8,
+      "name": "Playwright Fixture Product 08",
+      "category": "ops",
+      "price": 38.2,
+      "rating": 4
+    }
+  ]
+}

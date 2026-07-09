@@ -1,0 +1,5 @@
+# run_tests.py uses only the Python standard library (urllib, json).
+# No third-party packages are required to run the tests.
+#
+# Firecrawl itself is NOT a pip package here — the self-hosted service is a
+# 6-container Docker stack you bring up separately (see README "Run it").

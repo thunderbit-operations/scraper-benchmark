@@ -1,0 +1,62 @@
+[
+  {
+    "url": "http://127.0.0.1:56116/",
+    "depth": 0,
+    "title": "Fixture Home"
+  },
+  {
+    "url": "http://127.0.0.1:56116/article/1",
+    "depth": 1,
+    "title": "How Operations Teams Evaluate Web Scraping Tools"
+  },
+  {
+    "url": "http://127.0.0.1:56116/dynamic/catalog",
+    "depth": 1,
+    "title": "Dynamic Catalog"
+  },
+  {
+    "url": "http://127.0.0.1:56116/failure/500",
+    "depth": 1,
+    "title": ""
+  },
+  {
+    "url": "http://127.0.0.1:56116/static/catalog?page=1",
+    "depth": 1,
+    "title": "Static Catalog Page 1"
+  },
+  {
+    "url": "http://127.0.0.1:56116/product/1",
+    "depth": 2,
+    "title": "Playwright Fixture Product 01"
+  },
+  {
+    "url": "http://127.0.0.1:56116/product/2",
+    "depth": 2,
+    "title": "Playwright Fixture Product 02"
+  },
+  {
+    "url": "http://127.0.0.1:56116/product/3",
+    "depth": 2,
+    "title": "Playwright Fixture Product 03"
+  },
+  {
+    "url": "http://127.0.0.1:56116/product/4",
+    "depth": 2,
+    "title": "Playwright Fixture Product 04"
+  },
+  {
+    "url": "http://127.0.0.1:56116/product/5",
+    "depth": 2,
+    "title": "Playwright Fixture Product 05"
+  },
+  {
+    "url": "http://127.0.0.1:56116/product/6",
+    "depth": 2,
+    "title": "Playwright Fixture Product 06"
+  },
+  {
+    "url": "http://127.0.0.1:56116/static/catalog?page=2",
+    "depth": 2,
+    "title": "Static Catalog Page 2"
+  }
+]

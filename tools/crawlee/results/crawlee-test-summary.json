@@ -1,0 +1,127 @@
+{
+  "run_started_at": "2026-07-09T02:22:11.120Z",
+  "tool": "crawlee",
+  "crawlee_version": "3.17.0",
+  "playwright_version": "1.56.0",
+  "node": "v22.22.3",
+  "platform": "Darwin 25.5.0 arm64",
+  "fixture_base_url": "http://127.0.0.1:53279",
+  "tests": {
+    "local_static_catalog": {
+      "crawler": "CheerioCrawler",
+      "url": "http://127.0.0.1:53279/static/catalog?page=1",
+      "success": true,
+      "items": 12,
+      "pagination_followed": true,
+      "product_recall": {
+        "found_count": 12,
+        "expected_count": 12,
+        "recall": 1,
+        "missing": []
+      },
+      "elapsed_seconds": 0.155,
+      "raw_output": "results/local_static_catalog.json",
+      "csv_output": "results/local_static_catalog.csv"
+    },
+    "local_article": {
+      "crawler": "CheerioCrawler",
+      "url": "http://127.0.0.1:53279/article/1",
+      "success": true,
+      "title_found": true,
+      "paragraphs_found": 3,
+      "paragraphs_expected": 3,
+      "boilerplate_available_but_separated": true,
+      "elapsed_seconds": 0.041,
+      "raw_output": "results/local_article.json"
+    },
+    "local_dynamic_page_no_js": {
+      "crawler": "CheerioCrawler",
+      "url": "http://127.0.0.1:53279/dynamic/catalog",
+      "success": true,
+      "expected_limitation_observed": true,
+      "product_cards_found": 0,
+      "note": "CheerioCrawler does not execute JavaScript; empty result is expected and useful evidence.",
+      "elapsed_seconds": 0.035
+    },
+    "local_dynamic_api": {
+      "crawler": "CheerioCrawler",
+      "url": "http://127.0.0.1:53279/api/dynamic-products",
+      "success": true,
+      "items": 8,
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1,
+        "missing": []
+      },
+      "note": "Reproducing the underlying request avoids a browser for this endpoint.",
+      "elapsed_seconds": 0.035
+    },
+    "local_failure_500": {
+      "crawler": "CheerioCrawler",
+      "url": "http://127.0.0.1:53279/failure/500",
+      "success": true,
+      "confirmed_status": 500,
+      "routed_to_failed_handler": true,
+      "note": "Crawlee surfaces the 500 via failedRequestHandler after retries are exhausted.",
+      "elapsed_seconds": 0.038
+    },
+    "local_crawl_graph": {
+      "crawler": "CheerioCrawler",
+      "url": "http://127.0.0.1:53279",
+      "success": true,
+      "pages_seen": 11,
+      "depth_counts": {
+        "0": 1,
+        "1": 3,
+        "2": 7
+      },
+      "elapsed_seconds": 0.068
+    },
+    "local_dynamic_playwright": {
+      "crawler": "PlaywrightCrawler",
+      "url": "http://127.0.0.1:53279/dynamic/catalog",
+      "success": true,
+      "items": 8,
+      "status_text": "Loaded 8 products",
+      "product_recall": {
+        "found_count": 8,
+        "expected_count": 8,
+        "recall": 1,
+        "missing": []
+      },
+      "screenshot": "results/screenshots/local_dynamic_playwright.png",
+      "note": "Same fixture as the CheerioCrawler miss; the browser crawler renders JS and recovers all products.",
+      "elapsed_seconds": 4.967
+    },
+    "public_books_to_scrape": {
+      "crawler": "CheerioCrawler",
+      "url": "https://books.toscrape.com/",
+      "tested_on": "2026-07-09T02:22:17.902Z",
+      "success": true,
+      "items": 20,
+      "raw_output": "results/public_books_to_scrape.json",
+      "elapsed_seconds": 1.442
+    },
+    "public_quotes_js_no_render": {
+      "crawler": "CheerioCrawler",
+      "url": "https://quotes.toscrape.com/js/",
+      "tested_on": "2026-07-09T02:22:19.237Z",
+      "success": true,
+      "expected_limitation_observed": true,
+      "quote_nodes_found": 0,
+      "elapsed_seconds": 1.335
+    },
+    "public_quotes_js_playwright": {
+      "crawler": "PlaywrightCrawler",
+      "url": "https://quotes.toscrape.com/js/",
+      "tested_on": "2026-07-09T02:22:23.040Z",
+      "success": true,
+      "items": 10,
+      "raw_output": "results/public_quotes_js_playwright.json",
+      "note": "Same URL where CheerioCrawler saw 0 quotes; the browser crawler renders them.",
+      "elapsed_seconds": 3.803
+    }
+  },
+  "run_completed_at": "2026-07-09T02:22:23.040Z"
+}

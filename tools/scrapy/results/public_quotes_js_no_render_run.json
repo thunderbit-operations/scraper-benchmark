@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scrapy",
+    "runspider",
+    "spiders/public_quotes_js_spider.py",
+    "-O",
+    "artifacts/raw/public_quotes_js_no_render.json",
+    "-s",
+    "LOG_FILE=artifacts/logs/public_quotes_js_no_render.log",
+    "-s",
+    "FEED_EXPORT_ENCODING=utf-8"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 1.646,
+  "stdout": "",
+  "stderr": "",
+  "output_path": "artifacts/raw/public_quotes_js_no_render.json",
+  "log_path": "artifacts/logs/public_quotes_js_no_render.log"
+}

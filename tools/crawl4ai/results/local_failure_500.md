@@ -1,0 +1,5 @@
+
+```
+Intentional fixture failure
+```
+

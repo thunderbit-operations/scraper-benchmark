@@ -1,0 +1,62 @@
+{
+  "urls": [
+    "http://127.0.0.1:53342/product/1",
+    "http://127.0.0.1:53342/product/2",
+    "http://127.0.0.1:53342/product/3",
+    "http://127.0.0.1:53342/product/4",
+    "http://127.0.0.1:53342/product/5",
+    "http://127.0.0.1:53342/product/6"
+  ],
+  "success": true,
+  "elapsed_seconds": 3.76,
+  "pages": [
+    {
+      "url": "http://127.0.0.1:53342/product/1",
+      "success": true,
+      "status_code": 200,
+      "markdown_chars": 85,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/product/4",
+      "success": true,
+      "status_code": 200,
+      "markdown_chars": 85,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/product/5",
+      "success": true,
+      "status_code": 200,
+      "markdown_chars": 80,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/product/3",
+      "success": true,
+      "status_code": 200,
+      "markdown_chars": 86,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/product/2",
+      "success": true,
+      "status_code": 200,
+      "markdown_chars": 80,
+      "error_message": ""
+    },
+    {
+      "url": "http://127.0.0.1:53342/product/6",
+      "success": true,
+      "status_code": 200,
+      "markdown_chars": 86,
+      "error_message": ""
+    }
+  ],
+  "product_detail_recall": {
+    "found_count": 6,
+    "expected_count": 6,
+    "recall": 1.0,
+    "missing": []
+  }
+}

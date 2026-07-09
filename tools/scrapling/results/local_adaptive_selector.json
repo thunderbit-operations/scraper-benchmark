@@ -1,0 +1,16 @@
+{
+  "v1_saved_count": 3,
+  "v2_plain_selector_hits": 0,
+  "v2_adaptive_relocated_count": 1,
+  "adaptive_recovered_after_class_rename": true,
+  "relocated_matches_all_v1": false,
+  "v1_names": [
+    "Scrapling Fixture Product 01",
+    "Scrapling Fixture Product 02",
+    "Scrapling Fixture Product 03"
+  ],
+  "relocated_names": [
+    "Scrapling Fixture Product 01"
+  ],
+  "observation": "Plain selector broke after the class rename (0 hits); adaptive re-matching recovered the tracked element(s). In this 3-element synthetic test it relocated the first saved element, not all three \u2014 auto-match is element-tracking, tune percentage/usage for multi-element cases."
+}

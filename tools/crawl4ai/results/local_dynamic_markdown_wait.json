@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "url": "http://127.0.0.1:53342/dynamic/catalog",
+    "success": true,
+    "status_code": 200,
+    "elapsed_seconds": 1.559,
+    "markdown_chars": 399,
+    "error_message": "",
+    "extracted_type": null,
+    "product_recall": {
+      "found_count": 8,
+      "expected_count": 8,
+      "recall": 1.0,
+      "missing": []
+    }
+  },
+  "extracted_content": null,
+  "markdown_preview": "# Dynamic Product Catalog\nLoaded 8 products\n## Fixture Product 01\ncommerce\n$23.20\n2 stars\n## Fixture Product 02\nops\n$26.90\n3 stars\n## Fixture Product 03\nanalytics\n$30.60\n4 stars\n## Fixture Product 04\ncommerce\n$34.30\n5 stars\n## Fixture Product 05\nops\n$38.00\n1 stars\n## Fixture Product 06\nanalytics\n$41.70\n2 stars\n## Fixture Product 07\ncommerce\n$45.40\n3 stars\n## Fixture Product 08\nops\n$49.10\n4 stars\n"
+}

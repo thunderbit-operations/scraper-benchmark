@@ -1,0 +1,3 @@
+[
+{"source": "local_failure_500", "url": "http://127.0.0.1:56964/failure/500", "status": 500, "body_text": "Intentional fixture failure", "handled": true}
+]

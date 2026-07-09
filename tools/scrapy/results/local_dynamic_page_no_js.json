@@ -1,0 +1,3 @@
+[
+{"source": "local_dynamic_page_without_js_rendering", "url": "http://127.0.0.1:56964/dynamic/catalog", "status": 200, "product_cards_found": 0, "status_text": "Loading products...", "script_count": 1, "note": "Scrapy downloaded source HTML but did not execute the JavaScript that populates product cards."}
+]

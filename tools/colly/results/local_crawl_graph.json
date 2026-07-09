@@ -1,0 +1,70 @@
+[
+  {
+    "url": "http://127.0.0.1:63820/",
+    "depth": 0
+  },
+  {
+    "url": "http://127.0.0.1:63820/article/1",
+    "depth": 1
+  },
+  {
+    "url": "http://127.0.0.1:63820/dynamic/catalog",
+    "depth": 1
+  },
+  {
+    "url": "http://127.0.0.1:63820/static/catalog?page=1",
+    "depth": 1
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/1",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/2",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/3",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/4",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/5",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/6",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/static/catalog?page=2",
+    "depth": 2
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/10",
+    "depth": 3
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/11",
+    "depth": 3
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/12",
+    "depth": 3
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/7",
+    "depth": 3
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/8",
+    "depth": 3
+  },
+  {
+    "url": "http://127.0.0.1:63820/product/9",
+    "depth": 3
+  }
+]
