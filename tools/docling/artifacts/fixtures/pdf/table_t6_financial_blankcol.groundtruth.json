@@ -1,0 +1,52 @@
+{
+  "name": "table_t6_financial_blankcol",
+  "title": "T6 \u2014 Financials, blank 'Adj.' column, right-aligned",
+  "n_rows": 6,
+  "n_cols": 5,
+  "cells": [
+    [
+      "Account",
+      "2024",
+      "Adj.",
+      "2025",
+      "Notes"
+    ],
+    [
+      "Revenue",
+      "1,204,000",
+      "",
+      "1,388,500",
+      "organic"
+    ],
+    [
+      "COGS",
+      "(602,000)",
+      "",
+      "(661,200)",
+      ""
+    ],
+    [
+      "Gross profit",
+      "602,000",
+      "",
+      "727,300",
+      ""
+    ],
+    [
+      "Opex",
+      "(410,500)",
+      "",
+      "(455,900)",
+      ""
+    ],
+    [
+      "Operating income",
+      "191,500",
+      "",
+      "271,400",
+      "up 41.7%"
+    ]
+  ],
+  "spans": [],
+  "note": "The 'Adj.' column is entirely empty; numerics are right-aligned and parenthesised."
+}

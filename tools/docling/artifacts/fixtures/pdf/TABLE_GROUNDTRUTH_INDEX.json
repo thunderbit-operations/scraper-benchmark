@@ -1,0 +1,44 @@
+[
+  {
+    "name": "table_t1_simple_grid",
+    "n_rows": 8,
+    "n_cols": 5,
+    "n_spans": 0
+  },
+  {
+    "name": "table_t2_borderless",
+    "n_rows": 8,
+    "n_cols": 5,
+    "n_spans": 0
+  },
+  {
+    "name": "table_t3_colspan_header",
+    "n_rows": 6,
+    "n_cols": 5,
+    "n_spans": 3
+  },
+  {
+    "name": "table_t4_rowspan",
+    "n_rows": 6,
+    "n_cols": 4,
+    "n_spans": 2
+  },
+  {
+    "name": "table_t5_span_borderless",
+    "n_rows": 6,
+    "n_cols": 5,
+    "n_spans": 3
+  },
+  {
+    "name": "table_t6_financial_blankcol",
+    "n_rows": 6,
+    "n_cols": 5,
+    "n_spans": 0
+  },
+  {
+    "name": "table_t7_wide_12col",
+    "n_rows": 5,
+    "n_cols": 12,
+    "n_spans": 0
+  }
+]

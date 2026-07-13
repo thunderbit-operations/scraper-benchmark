@@ -1,0 +1,83 @@
+{
+  "name": "table_t3_colspan_header",
+  "title": "T3 \u2014 Merged 2-level column header (horizontal span)",
+  "n_rows": 6,
+  "n_cols": 5,
+  "cells": [
+    [
+      "Region",
+      "Q1 2026",
+      "Q1 2026",
+      "Q2 2026",
+      "Q2 2026"
+    ],
+    [
+      "",
+      "Units",
+      "Value",
+      "Units",
+      "Value"
+    ],
+    [
+      "EMEA",
+      "1240",
+      "18600",
+      "1310",
+      "19650"
+    ],
+    [
+      "APAC",
+      "890",
+      "13350",
+      "970",
+      "14550"
+    ],
+    [
+      "AMER",
+      "2310",
+      "46200",
+      "2510",
+      "50200"
+    ],
+    [
+      "LATAM",
+      "540",
+      "8100",
+      "600",
+      "9000"
+    ]
+  ],
+  "spans": [
+    [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    [
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "note": "'Q1 2026' spans the Units+Value columns; region label spans two header rows."
+}

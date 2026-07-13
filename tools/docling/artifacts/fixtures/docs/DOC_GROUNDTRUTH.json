@@ -1,0 +1,46 @@
+{
+  "report.docx": {
+    "probes": [
+      "Quarterly Operations Review",
+      "Regional detail",
+      "EMEA",
+      "50200",
+      "Total",
+      "84400",
+      "Expand APAC warehouse"
+    ],
+    "expects_table": true,
+    "expects_merged_total_row": true,
+    "headings": {
+      "h1": 1,
+      "h2": 3
+    }
+  },
+  "workbook.xlsx": {
+    "probes": [
+      "Alpha",
+      "220",
+      "Beta",
+      "441",
+      "prepared_by",
+      "2026"
+    ],
+    "sheets": [
+      "Sales",
+      "Meta"
+    ],
+    "expects_blank_col": true
+  },
+  "deck.pptx": {
+    "probes": [
+      "Docling Multi-Format Test Deck",
+      "Key Points",
+      "Second bullet about tables",
+      "Revenue",
+      "1388",
+      "Margin"
+    ],
+    "slides": 3,
+    "expects_table": true
+  }
+}

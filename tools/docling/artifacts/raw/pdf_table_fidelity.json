@@ -1,0 +1,220 @@
+{
+  "tool": "docling",
+  "results": [
+    {
+      "detected": false,
+      "cell_recall": 0.0,
+      "exact_grid_match": false,
+      "got_dims": [
+        0,
+        0
+      ],
+      "notes": "no markdown table emitted",
+      "name": "table_t1_simple_grid",
+      "convert_s": 12.141,
+      "merged_handling": null,
+      "md_excerpt": "<!-- image -->"
+    },
+    {
+      "detected": true,
+      "got_dims": [
+        8,
+        5
+      ],
+      "gt_dims": [
+        8,
+        5
+      ],
+      "dims_match": true,
+      "cell_recall": 1.0,
+      "inrow_rate": 1.0,
+      "exact_grid_match": true,
+      "n_tables_emitted": 1,
+      "notes": "ok",
+      "name": "table_t2_borderless",
+      "convert_s": 2.52,
+      "merged_handling": null,
+      "md_excerpt": "## T2 - Borderless table (no grid lines)\n\nThis table has no interior or exterior borders - only a single rule under the header.\n\n| SKU    | Product       | Region   |   Qty |   Revenue |\n|--------|---------------|----------|-------|-----------|\n| A-1001 | Widget Alpha  | EMEA     |  1240 |  18600.00 |\n| A-1002 | Widget Beta   | APAC     |   890 |  13350.50 |\n| A-1003 | Gadget Gamma  | AMER     |  2310 |  46200.00 |\n| A-1004 | Gadget Delta  | EMEA     |   540 |   8100.75 |\n| A-1005 | Sprocket Eps  | APAC     |  1780 |  26700.00 |\n| A-1006 | Sprocket Zeta | AMER     |   330 |   4950.25 |\n| A-1007 | Cog Eta       | EMEA     |  1990 |  29850.00 |"
+    },
+    {
+      "detected": true,
+      "got_dims": [
+        6,
+        5
+      ],
+      "gt_dims": [
+        6,
+        5
+      ],
+      "dims_match": true,
+      "cell_recall": 1.0,
+      "inrow_rate": 0.9655,
+      "exact_grid_match": false,
+      "n_tables_emitted": 1,
+      "notes": "all values present but some out of original row (shift)",
+      "name": "table_t3_colspan_header",
+      "convert_s": 1.911,
+      "merged_handling": {
+        "Q1 2026": {
+          "span": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "occurrences_in_output": 2
+        },
+        "Q2 2026": {
+          "span": [
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "occurrences_in_output": 2
+        },
+        "Region": {
+          "span": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "occurrences_in_output": 1
+        }
+      },
+      "md_excerpt": "## T3 - Merged 2-level column header (horizontal span)\n\n'Q1 2026' spans the Units+Value columns; region label spans two header rows.\n\n|        | Q1 2026   | Q1 2026   | Q2 2026   | Q2 2026   |\n|--------|-----------|-----------|-----------|-----------|\n| Region | Units     | Value     | Units     | Value     |\n| EMEA   | 1240      | 18600     | 1310      | 19650     |\n| APAC   | 890       | 13350     | 970       | 14550     |\n| AMER   | 2310      | 46200     | 2510      | 50200     |\n| LATAM  | 540       | 8100      | 600       | 9000      |"
+    },
+    {
+      "detected": false,
+      "cell_recall": 0.0,
+      "exact_grid_match": false,
+      "got_dims": [
+        0,
+        0
+      ],
+      "notes": "no markdown table emitted",
+      "name": "table_t4_rowspan",
+      "convert_s": 0.463,
+      "merged_handling": {
+        "merged_value_present": false
+      },
+      "md_excerpt": "## T4 - Merged row-label cell (vertical span)\n\n<!-- image -->"
+    },
+    {
+      "detected": true,
+      "got_dims": [
+        6,
+        5
+      ],
+      "gt_dims": [
+        6,
+        5
+      ],
+      "dims_match": true,
+      "cell_recall": 1.0,
+      "inrow_rate": 0.9655,
+      "exact_grid_match": false,
+      "n_tables_emitted": 1,
+      "notes": "all values present but some out of original row (shift)",
+      "name": "table_t5_span_borderless",
+      "convert_s": 2.034,
+      "merged_handling": {
+        "Q1 2026": {
+          "span": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "occurrences_in_output": 2
+        },
+        "Q2 2026": {
+          "span": [
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "occurrences_in_output": 2
+        },
+        "Region": {
+          "span": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "occurrences_in_output": 1
+        }
+      },
+      "md_excerpt": "## T5 - Merged header + borderless (combined)\n\nSame 2-level header as T3 but with no full grid - only header rules.\n\n|        | Q1 2026   | Q1 2026   | Q2 2026   | Q2 2026   |\n|--------|-----------|-----------|-----------|-----------|\n| Region | Units     | Value     | Units     | Value     |\n| EMEA   | 1240      | 18600     | 1310      | 19650     |\n| APAC   | 890       | 13350     | 970       | 14550     |\n| AMER   | 2310      | 46200     | 2510      | 50200     |\n| LATAM  | 540       | 8100      | 600       | 9000      |"
+    },
+    {
+      "detected": true,
+      "got_dims": [
+        6,
+        5
+      ],
+      "gt_dims": [
+        6,
+        5
+      ],
+      "dims_match": true,
+      "cell_recall": 1.0,
+      "inrow_rate": 1.0,
+      "exact_grid_match": true,
+      "n_tables_emitted": 1,
+      "notes": "ok",
+      "name": "table_t6_financial_blankcol",
+      "convert_s": 2.105,
+      "merged_handling": null,
+      "md_excerpt": "## T6 - Financials, blank 'Adj.' column, right-aligned\n\nThe 'Adj.' column is entirely empty; numerics are right-aligned and parenthesised.\n\n| Account          | 2024      | Adj.   | 2025      | Notes    |\n|------------------|-----------|--------|-----------|----------|\n| Revenue          | 1,204,000 |        | 1,388,500 | organic  |\n| COGS             | (602,000) |        | (661,200) |          |\n| Gross profit     | 602,000   |        | 727,300   |          |\n| Opex             | (410,500) |        | (455,900) |          |\n| Operating income | 191,500   |        | 271,400   | up 41.7% |"
+    },
+    {
+      "detected": true,
+      "got_dims": [
+        5,
+        12
+      ],
+      "gt_dims": [
+        5,
+        12
+      ],
+      "dims_match": true,
+      "cell_recall": 1.0,
+      "inrow_rate": 1.0,
+      "exact_grid_match": true,
+      "n_tables_emitted": 1,
+      "notes": "ok",
+      "name": "table_t7_wide_12col",
+      "convert_s": 2.789,
+      "merged_handling": null,
+      "md_excerpt": "## T7 - Wide table (12 columns)\n\n12 columns to stress horizontal layout / column-shift on a wide grid.\n\n| Item   |   Jan |   Feb |   Mar |   Apr |   May |   Jun |   Jul |   Aug |   Sep |   Oct |   Nov |\n|--------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|\n| Alpha  |   100 |   107 |   114 |   121 |   128 |   135 |   142 |   149 |   156 |   163 |   170 |\n| Beta   |   210 |   217 |   224 |   231 |   238 |   245 |   252 |   259 |   266 |   273 |   280 |\n| Gamma  |    55 |    62 |    69 |    76 |    83 |    90 |    97 |   104 |   111 |   118 |   125 |\n| Delta  |   333 |   340 |   347 |   354 |   361 |   368 |   375 |   382 |   389 |   396 |   403 |"
+    }
+  ]
+}

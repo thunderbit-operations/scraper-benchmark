@@ -1,0 +1,148 @@
+{
+  "tool": "docling",
+  "coldstart": {
+    "import_s": 5.122,
+    "first_pdf_convert_s_incl_download": 223.916,
+    "second_pdf_convert_s_warm": 0.546,
+    "hf_model_download_mb_reported": 1060.2
+  },
+  "table_fidelity": {
+    "n_tables_tested": 7,
+    "n_detected": 5,
+    "n_dims_match": 5,
+    "n_recall_1.0": 5,
+    "mean_cell_recall_of_detected": 1.0,
+    "not_detected": [
+      "table_t1_simple_grid",
+      "table_t4_rowspan"
+    ],
+    "per_table": {
+      "table_t1_simple_grid": {
+        "detected": false,
+        "dims_match": null,
+        "cell_recall": 0.0,
+        "convert_s": 12.141
+      },
+      "table_t2_borderless": {
+        "detected": true,
+        "dims_match": true,
+        "cell_recall": 1.0,
+        "convert_s": 2.52
+      },
+      "table_t3_colspan_header": {
+        "detected": true,
+        "dims_match": true,
+        "cell_recall": 1.0,
+        "convert_s": 1.911
+      },
+      "table_t4_rowspan": {
+        "detected": false,
+        "dims_match": null,
+        "cell_recall": 0.0,
+        "convert_s": 0.463
+      },
+      "table_t5_span_borderless": {
+        "detected": true,
+        "dims_match": true,
+        "cell_recall": 1.0,
+        "convert_s": 2.034
+      },
+      "table_t6_financial_blankcol": {
+        "detected": true,
+        "dims_match": true,
+        "cell_recall": 1.0,
+        "convert_s": 2.105
+      },
+      "table_t7_wide_12col": {
+        "detected": true,
+        "dims_match": true,
+        "cell_recall": 1.0,
+        "convert_s": 2.789
+      }
+    }
+  },
+  "real_and_scanned": {
+    "arxiv_docling_report.pdf": {
+      "n_pages": 9,
+      "convert_s": 134.52,
+      "s_per_page": 14.95,
+      "n_md_tables": 3,
+      "md_chars": 34582,
+      "probes_found": 5,
+      "probes_total": 5,
+      "reading_order_in_order": true,
+      "sections_present": "3/4"
+    },
+    "arxiv_attention.pdf": {
+      "n_pages": 15,
+      "convert_s": 89.88,
+      "s_per_page": 5.99,
+      "n_md_tables": 4,
+      "md_chars": 48959,
+      "probes_found": 5,
+      "probes_total": 5,
+      "reading_order_in_order": true,
+      "sections_present": "5/5"
+    },
+    "ocr_test.pdf": {
+      "n_pages": 1,
+      "convert_s": 14.31,
+      "s_per_page": 14.31,
+      "n_md_tables": 0,
+      "md_chars": 94,
+      "ocr_produced_text": true,
+      "ocr_body_chars": 94
+    },
+    "nemotron_multipage.pdf": {
+      "n_pages": 4,
+      "convert_s": 70.09,
+      "s_per_page": 17.52,
+      "n_md_tables": 0,
+      "md_chars": 292,
+      "ocr_produced_text": true,
+      "ocr_body_chars": 292
+    }
+  },
+  "multiformat": {
+    "report.docx": {
+      "convert_s": 0.137,
+      "all_probes_found": true,
+      "json_all_probes_found": true,
+      "n_md_tables": 1
+    },
+    "workbook.xlsx": {
+      "convert_s": 0.016,
+      "all_probes_found": true,
+      "json_all_probes_found": true,
+      "n_md_tables": 2
+    },
+    "deck.pptx": {
+      "convert_s": 0.038,
+      "all_probes_found": true,
+      "json_all_probes_found": true,
+      "n_md_tables": 1
+    }
+  },
+  "html_boilerplate": {
+    "wikipedia_web_scraping.html": {
+      "pct_boilerplate_lines": 13.3,
+      "boilerplate_marker_lines": 34,
+      "lines_before_main_heading": 28
+    },
+    "books_toscrape.html": {
+      "pct_boilerplate_lines": 0.0,
+      "boilerplate_marker_lines": 0,
+      "lines_before_main_heading": null
+    },
+    "quotes_toscrape.html": {
+      "pct_boilerplate_lines": 0.0,
+      "boilerplate_marker_lines": 0,
+      "lines_before_main_heading": null
+    },
+    "scrapethissite_forms.html": {
+      "pct_boilerplate_lines": 1.6,
+      "boilerplate_marker_lines": 1,
+      "lines_before_main_heading": null
+    }
+  }
+}

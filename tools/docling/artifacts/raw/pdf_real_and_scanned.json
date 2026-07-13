@@ -1,0 +1,95 @@
+{
+  "tool": "docling",
+  "results": [
+    {
+      "file": "arxiv_docling_report.pdf",
+      "n_pages": 9,
+      "expected_pages": 9,
+      "convert_s": 134.52,
+      "s_per_page": 14.95,
+      "md_chars": 34582,
+      "n_md_tables": 3,
+      "heading_counts": {
+        "2": 22
+      },
+      "probe_hits": {
+        "Docling": true,
+        "TableFormer": true,
+        "layout": true,
+        "reading order": true,
+        "PDF": true
+      },
+      "reading_order": {
+        "present": [
+          "Abstract",
+          "Introduction",
+          "References"
+        ],
+        "in_order": true,
+        "n_present": 3,
+        "n_total": 4
+      }
+    },
+    {
+      "file": "arxiv_attention.pdf",
+      "n_pages": 15,
+      "expected_pages": 15,
+      "convert_s": 89.88,
+      "s_per_page": 5.99,
+      "md_chars": 48959,
+      "n_md_tables": 4,
+      "heading_counts": {
+        "2": 27
+      },
+      "probe_hits": {
+        "Attention": true,
+        "Transformer": true,
+        "encoder": true,
+        "BLEU": true,
+        "multi-head": true
+      },
+      "reading_order": {
+        "present": [
+          "Abstract",
+          "Introduction",
+          "Background",
+          "Conclusion",
+          "References"
+        ],
+        "in_order": true,
+        "n_present": 5,
+        "n_total": 5
+      }
+    },
+    {
+      "file": "ocr_test.pdf",
+      "n_pages": 1,
+      "expected_pages": 1,
+      "convert_s": 14.31,
+      "s_per_page": 14.31,
+      "md_chars": 94,
+      "n_md_tables": 0,
+      "heading_counts": {},
+      "probe_hits": {},
+      "reading_order": null,
+      "ocr_body_chars": 94,
+      "ocr_sample": "Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package",
+      "ocr_produced_text": true
+    },
+    {
+      "file": "nemotron_multipage.pdf",
+      "n_pages": 4,
+      "expected_pages": 4,
+      "convert_s": 70.09,
+      "s_per_page": 17.52,
+      "md_chars": 292,
+      "n_md_tables": 0,
+      "heading_counts": {},
+      "probe_hits": {},
+      "reading_order": null,
+      "ocr_body_chars": 292,
+      "ocr_sample": "Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package package Docling bundles PDF document conversion to package JSON and Markdown in an easy self contained Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package",
+      "ocr_produced_text": true
+    }
+  ]
+}

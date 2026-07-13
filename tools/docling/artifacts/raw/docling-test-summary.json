@@ -1,0 +1,102 @@
+{
+  "docling_version": "unknown",
+  "python": "3.14.2",
+  "converter_init_s": 0.018,
+  "results": [
+    {
+      "key": "books",
+      "label": "Books to Scrape (static catalog)",
+      "source_url": "https://books.toscrape.com/",
+      "fixture_file": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/fixtures/books_toscrape.html",
+      "fixture_bytes": 51294,
+      "success": true,
+      "runtime_s": 0.05,
+      "md_chars": 3670,
+      "md_lines": 89,
+      "heading_levels": {
+        "1": 1
+      },
+      "md_tables": 0,
+      "md_links": 21,
+      "raw_output": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/raw/docling_books.md",
+      "probes": {
+        "a light in the": true,
+        "tipping the velvet": true,
+        "soumission": true
+      }
+    },
+    {
+      "key": "quotes",
+      "label": "Quotes to Scrape (static quotes)",
+      "source_url": "https://quotes.toscrape.com/",
+      "fixture_file": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/fixtures/quotes_toscrape.html",
+      "fixture_bytes": 11064,
+      "success": true,
+      "runtime_s": 0.023,
+      "md_chars": 2824,
+      "md_lines": 69,
+      "heading_levels": {
+        "1": 1,
+        "2": 1
+      },
+      "md_tables": 0,
+      "md_links": 53,
+      "raw_output": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/raw/docling_quotes.md",
+      "probes": {
+        "albert einstein": true,
+        "j.k. rowling": true,
+        "world as we have created it": true
+      }
+    },
+    {
+      "key": "forms",
+      "label": "Scrape This Site Forms (HTML table)",
+      "source_url": "https://www.scrapethissite.com/pages/forms/",
+      "fixture_file": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/fixtures/scrapethissite_forms.html",
+      "fixture_bytes": 50439,
+      "success": true,
+      "runtime_s": 0.021,
+      "md_chars": 4973,
+      "md_lines": 76,
+      "heading_levels": {
+        "1": 1
+      },
+      "md_tables": 1,
+      "md_links": 26,
+      "raw_output": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/raw/docling_forms.md",
+      "probes": {
+        "team name": true,
+        "boston bruins": true,
+        "win %": true,
+        "goals for": true,
+        "44": true,
+        "1990": true
+      }
+    },
+    {
+      "key": "wikipedia",
+      "label": "Wikipedia: Web scraping (article + tables)",
+      "source_url": "https://en.wikipedia.org/wiki/Web_scraping",
+      "fixture_file": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/fixtures/wikipedia_web_scraping.html",
+      "fixture_bytes": 226771,
+      "success": true,
+      "runtime_s": 0.176,
+      "md_chars": 51368,
+      "md_lines": 372,
+      "heading_levels": {
+        "2": 7,
+        "1": 1,
+        "3": 12
+      },
+      "md_tables": 3,
+      "md_links": 375,
+      "raw_output": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/raw/docling_wikipedia.md",
+      "probes": {
+        "web scraping": true,
+        "html": true,
+        "http": true,
+        "legal issues": true
+      }
+    }
+  ]
+}

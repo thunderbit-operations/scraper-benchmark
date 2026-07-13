@@ -1,0 +1,66 @@
+{
+  "name": "table_t2_borderless",
+  "title": "T2 \u2014 Borderless table (no grid lines)",
+  "n_rows": 8,
+  "n_cols": 5,
+  "cells": [
+    [
+      "SKU",
+      "Product",
+      "Region",
+      "Qty",
+      "Revenue"
+    ],
+    [
+      "A-1001",
+      "Widget Alpha",
+      "EMEA",
+      "1240",
+      "18600.00"
+    ],
+    [
+      "A-1002",
+      "Widget Beta",
+      "APAC",
+      "890",
+      "13350.50"
+    ],
+    [
+      "A-1003",
+      "Gadget Gamma",
+      "AMER",
+      "2310",
+      "46200.00"
+    ],
+    [
+      "A-1004",
+      "Gadget Delta",
+      "EMEA",
+      "540",
+      "8100.75"
+    ],
+    [
+      "A-1005",
+      "Sprocket Eps",
+      "APAC",
+      "1780",
+      "26700.00"
+    ],
+    [
+      "A-1006",
+      "Sprocket Zeta",
+      "AMER",
+      "330",
+      "4950.25"
+    ],
+    [
+      "A-1007",
+      "Cog Eta",
+      "EMEA",
+      "1990",
+      "29850.00"
+    ]
+  ],
+  "spans": [],
+  "note": "This table has no interior or exterior borders \u2014 only a single rule under the header."
+}

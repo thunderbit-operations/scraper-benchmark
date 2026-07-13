@@ -1,0 +1,14 @@
+{
+  "hf_home": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/hf_cache_probe",
+  "pdf": "/Users/richardli/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/docling/artifacts/fixtures/pdf/table_t1_simple_grid.pdf",
+  "hf_cache_before_bytes": 0,
+  "import_s": 5.122,
+  "converter_init_s": 0.018,
+  "first_pdf_convert_s": 223.916,
+  "first_pdf_md_chars": 14,
+  "first_pdf_has_table": false,
+  "hf_cache_after_bytes": 1060176468,
+  "model_download_bytes": 1060176468,
+  "model_download_mb": 1060.2,
+  "second_pdf_convert_s": 0.546
+}

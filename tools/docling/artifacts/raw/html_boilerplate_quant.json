@@ -1,0 +1,38 @@
+{
+  "tool": "docling",
+  "note": "raw full-document conversion, no main-content extraction",
+  "results": [
+    {
+      "total_nonblank_md_lines": 255,
+      "boilerplate_marker_lines": 34,
+      "pct_boilerplate_lines": 13.3,
+      "main_heading_line": 28,
+      "lines_before_main_heading": 28,
+      "file": "wikipedia_web_scraping.html"
+    },
+    {
+      "total_nonblank_md_lines": 65,
+      "boilerplate_marker_lines": 0,
+      "pct_boilerplate_lines": 0.0,
+      "main_heading_line": null,
+      "lines_before_main_heading": null,
+      "file": "books_toscrape.html"
+    },
+    {
+      "total_nonblank_md_lines": 35,
+      "boilerplate_marker_lines": 0,
+      "pct_boilerplate_lines": 0.0,
+      "main_heading_line": null,
+      "lines_before_main_heading": null,
+      "file": "quotes_toscrape.html"
+    },
+    {
+      "total_nonblank_md_lines": 63,
+      "boilerplate_marker_lines": 1,
+      "pct_boilerplate_lines": 1.6,
+      "main_heading_line": null,
+      "lines_before_main_heading": null,
+      "file": "scrapethissite_forms.html"
+    }
+  ]
+}
