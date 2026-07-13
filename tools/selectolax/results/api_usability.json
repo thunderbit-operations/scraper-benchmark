@@ -1,0 +1,60 @@
+{
+  "missing_css_first_returns[lexbor]": "None",
+  "missing_css_returns[lexbor]": "[]",
+  "missing_css_first_returns[modest]": "None",
+  "missing_css_returns[modest]": "[]",
+  "attributes_dict": {
+    "id": "a1",
+    "href": "/x",
+    "data-flag": null
+  },
+  "boolean_attr_value(data-flag)": "None",
+  "missing_attr_get_default": "'DEFAULT'",
+  "disabled_bool_attr_value": "None",
+  "text_deep_default": "'Hello World'",
+  "text_deep_false": "'Hello '",
+  "text_separator": "'Hello |World'",
+  "text_strip": "'HelloWorld'",
+  "after_decompose_b_html": "<p id=\"p1\">Hello </p>",
+  "after_remove_a_present": true,
+  "after_strip_tags_b": "<p id=\"p1\">Hello </p>",
+  "after_unwrap_b": "<p id=\"p1\">Hello World</p>",
+  "after_replace_with": "<p id=\"p1\">Hello PLAIN</p>",
+  "after_insert_before": "<p id=\"p1\">Hello [before]<b>World</b></p>",
+  "html_roundtrip": "<html><head></head><body><div class=\"c\"><p id=\"p1\">Hello <b>World</b></p><a id=\"",
+  "html_pretty_available": "<html>\n  <head>\n  </head>\n  <body>\n    <div class=\"c\">\n     ",
+  "lexbor_child_node_kinds": [
+    {
+      "tag": "-text",
+      "is_text": true,
+      "is_comment": false,
+      "is_element": false
+    },
+    {
+      "tag": "-comment",
+      "is_text": false,
+      "is_comment": true,
+      "is_element": false
+    },
+    {
+      "tag": "p",
+      "is_text": false,
+      "is_comment": false,
+      "is_element": true
+    }
+  ],
+  "unwrap_tags_div_ok": "ok",
+  "readme_advanced_selector_result": [
+    {
+      "id": "p1",
+      "text": "",
+      "tag": "p"
+    },
+    {
+      "id": "p5",
+      "text": "text",
+      "tag": "p"
+    }
+  ],
+  "readme_advanced_selector_matches_doc": true
+}

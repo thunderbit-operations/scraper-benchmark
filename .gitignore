@@ -19,3 +19,12 @@ __pycache__/
 # Local run scratch
 *.log
 tmp/
+
+# selectolax: large synthetic fixtures are regenerated deterministically by
+# tools/selectolax/tests/gen_fixtures.py (seed=42). Don't commit the big ones;
+# the small fixtures + manifest are kept as examples.
+tools/selectolax/fixtures/synthetic/page_1mb.html
+tools/selectolax/fixtures/synthetic/page_10mb.html
+tools/selectolax/fixtures/synthetic/wide_100k_nodes.html
+# selectolax: per-run benchmark outputs (aggregated JSON is committed instead)
+tools/selectolax/results/runs/

@@ -1,0 +1,1759 @@
+{
+  "engines": [
+    "lexbor",
+    "modest",
+    "lxml",
+    "parsel",
+    "soupsieve"
+  ],
+  "cases": [
+    {
+      "selector": "type selector",
+      "css": "p",
+      "expected": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": "id selector",
+      "css": "#p2",
+      "expected": [
+        "p2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      }
+    },
+    {
+      "selector": "class selector",
+      "css": ".a",
+      "expected": [
+        "p1",
+        "p2",
+        "s1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "s1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "s1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "s1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "s1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "s1"
+        ]
+      }
+    },
+    {
+      "selector": "multiple class (chained)",
+      "css": ".a.b",
+      "expected": [
+        "p2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      }
+    },
+    {
+      "selector": "grouping (comma)",
+      "css": "#p1, #p4",
+      "expected": [
+        "p1",
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": "descendant combinator",
+      "css": "#wrap p",
+      "expected": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2",
+          "p3",
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": "child combinator >",
+      "css": "#list > li",
+      "expected": [
+        "li1",
+        "li2",
+        "li3",
+        "li4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      }
+    },
+    {
+      "selector": "adjacent sibling +",
+      "css": "#p1 + p",
+      "expected": [
+        "p2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      }
+    },
+    {
+      "selector": "general sibling ~",
+      "css": "#p1 ~ span",
+      "expected": [
+        "s1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "s1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "s1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "s1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "s1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "s1"
+        ]
+      }
+    },
+    {
+      "selector": "universal *",
+      "css": "#list > *",
+      "expected": [
+        "li1",
+        "li2",
+        "li3",
+        "li4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li2",
+          "li3",
+          "li4"
+        ]
+      }
+    },
+    {
+      "selector": "attr presence [attr]",
+      "css": "[data-role]",
+      "expected": [
+        "p1",
+        "p3"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p3"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p3"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p3"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p3"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p3"
+        ]
+      }
+    },
+    {
+      "selector": "attr equals [a=v]",
+      "css": "[data-role=\"lead\"]",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "attr prefix [a^=v]",
+      "css": "[title^=\"hello\"]",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "attr suffix [a$=v]",
+      "css": "[title$=\"world\"]",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "attr substring [a*=v]",
+      "css": "[title*=\"lo wo\"]",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "attr lang dash [a|=v]",
+      "css": "[lang|=\"en\"]",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "attr whitespace [a~=v]",
+      "css": "[class~=\"b\"]",
+      "expected": [
+        "p2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      }
+    },
+    {
+      "selector": ":first-child",
+      "css": "#list li:first-child",
+      "expected": [
+        "li1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li1"
+        ]
+      }
+    },
+    {
+      "selector": ":last-child",
+      "css": "#list li:last-child",
+      "expected": [
+        "li4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      }
+    },
+    {
+      "selector": ":nth-child(2)",
+      "css": "#list li:nth-child(2)",
+      "expected": [
+        "li2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li2"
+        ]
+      }
+    },
+    {
+      "selector": ":nth-child(odd)",
+      "css": "#list li:nth-child(odd)",
+      "expected": [
+        "li1",
+        "li3"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li3"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li3"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li3"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li3"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li1",
+          "li3"
+        ]
+      }
+    },
+    {
+      "selector": ":nth-child(2n)",
+      "css": "#list li:nth-child(2n)",
+      "expected": [
+        "li2",
+        "li4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li2",
+          "li4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li2",
+          "li4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li2",
+          "li4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li2",
+          "li4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li2",
+          "li4"
+        ]
+      }
+    },
+    {
+      "selector": ":nth-last-child(1)",
+      "css": "#list li:nth-last-child(1)",
+      "expected": [
+        "li4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "li4"
+        ]
+      }
+    },
+    {
+      "selector": ":nth-of-type(2)",
+      "css": "#wrap p:nth-of-type(2)",
+      "expected": [
+        "p2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      }
+    },
+    {
+      "selector": ":nth-last-of-type(1)",
+      "css": "#wrap p:nth-last-of-type(1)",
+      "expected": [
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": ":only-child",
+      "css": "#p3 a:only-child",
+      "expected": [
+        "lnk"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "lnk"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "lnk"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "lnk"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "lnk"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "lnk"
+        ]
+      }
+    },
+    {
+      "selector": ":first-of-type",
+      "css": "#wrap p:first-of-type",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": ":last-of-type",
+      "css": "#wrap p:last-of-type",
+      "expected": [
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": ":not(simple)",
+      "css": "#wrap p:not(.a)",
+      "expected": [
+        "p3",
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p3",
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p3",
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p3",
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p3",
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p3",
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": ":not(compound .a.b)",
+      "css": "#wrap p:not(.a):not(.c)",
+      "expected": [
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": ":empty",
+      "css": "p:empty",
+      "expected": [
+        "e1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "e1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "e1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "e1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "e1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "e1"
+        ]
+      }
+    },
+    {
+      "selector": ":checked",
+      "css": "#in2:checked",
+      "expected": [
+        "in2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "in2"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "in2"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "in2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "in2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "in2"
+        ]
+      }
+    },
+    {
+      "selector": ":disabled",
+      "css": "#in1:disabled",
+      "expected": [
+        "in1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "in1"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "in1"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "in1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "in1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "in1"
+        ]
+      }
+    },
+    {
+      "selector": ":has(child)",
+      "css": "p:has(a)",
+      "expected": [
+        "p3"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p3"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p3"
+        ]
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p3"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p3"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p3"
+        ]
+      }
+    },
+    {
+      "selector": ":is() list",
+      "css": ":is(#p1, #p4)",
+      "expected": [
+        "p1",
+        "p4"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "modest": {
+        "status": "UNSUPPORTED",
+        "err": "ValueError: Bad CSS Selectors: :is(#p1, #p4)",
+        "got": null
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p4"
+        ]
+      }
+    },
+    {
+      "selector": ":where() list",
+      "css": ":where(#p2)",
+      "expected": [
+        "p2"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "UNSUPPORTED",
+        "err": "ValueError: Bad CSS Selectors: :where(#p2)",
+        "got": null
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p2"
+        ]
+      }
+    },
+    {
+      "selector": "attr case-insensitive [a=v i]",
+      "css": "[data-role=\"LEAD\" i]",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      },
+      "modest": {
+        "status": "WRONG",
+        "got": []
+      },
+      "lxml": {
+        "status": "UNSUPPORTED",
+        "err": "SelectorSyntaxError: Expected ']', got <IDENT 'i' at 18>",
+        "got": null
+      },
+      "parsel": {
+        "status": "UNSUPPORTED",
+        "err": "SelectorSyntaxError: Expected ']', got <IDENT 'i' at 18>",
+        "got": null
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "complex nth+not (README)",
+      "css": "div > :nth-child(2n+1):not(:has(a))",
+      "expected": [
+        "p1",
+        "p5"
+      ],
+      "fault_find": false,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p5"
+        ]
+      },
+      "modest": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p5"
+        ]
+      },
+      "lxml": {
+        "status": "WRONG",
+        "got": [
+          "p1",
+          "p3",
+          "p5"
+        ]
+      },
+      "parsel": {
+        "status": "WRONG",
+        "got": [
+          "p1",
+          "p3",
+          "p5"
+        ]
+      },
+      "soupsieve": {
+        "status": "WRONG",
+        "got": []
+      }
+    },
+    {
+      "selector": ":lang(en) [FAULT-FIND]",
+      "css": ":lang(en)",
+      "expected": [
+        "p1",
+        "q1"
+      ],
+      "fault_find": true,
+      "lexbor": {
+        "status": "UNSUPPORTED",
+        "err": "SelectolaxError: Can't parse CSS selector.",
+        "got": null
+      },
+      "modest": {
+        "status": "WRONG",
+        "got": []
+      },
+      "lxml": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "q1"
+        ]
+      },
+      "parsel": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "q1"
+        ]
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "q1"
+        ]
+      }
+    },
+    {
+      "selector": ":dir(rtl) [FAULT-FIND]",
+      "css": ":dir(rtl)",
+      "expected": [
+        "p1"
+      ],
+      "fault_find": true,
+      "lexbor": {
+        "status": "UNSUPPORTED",
+        "err": "SelectolaxError: Can't parse CSS selector.",
+        "got": null
+      },
+      "modest": {
+        "status": "PROCESS_ABORT",
+        "returncode": -6,
+        "stderr": "",
+        "got": null
+      },
+      "lxml": {
+        "status": "UNSUPPORTED",
+        "err": "ExpressionError: The pseudo-class :dir() is unknown",
+        "got": null
+      },
+      "parsel": {
+        "status": "UNSUPPORTED",
+        "err": "ExpressionError: The pseudo-class :dir() is unknown",
+        "got": null
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1"
+        ]
+      }
+    },
+    {
+      "selector": "[a=v i] both-case [FAULT-FIND]",
+      "css": "[data-role=\"LEAD\" i]",
+      "expected": [
+        "p1",
+        "p2"
+      ],
+      "fault_find": true,
+      "lexbor": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2"
+        ]
+      },
+      "modest": {
+        "status": "WRONG",
+        "got": [
+          "p2"
+        ]
+      },
+      "lxml": {
+        "status": "UNSUPPORTED",
+        "err": "SelectorSyntaxError: Expected ']', got <IDENT 'i' at 18>",
+        "got": null
+      },
+      "parsel": {
+        "status": "UNSUPPORTED",
+        "err": "SelectorSyntaxError: Expected ']', got <IDENT 'i' at 18>",
+        "got": null
+      },
+      "soupsieve": {
+        "status": "PASS",
+        "got": [
+          "p1",
+          "p2"
+        ]
+      }
+    }
+  ],
+  "pseudo_elements": {
+    "lexbor": {
+      "status": "UNSUPPORTED",
+      "err": "SelectolaxError: Can't parse CSS selector."
+    },
+    "modest": {
+      "status": "UNSUPPORTED",
+      "err": "ValueError: Bad CSS Selectors: p::text"
+    },
+    "parsel": {
+      "status": "PASS",
+      "text": [
+        "hi"
+      ],
+      "attr": [
+        "/x"
+      ]
+    }
+  },
+  "scope_probe": {
+    "lexbor": {
+      "status": "UNSUPPORTED",
+      "err": "SelectolaxError: Can't parse CSS selector.",
+      "got": null
+    },
+    "modest": {
+      "status": "WRONG",
+      "got": []
+    },
+    "lxml": {
+      "status": "PASS",
+      "got": [
+        "p1",
+        "p2"
+      ]
+    },
+    "parsel": {
+      "status": "WRONG",
+      "got": []
+    },
+    "soupsieve": {
+      "status": "PASS",
+      "got": [
+        "p1",
+        "p2"
+      ]
+    }
+  },
+  "lexbor_contains": {
+    "ci": [
+      "b"
+    ],
+    "cs": [
+      "b"
+    ],
+    "no_flag": []
+  },
+  "xpath": {
+    "lexbor": {
+      "has_xpath_method": false
+    },
+    "modest": {
+      "has_xpath_method": false
+    },
+    "lxml": {
+      "has_xpath_method": true,
+      "works": true
+    },
+    "parsel": {
+      "has_xpath_method": true,
+      "works": true
+    }
+  }
+}

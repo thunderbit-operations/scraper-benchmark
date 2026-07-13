@@ -1,0 +1,785 @@
+{
+  "meta": {
+    "n_fixtures_on_disk": 11,
+    "n_admitted": 11,
+    "n_excluded": 0,
+    "admitted_pages": [
+      "docs_mdn_array.html",
+      "docs_python.html",
+      "ecommerce_books.html",
+      "ecommerce_webscraper_allinone.html",
+      "forum_reddit.html",
+      "gov_whitehouse.html",
+      "news_bbc.html",
+      "news_hackernews.html",
+      "oldstyle_craigslist.html",
+      "spa_quotes_js.html",
+      "wiki_scraping.html"
+    ],
+    "excluded_pages": [],
+    "lexbor_vs_lxml_identical_admitted": "10 of 11",
+    "gc_policy": "enabled throughout; per-iter result freed via del; no gc.disable",
+    "note": "accuracy tally counts ADMITTED pages only; excluded pages disclosed"
+  },
+  "pages": {
+    "docs_mdn_array.html": {
+      "size_bytes": 243391,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "Array - JavaScript | MDN",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 497,
+          "d_links_vs_lxml": -11,
+          "n_headings": 44,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.5765
+        },
+        "selectolax_modest": {
+          "n_links": 508,
+          "d_links_vs_lxml": 0,
+          "n_headings": 44,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 3.2732
+        },
+        "lxml": {
+          "n_links": 508,
+          "d_links_vs_lxml": 0,
+          "n_headings": 44,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.8953
+        },
+        "bs4_lxml": {
+          "n_links": 508,
+          "d_links_vs_lxml": 0,
+          "n_headings": 44,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 28.6996
+        },
+        "bs4_htmlparser": {
+          "n_links": 508,
+          "d_links_vs_lxml": 0,
+          "n_headings": 44,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 34.9002
+        },
+        "parsel": {
+          "n_links": 508,
+          "d_links_vs_lxml": 0,
+          "n_headings": 44,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.9336
+        }
+      },
+      "lxml_ref": {
+        "n_links": 508,
+        "n_headings": 44,
+        "n_imgs": 0
+      }
+    },
+    "docs_python.html": {
+      "size_bytes": 79636,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "The Python Standard Library \u2014 Python 3.14.6 documentation",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 341,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 3,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.3336
+        },
+        "selectolax_modest": {
+          "n_links": 341,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 3,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.5117
+        },
+        "lxml": {
+          "n_links": 341,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 3,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.037
+        },
+        "bs4_lxml": {
+          "n_links": 341,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 3,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 16.175
+        },
+        "bs4_htmlparser": {
+          "n_links": 341,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 3,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 18.9954
+        },
+        "parsel": {
+          "n_links": 343,
+          "d_links_vs_lxml": 2,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 3,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.5896
+        }
+      },
+      "lxml_ref": {
+        "n_links": 341,
+        "n_headings": 9,
+        "n_imgs": 3
+      }
+    },
+    "ecommerce_books.html": {
+      "size_bytes": 51294,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "\n    All products | Books to Scrape - Sandbox\n",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 94,
+          "d_links_vs_lxml": 0,
+          "n_headings": 21,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 20,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.605
+        },
+        "selectolax_modest": {
+          "n_links": 94,
+          "d_links_vs_lxml": 0,
+          "n_headings": 21,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 20,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.7683
+        },
+        "lxml": {
+          "n_links": 94,
+          "d_links_vs_lxml": 0,
+          "n_headings": 21,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 20,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.4712
+        },
+        "bs4_lxml": {
+          "n_links": 94,
+          "d_links_vs_lxml": 0,
+          "n_headings": 21,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 20,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 7.2976
+        },
+        "bs4_htmlparser": {
+          "n_links": 94,
+          "d_links_vs_lxml": 0,
+          "n_headings": 21,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 20,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 8.4649
+        },
+        "parsel": {
+          "n_links": 94,
+          "d_links_vs_lxml": 0,
+          "n_headings": 21,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 20,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.7494
+        }
+      },
+      "lxml_ref": {
+        "n_links": 94,
+        "n_headings": 21,
+        "n_imgs": 20
+      }
+    },
+    "ecommerce_webscraper_allinone.html": {
+      "size_bytes": 15618,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "Allinone | Web Scraper Test Sites",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 35,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 4,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.3024
+        },
+        "selectolax_modest": {
+          "n_links": 35,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 4,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.3284
+        },
+        "lxml": {
+          "n_links": 35,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 4,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.2298
+        },
+        "bs4_lxml": {
+          "n_links": 35,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 4,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 3.0586
+        },
+        "bs4_htmlparser": {
+          "n_links": 35,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 4,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 3.5477
+        },
+        "parsel": {
+          "n_links": 35,
+          "d_links_vs_lxml": 0,
+          "n_headings": 9,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 4,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.3643
+        }
+      },
+      "lxml_ref": {
+        "n_links": 35,
+        "n_headings": 9,
+        "n_imgs": 4
+      }
+    },
+    "forum_reddit.html": {
+      "size_bytes": 129152,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "programming",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 318,
+          "d_links_vs_lxml": 0,
+          "n_headings": 3,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.7725
+        },
+        "selectolax_modest": {
+          "n_links": 318,
+          "d_links_vs_lxml": 0,
+          "n_headings": 3,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.859
+        },
+        "lxml": {
+          "n_links": 318,
+          "d_links_vs_lxml": 0,
+          "n_headings": 3,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.3028
+        },
+        "bs4_lxml": {
+          "n_links": 318,
+          "d_links_vs_lxml": 0,
+          "n_headings": 3,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 16.2372
+        },
+        "bs4_htmlparser": {
+          "n_links": 318,
+          "d_links_vs_lxml": 0,
+          "n_headings": 3,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 19.9363
+        },
+        "parsel": {
+          "n_links": 318,
+          "d_links_vs_lxml": 0,
+          "n_headings": 3,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.7767
+        }
+      },
+      "lxml_ref": {
+        "n_links": 318,
+        "n_headings": 3,
+        "n_imgs": 2
+      }
+    },
+    "gov_whitehouse.html": {
+      "size_bytes": 289495,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "The White House",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 154,
+          "d_links_vs_lxml": 0,
+          "n_headings": 12,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 17,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.7914
+        },
+        "selectolax_modest": {
+          "n_links": 154,
+          "d_links_vs_lxml": 0,
+          "n_headings": 12,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 17,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.5519
+        },
+        "lxml": {
+          "n_links": 154,
+          "d_links_vs_lxml": 0,
+          "n_headings": 12,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 17,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.4256
+        },
+        "bs4_lxml": {
+          "n_links": 154,
+          "d_links_vs_lxml": 0,
+          "n_headings": 12,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 17,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 11.2404
+        },
+        "bs4_htmlparser": {
+          "n_links": 154,
+          "d_links_vs_lxml": 0,
+          "n_headings": 12,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 17,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 13.3972
+        },
+        "parsel": {
+          "n_links": 154,
+          "d_links_vs_lxml": 0,
+          "n_headings": 12,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 17,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.7756
+        }
+      },
+      "lxml_ref": {
+        "n_links": 154,
+        "n_headings": 12,
+        "n_imgs": 17
+      }
+    },
+    "news_bbc.html": {
+      "size_bytes": 397766,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "BBC News - Breaking news, video and the latest top stories from the U.S. and around the world",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 255,
+          "d_links_vs_lxml": 0,
+          "n_headings": 62,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 50,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.25
+        },
+        "selectolax_modest": {
+          "n_links": 255,
+          "d_links_vs_lxml": 0,
+          "n_headings": 62,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 50,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 3.5727
+        },
+        "lxml": {
+          "n_links": 255,
+          "d_links_vs_lxml": 0,
+          "n_headings": 62,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 50,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 1.9431
+        },
+        "bs4_lxml": {
+          "n_links": 255,
+          "d_links_vs_lxml": 0,
+          "n_headings": 62,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 50,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 18.3928
+        },
+        "bs4_htmlparser": {
+          "n_links": 255,
+          "d_links_vs_lxml": 0,
+          "n_headings": 62,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 50,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 21.7376
+        },
+        "parsel": {
+          "n_links": 255,
+          "d_links_vs_lxml": 0,
+          "n_headings": 62,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 50,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.7453
+        }
+      },
+      "lxml_ref": {
+        "n_links": 255,
+        "n_headings": 62,
+        "n_imgs": 50
+      }
+    },
+    "news_hackernews.html": {
+      "size_bytes": 34919,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "Hacker News",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 229,
+          "d_links_vs_lxml": 0,
+          "n_headings": 0,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.7348
+        },
+        "selectolax_modest": {
+          "n_links": 229,
+          "d_links_vs_lxml": 0,
+          "n_headings": 0,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.7682
+        },
+        "lxml": {
+          "n_links": 229,
+          "d_links_vs_lxml": 0,
+          "n_headings": 0,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.5957
+        },
+        "bs4_lxml": {
+          "n_links": 229,
+          "d_links_vs_lxml": 0,
+          "n_headings": 0,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 8.756
+        },
+        "bs4_htmlparser": {
+          "n_links": 229,
+          "d_links_vs_lxml": 0,
+          "n_headings": 0,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 10.4505
+        },
+        "parsel": {
+          "n_links": 229,
+          "d_links_vs_lxml": 0,
+          "n_headings": 0,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 2,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.9193
+        }
+      },
+      "lxml_ref": {
+        "n_links": 229,
+        "n_headings": 0,
+        "n_imgs": 2
+      }
+    },
+    "oldstyle_craigslist.html": {
+      "size_bytes": 560624,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "SF bay area for sale - craigslist",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 351,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.7307
+        },
+        "selectolax_modest": {
+          "n_links": 351,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 5.3282
+        },
+        "lxml": {
+          "n_links": 351,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.0598
+        },
+        "bs4_lxml": {
+          "n_links": 351,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 30.0887
+        },
+        "bs4_htmlparser": {
+          "n_links": 351,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 35.4339
+        },
+        "parsel": {
+          "n_links": 351,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.5299
+        }
+      },
+      "lxml_ref": {
+        "n_links": 351,
+        "n_headings": 1,
+        "n_imgs": 0
+      }
+    },
+    "spa_quotes_js.html": {
+      "size_bytes": 5808,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "Quotes to Scrape",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 5,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.0513
+        },
+        "selectolax_modest": {
+          "n_links": 5,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.0773
+        },
+        "lxml": {
+          "n_links": 5,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.0648
+        },
+        "bs4_lxml": {
+          "n_links": 5,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.438
+        },
+        "bs4_htmlparser": {
+          "n_links": 5,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.4938
+        },
+        "parsel": {
+          "n_links": 5,
+          "d_links_vs_lxml": 0,
+          "n_headings": 1,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 0,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 0.0656
+        }
+      },
+      "lxml_ref": {
+        "n_links": 5,
+        "n_headings": 1,
+        "n_imgs": 0
+      }
+    },
+    "wiki_scraping.html": {
+      "size_bytes": 226771,
+      "admitted": true,
+      "admission_reason": "ok",
+      "title": "Web scraping - Wikipedia",
+      "compare": {
+        "selectolax_lexbor": {
+          "n_links": 460,
+          "d_links_vs_lxml": 0,
+          "n_headings": 20,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 10,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.7443
+        },
+        "selectolax_modest": {
+          "n_links": 460,
+          "d_links_vs_lxml": 0,
+          "n_headings": 20,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 10,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 3.1798
+        },
+        "lxml": {
+          "n_links": 460,
+          "d_links_vs_lxml": 0,
+          "n_headings": 20,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 10,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 2.3606
+        },
+        "bs4_lxml": {
+          "n_links": 460,
+          "d_links_vs_lxml": 0,
+          "n_headings": 20,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 10,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 23.8331
+        },
+        "bs4_htmlparser": {
+          "n_links": 460,
+          "d_links_vs_lxml": 0,
+          "n_headings": 20,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 10,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 28.4241
+        },
+        "parsel": {
+          "n_links": 460,
+          "d_links_vs_lxml": 0,
+          "n_headings": 20,
+          "d_headings_vs_lxml": 0,
+          "n_imgs": 10,
+          "d_imgs_vs_lxml": 0,
+          "speed_p50_ms": 3.1942
+        }
+      },
+      "lxml_ref": {
+        "n_links": 460,
+        "n_headings": 20,
+        "n_imgs": 10
+      }
+    }
+  },
+  "disagreements_vs_lxml": [
+    {
+      "page": "docs_mdn_array.html",
+      "parser": "selectolax_lexbor",
+      "n_links": 497,
+      "d_links_vs_lxml": -11,
+      "n_headings": 44,
+      "d_headings_vs_lxml": 0,
+      "n_imgs": 0,
+      "d_imgs_vs_lxml": 0
+    },
+    {
+      "page": "docs_python.html",
+      "parser": "parsel",
+      "n_links": 343,
+      "d_links_vs_lxml": 2,
+      "n_headings": 9,
+      "d_headings_vs_lxml": 0,
+      "n_imgs": 3,
+      "d_imgs_vs_lxml": 0
+    }
+  ]
+}

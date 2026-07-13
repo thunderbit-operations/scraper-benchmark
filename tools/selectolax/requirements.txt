@@ -1,0 +1,6 @@
+selectolax==0.4.10
+lxml==6.1.1
+beautifulsoup4==4.15.0
+soupsieve==2.8.4
+parsel==1.11.0
+cssselect==1.4.0

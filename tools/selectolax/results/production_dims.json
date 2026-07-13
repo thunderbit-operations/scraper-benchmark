@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "run_id": 0,
+    "python": "3.14.2",
+    "note": "GIL signal is empirical wall-clock speedup, not a source claim"
+  },
+  "thread_scaling": {
+    "selectolax_lexbor": {
+      "n_tasks": 48,
+      "threads": 4,
+      "single_thread_s": 0.5734,
+      "threaded_s": 0.1617,
+      "speedup": 3.547,
+      "gil_release_signal": "likely-releases-GIL"
+    },
+    "selectolax_modest": {
+      "n_tasks": 48,
+      "threads": 4,
+      "single_thread_s": 0.6869,
+      "threaded_s": 0.1768,
+      "speedup": 3.884,
+      "gil_release_signal": "likely-releases-GIL"
+    },
+    "lxml": {
+      "n_tasks": 48,
+      "threads": 4,
+      "single_thread_s": 0.4697,
+      "threaded_s": 0.3807,
+      "speedup": 1.234,
+      "gil_release_signal": "inconclusive"
+    },
+    "bs4_lxml": {
+      "n_tasks": 48,
+      "threads": 4,
+      "single_thread_s": 7.0548,
+      "threaded_s": 14.8571,
+      "speedup": 0.475,
+      "gil_release_signal": "likely-holds-GIL"
+    }
+  },
+  "mem_growth": {
+    "selectolax_lexbor": {
+      "iters": 2000,
+      "rss_base_mb": 423.64,
+      "rss_delta_samples_mb": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rss_delta_first_sample_mb": 0.0,
+      "rss_delta_last_sample_mb": 0.0,
+      "rss_delta_max_mb": 0.0,
+      "growth_first_to_last_mb": 0.0
+    },
+    "selectolax_modest": {
+      "iters": 2000,
+      "rss_base_mb": 423.64,
+      "rss_delta_samples_mb": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rss_delta_first_sample_mb": 0.0,
+      "rss_delta_last_sample_mb": 0.0,
+      "rss_delta_max_mb": 0.0,
+      "growth_first_to_last_mb": 0.0
+    },
+    "lxml": {
+      "iters": 2000,
+      "rss_base_mb": 423.64,
+      "rss_delta_samples_mb": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rss_delta_first_sample_mb": 0.0,
+      "rss_delta_last_sample_mb": 0.0,
+      "rss_delta_max_mb": 0.0,
+      "growth_first_to_last_mb": 0.0
+    }
+  },
+  "node_lifecycle": {
+    "stale_node_after_tree_gc": {
+      "scenario": "stale_node_after_tree_gc",
+      "text_after_tree_gc": "hello w",
+      "html_after_tree_gc": "<p id=\"x\">hello <b>w</b></p>",
+      "result": "usable"
+    },
+    "stale_node_after_reparse": {
+      "scenario": "stale_node_after_reparse",
+      "text_after_decompose": "",
+      "result": "usable_after_decompose",
+      "first_text": "first"
+    }
+  }
+}

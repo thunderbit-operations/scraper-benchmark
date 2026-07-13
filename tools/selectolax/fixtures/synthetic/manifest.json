@@ -1,0 +1,34 @@
+{
+  "1kb": {
+    "path": "page_1kb.html",
+    "bytes": 1180,
+    "cards": 2
+  },
+  "10kb": {
+    "path": "page_10kb.html",
+    "bytes": 10577,
+    "cards": 25
+  },
+  "100kb": {
+    "path": "page_100kb.html",
+    "bytes": 103017,
+    "cards": 250
+  },
+  "1mb": {
+    "path": "page_1mb.html",
+    "bytes": 1038757,
+    "cards": 2500
+  },
+  "10mb": {
+    "path": "page_10mb.html",
+    "bytes": 10482582,
+    "cards": 25000
+  },
+  "wide_100k": {
+    "path": "wide_100k_nodes.html",
+    "bytes": 6566720,
+    "li_nodes": 100000,
+    "a_nodes": 100000,
+    "approx_element_nodes": 200003
+  }
+}

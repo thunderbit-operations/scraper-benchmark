@@ -1,0 +1,60 @@
+{
+  "fixture_bytes_repr": "b'<p>caf\\xe9 \\xe9\\xe8</p>'",
+  "intended_text": "café éè",
+  "engines": {
+    "lexbor": {
+      "parse": {
+        "outcome": "OK",
+        "value": true
+      },
+      "text_call": {
+        "outcome": "OK",
+        "value": "caf� ��"
+      },
+      "text_analysis": {
+        "returned": "caf� ��",
+        "equals_intended": false,
+        "contains_U+FFFD_replacement": true,
+        "silently_dropped_bytes": false,
+        "corruption": "replacement_chars"
+      },
+      "html_serialization": {
+        "outcome": "RAISED",
+        "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 31: invalid continuation byte",
+        "value_len": null
+      }
+    },
+    "modest": {
+      "parse": {
+        "outcome": "OK",
+        "value": true
+      },
+      "text_call": {
+        "outcome": "OK",
+        "value": "caf "
+      },
+      "text_analysis": {
+        "returned": "caf ",
+        "equals_intended": false,
+        "contains_U+FFFD_replacement": false,
+        "silently_dropped_bytes": true,
+        "corruption": "dropped_bytes"
+      },
+      "html_serialization": {
+        "outcome": "RAISED",
+        "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 31: invalid continuation byte",
+        "value_len": null
+      }
+    }
+  },
+  "workaround": {
+    "lexbor": {
+      "decoded_first_text": "café éè",
+      "correct": true
+    },
+    "modest": {
+      "decoded_first_text": "café éè",
+      "correct": true
+    }
+  }
+}

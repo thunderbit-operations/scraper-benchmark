@@ -1,0 +1,1008 @@
+{
+  "meta": {
+    "machine": "darwin",
+    "python": "3.14.2",
+    "iters_default": 50,
+    "warmup": 3,
+    "gc_policy": "enabled throughout; per-iter tree freed via del; no gc.disable (real-usage, consistent across parsers)",
+    "parity_gate": "content-hash over sorted titles+hrefs vs selectolax_lexbor",
+    "fixture_manifest": {
+      "1kb": {
+        "path": "fixtures/synthetic/page_1kb.html",
+        "bytes": 1180,
+        "cards": 2
+      },
+      "10kb": {
+        "path": "fixtures/synthetic/page_10kb.html",
+        "bytes": 10577,
+        "cards": 25
+      },
+      "100kb": {
+        "path": "fixtures/synthetic/page_100kb.html",
+        "bytes": 103017,
+        "cards": 250
+      },
+      "1mb": {
+        "path": "fixtures/synthetic/page_1mb.html",
+        "bytes": 1038757,
+        "cards": 2500
+      },
+      "10mb": {
+        "path": "fixtures/synthetic/page_10mb.html",
+        "bytes": 10482582,
+        "cards": 25000
+      },
+      "wide_100k": {
+        "path": "fixtures/synthetic/wide_100k_nodes.html",
+        "bytes": 6566720,
+        "li_nodes": 100000,
+        "a_nodes": 100000,
+        "approx_element_nodes": 200003
+      }
+    },
+    "task": "parse + extract h3.title text + all a href",
+    "n_runs": 3
+  },
+  "results": {
+    "1kb": {
+      "_parity": {
+        "reference": "selectolax_lexbor",
+        "reference_hash": "a43a6e77e60d7923ac127810b916b9dcafe0df1ac35bb574b64e45258a7d6dc6",
+        "reference_n_titles": 2,
+        "reference_n_links": 4,
+        "matched": [
+          "selectolax_lexbor",
+          "selectolax_modest",
+          "lxml",
+          "parsel",
+          "bs4_lxml",
+          "bs4_htmlparser"
+        ],
+        "mismatched": {},
+        "consistent_across_runs": true
+      },
+      "selectolax_lexbor": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.0269,
+          "min_across_runs": 0.0246,
+          "max_across_runs": 0.027,
+          "runs": 3,
+          "spread_pct_of_median": 8.92,
+          "per_run": [
+            0.0246,
+            0.0269,
+            0.027
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.0277,
+          "min_across_runs": 0.027,
+          "max_across_runs": 0.0278,
+          "runs": 3,
+          "spread_pct_of_median": 2.89,
+          "per_run": [
+            0.027,
+            0.0278,
+            0.0277
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "selectolax_modest": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.029,
+          "min_across_runs": 0.0272,
+          "max_across_runs": 0.0292,
+          "runs": 3,
+          "spread_pct_of_median": 6.9,
+          "per_run": [
+            0.0272,
+            0.0292,
+            0.029
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.0296,
+          "min_across_runs": 0.0293,
+          "max_across_runs": 0.0301,
+          "runs": 3,
+          "spread_pct_of_median": 2.7,
+          "per_run": [
+            0.0293,
+            0.0301,
+            0.0296
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.0359,
+          "min_across_runs": 0.0358,
+          "max_across_runs": 0.0371,
+          "runs": 3,
+          "spread_pct_of_median": 3.62,
+          "per_run": [
+            0.0359,
+            0.0358,
+            0.0371
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.0387,
+          "min_across_runs": 0.0374,
+          "max_across_runs": 0.0395,
+          "runs": 3,
+          "spread_pct_of_median": 5.43,
+          "per_run": [
+            0.0374,
+            0.0387,
+            0.0395
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "parsel": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.0436,
+          "min_across_runs": 0.0427,
+          "max_across_runs": 0.0436,
+          "runs": 3,
+          "spread_pct_of_median": 2.06,
+          "per_run": [
+            0.0427,
+            0.0436,
+            0.0436
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.0444,
+          "min_across_runs": 0.0441,
+          "max_across_runs": 0.046,
+          "runs": 3,
+          "spread_pct_of_median": 4.28,
+          "per_run": [
+            0.0441,
+            0.0444,
+            0.046
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.2815,
+          "min_across_runs": 0.2733,
+          "max_across_runs": 0.2854,
+          "runs": 3,
+          "spread_pct_of_median": 4.3,
+          "per_run": [
+            0.2733,
+            0.2815,
+            0.2854
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.3065,
+          "min_across_runs": 0.2883,
+          "max_across_runs": 0.3117,
+          "runs": 3,
+          "spread_pct_of_median": 7.63,
+          "per_run": [
+            0.2883,
+            0.3065,
+            0.3117
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_htmlparser": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.3226,
+          "min_across_runs": 0.3223,
+          "max_across_runs": 0.3274,
+          "runs": 3,
+          "spread_pct_of_median": 1.58,
+          "per_run": [
+            0.3223,
+            0.3226,
+            0.3274
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.3403,
+          "min_across_runs": 0.3342,
+          "max_across_runs": 0.3765,
+          "runs": 3,
+          "spread_pct_of_median": 12.43,
+          "per_run": [
+            0.3342,
+            0.3403,
+            0.3765
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      }
+    },
+    "10kb": {
+      "_parity": {
+        "reference": "selectolax_lexbor",
+        "reference_hash": "0034c27445e5f6a8c381d986bc47e712277a833a75efdab6bd5644e46795a75b",
+        "reference_n_titles": 25,
+        "reference_n_links": 27,
+        "matched": [
+          "selectolax_lexbor",
+          "selectolax_modest",
+          "lxml",
+          "parsel",
+          "bs4_lxml",
+          "bs4_htmlparser"
+        ],
+        "mismatched": {},
+        "consistent_across_runs": true
+      },
+      "selectolax_lexbor": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.1598,
+          "min_across_runs": 0.159,
+          "max_across_runs": 0.162,
+          "runs": 3,
+          "spread_pct_of_median": 1.88,
+          "per_run": [
+            0.159,
+            0.1598,
+            0.162
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.1619,
+          "min_across_runs": 0.1617,
+          "max_across_runs": 0.1888,
+          "runs": 3,
+          "spread_pct_of_median": 16.74,
+          "per_run": [
+            0.1617,
+            0.1619,
+            0.1888
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "selectolax_modest": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.1708,
+          "min_across_runs": 0.1687,
+          "max_across_runs": 0.1713,
+          "runs": 3,
+          "spread_pct_of_median": 1.52,
+          "per_run": [
+            0.1687,
+            0.1708,
+            0.1713
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.1739,
+          "min_across_runs": 0.1715,
+          "max_across_runs": 0.1808,
+          "runs": 3,
+          "spread_pct_of_median": 5.35,
+          "per_run": [
+            0.1715,
+            0.1739,
+            0.1808
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.1657,
+          "min_across_runs": 0.1645,
+          "max_across_runs": 0.166,
+          "runs": 3,
+          "spread_pct_of_median": 0.91,
+          "per_run": [
+            0.1657,
+            0.1645,
+            0.166
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.1685,
+          "min_across_runs": 0.1671,
+          "max_across_runs": 0.185,
+          "runs": 3,
+          "spread_pct_of_median": 10.62,
+          "per_run": [
+            0.1671,
+            0.1685,
+            0.185
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "parsel": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 0.2278,
+          "min_across_runs": 0.226,
+          "max_across_runs": 0.2298,
+          "runs": 3,
+          "spread_pct_of_median": 1.67,
+          "per_run": [
+            0.226,
+            0.2278,
+            0.2298
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 0.2333,
+          "min_across_runs": 0.2292,
+          "max_across_runs": 0.2603,
+          "runs": 3,
+          "spread_pct_of_median": 13.33,
+          "per_run": [
+            0.2292,
+            0.2333,
+            0.2603
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 1.7046,
+          "min_across_runs": 1.6815,
+          "max_across_runs": 1.7726,
+          "runs": 3,
+          "spread_pct_of_median": 5.34,
+          "per_run": [
+            1.6815,
+            1.7046,
+            1.7726
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 1.7779,
+          "min_across_runs": 1.7287,
+          "max_across_runs": 1.9286,
+          "runs": 3,
+          "spread_pct_of_median": 11.24,
+          "per_run": [
+            1.7287,
+            1.7779,
+            1.9286
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_htmlparser": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 2.0487,
+          "min_across_runs": 2.0052,
+          "max_across_runs": 2.1083,
+          "runs": 3,
+          "spread_pct_of_median": 5.03,
+          "per_run": [
+            2.0052,
+            2.0487,
+            2.1083
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 2.0743,
+          "min_across_runs": 2.0525,
+          "max_across_runs": 2.3674,
+          "runs": 3,
+          "spread_pct_of_median": 15.18,
+          "per_run": [
+            2.0525,
+            2.0743,
+            2.3674
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      }
+    },
+    "100kb": {
+      "_parity": {
+        "reference": "selectolax_lexbor",
+        "reference_hash": "5b1cda02a9f1cd708ae023818b357c8e2311e43466957c8ca48ba4cc0ee7786f",
+        "reference_n_titles": 250,
+        "reference_n_links": 252,
+        "matched": [
+          "selectolax_lexbor",
+          "selectolax_modest",
+          "lxml",
+          "parsel",
+          "bs4_lxml",
+          "bs4_htmlparser"
+        ],
+        "mismatched": {},
+        "consistent_across_runs": true
+      },
+      "selectolax_lexbor": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 1.4645,
+          "min_across_runs": 1.4452,
+          "max_across_runs": 1.4803,
+          "runs": 3,
+          "spread_pct_of_median": 2.4,
+          "per_run": [
+            1.4452,
+            1.4645,
+            1.4803
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 1.5818,
+          "min_across_runs": 1.4673,
+          "max_across_runs": 1.6183,
+          "runs": 3,
+          "spread_pct_of_median": 9.55,
+          "per_run": [
+            1.4673,
+            1.6183,
+            1.5818
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "selectolax_modest": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 1.5647,
+          "min_across_runs": 1.5348,
+          "max_across_runs": 1.5662,
+          "runs": 3,
+          "spread_pct_of_median": 2.01,
+          "per_run": [
+            1.5348,
+            1.5647,
+            1.5662
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 1.6186,
+          "min_across_runs": 1.5601,
+          "max_across_runs": 1.6804,
+          "runs": 3,
+          "spread_pct_of_median": 7.43,
+          "per_run": [
+            1.5601,
+            1.6186,
+            1.6804
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 1.4228,
+          "min_across_runs": 1.3968,
+          "max_across_runs": 1.4348,
+          "runs": 3,
+          "spread_pct_of_median": 2.67,
+          "per_run": [
+            1.3968,
+            1.4228,
+            1.4348
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 1.5345,
+          "min_across_runs": 1.4042,
+          "max_across_runs": 1.6554,
+          "runs": 3,
+          "spread_pct_of_median": 16.37,
+          "per_run": [
+            1.4042,
+            1.6554,
+            1.5345
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "parsel": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 2.0197,
+          "min_across_runs": 1.988,
+          "max_across_runs": 2.0655,
+          "runs": 3,
+          "spread_pct_of_median": 3.84,
+          "per_run": [
+            1.988,
+            2.0197,
+            2.0655
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 2.131,
+          "min_across_runs": 2.0363,
+          "max_across_runs": 2.1718,
+          "runs": 3,
+          "spread_pct_of_median": 6.36,
+          "per_run": [
+            2.0363,
+            2.131,
+            2.1718
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 16.5403,
+          "min_across_runs": 16.2727,
+          "max_across_runs": 17.4008,
+          "runs": 3,
+          "spread_pct_of_median": 6.82,
+          "per_run": [
+            16.2727,
+            16.5403,
+            17.4008
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 17.8761,
+          "min_across_runs": 17.0395,
+          "max_across_runs": 18.3446,
+          "runs": 3,
+          "spread_pct_of_median": 7.3,
+          "per_run": [
+            17.0395,
+            17.8761,
+            18.3446
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_htmlparser": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 20.5992,
+          "min_across_runs": 20.3543,
+          "max_across_runs": 21.5104,
+          "runs": 3,
+          "spread_pct_of_median": 5.61,
+          "per_run": [
+            20.3543,
+            20.5992,
+            21.5104
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 21.6817,
+          "min_across_runs": 21.4378,
+          "max_across_runs": 23.0176,
+          "runs": 3,
+          "spread_pct_of_median": 7.29,
+          "per_run": [
+            21.4378,
+            21.6817,
+            23.0176
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      }
+    },
+    "1mb": {
+      "_parity": {
+        "reference": "selectolax_lexbor",
+        "reference_hash": "e6ecbc1bde9c5096bab7d0078ff8d4f444d49faea849f6412b089920599bd852",
+        "reference_n_titles": 2500,
+        "reference_n_links": 2502,
+        "matched": [
+          "selectolax_lexbor",
+          "selectolax_modest",
+          "lxml",
+          "parsel",
+          "bs4_lxml",
+          "bs4_htmlparser"
+        ],
+        "mismatched": {},
+        "consistent_across_runs": true
+      },
+      "selectolax_lexbor": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 14.9007,
+          "min_across_runs": 14.1804,
+          "max_across_runs": 15.3742,
+          "runs": 3,
+          "spread_pct_of_median": 8.01,
+          "per_run": [
+            14.1804,
+            14.9007,
+            15.3742
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 16.4365,
+          "min_across_runs": 15.3267,
+          "max_across_runs": 16.5146,
+          "runs": 3,
+          "spread_pct_of_median": 7.23,
+          "per_run": [
+            15.3267,
+            16.4365,
+            16.5146
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "selectolax_modest": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 16.9433,
+          "min_across_runs": 16.167,
+          "max_across_runs": 17.6182,
+          "runs": 3,
+          "spread_pct_of_median": 8.57,
+          "per_run": [
+            16.167,
+            16.9433,
+            17.6182
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 17.456,
+          "min_across_runs": 16.8636,
+          "max_across_runs": 18.6583,
+          "runs": 3,
+          "spread_pct_of_median": 10.28,
+          "per_run": [
+            16.8636,
+            17.456,
+            18.6583
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 14.1769,
+          "min_across_runs": 14.0659,
+          "max_across_runs": 15.9578,
+          "runs": 3,
+          "spread_pct_of_median": 13.34,
+          "per_run": [
+            14.0659,
+            14.1769,
+            15.9578
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 15.2945,
+          "min_across_runs": 14.6555,
+          "max_across_runs": 17.2728,
+          "runs": 3,
+          "spread_pct_of_median": 17.11,
+          "per_run": [
+            14.6555,
+            15.2945,
+            17.2728
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "parsel": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 20.9348,
+          "min_across_runs": 20.2027,
+          "max_across_runs": 22.3144,
+          "runs": 3,
+          "spread_pct_of_median": 10.09,
+          "per_run": [
+            20.2027,
+            20.9348,
+            22.3144
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 22.311,
+          "min_across_runs": 21.2797,
+          "max_across_runs": 23.3203,
+          "runs": 3,
+          "spread_pct_of_median": 9.15,
+          "per_run": [
+            21.2797,
+            22.311,
+            23.3203
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_lxml": {
+        "iters_per_run": 30,
+        "p50_ms": {
+          "median_across_runs": 181.8553,
+          "min_across_runs": 173.604,
+          "max_across_runs": 189.8974,
+          "runs": 3,
+          "spread_pct_of_median": 8.96,
+          "per_run": [
+            173.604,
+            181.8553,
+            189.8974
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 199.4257,
+          "min_across_runs": 192.7425,
+          "max_across_runs": 240.1805,
+          "runs": 3,
+          "spread_pct_of_median": 23.79,
+          "per_run": [
+            192.7425,
+            199.4257,
+            240.1805
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=30<100; p90 shown is ~30th-largest single sample"
+      },
+      "bs4_htmlparser": {
+        "iters_per_run": 20,
+        "p50_ms": {
+          "median_across_runs": 232.558,
+          "min_across_runs": 219.5413,
+          "max_across_runs": 241.1147,
+          "runs": 3,
+          "spread_pct_of_median": 9.28,
+          "per_run": [
+            219.5413,
+            241.1147,
+            232.558
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 253.7034,
+          "min_across_runs": 239.1617,
+          "max_across_runs": 273.4267,
+          "runs": 3,
+          "spread_pct_of_median": 13.51,
+          "per_run": [
+            239.1617,
+            273.4267,
+            253.7034
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=20<100; p90 shown is ~20th-largest single sample"
+      }
+    },
+    "10mb": {
+      "_parity": {
+        "reference": "selectolax_lexbor",
+        "reference_hash": "434df9557795ac1fadd8cea93892e34ad58721840647fa7014e5136b14f37a15",
+        "reference_n_titles": 25000,
+        "reference_n_links": 25002,
+        "matched": [
+          "selectolax_lexbor",
+          "selectolax_modest",
+          "lxml",
+          "parsel",
+          "bs4_lxml",
+          "bs4_htmlparser"
+        ],
+        "mismatched": {},
+        "consistent_across_runs": true
+      },
+      "selectolax_lexbor": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 159.9348,
+          "min_across_runs": 153.25,
+          "max_across_runs": 160.3025,
+          "runs": 3,
+          "spread_pct_of_median": 4.41,
+          "per_run": [
+            153.25,
+            159.9348,
+            160.3025
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 168.9577,
+          "min_across_runs": 156.3616,
+          "max_across_runs": 181.8258,
+          "runs": 3,
+          "spread_pct_of_median": 15.07,
+          "per_run": [
+            156.3616,
+            181.8258,
+            168.9577
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "selectolax_modest": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 247.9453,
+          "min_across_runs": 243.5288,
+          "max_across_runs": 254.5503,
+          "runs": 3,
+          "spread_pct_of_median": 4.45,
+          "per_run": [
+            243.5288,
+            254.5503,
+            247.9453
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 257.7305,
+          "min_across_runs": 249.7859,
+          "max_across_runs": 270.4903,
+          "runs": 3,
+          "spread_pct_of_median": 8.03,
+          "per_run": [
+            249.7859,
+            270.4903,
+            257.7305
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "lxml": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 172.933,
+          "min_across_runs": 168.3967,
+          "max_across_runs": 175.6821,
+          "runs": 3,
+          "spread_pct_of_median": 4.21,
+          "per_run": [
+            168.3967,
+            175.6821,
+            172.933
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 178.3302,
+          "min_across_runs": 173.7393,
+          "max_across_runs": 186.8527,
+          "runs": 3,
+          "spread_pct_of_median": 7.35,
+          "per_run": [
+            173.7393,
+            186.8527,
+            178.3302
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "parsel": {
+        "iters_per_run": 50,
+        "p50_ms": {
+          "median_across_runs": 231.8515,
+          "min_across_runs": 228.7164,
+          "max_across_runs": 235.7757,
+          "runs": 3,
+          "spread_pct_of_median": 3.04,
+          "per_run": [
+            228.7164,
+            235.7757,
+            231.8515
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 237.5904,
+          "min_across_runs": 234.5202,
+          "max_across_runs": 240.8552,
+          "runs": 3,
+          "spread_pct_of_median": 2.67,
+          "per_run": [
+            234.5202,
+            237.5904,
+            240.8552
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=50<100; p90 shown is ~50th-largest single sample"
+      },
+      "bs4_lxml": {
+        "iters_per_run": 10,
+        "p50_ms": {
+          "median_across_runs": 2261.5572,
+          "min_across_runs": 2187.1274,
+          "max_across_runs": 2268.256,
+          "runs": 3,
+          "spread_pct_of_median": 3.59,
+          "per_run": [
+            2187.1274,
+            2268.256,
+            2261.5572
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 2312.2939,
+          "min_across_runs": 2293.5367,
+          "max_across_runs": 2382.1705,
+          "runs": 3,
+          "spread_pct_of_median": 3.83,
+          "per_run": [
+            2293.5367,
+            2312.2939,
+            2382.1705
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=10<100; p90 shown is ~10th-largest single sample"
+      },
+      "bs4_htmlparser": {
+        "iters_per_run": 5,
+        "p50_ms": {
+          "median_across_runs": 2788.7457,
+          "min_across_runs": 2736.9383,
+          "max_across_runs": 2844.4625,
+          "runs": 3,
+          "spread_pct_of_median": 3.86,
+          "per_run": [
+            2736.9383,
+            2788.7457,
+            2844.4625
+          ]
+        },
+        "p90_ms": {
+          "median_across_runs": 2879.3099,
+          "min_across_runs": 2780.0705,
+          "max_across_runs": 2941.8185,
+          "runs": 3,
+          "spread_pct_of_median": 5.62,
+          "per_run": [
+            2780.0705,
+            2879.3099,
+            2941.8185
+          ]
+        },
+        "p99_ms": null,
+        "p99_note": "suppressed: n=5<100; p90 shown is ~5th-largest single sample"
+      }
+    }
+  }
+}

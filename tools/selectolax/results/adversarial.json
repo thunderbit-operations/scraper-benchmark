@@ -1,0 +1,328 @@
+{
+  "unclosed_tags": {
+    "lexbor": {
+      "parsed": true,
+      "n_p": 2,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "n_p": 2,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "n_p": 2,
+      "status": "OK"
+    }
+  },
+  "misnested": {
+    "lexbor": {
+      "parsed": true,
+      "n_i": 2,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "n_i": 2,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "n_i": 1,
+      "status": "OK"
+    }
+  },
+  "no_html_body": {
+    "lexbor": {
+      "parsed": true,
+      "value": "just a paragraph",
+      "match": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "value": "just a paragraph",
+      "match": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "value": "just a paragraph",
+      "match": true,
+      "status": "OK"
+    }
+  },
+  "deep_nesting_1000": {
+    "lexbor": {
+      "parsed": true,
+      "has_deep": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "has_deep": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "has_deep": false,
+      "status": "OK"
+    }
+  },
+  "deep_nesting_5000": {
+    "lexbor": {
+      "parsed": true,
+      "has_deep": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "has_deep": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "has_deep": false,
+      "status": "OK"
+    }
+  },
+  "empty": {
+    "lexbor": {
+      "parsed": true,
+      "root_not_none": true,
+      "html_len": 39,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "root_not_none": true,
+      "html_len": 39,
+      "status": "OK"
+    },
+    "lxml": {
+      "status": "CRASH",
+      "error": "ParserError('Document is empty')"
+    }
+  },
+  "whitespace_only": {
+    "lexbor": {
+      "parsed": true,
+      "root_not_none": true,
+      "html_len": 39,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "root_not_none": true,
+      "html_len": 39,
+      "status": "OK"
+    },
+    "lxml": {
+      "status": "CRASH",
+      "error": "ParserError('Document is empty')"
+    }
+  },
+  "binary_non_html": {
+    "lexbor": {
+      "status": "CRASH",
+      "error": "UnicodeDecodeError('utf-8', b'<html><head></head><body>\\x01\\x02\\x03\\x04\\x05\\x06\\x07\\x08\\t\\n\\x0b\\x0c\\n\\x0e\\x0f\\x10\\x11\\x12\\x13\\x14\\x15\\x16\\x17\\x18\\x19\\x1a\\x1b\\x1c\\x1d\\x1e\\x1f !\"#$%&amp;\\'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\\x7f\\x80\\x81\\x82\\x83"
+    },
+    "modest": {
+      "parsed": true,
+      "html_len": 10839,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "ok": true,
+      "status": "OK"
+    }
+  },
+  "bom_utf8": {
+    "lexbor": {
+      "parsed": true,
+      "value": "bom text",
+      "match": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "value": "bom text",
+      "match": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "value": "bom text",
+      "match": true,
+      "status": "OK"
+    }
+  },
+  "latin1_bytes": {
+    "lexbor": {
+      "status": "CRASH",
+      "error": "UnicodeDecodeError('utf-8', b'<html><head></head><body><p>caf\\xe9 \\xe9\\xe8</p></body></html>', 31, 32, 'invalid continuation byte')"
+    },
+    "modest": {
+      "status": "CRASH",
+      "error": "UnicodeDecodeError('utf-8', b'<html><head></head><body><p>caf\\xe9 \\xe9\\xe8</p></body></html>', 31, 32, 'invalid continuation byte')"
+    },
+    "lxml": {
+      "parsed": true,
+      "ok": true,
+      "status": "OK"
+    }
+  },
+  "huge_attr_1mb": {
+    "lexbor": {
+      "parsed": true,
+      "value": "ok",
+      "match": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "value": "ok",
+      "match": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "value": "ok",
+      "match": true,
+      "status": "OK"
+    }
+  },
+  "many_elements_100k": {
+    "lexbor": {
+      "parsed": true,
+      "n_li": 100000,
+      "match": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "n_li": 100000,
+      "match": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "n_li": 100000,
+      "match": true,
+      "status": "OK"
+    }
+  },
+  "unicode_emoji": {
+    "lexbor": {
+      "parsed": true,
+      "value": "hello \ud83c\udf0d\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 \u0645\u0631\u062d\u0628\u0627 \u65e5\u672c\u8a9e",
+      "contains": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "value": "hello \ud83c\udf0d\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 \u0645\u0631\u062d\u0628\u0627 \u65e5\u672c\u8a9e",
+      "contains": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "value": "hello \ud83c\udf0d\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66 \u0645\u0631\u062d\u0628\u0627 \u65e5\u672c\u8a9e",
+      "contains": true,
+      "status": "OK"
+    }
+  },
+  "null_bytes": {
+    "lexbor": {
+      "parsed": true,
+      "html_len": 56,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "html_len": 56,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "ok": true,
+      "status": "OK"
+    }
+  },
+  "cdata_comments": {
+    "lexbor": {
+      "parsed": true,
+      "value": "after",
+      "match": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "value": "after",
+      "match": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "value": "after",
+      "match": true,
+      "status": "OK"
+    }
+  },
+  "script_style_raw": {
+    "lexbor": {
+      "parsed": true,
+      "value": "body",
+      "match": true,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "value": "body",
+      "match": true,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "value": "body",
+      "match": true,
+      "status": "OK"
+    }
+  },
+  "broken_entities": {
+    "lexbor": {
+      "parsed": true,
+      "html_len": 75,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "html_len": 75,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "ok": true,
+      "status": "OK"
+    }
+  },
+  "attr_no_quotes_spaces": {
+    "lexbor": {
+      "parsed": true,
+      "html_len": 77,
+      "status": "OK"
+    },
+    "modest": {
+      "parsed": true,
+      "html_len": 77,
+      "status": "OK"
+    },
+    "lxml": {
+      "parsed": true,
+      "ok": true,
+      "status": "OK"
+    }
+  }
+}

@@ -12,15 +12,17 @@ fixtures-reference/   the shared ground-truth page structure all packs mirror
 METHODOLOGY.md        environment, versions, and the comparability boundary (read this)
 ```
 
-Tools covered: Crawl4AI · Crawlee · Playwright · Puppeteer · trafilatura · Scrapy · Colly · Scrapling · Firecrawl.
+Tools covered: Crawl4AI · Crawlee · Playwright · Puppeteer · trafilatura · Scrapy · Colly · Scrapling · Firecrawl · selectolax.
 
 ## How to reproduce
 
 Each tool directory has its own README with exact steps (they span Python, Node, and Go). In general:
 
-- **Python tools** (crawl4ai, trafilatura, scrapy, scrapling, firecrawl): create a venv, `pip install -r requirements.txt`, run the `run_*_material_tests.py`.
+- **Python tools** (crawl4ai, trafilatura, scrapy, scrapling, firecrawl, selectolax): create a venv, `pip install -r requirements.txt`, run the pack's runner (`run_*_material_tests.py`, or `run_tests.py` for selectolax).
 - **Node tools** (crawlee, playwright, puppeteer): `npm install`, then `node run_*_material_tests.mjs`. Browser engines need `npx playwright install` / `npx puppeteer browsers install`.
 - **Go tool** (colly): `go run main.go`.
+
+**selectolax is a parsing library, not a crawler**, so its pack does not use the shared catalog fixtures. It reproduces a *parser* benchmark — performance distributions vs lxml / BeautifulSoup / parsel across page sizes (3 independent runs + cross-run variance), a CSS-selector coverage matrix (including a fault-finding pass and soupsieve), an adversarial-input sweep, a real dirty-HTML accuracy check, memory/import profiling, and production-dimension probes (thread scaling / memory growth / node lifecycle). See `tools/selectolax/README.md`.
 
 Each runner starts a local fixture server, runs the tests against known ground truth, and writes JSON to `results/`.
 

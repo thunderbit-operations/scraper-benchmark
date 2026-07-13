@@ -1,0 +1,523 @@
+{
+  "meta": {
+    "python": "3.14.2",
+    "note": "RSS and tracemalloc measured in SEPARATE processes",
+    "n_runs": 3
+  },
+  "memory_rss": {
+    "page_1mb.html": {
+      "selectolax_lexbor": {
+        "rss_delta_mb": {
+          "median_across_runs": 20.812,
+          "min_across_runs": 20.781,
+          "max_across_runs": 20.875,
+          "runs": 3,
+          "spread_pct_of_median": 0.45,
+          "per_run": [
+            20.875,
+            20.812,
+            20.781
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "selectolax_modest": {
+        "rss_delta_mb": {
+          "median_across_runs": 23.297,
+          "min_across_runs": 23.062,
+          "max_across_runs": 23.391,
+          "runs": 3,
+          "spread_pct_of_median": 1.41,
+          "per_run": [
+            23.062,
+            23.297,
+            23.391
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "lxml": {
+        "rss_delta_mb": {
+          "median_across_runs": 19.25,
+          "min_across_runs": 19.234,
+          "max_across_runs": 19.328,
+          "runs": 3,
+          "spread_pct_of_median": 0.49,
+          "per_run": [
+            19.328,
+            19.234,
+            19.25
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "parsel": {
+        "rss_delta_mb": {
+          "median_across_runs": 28.266,
+          "min_across_runs": 28.266,
+          "max_across_runs": 28.281,
+          "runs": 3,
+          "spread_pct_of_median": 0.05,
+          "per_run": [
+            28.281,
+            28.266,
+            28.266
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "bs4_lxml": {
+        "rss_delta_mb": {
+          "median_across_runs": 31.656,
+          "min_across_runs": 30.547,
+          "max_across_runs": 31.688,
+          "runs": 3,
+          "spread_pct_of_median": 3.6,
+          "per_run": [
+            30.547,
+            31.656,
+            31.688
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "bs4_htmlparser": {
+        "rss_delta_mb": {
+          "median_across_runs": 30.922,
+          "min_across_runs": 30.922,
+          "max_across_runs": 31.344,
+          "runs": 3,
+          "spread_pct_of_median": 1.36,
+          "per_run": [
+            30.922,
+            31.344,
+            30.922
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      }
+    },
+    "page_10mb.html": {
+      "selectolax_lexbor": {
+        "rss_delta_mb": {
+          "median_across_runs": 144.641,
+          "min_across_runs": 144.562,
+          "max_across_runs": 144.938,
+          "runs": 3,
+          "spread_pct_of_median": 0.26,
+          "per_run": [
+            144.562,
+            144.938,
+            144.641
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "selectolax_modest": {
+        "rss_delta_mb": {
+          "median_across_runs": 168.219,
+          "min_across_runs": 168.156,
+          "max_across_runs": 168.75,
+          "runs": 3,
+          "spread_pct_of_median": 0.35,
+          "per_run": [
+            168.219,
+            168.156,
+            168.75
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "lxml": {
+        "rss_delta_mb": {
+          "median_across_runs": 128.938,
+          "min_across_runs": 128.703,
+          "max_across_runs": 129.188,
+          "runs": 3,
+          "spread_pct_of_median": 0.38,
+          "per_run": [
+            129.188,
+            128.703,
+            128.938
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "parsel": {
+        "rss_delta_mb": {
+          "median_across_runs": 142.156,
+          "min_across_runs": 141.953,
+          "max_across_runs": 142.625,
+          "runs": 3,
+          "spread_pct_of_median": 0.47,
+          "per_run": [
+            141.953,
+            142.156,
+            142.625
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "bs4_lxml": {
+        "rss_delta_mb": {
+          "median_across_runs": 218.438,
+          "min_across_runs": 218.406,
+          "max_across_runs": 218.719,
+          "runs": 3,
+          "spread_pct_of_median": 0.14,
+          "per_run": [
+            218.719,
+            218.406,
+            218.438
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "bs4_htmlparser": {
+        "rss_delta_mb": {
+          "median_across_runs": 225.594,
+          "min_across_runs": 225.391,
+          "max_across_runs": 225.641,
+          "runs": 3,
+          "spread_pct_of_median": 0.11,
+          "per_run": [
+            225.641,
+            225.594,
+            225.391
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      }
+    }
+  },
+  "memory_tracemalloc": {
+    "page_1mb.html": {
+      "selectolax_lexbor": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 18.477,
+          "min_across_runs": 18.477,
+          "max_across_runs": 18.477,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            18.477,
+            18.477,
+            18.477
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "selectolax_modest": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 4.532,
+          "min_across_runs": 4.532,
+          "max_across_runs": 4.532,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            4.532,
+            4.532,
+            4.532
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "lxml": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 4.754,
+          "min_across_runs": 4.753,
+          "max_across_runs": 4.754,
+          "runs": 3,
+          "spread_pct_of_median": 0.02,
+          "per_run": [
+            4.754,
+            4.754,
+            4.753
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "parsel": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 9.012,
+          "min_across_runs": 9.012,
+          "max_across_runs": 9.013,
+          "runs": 3,
+          "spread_pct_of_median": 0.01,
+          "per_run": [
+            9.012,
+            9.012,
+            9.013
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "bs4_lxml": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 24.973,
+          "min_across_runs": 24.973,
+          "max_across_runs": 24.973,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            24.973,
+            24.973,
+            24.973
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      },
+      "bs4_htmlparser": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 26.7,
+          "min_across_runs": 26.7,
+          "max_across_runs": 26.7,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            26.7,
+            26.7,
+            26.7
+          ]
+        },
+        "counts": [
+          2500,
+          2502
+        ]
+      }
+    },
+    "page_10mb.html": {
+      "selectolax_lexbor": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 149.139,
+          "min_across_runs": 149.139,
+          "max_across_runs": 149.139,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            149.139,
+            149.139,
+            149.139
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "selectolax_modest": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 17.633,
+          "min_across_runs": 17.633,
+          "max_across_runs": 17.633,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            17.633,
+            17.633,
+            17.633
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "lxml": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 9.706,
+          "min_across_runs": 9.706,
+          "max_across_runs": 9.706,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            9.706,
+            9.706,
+            9.706
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "parsel": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 18.084,
+          "min_across_runs": 18.083,
+          "max_across_runs": 18.084,
+          "runs": 3,
+          "spread_pct_of_median": 0.01,
+          "per_run": [
+            18.083,
+            18.084,
+            18.084
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "bs4_lxml": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 189.613,
+          "min_across_runs": 189.612,
+          "max_across_runs": 189.613,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            189.613,
+            189.613,
+            189.612
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      },
+      "bs4_htmlparser": {
+        "tracemalloc_peak_mb": {
+          "median_across_runs": 209.924,
+          "min_across_runs": 209.924,
+          "max_across_runs": 209.925,
+          "runs": 3,
+          "spread_pct_of_median": 0.0,
+          "per_run": [
+            209.924,
+            209.925,
+            209.924
+          ]
+        },
+        "counts": [
+          25000,
+          25002
+        ]
+      }
+    }
+  },
+  "import_cold": {
+    "selectolax.lexbor": {
+      "median_ms": {
+        "median_across_runs": 14.361,
+        "min_across_runs": 14.348,
+        "max_across_runs": 14.441,
+        "runs": 3,
+        "spread_pct_of_median": 0.65,
+        "per_run": [
+          14.441,
+          14.348,
+          14.361
+        ]
+      }
+    },
+    "selectolax.parser": {
+      "median_ms": {
+        "median_across_runs": 14.245,
+        "min_across_runs": 14.051,
+        "max_across_runs": 14.577,
+        "runs": 3,
+        "spread_pct_of_median": 3.69,
+        "per_run": [
+          14.577,
+          14.245,
+          14.051
+        ]
+      }
+    },
+    "lxml.html": {
+      "median_ms": {
+        "median_across_runs": 14.142,
+        "min_across_runs": 13.805,
+        "max_across_runs": 14.65,
+        "runs": 3,
+        "spread_pct_of_median": 5.98,
+        "per_run": [
+          14.65,
+          14.142,
+          13.805
+        ]
+      }
+    },
+    "bs4": {
+      "median_ms": {
+        "median_across_runs": 33.394,
+        "min_across_runs": 32.619,
+        "max_across_runs": 33.863,
+        "runs": 3,
+        "spread_pct_of_median": 3.73,
+        "per_run": [
+          33.863,
+          33.394,
+          32.619
+        ]
+      }
+    },
+    "parsel": {
+      "median_ms": {
+        "median_across_runs": 37.135,
+        "min_across_runs": 37.057,
+        "max_across_runs": 37.601,
+        "runs": 3,
+        "spread_pct_of_median": 1.46,
+        "per_run": [
+          37.601,
+          37.057,
+          37.135
+        ]
+      }
+    }
+  }
+}
