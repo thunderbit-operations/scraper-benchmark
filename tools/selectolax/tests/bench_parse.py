@@ -20,10 +20,11 @@ hash is selectolax_lexbor's; any parser whose content differs is recorded with
 the diff and excluded from the timed comparison for that size.
 
 GC policy (methodology v3 Part 2 item 6): GC is ENABLED throughout (closest to
-real scraper usage). For parsers whose timed task accumulates reference-cycle
-garbage inside the loop (BeautifulSoup builds a cyclic parent/child tree), we do
-an explicit gc.collect() BETWEEN iterations (outside the timed region) so dead
-objects from a previous iteration cannot inflate a later iteration's tail. This
+real scraper usage). Each iteration's tree is dropped with `del r` so Python's
+generational collector reclaims BeautifulSoup's reference cycles on its own; for
+cyclic parsers we additionally run ONE gc.collect() before the timed loop starts
+(to clear warm-up garbage), NOT a forced collect between every iteration -- a
+full-heap scan after each 10MB parse would dominate the measurement. This
 replaces v2's gc.disable(), which both (a) diverged from real usage and (b) was
 then used to "explain" tail latency -- a contradiction Fable 5 flagged.
 
@@ -227,7 +228,7 @@ def summarize(samples, iters):
         d["p99_note"] = None
     else:
         d["p99_ms"] = None
-        # how many samples back the "99th" would be, for honesty
+        # record where the "99th" would fall on this small n, so the note is exact
         rank = max(1, int(round(0.01 * (len(samples) - 1))) + 1)
         d["p99_note"] = (f"suppressed: n={len(samples)}<100; "
                          f"p90 shown is ~{len(samples)}th-largest single sample")

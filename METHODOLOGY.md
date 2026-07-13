@@ -44,7 +44,7 @@ Metadata (stars/releases) drifts — re-check each project before quoting. Versi
 | Firecrawl | self-hosted, prebuilt images | AGPL-3.0 — see below |
 | selectolax | 0.4.10 | = latest; MIT binding, bundles LGPL-2.1 (Modest) + Apache-2.0 (Lexbor) engines |
 
-## Honest caveats carried per tool
+## Caveats carried per tool
 
 These are documented so nobody reads a happy-path number without its footnote:
 
@@ -56,7 +56,7 @@ These are documented so nobody reads a happy-path number without its footnote:
 - **Scrapling** — adaptive selectors recovered a tracked element after a class rename, but recovered only 1 of 3 in a synthetic multi-element test. Resilient tracking, not total recovery.
 - **trafilatura** — article-text extractor, not a structured scraper; returned product names as text but 0 structured rows on a catalog; no JS.
 - **Crawlee** — PlaywrightCrawler needs a separate `npx playwright install` (~80 MiB) not covered by `npm install crawlee`.
-- **selectolax** — a CSS-only HTML parser (no XPath, no JS, no crawl). Its pack uses its own parser-benchmark harness, not the shared catalog fixtures, and reports performance as distributions over 3 independent process runs with cross-run spread. Known behaviors surfaced by the pack (all reproduced, none original to it): the Lexbor backend does not descend into `<template>` content (upstream selectolax#146 / lexbor#170); non-UTF-8 bytes are stored raw and later silently corrupt on `.text()` while `.html` raises (related to selectolax#40); `lxml`'s parse step is faster than selectolax's on this machine (counter to most published benchmarks — treated as a single-platform result); the Modest backend aborts the process on `:dir()`. Numbers are macOS arm64 / Python 3.14 only.
+- **selectolax** — a CSS-only HTML parser (no XPath, no JS, no crawl). Its pack uses its own parser-benchmark harness, not the shared catalog fixtures, and reports performance as distributions over 3 separate process runs with cross-run spread. Known behaviors surfaced by the pack (all reproduced, none original to it): the Lexbor backend does not descend into `<template>` content (upstream selectolax#146 / lexbor#170); non-UTF-8 bytes are stored raw and later silently corrupt on `.text()` while `.html` raises (related to selectolax#40); `lxml`'s parse step is faster than selectolax's on this machine (counter to most published benchmarks — cross-checked with two lxml APIs, treated as a single-platform result); on deeply-nested input lxml silently drops the deepest content while selectolax keeps it; the Modest backend aborts the process on `:dir()`. After a CSS fault-finding pass **soupsieve scores highest (41/41)**, not Lexbor. Numbers are macOS arm64 / Python 3.14 only.
 
 ## Compliance note
 

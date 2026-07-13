@@ -14,8 +14,10 @@ Two experiments:
      reading their href. Reports nodes/sec.
 
 GC stays enabled (real-usage policy, consistent with bench_parse.py). bs4 builds
-cyclic trees; we gc.collect() between iterations OUTSIDE the timed region so one
-iteration's garbage can't tax the next. p99 suppressed for capped (n<100) cells.
+cyclic trees; each iteration's tree is dropped with `del r` so the generational
+collector reclaims them, and for cyclic parsers we run ONE gc.collect() before
+the timed loop (not between every iteration -- a per-iteration full-heap scan
+would dominate timing). p99 suppressed for capped (n<100) cells.
 """
 import argparse
 import gc

@@ -10,8 +10,9 @@ DISAGREEMENT in element counts (the interesting robustness findings: different
 parsers recover differently from real malformed markup).
 
 Speed: p50 over 30 iters of the full extraction per parser per page. bs4 builds
-cyclic trees; we gc.collect() between iterations (outside the timed region) and
-keep GC enabled throughout, consistent with the other benchmarks.
+cyclic trees; each iteration's result is dropped with `del r` and we run ONE
+gc.collect() after warm-up, before the timed loop (not between every iteration),
+keeping GC enabled throughout, consistent with the other benchmarks.
 
 FIXTURE ADMISSION GATE (methodology v3 gate 2):
   Before a page is allowed to count toward the accuracy tally, it must pass:

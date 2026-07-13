@@ -1,8 +1,10 @@
 {
+  "_generated_by": "tests/build_summary.py (all fields computed from raw result JSONs)",
   "as_of": "2026-07-10 (benchmarks re-run 2026-07-13, methodology v3)",
   "tool": "selectolax",
-  "version": "0.4.10",
-  "platform": "macOS arm64 / Python 3.14.2",
+  "version_measured": "'0.4.10'",
+  "module_has___version__": true,
+  "platform": "darwin / Python 3.14.2",
   "benchmark_runs": 3,
   "engines": [
     "lexbor",
@@ -22,13 +24,34 @@
     "1mb": 12.2,
     "10mb": 14.1
   },
-  "lexbor_vs_lxml_parse_only_p50_ratio": {
-    "10kb": 1.52,
+  "parse_only_lexbor_over_lxml_p50_ratio_gt1_means_lxml_faster": {
+    "10kb": 1.516,
     "100kb": 1.52,
-    "1mb": 1.51,
-    "10mb": 1.5
+    "1mb": 1.513,
+    "10mb": 1.498
   },
-  "note_parse_only": "ratio>1 means lxml parses FASTER than selectolax-Lexbor (counter-consensus; single platform)",
+  "throughput_100k_nodes": {
+    "selectolax_lexbor": {
+      "query_p50_ms": 39.4629,
+      "nodes_per_sec": 2534027
+    },
+    "selectolax_modest": {
+      "query_p50_ms": 34.1933,
+      "nodes_per_sec": 2924550
+    },
+    "lxml": {
+      "query_p50_ms": 33.304,
+      "nodes_per_sec": 3002646
+    },
+    "parsel": {
+      "query_p50_ms": 202.0596,
+      "nodes_per_sec": 494903
+    },
+    "bs4_lxml": {
+      "query_p50_ms": 250.5567,
+      "nodes_per_sec": 399111
+    }
+  },
   "memory_10mb_rss_delta_mb_tracemalloc_OFF": {
     "selectolax_lexbor": 144.641,
     "selectolax_modest": 168.219,
@@ -45,14 +68,10 @@
     "bs4_lxml": 189.613,
     "bs4_htmlparser": 209.924
   },
-  "note_memory": "RSS measured with tracemalloc OFF is the verdict; bs4/lean ratio ~1.6-1.8x (NOT 3x; the 3x was tracemalloc-contaminated)",
-  "import_cold_median_ms": {
-    "selectolax.lexbor": 14.361,
-    "selectolax.parser": 14.245,
-    "lxml.html": 14.142,
-    "bs4": 33.394,
-    "parsel": 37.135
-  },
+  "memory_bs4_over_lean_rss_ratio_range": [
+    1.51,
+    1.75
+  ],
   "css_coverage_41_cases_incl_fault_finding": {
     "lexbor": {
       "PASS": 39,
@@ -79,119 +98,72 @@
       "PROCESS_ABORT": 0
     },
     "soupsieve": {
-      "PASS": 40,
-      "WRONG": 1,
+      "PASS": 41,
+      "WRONG": 0,
       "UNSUPPORTED": 0,
       "PROCESS_ABORT": 0
     }
   },
-  "css_note": "soupsieve scores highest (handles :lang()/:dir()/[i]); Lexbor UNSUPPORTED on :lang()/:dir(); Modest PROCESS_ABORT on :dir()",
-  "module___version__": {
-    "present": null,
-    "value": null
-  },
   "xpath_supported": {
-    "selectolax": false,
+    "lexbor": false,
+    "modest": false,
     "lxml": true,
     "parsel": true
   },
   "non_utf8_bytes_behavior": {
-    "lexbor_text": "replacement_chars",
-    "modest_text": "dropped_bytes",
-    "lexbor_html": "RAISED",
-    "modest_html": "RAISED",
-    "summary": "both engines .text() SILENTLY CORRUPT (lexbor->U+FFFD, modest->dropped bytes); both .html RAISE; fix=pass decoded str"
+    "lexbor": {
+      "corruption": "replacement_chars",
+      "html_serialization": "RAISED"
+    },
+    "modest": {
+      "corruption": "dropped_bytes",
+      "html_serialization": "RAISED"
+    }
   },
   "thread_scaling_speedup_4threads": {
-    "selectolax_lexbor": 3.547,
-    "selectolax_modest": 3.884,
-    "lxml": 1.234,
-    "bs4_lxml": 0.475
+    "selectolax_lexbor": 3.542,
+    "selectolax_modest": 3.945,
+    "lxml": 1.213,
+    "bs4_lxml": 0.259
   },
-  "thread_note": "selectolax ~3.5-3.9x (releases GIL); bs4 ~0.47x (holds GIL, slower threaded)",
-  "adversarial_crashes": {
-    "lexbor": [
-      "binary_non_html",
-      "latin1_bytes"
-    ],
-    "modest": [
-      "latin1_bytes"
-    ],
-    "lxml": [
-      "empty",
-      "whitespace_only"
-    ]
+  "long_loop_memory_growth_mb": {
+    "selectolax_lexbor": {
+      "growth_first_to_last_mb": 10.0,
+      "verdict": "no_monotonic_growth_bounded_working_set"
+    },
+    "selectolax_modest": {
+      "growth_first_to_last_mb": 10.094,
+      "verdict": "no_monotonic_growth_bounded_working_set"
+    },
+    "lxml": {
+      "growth_first_to_last_mb": -3.578,
+      "verdict": "no_monotonic_growth_bounded_working_set"
+    }
+  },
+  "long_loop_instrument_calibration": {
+    "known_leak_per_iter_kb": 100,
+    "injected_total_mb": 195.3,
+    "observed_growth_mb": 219.219,
+    "instrument_tracks_known_leak": true,
+    "note": "current-RSS instrument registered the injected leak (observed >= 50% of injected) -> a real leak in the parsers would show; ru_maxrss would have read ~0 for a leak under a prior stage's high-water peak."
   },
   "real_world_admitted": 11,
-  "real_world_excluded": [],
-  "real_world_lexbor_vs_lxml_identical": "10 of 11",
-  "real_world_disagreements_vs_lxml": [
-    {
-      "page": "docs_mdn_array.html",
-      "parser": "selectolax_lexbor",
-      "n_links": 497,
-      "d_links_vs_lxml": -11,
-      "n_headings": 44,
-      "d_headings_vs_lxml": 0,
-      "n_imgs": 0,
-      "d_imgs_vs_lxml": 0
+  "real_world_excluded": 0,
+  "parse_only_etree_crosscheck": {
+    "100kb": {
+      "both_lxml_apis_beat_selectolax_lexbor": true,
+      "two_api_margin_pct": 0.72,
+      "lexbor_slower_than_lxml_html_by_pct": 50.8
     },
-    {
-      "page": "docs_python.html",
-      "parser": "parsel",
-      "n_links": 343,
-      "d_links_vs_lxml": 2,
-      "n_headings": 9,
-      "d_headings_vs_lxml": 0,
-      "n_imgs": 3,
-      "d_imgs_vs_lxml": 0
+    "1mb": {
+      "both_lxml_apis_beat_selectolax_lexbor": true,
+      "two_api_margin_pct": 1.56,
+      "lexbor_slower_than_lxml_html_by_pct": 58.7
+    },
+    "10mb": {
+      "both_lxml_apis_beat_selectolax_lexbor": true,
+      "two_api_margin_pct": 3.97,
+      "lexbor_slower_than_lxml_html_by_pct": 62.6
     }
-  ],
-  "findings": [
-    {
-      "id": "FINDING-01",
-      "novelty": "DOCUMENTED-folklore",
-      "text": "selectolax-Lexbor ~12-17x faster than BeautifulSoup(html.parser), ~10-14x vs bs4(lxml) on parse+extract"
-    },
-    {
-      "id": "FINDING-02/03",
-      "novelty": "EXCLUSIVE (counter-consensus, single platform)",
-      "text": "full task tie with lxml; parse-only lxml ~33-34pct FASTER than selectolax-Lexbor (opposite of published benchmarks)"
-    },
-    {
-      "id": "FINDING-14",
-      "novelty": "KNOWN-ISSUE: selectolax#146 / lexbor#170",
-      "text": "Lexbor silently drops content inside <template> (MDN 497 vs 508 links); reproduction of a documented open issue, not a discovery"
-    },
-    {
-      "id": "FINDING-12",
-      "novelty": "KNOWN-ISSUE: selectolax#40",
-      "text": "non-UTF-8 bytes: both engines .text() SILENTLY CORRUPT; both .html RAISE UnicodeDecodeError (corrected from earlier 'text() raises' claim)"
-    },
-    {
-      "id": "FINDING-06",
-      "novelty": "methodology exhibit",
-      "text": "tracemalloc mis-ranks parsers vs RSS; rank by RSS with tracemalloc off; bs4 memory ~1.7x not 3x"
-    },
-    {
-      "id": "FINDING-07",
-      "novelty": "n/a",
-      "text": "after fault-finding pass soupsieve (40/41) edges Lexbor (39/41); Lexbor UNSUPPORTED on :lang()/:dir()"
-    },
-    {
-      "id": "FINDING-08",
-      "novelty": "EXCLUSIVE",
-      "text": "Modest backend aborts the interpreter (SIGABRT) on :dir()"
-    },
-    {
-      "id": "FINDING-15",
-      "novelty": "EXCLUSIVE (single observation)",
-      "text": "selectolax releases the GIL (~3.5-3.9x on 4 threads); BeautifulSoup holds it (~0.47x, slower threaded)"
-    },
-    {
-      "id": "FINDING-09",
-      "novelty": "KNOWN-ISSUE partial: cssselect#138",
-      "text": "README :has() compound returns WRONG set silently on lxml/parsel/soupsieve; passes on selectolax; cssselect>=1.3.0 parses :has() so 'supported but mis-evaluates'"
-    }
-  ]
+  }
 }

@@ -1,4 +1,6 @@
 {
+  "module_has___version__": true,
+  "module___version___value": "'0.4.10'",
   "missing_css_first_returns[lexbor]": "None",
   "missing_css_returns[lexbor]": "[]",
   "missing_css_first_returns[modest]": "None",

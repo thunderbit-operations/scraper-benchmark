@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "python": "3.14.2",
+    "platform": "darwin",
+    "task": "parse-only tree construction, two lxml APIs vs selectolax-Lexbor",
+    "note": "ratio_vs_lexbor > 1 means that engine is SLOWER than lxml.html"
+  },
+  "results": {
+    "100kb": {
+      "lxml_html_fromstring": {
+        "iters": 50,
+        "p50_ms": 0.7281,
+        "p90_ms": 0.75,
+        "min_ms": 0.6779,
+        "mean_ms": 0.7256,
+        "ratio_vs_lxml_html": 1.0
+      },
+      "lxml_etree_HTMLParser": {
+        "iters": 50,
+        "p50_ms": 0.7229,
+        "p90_ms": 0.735,
+        "min_ms": 0.7108,
+        "mean_ms": 0.7236,
+        "ratio_vs_lxml_html": 0.993
+      },
+      "selectolax_lexbor": {
+        "iters": 50,
+        "p50_ms": 1.0981,
+        "p90_ms": 1.1125,
+        "min_ms": 1.0446,
+        "mean_ms": 1.0932,
+        "ratio_vs_lxml_html": 1.508
+      },
+      "_crosscheck": {
+        "both_lxml_apis_beat_selectolax_lexbor": true,
+        "two_api_margin_pct": 0.72,
+        "lexbor_slower_than_lxml_html_by_pct": 50.8
+      }
+    },
+    "1mb": {
+      "lxml_html_fromstring": {
+        "iters": 50,
+        "p50_ms": 7.1709,
+        "p90_ms": 7.4669,
+        "min_ms": 6.8447,
+        "mean_ms": 7.2293,
+        "ratio_vs_lxml_html": 1.0
+      },
+      "lxml_etree_HTMLParser": {
+        "iters": 50,
+        "p50_ms": 7.2828,
+        "p90_ms": 7.365,
+        "min_ms": 6.8552,
+        "mean_ms": 7.2304,
+        "ratio_vs_lxml_html": 1.016
+      },
+      "selectolax_lexbor": {
+        "iters": 50,
+        "p50_ms": 11.3803,
+        "p90_ms": 11.7411,
+        "min_ms": 11.1646,
+        "mean_ms": 11.4515,
+        "ratio_vs_lxml_html": 1.587
+      },
+      "_crosscheck": {
+        "both_lxml_apis_beat_selectolax_lexbor": true,
+        "two_api_margin_pct": 1.56,
+        "lexbor_slower_than_lxml_html_by_pct": 58.7
+      }
+    },
+    "10mb": {
+      "lxml_html_fromstring": {
+        "iters": 50,
+        "p50_ms": 109.3004,
+        "p90_ms": 132.6259,
+        "min_ms": 79.8534,
+        "mean_ms": 111.1339,
+        "ratio_vs_lxml_html": 1.0
+      },
+      "lxml_etree_HTMLParser": {
+        "iters": 50,
+        "p50_ms": 105.1277,
+        "p90_ms": 115.3425,
+        "min_ms": 97.3425,
+        "mean_ms": 105.1871,
+        "ratio_vs_lxml_html": 0.962
+      },
+      "selectolax_lexbor": {
+        "iters": 50,
+        "p50_ms": 177.7613,
+        "p90_ms": 180.6432,
+        "min_ms": 162.3257,
+        "mean_ms": 175.4948,
+        "ratio_vs_lxml_html": 1.626
+      },
+      "_crosscheck": {
+        "both_lxml_apis_beat_selectolax_lexbor": true,
+        "two_api_margin_pct": 3.97,
+        "lexbor_slower_than_lxml_html_by_pct": 62.6
+      }
+    }
+  }
+}

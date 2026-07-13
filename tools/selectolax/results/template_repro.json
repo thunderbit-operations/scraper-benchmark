@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "python": "3.14.2",
+    "fixture": "<a href=\"/outside\">o</a><template><a href=\"/inside\">t</a></template><a href=\"/normal\">n</a>",
+    "expected": "lexbor=2 (misses /inside); modest/lxml/bs4=3"
+  },
+  "css_a_counts": {
+    "selectolax_lexbor": 2,
+    "selectolax_modest": 3,
+    "lxml_html": 3,
+    "bs4_html_parser": 3,
+    "bs4_lxml": 3
+  },
+  "lexbor_only_drops_template_anchor": true,
+  "lexbor_template_content_unreachable_via_api": true,
+  "lexbor_template_reachability": {
+    "template_node_found": true,
+    "template_css_a_len": 0,
+    "template_child_is_none": true,
+    "template_inner_html_repr": "''",
+    "template_html_contains_inside_anchor": true
+  }
+}

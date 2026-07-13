@@ -15,9 +15,14 @@ Three experiments (all numbers computed at runtime):
 
   B) LONG-LOOP MEMORY GROWTH (leak check)
      Parse + extract + DROP the tree in a tight loop for K iterations, sampling
-     process RSS at intervals. A healthy parser's RSS plateaus; a leak shows
-     monotonic growth. We report first/last/max RSS and a simple slope so the
-     doc can state "no growth beyond X MB over K iterations" from data.
+     CURRENT RSS (via `ps`) at intervals. Each subject runs in its OWN fresh
+     subprocess so no earlier stage's high-water mark contaminates the baseline
+     (the reason we do NOT use ru_maxrss here -- see rss_current_mb docstring).
+     A calibration subject that intentionally retains 100 KB/iter is measured
+     the same way, so the JSON proves the instrument tracks a real leak before
+     we conclude "no leak" for the parsers. A healthy parser's RSS plateaus; a
+     leak shows monotonic growth. We report first/last/max RSS and a simple
+     slope so the doc can state "no growth beyond X MB over K iterations".
 
   C) NODE LIFECYCLE (use-after-free / dangling handle safety)
      Hold a Node handle, then let its owning tree go out of scope / be reparsed,
@@ -45,6 +50,25 @@ def rss_mb():
     import resource
     r = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     return (r / 1024.0 / 1024.0) if sys.platform == "darwin" else (r / 1024.0)
+
+
+def rss_current_mb():
+    """CURRENT resident set size in MB (not a high-water mark).
+
+    The leak check must read *current* RSS, not ru_maxrss: ru_maxrss is a
+    monotonic process high-water mark, so if any earlier stage in the same
+    process (e.g. the bs4 4-thread run in thread_scaling) pushed the peak up,
+    a later leak that stays *under* that peak never sets a new high-water mark
+    and reads 0.0 growth -- i.e. the instrument goes blind to real leaks below
+    the historical peak. Current RSS via `ps` climbs with a real leak.
+    (Kept dependency-free on purpose; psutil would work too.)
+    """
+    out = subprocess.run(["ps", "-o", "rss=", "-p", str(os.getpid())],
+                         capture_output=True, text=True)
+    try:
+        return int(out.stdout.strip()) / 1024.0  # ps reports KB on macOS/Linux
+    except (ValueError, TypeError):
+        return float("nan")
 
 
 # ---------------- A) thread scaling ----------------
@@ -110,44 +134,127 @@ def thread_scaling(html, n_tasks=48, threads=4, repeat=3):
 
 
 # ---------------- B) long-loop memory growth ----------------
-def mem_growth(html, iters=2000, sample_every=200):
+# Each subject runs in its OWN fresh subprocess so (a) no earlier stage's RSS
+# peak contaminates the baseline, and (b) the instrument reads CURRENT RSS.
+# A calibration subject with a KNOWN 100 KB/iter leak is measured the same way,
+# so the JSON itself proves the instrument tracks a real leak before we conclude
+# "no leak" for the parsers.
+MEMLOOP_CHILD = r'''
+import os, sys, gc, json, subprocess
+
+def rss_current_mb():
+    out = subprocess.run(["ps","-o","rss=","-p",str(os.getpid())],capture_output=True,text=True)
+    return int(out.stdout.strip())/1024.0
+
+subject = sys.argv[1]
+iters = int(sys.argv[2])
+sample_every = int(sys.argv[3])
+html_path = sys.argv[4]
+html = open(html_path).read()
+
+if subject == "selectolax_lexbor":
     from selectolax.lexbor import LexborHTMLParser
+    def step(_leak):
+        t = LexborHTMLParser(html); _ = [n.attributes.get("href") for n in t.css("a")]
+elif subject == "selectolax_modest":
     from selectolax.parser import HTMLParser
+    def step(_leak):
+        t = HTMLParser(html); _ = [n.attributes.get("href") for n in t.css("a")]
+elif subject == "lxml":
     import lxml.html
+    def step(_leak):
+        t = lxml.html.fromstring(html); _ = [n.get("href") for n in t.cssselect("a")]
+elif subject == "_calibration_known_leak":
+    # Instrument calibration: retain 100 KB per iteration -> a real, monotonic leak.
+    def step(_leak):
+        _leak.append(bytearray(100*1024))
+else:
+    print(json.dumps({"error": "unknown subject"})); sys.exit(2)
 
-    def sl_lexbor():
-        t = LexborHTMLParser(html)
-        _ = [n.attributes.get("href") for n in t.css("a")]
+leak_store = []
+gc.collect()
+base = rss_current_mb()
+samples = []
+for i in range(1, iters+1):
+    step(leak_store)
+    if i % sample_every == 0:
+        gc.collect()   # sample RETAINED memory, not in-flight parse allocations
+        samples.append(round(rss_current_mb() - base, 3))
+out = {
+    "subject": subject,
+    "instrument": "current_rss_ps_mb",
+    "iters": iters,
+    "rss_base_mb": round(base, 2),
+    "rss_delta_samples_mb": samples,
+    "rss_delta_first_sample_mb": samples[0] if samples else None,
+    "rss_delta_last_sample_mb": samples[-1] if samples else None,
+    "rss_delta_max_mb": max(samples) if samples else None,
+    "growth_first_to_last_mb": round(samples[-1]-samples[0], 3) if len(samples) >= 2 else None,
+}
+if subject == "_calibration_known_leak":
+    out["injected_total_mb"] = round(iters*100/1024.0, 1)
+print(json.dumps(out))
+'''
 
-    def sl_modest():
-        t = HTMLParser(html)
-        _ = [n.attributes.get("href") for n in t.css("a")]
 
-    def do_lxml():
-        t = lxml.html.fromstring(html)
-        _ = [n.get("href") for n in t.cssselect("a")]
-
-    loops = {"selectolax_lexbor": sl_lexbor, "selectolax_modest": sl_modest, "lxml": do_lxml}
+def mem_growth(html_path, iters=2000, sample_every=200):
+    # Order matters only for readability; each runs in its own process anyway.
+    subjects = ["_calibration_known_leak", "selectolax_lexbor", "selectolax_modest", "lxml"]
     res = {}
-    for name, fn in loops.items():
-        gc.collect()
-        samples = []
-        base = rss_mb()
-        for i in range(1, iters + 1):
-            fn()
-            if i % sample_every == 0:
-                samples.append(round(rss_mb() - base, 3))
-        res[name] = {
-            "iters": iters,
-            "rss_base_mb": round(base, 2),
-            "rss_delta_samples_mb": samples,
-            "rss_delta_first_sample_mb": samples[0] if samples else None,
-            "rss_delta_last_sample_mb": samples[-1] if samples else None,
-            "rss_delta_max_mb": max(samples) if samples else None,
-            "growth_first_to_last_mb": round(samples[-1] - samples[0], 3) if len(samples) >= 2 else None,
-        }
-        print(f"[MEMLOOP] {name:<20} iters={iters} rss_delta first={samples[0]}MB "
-              f"last={samples[-1]}MB max={max(samples)}MB growth={res[name]['growth_first_to_last_mb']}MB")
+    for subject in subjects:
+        p = subprocess.run([PY, "-c", MEMLOOP_CHILD, subject, str(iters),
+                            str(sample_every), html_path],
+                           capture_output=True, text=True, timeout=600)
+        if p.returncode != 0:
+            res[subject] = {"result": "child_nonzero_exit", "returncode": p.returncode,
+                            "stderr": p.stderr[-200:]}
+            print(f"[MEMLOOP] {subject:<26} FAILED rc={p.returncode}")
+            continue
+        try:
+            r = json.loads(p.stdout.strip().splitlines()[-1])
+        except Exception:
+            res[subject] = {"result": "parse_err", "stdout": p.stdout[-200:]}
+            continue
+        # Data-derived leak verdict (not eyeballed): a real leak is MONOTONIC and
+        # its total growth scales with iters (the calibration subject climbs to
+        # ~injected_total). We flag "leak" only if the samples rise near-monotonically
+        # AND end well above where they started; churn that goes up and back down,
+        # or a bounded plateau, is "no monotonic growth (bounded working set)".
+        s = r.get("rss_delta_samples_mb") or []
+        if subject != "_calibration_known_leak" and len(s) >= 3:
+            ups = sum(1 for i in range(1, len(s)) if s[i] > s[i - 1] + 0.5)
+            frac_up = ups / (len(s) - 1)
+            span = max(s) - min(s)
+            g = r.get("growth_first_to_last_mb") or 0.0
+            r["leak_verdict"] = ("monotonic_growth_possible_leak"
+                                 if (frac_up >= 0.8 and g > 0.5 * span and g > 5)
+                                 else "no_monotonic_growth_bounded_working_set")
+            r["fraction_samples_increasing"] = round(frac_up, 2)
+        res[subject] = r
+        print(f"[MEMLOOP] {subject:<26} iters={iters} base={r['rss_base_mb']}MB "
+              f"first={r['rss_delta_first_sample_mb']}MB last={r['rss_delta_last_sample_mb']}MB "
+              f"max={r['rss_delta_max_mb']}MB growth={r['growth_first_to_last_mb']}MB "
+              f"{r.get('leak_verdict','')}")
+
+    # Instrument self-check: the known-leak subject MUST show growth (else the
+    # instrument is blind and no "no leak" conclusion is valid).
+    cal = res.get("_calibration_known_leak", {})
+    injected = cal.get("injected_total_mb")
+    observed = cal.get("rss_delta_last_sample_mb")
+    ok = isinstance(observed, (int, float)) and isinstance(injected, (int, float)) \
+        and observed >= 0.5 * injected
+    res["_instrument_calibration"] = {
+        "known_leak_per_iter_kb": 100,
+        "injected_total_mb": injected,
+        "observed_growth_mb": observed,
+        "instrument_tracks_known_leak": bool(ok),
+        "note": ("current-RSS instrument registered the injected leak "
+                 "(observed >= 50% of injected) -> a real leak in the parsers "
+                 "would show; ru_maxrss would have read ~0 for a leak under a "
+                 "prior stage's high-water peak."),
+    }
+    print(f"[MEMLOOP] instrument calibration: injected~{injected}MB "
+          f"observed~{observed}MB tracks_leak={ok}")
     return res
 
 
@@ -217,17 +324,20 @@ def main():
     ap.add_argument("--run-id", type=int, default=0)
     args = ap.parse_args()
 
-    html_1mb = open(os.path.join(FIX, "page_1mb.html")).read()
+    html_1mb_path = os.path.join(FIX, "page_1mb.html")
+    html_1mb = open(html_1mb_path).read()
 
     print("=== A) thread scaling / GIL release ===")
     a = thread_scaling(html_1mb)
-    print("\n=== B) long-loop memory growth ===")
-    b = mem_growth(html_1mb)
+    print("\n=== B) long-loop memory growth (current-RSS instrument, per-subject subprocess) ===")
+    b = mem_growth(html_1mb_path)
     print("\n=== C) node lifecycle ===")
     c = node_lifecycle()
 
     out = {"meta": {"run_id": args.run_id, "python": sys.version.split()[0],
-                    "note": "GIL signal is empirical wall-clock speedup, not a source claim"},
+                    "note": "GIL signal is empirical wall-clock speedup, not a source claim; "
+                            "mem_growth uses CURRENT RSS (ps) in a fresh subprocess and "
+                            "includes a known-leak calibration subject"},
            "thread_scaling": a, "mem_growth": b, "node_lifecycle": c}
     with open(os.path.join(RAW, "production_dims.json"), "w") as f:
         json.dump(out, f, indent=2)

@@ -23,9 +23,11 @@ Methodology v3 Part 3 (anti-bias):
   - Fault-finding pass appends selectors chosen to BREAK Lexbor (:lang(), :dir(),
     plus a two-case [a=v i] check) so a high Lexbor score is earned against
     hostile selectors, not only against selectors it was built to pass.
-  - :has() divergence classified precisely: cssselect >=1.3.0 (Jan 2025) parses
-    :has(), so lxml/parsel returning the wrong set here is WRONG ("supported but
-    buggy evaluation"), which is worse than "unsupported" (cf. scrapy/cssselect#138).
+  - :has() divergence classified precisely: cssselect has parsed :has() since
+    1.2.0 (released 2022-10-27, "with some limitations"); this pack tests
+    cssselect 1.4.0. So lxml/parsel returning the wrong set here is WRONG
+    ("supported but buggy evaluation"), which is worse than "unsupported"
+    (cf. scrapy/cssselect#138).
 """
 import json
 import os
@@ -136,9 +138,16 @@ CASES = [
     (":is() list", ":is(#p1, #p4)", FX, {"p1", "p4"}),
     (":where() list", ":where(#p2)", FX, {"p2"}),
     ("attr case-insensitive [a=v i]", '[data-role="LEAD" i]', FX, {"p1"}),
+    # README compound. Fixture is WELL-FORMED (explicitly closed <p> siblings):
+    # an earlier version used unclosed <p> tags, which soupsieve's html.parser
+    # tree builder nested rather than treating as siblings, making soupsieve
+    # return [] (a tree-builder artifact, not a :has() bug). With six real
+    # siblings, soupsieve returns the correct {p1,p5} and only cssselect
+    # (lxml/parsel) genuinely mis-evaluates the compound (adds p3). See FINDING-09.
     ("complex nth+not (README)",
      "div > :nth-child(2n+1):not(:has(a))",
-     "<div><p id=p1><p id=p2><p id=p3><a>link</a><p id=p4><p id=p5>text<p id=p6></div>",
+     "<div><p id=p1></p><p id=p2></p><p id=p3><a>link</a></p>"
+     "<p id=p4></p><p id=p5>text</p><p id=p6></p></div>",
      {"p1", "p5"}),
     # ---- fault-finding pass (methodology v3) ----
     (":lang(en) [FAULT-FIND]", ":lang(en)", FX_LANG, {"p1", "q1"}),

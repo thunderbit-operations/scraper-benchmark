@@ -1,103 +1,145 @@
 {
   "meta": {
-    "run_id": 0,
+    "run_id": 1,
     "python": "3.14.2",
-    "note": "GIL signal is empirical wall-clock speedup, not a source claim"
+    "note": "GIL signal is empirical wall-clock speedup, not a source claim; mem_growth uses CURRENT RSS (ps) in a fresh subprocess and includes a known-leak calibration subject"
   },
   "thread_scaling": {
     "selectolax_lexbor": {
       "n_tasks": 48,
       "threads": 4,
-      "single_thread_s": 0.5734,
-      "threaded_s": 0.1617,
-      "speedup": 3.547,
+      "single_thread_s": 0.5627,
+      "threaded_s": 0.1589,
+      "speedup": 3.542,
       "gil_release_signal": "likely-releases-GIL"
     },
     "selectolax_modest": {
       "n_tasks": 48,
       "threads": 4,
-      "single_thread_s": 0.6869,
-      "threaded_s": 0.1768,
-      "speedup": 3.884,
+      "single_thread_s": 0.6956,
+      "threaded_s": 0.1763,
+      "speedup": 3.945,
       "gil_release_signal": "likely-releases-GIL"
     },
     "lxml": {
       "n_tasks": 48,
       "threads": 4,
-      "single_thread_s": 0.4697,
-      "threaded_s": 0.3807,
-      "speedup": 1.234,
+      "single_thread_s": 0.4591,
+      "threaded_s": 0.3784,
+      "speedup": 1.213,
       "gil_release_signal": "inconclusive"
     },
     "bs4_lxml": {
       "n_tasks": 48,
       "threads": 4,
-      "single_thread_s": 7.0548,
-      "threaded_s": 14.8571,
-      "speedup": 0.475,
+      "single_thread_s": 6.9448,
+      "threaded_s": 26.8422,
+      "speedup": 0.259,
       "gil_release_signal": "likely-holds-GIL"
     }
   },
   "mem_growth": {
-    "selectolax_lexbor": {
+    "_calibration_known_leak": {
+      "subject": "_calibration_known_leak",
+      "instrument": "current_rss_ps_mb",
       "iters": 2000,
-      "rss_base_mb": 423.64,
+      "rss_base_mb": 20.33,
       "rss_delta_samples_mb": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        20.922,
+        42.953,
+        65.0,
+        87.016,
+        109.078,
+        131.094,
+        153.141,
+        175.156,
+        197.188,
+        219.219
       ],
-      "rss_delta_first_sample_mb": 0.0,
-      "rss_delta_last_sample_mb": 0.0,
-      "rss_delta_max_mb": 0.0,
-      "growth_first_to_last_mb": 0.0
+      "rss_delta_first_sample_mb": 20.922,
+      "rss_delta_last_sample_mb": 219.219,
+      "rss_delta_max_mb": 219.219,
+      "growth_first_to_last_mb": 198.297,
+      "injected_total_mb": 195.3
+    },
+    "selectolax_lexbor": {
+      "subject": "selectolax_lexbor",
+      "instrument": "current_rss_ps_mb",
+      "iters": 2000,
+      "rss_base_mb": 25.8,
+      "rss_delta_samples_mb": [
+        24.734,
+        34.422,
+        34.469,
+        34.703,
+        34.703,
+        34.719,
+        34.719,
+        34.734,
+        34.734,
+        34.734
+      ],
+      "rss_delta_first_sample_mb": 24.734,
+      "rss_delta_last_sample_mb": 34.734,
+      "rss_delta_max_mb": 34.734,
+      "growth_first_to_last_mb": 10.0,
+      "leak_verdict": "no_monotonic_growth_bounded_working_set",
+      "fraction_samples_increasing": 0.11
     },
     "selectolax_modest": {
+      "subject": "selectolax_modest",
+      "instrument": "current_rss_ps_mb",
       "iters": 2000,
-      "rss_base_mb": 423.64,
+      "rss_base_mb": 25.5,
       "rss_delta_samples_mb": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        31.312,
+        31.375,
+        35.531,
+        35.547,
+        35.547,
+        35.547,
+        35.547,
+        35.562,
+        35.562,
+        41.406
       ],
-      "rss_delta_first_sample_mb": 0.0,
-      "rss_delta_last_sample_mb": 0.0,
-      "rss_delta_max_mb": 0.0,
-      "growth_first_to_last_mb": 0.0
+      "rss_delta_first_sample_mb": 31.312,
+      "rss_delta_last_sample_mb": 41.406,
+      "rss_delta_max_mb": 41.406,
+      "growth_first_to_last_mb": 10.094,
+      "leak_verdict": "no_monotonic_growth_bounded_working_set",
+      "fraction_samples_increasing": 0.22
     },
     "lxml": {
+      "subject": "lxml",
+      "instrument": "current_rss_ps_mb",
       "iters": 2000,
-      "rss_base_mb": 423.64,
+      "rss_base_mb": 26.3,
       "rss_delta_samples_mb": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        13.359,
+        13.359,
+        13.375,
+        9.781,
+        9.781,
+        9.781,
+        9.781,
+        9.781,
+        9.781,
+        9.781
       ],
-      "rss_delta_first_sample_mb": 0.0,
-      "rss_delta_last_sample_mb": 0.0,
-      "rss_delta_max_mb": 0.0,
-      "growth_first_to_last_mb": 0.0
+      "rss_delta_first_sample_mb": 13.359,
+      "rss_delta_last_sample_mb": 9.781,
+      "rss_delta_max_mb": 13.375,
+      "growth_first_to_last_mb": -3.578,
+      "leak_verdict": "no_monotonic_growth_bounded_working_set",
+      "fraction_samples_increasing": 0.0
+    },
+    "_instrument_calibration": {
+      "known_leak_per_iter_kb": 100,
+      "injected_total_mb": 195.3,
+      "observed_growth_mb": 219.219,
+      "instrument_tracks_known_leak": true,
+      "note": "current-RSS instrument registered the injected leak (observed >= 50% of injected) -> a real leak in the parsers would show; ru_maxrss would have read ~0 for a leak under a prior stage's high-water peak."
     }
   },
   "node_lifecycle": {

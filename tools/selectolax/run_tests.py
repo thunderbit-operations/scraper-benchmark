@@ -17,9 +17,12 @@ Steps:
   3. adversarial inputs           (tests/adversarial.py)
   4. non-UTF-8 encoding probe     (tests/encoding_probe.py)
   5. API / claim verification     (tests/api_usability.py)
-  6. production dimensions        (tests/production_dims.py)
-  7. real-world dirty HTML        (tests/real_world.py)  [uses committed fixtures]
-  8. performance benchmarks       (tests/run_all.py)     [N independent runs]
+  6. <template> repro (FINDING-14) (tests/template_repro.py)
+  7. production dimensions        (tests/production_dims.py)
+  8. real-world dirty HTML        (tests/real_world.py)  [uses committed fixtures]
+  9. performance benchmarks       (tests/run_all.py)     [N independent runs]
+ 10. parse-only etree cross-check (tests/etree_crosscheck.py)  [FINDING-03 defense]
+ 11. build computed summary       (tests/build_summary.py)     [derives summary from raw JSONs]
 
 Every result lands in results/. Set RUNS_N to change the benchmark run count
 (default 3, matching the published numbers). Set QUICK=1 for a fast smoke run
@@ -70,10 +73,15 @@ def main():
     run("adversarial.py")
     run("encoding_probe.py")
     run("api_usability.py")
+    run("template_repro.py")
     run("production_dims.py")
     run("real_world.py")
     # performance: N independent process runs + cross-run variance
     run("run_all.py", "--runs", runs_n)
+    # FINDING-03 defense: parse-only re-timed with two lxml APIs (idle machine ideally)
+    run("etree_crosscheck.py")
+    # summary derived from all the raw JSONs above (no hand-written numbers)
+    run("build_summary.py")
 
     print("\nAll done. Raw results are in results/ (see README.md).", flush=True)
 
