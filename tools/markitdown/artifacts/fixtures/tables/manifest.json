@@ -1,0 +1,244 @@
+{
+  "n_cases": 13,
+  "cases": [
+    {
+      "id": "t01_plain",
+      "desc": "Plain 3x3 table with a header row (control case).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 3,
+        "must_contain": [
+          "Ada",
+          "Engineer",
+          "London",
+          "Bo",
+          "Designer",
+          "Berlin"
+        ],
+        "note": "baseline; a correct GFM table has header + separator + 2 data rows"
+      }
+    },
+    {
+      "id": "t02_colspan_header",
+      "desc": "Header cell spanning 2 columns (colspan=2) over a 3-column body.",
+      "expected": {
+        "logical_rows": 4,
+        "logical_cols": 3,
+        "must_contain": [
+          "Person",
+          "First",
+          "Last",
+          "City",
+          "Ada",
+          "Lovelace",
+          "London",
+          "Turing",
+          "Manchester"
+        ],
+        "spanning": "colspan=2 on 'Person'",
+        "note": "spanned header cell — does converter duplicate/blank the spanned column?"
+      }
+    },
+    {
+      "id": "t03_rowspan_col",
+      "desc": "First column uses rowspan=2 to group two rows under one label.",
+      "expected": {
+        "logical_rows": 5,
+        "logical_cols": 3,
+        "must_contain": [
+          "Group",
+          "Fruit",
+          "Apple",
+          "Banana",
+          "Veg",
+          "Carrot",
+          "Pea"
+        ],
+        "spanning": "rowspan=2 on 'Fruit' and 'Veg'",
+        "note": "rowspan grouping — Markdown has no rowspan; does the label repeat, blank, or drop the second row?"
+      }
+    },
+    {
+      "id": "t04_colrowspan",
+      "desc": "Mixed colspan and rowspan (a merged top-left 2x2 block).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 4,
+        "must_contain": [
+          "Merged 2x2",
+          "c2",
+          "d2",
+          "a3",
+          "b3",
+          "c3",
+          "d3"
+        ],
+        "spanning": "rowspan=2 colspan=2 merged block",
+        "note": "2D merge — the hardest span case for a flat pipe grid"
+      }
+    },
+    {
+      "id": "t05_nested",
+      "desc": "A table nested inside one cell of an outer table.",
+      "expected": {
+        "logical_rows": "outer 3 / inner 3",
+        "logical_cols": "outer 2 / inner 2",
+        "must_contain": [
+          "Section",
+          "Detail",
+          "Specs",
+          "CPU",
+          "8 core",
+          "RAM",
+          "16 GB",
+          "Price",
+          "999"
+        ],
+        "spanning": "nested <table> inside a <td>",
+        "note": "GFM cannot nest tables — does inner data survive as text, flatten, or vanish?"
+      }
+    },
+    {
+      "id": "t06_wide24",
+      "desc": "Very wide table: 24 columns x 2 data rows.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 24,
+        "must_contain": [
+          "C0",
+          "C23",
+          "r1c0",
+          "r1c23",
+          "r2c0",
+          "r2c23"
+        ],
+        "note": "width stress — are all 24 columns kept, and is the header/separator arity correct?"
+      }
+    },
+    {
+      "id": "t07_headerless",
+      "desc": "Table with NO header cells — every cell is a <td>.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 3,
+        "must_contain": [
+          "2019",
+          "120",
+          "2020",
+          "98",
+          "2021",
+          "141"
+        ],
+        "note": "GFM REQUIRES a header row. Does the converter promote row 1 to header (losing it as data) or synthesize a blank header?"
+      }
+    },
+    {
+      "id": "t08_ragged",
+      "desc": "Malformed table: rows have different numbers of cells (2, 4, 3).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": "ragged (2/4/3)",
+        "must_contain": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i"
+        ],
+        "note": "ragged rows — does the converter pad, truncate to the first row's width, or emit invalid GFM?"
+      }
+    },
+    {
+      "id": "t09_empty_cells",
+      "desc": "Table with genuinely empty cells and whitespace-only cells.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 3,
+        "must_contain": [
+          "A",
+          "B",
+          "C",
+          "1",
+          "3",
+          "x"
+        ],
+        "note": "empty-cell preservation — are blanks kept as empty pipe cells so column alignment holds?"
+      }
+    },
+    {
+      "id": "t10_block_in_cell",
+      "desc": "Cells containing a <ul> list, a <br> line break, and a link.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 2,
+        "must_contain": [
+          "Feature",
+          "Notes",
+          "Formats",
+          "PDF",
+          "DOCX",
+          "XLSX",
+          "break",
+          "docs"
+        ],
+        "note": "block content in cells — a newline inside a GFM cell breaks the table; does the converter inline/escape it?"
+      }
+    },
+    {
+      "id": "t11_rtl",
+      "desc": "Right-to-left (Arabic) text in a table with dir=rtl.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 2,
+        "must_contain": [
+          "الاسم",
+          "المدينة",
+          "علي",
+          "القاهرة",
+          "سارة",
+          "دبي"
+        ],
+        "note": "RTL preservation — is the Arabic text kept intact and are cells in logical order?"
+      }
+    },
+    {
+      "id": "t12_pipe_in_cell",
+      "desc": "Cells whose text contains pipe '|', asterisks, and backticks (GFM-significant).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 2,
+        "must_contain": [
+          "Expr",
+          "Result"
+        ],
+        "adversarial": "literal '|' inside cells must be escaped or the table corrupts",
+        "note": "does the converter escape in-cell pipes so the column count stays 2?"
+      }
+    },
+    {
+      "id": "t13_caption_tfoot",
+      "desc": "Full semantic table: <caption>, 2-row <thead>, <tbody>, <tfoot> totals.",
+      "expected": {
+        "logical_rows": 5,
+        "logical_cols": 3,
+        "must_contain": [
+          "Sales by Quarter",
+          "Region",
+          "Q1",
+          "Q2",
+          "East",
+          "West",
+          "Total",
+          "18",
+          "21"
+        ],
+        "spanning": "rowspan header + colspan header + tfoot",
+        "note": "does caption survive? does tfoot merge into the body? multi-row header collapse?"
+      }
+    }
+  ]
+}

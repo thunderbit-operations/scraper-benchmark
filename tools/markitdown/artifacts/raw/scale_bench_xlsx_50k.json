@@ -1,0 +1,24 @@
+{
+  "python": "3.14.2",
+  "results": [
+    {
+      "subject": "xlsx_50k",
+      "input_bytes": 2160285,
+      "output_chars": 3722955,
+      "n_runs": 3,
+      "timings_ms": [
+        100081.1,
+        62107.2,
+        60890.6
+      ],
+      "t_ms_min": 60890.6,
+      "t_ms_median": 62107.2,
+      "t_ms_max": 100081.1,
+      "rss_mb_before": 142.3,
+      "rss_mb_after_first_convert": 516.8,
+      "rss_mb_peak_delta_firstconvert": 374.5,
+      "crashed": false,
+      "process_baseline_rss_mb": 142.3
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+empty_venv_mb	13
+core_only_markitdown_mb	161
+full_with_doc_extras_mb	310
+onnxruntime_mb	73
+numpy_mb	34
+magika_mb	3.3

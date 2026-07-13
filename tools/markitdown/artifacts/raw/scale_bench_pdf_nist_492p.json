@@ -1,0 +1,24 @@
+{
+  "python": "3.14.2",
+  "results": [
+    {
+      "subject": "pdf_nist_492p",
+      "input_bytes": 6073678,
+      "output_chars": 1625365,
+      "n_runs": 3,
+      "timings_ms": [
+        192464.8,
+        201645.7,
+        176709.4
+      ],
+      "t_ms_min": 176709.4,
+      "t_ms_median": 192464.8,
+      "t_ms_max": 201645.7,
+      "rss_mb_before": 141.6,
+      "rss_mb_after_first_convert": 181.9,
+      "rss_mb_peak_delta_firstconvert": 40.2,
+      "crashed": false,
+      "process_baseline_rss_mb": 141.6
+    }
+  ]
+}

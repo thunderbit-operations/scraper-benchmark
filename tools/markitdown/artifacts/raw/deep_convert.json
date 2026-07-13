@@ -1,0 +1,1002 @@
+{
+  "tool": "markitdown",
+  "version": "0.1.6",
+  "python": "3.14.2",
+  "web": [
+    {
+      "fixture": "books_toscrape",
+      "input_bytes": 51294,
+      "output_chars": 10478,
+      "headings": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 1
+      },
+      "md_table_rows": 0,
+      "md_links": 94,
+      "body_probes": {
+        "Home": true,
+        "Books": true,
+        "Travel": true,
+        "Sharp Objects": true,
+        "£": true
+      },
+      "boilerplate": {
+        "nonempty_lines": 159,
+        "chrome_lines": 1,
+        "chrome_fraction": 0.0063,
+        "markers_hit": [
+          "next"
+        ]
+      },
+      "timings_ms": [
+        91.85,
+        109.126,
+        78.332,
+        83.732,
+        82.67
+      ],
+      "time_ms_median": 83.732
+    },
+    {
+      "fixture": "quotes_toscrape",
+      "input_bytes": 11064,
+      "output_chars": 2973,
+      "headings": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 2
+      },
+      "md_table_rows": 0,
+      "md_links": 55,
+      "body_probes": {
+        "Albert Einstein": true,
+        "quote": true,
+        "tags": true,
+        "Login": true
+      },
+      "boilerplate": {
+        "nonempty_lines": 86,
+        "chrome_lines": 1,
+        "chrome_fraction": 0.0116,
+        "markers_hit": [
+          "next"
+        ]
+      },
+      "timings_ms": [
+        29.04,
+        49.506,
+        44.428,
+        52.62,
+        47.594
+      ],
+      "time_ms_median": 47.594
+    },
+    {
+      "fixture": "scrapethissite_forms",
+      "input_bytes": 50439,
+      "output_chars": 3385,
+      "headings": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 1
+      },
+      "md_table_rows": 27,
+      "md_links": 31,
+      "body_probes": {
+        "Boston Bruins": true,
+        "Team Name": true,
+        "Win %": true,
+        "Hartley Brody": true
+      },
+      "boilerplate": {
+        "nonempty_lines": 75,
+        "chrome_lines": 5,
+        "chrome_fraction": 0.0667,
+        "markers_hit": [
+          "hartley brody",
+          "per page",
+          "search",
+          "©"
+        ]
+      },
+      "timings_ms": [
+        93.464,
+        127.202,
+        93.892,
+        50.68,
+        54.119
+      ],
+      "time_ms_median": 93.464
+    },
+    {
+      "fixture": "wikipedia_web_scraping",
+      "input_bytes": 226771,
+      "output_chars": 60159,
+      "headings": {
+        "h1": 1,
+        "h2": 7,
+        "h3": 12,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 20
+      },
+      "md_table_rows": 9,
+      "md_links": 418,
+      "body_probes": {
+        "Web scraping": true,
+        "History": true,
+        "Techniques": true,
+        "References": true,
+        "See also": true
+      },
+      "boilerplate": {
+        "nonempty_lines": 338,
+        "chrome_lines": 42,
+        "chrome_fraction": 0.1243,
+        "markers_hit": [
+          "cookie",
+          "creative commons",
+          "jump to content",
+          "languages",
+          "log in",
+          "main menu",
+          "navigation",
+          "privacy policy",
+          "retrieved from",
+          "search",
+          "terms of use",
+          "this page was last edited",
+          "toggle the table of contents"
+        ]
+      },
+      "timings_ms": [
+        151.723,
+        315.725,
+        1128.533,
+        351.656,
+        402.97
+      ],
+      "time_ms_median": 351.656
+    }
+  ],
+  "docs": [
+    {
+      "doc": "pdf_arxiv_attention",
+      "input_bytes": 2215244,
+      "output_chars": 40174,
+      "headings": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 0
+      },
+      "md_table_rows": 72,
+      "md_links": 0,
+      "structural_probes": {
+        "Attention Is All You Need": true,
+        "Transformer": true,
+        "Multi-Head Attention": true,
+        "BLEU": true,
+        "References": true,
+        "Encoder": true,
+        "Decoder": true
+      },
+      "probes_present_ratio": "7/7",
+      "timings_ms": [
+        3706.5,
+        3273.572,
+        11775.592
+      ],
+      "time_ms_median": 3706.5
+    },
+    {
+      "doc": "pdf_bitcoin",
+      "input_bytes": 184292,
+      "output_chars": 22485,
+      "headings": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 0
+      },
+      "md_table_rows": 24,
+      "md_links": 0,
+      "structural_probes": {
+        "Satoshi Nakamoto": true,
+        "Abstract": true,
+        "proof-of-work": true,
+        "double-spending": true,
+        "References": true,
+        "Conclusion": true
+      },
+      "probes_present_ratio": "6/6",
+      "timings_ms": [
+        1341.223,
+        2362.672,
+        1391.386
+      ],
+      "time_ms_median": 1391.386
+    },
+    {
+      "doc": "pdf_scanned_financial",
+      "input_bytes": 88791,
+      "output_chars": 0,
+      "headings": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 0
+      },
+      "md_table_rows": 0,
+      "md_links": 0,
+      "structural_probes": {
+        "QUARTERLY": false,
+        "Revenue": false,
+        "North America": false,
+        "Total": false
+      },
+      "probes_present_ratio": "0/4",
+      "timings_ms": [
+        9.029,
+        18.986,
+        15.333
+      ],
+      "time_ms_median": 15.333
+    },
+    {
+      "doc": "docx_test",
+      "input_bytes": 135824,
+      "output_chars": 4651,
+      "headings": {
+        "h1": 2,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 3
+      },
+      "md_table_rows": 7,
+      "md_links": 1,
+      "structural_probes": {
+        "Microsoft": false,
+        "AutoGen": true
+      },
+      "probes_present_ratio": "1/2",
+      "timings_ms": [
+        68.282,
+        70.435,
+        110.834
+      ],
+      "time_ms_median": 70.435
+    },
+    {
+      "doc": "docx_equations",
+      "input_bytes": 15235,
+      "output_chars": 240,
+      "headings": {
+        "h1": 0,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 0
+      },
+      "md_table_rows": 0,
+      "md_links": 0,
+      "structural_probes": {
+        "equation": false,
+        "=": true
+      },
+      "probes_present_ratio": "1/2",
+      "timings_ms": [
+        128.397,
+        83.28,
+        100.857
+      ],
+      "time_ms_median": 100.857
+    },
+    {
+      "doc": "xlsx_test",
+      "input_bytes": 11562,
+      "output_chars": 808,
+      "headings": {
+        "h1": 0,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 2
+      },
+      "md_table_rows": 31,
+      "md_links": 0,
+      "structural_probes": {
+        "Sheet": true
+      },
+      "probes_present_ratio": "1/1",
+      "timings_ms": [
+        56.975,
+        61.511,
+        50.852
+      ],
+      "time_ms_median": 56.975
+    },
+    {
+      "doc": "pptx_test",
+      "input_bytes": 277515,
+      "output_chars": 2047,
+      "headings": {
+        "h1": 6,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0,
+        "total": 7
+      },
+      "md_table_rows": 11,
+      "md_links": 2,
+      "structural_probes": {
+        "slide": true
+      },
+      "probes_present_ratio": "1/1",
+      "timings_ms": [
+        35.895,
+        52.381,
+        51.791
+      ],
+      "time_ms_median": 51.791
+    }
+  ],
+  "tables": [
+    {
+      "case": "t01_plain",
+      "desc": "Plain 3x3 table with a header row (control case).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 3,
+        "must_contain": [
+          "Ada",
+          "Engineer",
+          "London",
+          "Bo",
+          "Designer",
+          "Berlin"
+        ],
+        "note": "baseline; a correct GFM table has header + separator + 2 data rows"
+      },
+      "output_chars": 97,
+      "must_contain_present": {
+        "Ada": true,
+        "Engineer": true,
+        "London": true,
+        "Bo": true,
+        "Designer": true,
+        "Berlin": true
+      },
+      "must_contain_ratio": "6/6",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "distinct_pipe_col_counts": [
+        3
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t02_colspan_header",
+      "desc": "Header cell spanning 2 columns (colspan=2) over a 3-column body.",
+      "expected": {
+        "logical_rows": 4,
+        "logical_cols": 3,
+        "must_contain": [
+          "Person",
+          "First",
+          "Last",
+          "City",
+          "Ada",
+          "Lovelace",
+          "London",
+          "Turing",
+          "Manchester"
+        ],
+        "spanning": "colspan=2 on 'Person'",
+        "note": "spanned header cell — does converter duplicate/blank the spanned column?"
+      },
+      "output_chars": 118,
+      "must_contain_present": {
+        "Person": true,
+        "First": true,
+        "Last": true,
+        "City": true,
+        "Ada": true,
+        "Lovelace": true,
+        "London": true,
+        "Turing": true,
+        "Manchester": true
+      },
+      "must_contain_ratio": "9/9",
+      "all_tokens_survived": true,
+      "pipe_row_count": 5,
+      "pipe_col_counts": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "distinct_pipe_col_counts": [
+        3
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t03_rowspan_col",
+      "desc": "First column uses rowspan=2 to group two rows under one label.",
+      "expected": {
+        "logical_rows": 5,
+        "logical_cols": 3,
+        "must_contain": [
+          "Group",
+          "Fruit",
+          "Apple",
+          "Banana",
+          "Veg",
+          "Carrot",
+          "Pea"
+        ],
+        "spanning": "rowspan=2 on 'Fruit' and 'Veg'",
+        "note": "rowspan grouping — Markdown has no rowspan; does the label repeat, blank, or drop the second row?"
+      },
+      "output_chars": 112,
+      "must_contain_present": {
+        "Group": true,
+        "Fruit": true,
+        "Apple": true,
+        "Banana": true,
+        "Veg": true,
+        "Carrot": true,
+        "Pea": true
+      },
+      "must_contain_ratio": "7/7",
+      "all_tokens_survived": true,
+      "pipe_row_count": 6,
+      "pipe_col_counts": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "distinct_pipe_col_counts": [
+        2,
+        3
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": false
+    },
+    {
+      "case": "t04_colrowspan",
+      "desc": "Mixed colspan and rowspan (a merged top-left 2x2 block).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 4,
+        "must_contain": [
+          "Merged 2x2",
+          "c2",
+          "d2",
+          "a3",
+          "b3",
+          "c3",
+          "d3"
+        ],
+        "spanning": "rowspan=2 colspan=2 merged block",
+        "note": "2D merge — the hardest span case for a flat pipe grid"
+      },
+      "output_chars": 98,
+      "must_contain_present": {
+        "Merged 2x2": true,
+        "c2": true,
+        "d2": true,
+        "a3": true,
+        "b3": true,
+        "c3": true,
+        "d3": true
+      },
+      "must_contain_ratio": "7/7",
+      "all_tokens_survived": true,
+      "pipe_row_count": 5,
+      "pipe_col_counts": [
+        4,
+        4,
+        4,
+        2,
+        4
+      ],
+      "distinct_pipe_col_counts": [
+        2,
+        4
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": false
+    },
+    {
+      "case": "t05_nested",
+      "desc": "A table nested inside one cell of an outer table.",
+      "expected": {
+        "logical_rows": "outer 3 / inner 3",
+        "logical_cols": "outer 2 / inner 2",
+        "must_contain": [
+          "Section",
+          "Detail",
+          "Specs",
+          "CPU",
+          "8 core",
+          "RAM",
+          "16 GB",
+          "Price",
+          "999"
+        ],
+        "spanning": "nested <table> inside a <td>",
+        "note": "GFM cannot nest tables — does inner data survive as text, flatten, or vanish?"
+      },
+      "output_chars": 123,
+      "must_contain_present": {
+        "Section": true,
+        "Detail": true,
+        "Specs": true,
+        "CPU": true,
+        "8 core": true,
+        "RAM": true,
+        "16 GB": true,
+        "Price": true,
+        "999": true
+      },
+      "must_contain_ratio": "9/9",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        2,
+        2,
+        14,
+        2
+      ],
+      "distinct_pipe_col_counts": [
+        2,
+        14
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": false
+    },
+    {
+      "case": "t06_wide24",
+      "desc": "Very wide table: 24 columns x 2 data rows.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 24,
+        "must_contain": [
+          "C0",
+          "C23",
+          "r1c0",
+          "r1c23",
+          "r2c0",
+          "r2c23"
+        ],
+        "note": "width stress — are all 24 columns kept, and is the header/separator arity correct?"
+      },
+      "output_chars": 649,
+      "must_contain_present": {
+        "C0": true,
+        "C23": true,
+        "r1c0": true,
+        "r1c23": true,
+        "r2c0": true,
+        "r2c23": true
+      },
+      "must_contain_ratio": "6/6",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "distinct_pipe_col_counts": [
+        24
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t07_headerless",
+      "desc": "Table with NO header cells — every cell is a <td>.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 3,
+        "must_contain": [
+          "2019",
+          "120",
+          "2020",
+          "98",
+          "2021",
+          "141"
+        ],
+        "note": "GFM REQUIRES a header row. Does the converter promote row 1 to header (losing it as data) or synthesize a blank header?"
+      },
+      "output_chars": 91,
+      "must_contain_present": {
+        "2019": true,
+        "120": true,
+        "2020": true,
+        "98": true,
+        "2021": true,
+        "141": true
+      },
+      "must_contain_ratio": "6/6",
+      "all_tokens_survived": true,
+      "pipe_row_count": 5,
+      "pipe_col_counts": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "distinct_pipe_col_counts": [
+        3
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t08_ragged",
+      "desc": "Malformed table: rows have different numbers of cells (2, 4, 3).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": "ragged (2/4/3)",
+        "must_contain": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i"
+        ],
+        "note": "ragged rows — does the converter pad, truncate to the first row's width, or emit invalid GFM?"
+      },
+      "output_chars": 63,
+      "must_contain_present": {
+        "a": true,
+        "b": true,
+        "c": true,
+        "d": true,
+        "e": true,
+        "f": true,
+        "g": true,
+        "h": true,
+        "i": true
+      },
+      "must_contain_ratio": "9/9",
+      "all_tokens_survived": true,
+      "pipe_row_count": 5,
+      "pipe_col_counts": [
+        2,
+        2,
+        2,
+        4,
+        3
+      ],
+      "distinct_pipe_col_counts": [
+        2,
+        3,
+        4
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": false
+    },
+    {
+      "case": "t09_empty_cells",
+      "desc": "Table with genuinely empty cells and whitespace-only cells.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 3,
+        "must_contain": [
+          "A",
+          "B",
+          "C",
+          "1",
+          "3",
+          "x"
+        ],
+        "note": "empty-cell preservation — are blanks kept as empty pipe cells so column alignment holds?"
+      },
+      "output_chars": 58,
+      "must_contain_present": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "1": true,
+        "3": true,
+        "x": true
+      },
+      "must_contain_ratio": "6/6",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "distinct_pipe_col_counts": [
+        3
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t10_block_in_cell",
+      "desc": "Cells containing a <ul> list, a <br> line break, and a link.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 2,
+        "must_contain": [
+          "Feature",
+          "Notes",
+          "Formats",
+          "PDF",
+          "DOCX",
+          "XLSX",
+          "break",
+          "docs"
+        ],
+        "note": "block content in cells — a newline inside a GFM cell breaks the table; does the converter inline/escape it?"
+      },
+      "output_chars": 118,
+      "must_contain_present": {
+        "Feature": true,
+        "Notes": true,
+        "Formats": true,
+        "PDF": true,
+        "DOCX": true,
+        "XLSX": true,
+        "break": true,
+        "docs": true
+      },
+      "must_contain_ratio": "8/8",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "distinct_pipe_col_counts": [
+        2
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t11_rtl",
+      "desc": "Right-to-left (Arabic) text in a table with dir=rtl.",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 2,
+        "must_contain": [
+          "الاسم",
+          "المدينة",
+          "علي",
+          "القاهرة",
+          "سارة",
+          "دبي"
+        ],
+        "note": "RTL preservation — is the Arabic text kept intact and are cells in logical order?"
+      },
+      "output_chars": 66,
+      "must_contain_present": {
+        "الاسم": true,
+        "المدينة": true,
+        "علي": true,
+        "القاهرة": true,
+        "سارة": true,
+        "دبي": true
+      },
+      "must_contain_ratio": "6/6",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "distinct_pipe_col_counts": [
+        2
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": true
+    },
+    {
+      "case": "t12_pipe_in_cell",
+      "desc": "Cells whose text contains pipe '|', asterisks, and backticks (GFM-significant).",
+      "expected": {
+        "logical_rows": 3,
+        "logical_cols": 2,
+        "must_contain": [
+          "Expr",
+          "Result"
+        ],
+        "adversarial": "literal '|' inside cells must be escaped or the table corrupts",
+        "note": "does the converter escape in-cell pipes so the column count stays 2?"
+      },
+      "output_chars": 77,
+      "must_contain_present": {
+        "Expr": true,
+        "Result": true
+      },
+      "must_contain_ratio": "2/2",
+      "all_tokens_survived": true,
+      "pipe_row_count": 4,
+      "pipe_col_counts": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "distinct_pipe_col_counts": [
+        2,
+        3,
+        4
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": false
+    },
+    {
+      "case": "t13_caption_tfoot",
+      "desc": "Full semantic table: <caption>, 2-row <thead>, <tbody>, <tfoot> totals.",
+      "expected": {
+        "logical_rows": 5,
+        "logical_cols": 3,
+        "must_contain": [
+          "Sales by Quarter",
+          "Region",
+          "Q1",
+          "Q2",
+          "East",
+          "West",
+          "Total",
+          "18",
+          "21"
+        ],
+        "spanning": "rowspan header + colspan header + tfoot",
+        "note": "does caption survive? does tfoot merge into the body? multi-row header collapse?"
+      },
+      "output_chars": 158,
+      "must_contain_present": {
+        "Sales by Quarter": true,
+        "Region": true,
+        "Q1": true,
+        "Q2": true,
+        "East": true,
+        "West": true,
+        "Total": true,
+        "18": true,
+        "21": true
+      },
+      "must_contain_ratio": "9/9",
+      "all_tokens_survived": true,
+      "pipe_row_count": 8,
+      "pipe_col_counts": [
+        3,
+        3,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "distinct_pipe_col_counts": [
+        2,
+        3
+      ],
+      "has_gfm_separator_row": true,
+      "column_arity_consistent": false
+    }
+  ],
+  "recursion": [
+    {
+      "depth": 50,
+      "fallback_fired": false,
+      "md_heading_survives": true,
+      "out_chars": 10
+    },
+    {
+      "depth": 100,
+      "fallback_fired": false,
+      "md_heading_survives": true,
+      "out_chars": 10
+    },
+    {
+      "depth": 200,
+      "fallback_fired": false,
+      "md_heading_survives": true,
+      "out_chars": 10
+    },
+    {
+      "depth": 300,
+      "fallback_fired": false,
+      "md_heading_survives": true,
+      "out_chars": 10
+    },
+    {
+      "depth": 400,
+      "fallback_fired": false,
+      "md_heading_survives": true,
+      "out_chars": 10
+    },
+    {
+      "depth": 450,
+      "fallback_fired": false,
+      "md_heading_survives": true,
+      "out_chars": 10
+    },
+    {
+      "depth": 500,
+      "fallback_fired": true,
+      "md_heading_survives": false,
+      "out_chars": 6
+    },
+    {
+      "depth": 2000,
+      "fallback_fired": true,
+      "md_heading_survives": false,
+      "out_chars": 6
+    },
+    {
+      "depth": 6000,
+      "fallback_fired": true,
+      "md_heading_survives": false,
+      "out_chars": 6
+    }
+  ]
+}

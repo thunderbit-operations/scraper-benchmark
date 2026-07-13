@@ -1,0 +1,30 @@
+# MarkItDown review pack — pinned to the exact versions exercised in this pack
+# (macOS arm64 / Python 3.14.2, snapshot 2026-07-13). See research-materials.md
+# §Source Snapshot and artifacts/logs/pip-freeze.txt for the full frozen env.
+#
+#   python3.10+ -m venv .venv && . .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# markitdown[all] pulls the document extras (pdfminer/pdfplumber, mammoth,
+# python-pptx, openpyxl, pandas, lxml, Pillow, magika + its onnxruntime).
+# We pin markitdown itself; the extras are recorded pinned below so a fresh
+# clone reproduces the same numbers. Loosen the extras if you only need a
+# newer markitdown.
+markitdown[all]==0.1.6
+
+# --- extras exercised (pinned from the tested freeze) ---
+magika==0.6.3
+onnxruntime==1.27.0
+numpy==2.5.1
+pdfminer.six==20260107
+pdfplumber==0.11.10
+mammoth==1.11.0
+python-pptx==1.0.2
+openpyxl==3.1.5
+pandas==3.0.3
+beautifulsoup4==4.15.0
+lxml==6.1.1
+pillow==12.3.0
+
+# --- fixture generation (tests/make_fixtures.py) ---
+# openpyxl (above) writes the synthetic XLSX fixtures; no extra dep needed.

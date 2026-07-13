@@ -28,3 +28,20 @@ tools/selectolax/fixtures/synthetic/page_10mb.html
 tools/selectolax/fixtures/synthetic/wide_100k_nodes.html
 # selectolax: per-run benchmark outputs (aggregated JSON is committed instead)
 tools/selectolax/results/runs/
+
+# markitdown: large fixtures are downloadable / deterministically regenerated —
+# don't commit them; FIXTURES_README.md says how to get each back.
+#   large_sheet.xlsx (50k rows)  -> python tests/make_fixtures.py
+#   arxiv_1706.03762.pdf, large_report_nist.pdf -> curl (see FIXTURES_README)
+#   mid_test_files.zip -> unreferenced convenience bundle, omitted
+tools/markitdown/artifacts/fixtures/docs/large_sheet.xlsx
+tools/markitdown/artifacts/fixtures/docs/large_report_nist.pdf
+tools/markitdown/artifacts/fixtures/docs/arxiv_1706.03762.pdf
+tools/markitdown/artifacts/fixtures/docs/mid_test_files.zip
+
+# markitdown: the pip-install-*.log files ARE evidence (the install-friction
+# root-cause in research-materials.md links to them), so whitelist them back in
+# even though the global *.log rule above would otherwise drop them. The run log
+# (markitdown-material-tests.log) stays ignored — the JSON summary carries those
+# numbers.
+!tools/markitdown/artifacts/logs/pip-install-*.log

@@ -1,0 +1,92 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<title>Complex table matrix</title></head><body>
+<h1>Complex table matrix</h1>
+<h2 id='t01_plain'>t01_plain: Plain 3x3 table with a header row (control case).</h2>
+<table><thead><tr><th>Name</th><th>Role</th><th>City</th></tr></thead>
+<tbody>
+<tr><td>Ada</td><td>Engineer</td><td>London</td></tr>
+<tr><td>Bo</td><td>Designer</td><td>Berlin</td></tr>
+</tbody></table>
+<h2 id='t02_colspan_header'>t02_colspan_header: Header cell spanning 2 columns (colspan=2) over a 3-column body.</h2>
+<table>
+<tr><th colspan="2">Person</th><th rowspan="1">City</th></tr>
+<tr><th>First</th><th>Last</th><th></th></tr>
+<tr><td>Ada</td><td>Lovelace</td><td>London</td></tr>
+<tr><td>Alan</td><td>Turing</td><td>Manchester</td></tr>
+</table>
+<h2 id='t03_rowspan_col'>t03_rowspan_col: First column uses rowspan=2 to group two rows under one label.</h2>
+<table><thead><tr><th>Group</th><th>Item</th><th>Qty</th></tr></thead>
+<tbody>
+<tr><td rowspan="2">Fruit</td><td>Apple</td><td>5</td></tr>
+<tr><td>Banana</td><td>8</td></tr>
+<tr><td rowspan="2">Veg</td><td>Carrot</td><td>3</td></tr>
+<tr><td>Pea</td><td>9</td></tr>
+</tbody></table>
+<h2 id='t04_colrowspan'>t04_colrowspan: Mixed colspan and rowspan (a merged top-left 2x2 block).</h2>
+<table>
+<tr><td rowspan="2" colspan="2">Merged 2x2</td><td>C</td><td>D</td></tr>
+<tr><td>c2</td><td>d2</td></tr>
+<tr><td>a3</td><td>b3</td><td>c3</td><td>d3</td></tr>
+</table>
+<h2 id='t05_nested'>t05_nested: A table nested inside one cell of an outer table.</h2>
+<table><thead><tr><th>Section</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Specs</td><td>
+  <table><tr><th>Key</th><th>Val</th></tr>
+  <tr><td>CPU</td><td>8 core</td></tr>
+  <tr><td>RAM</td><td>16 GB</td></tr></table>
+</td></tr>
+<tr><td>Price</td><td>999</td></tr>
+</tbody></table>
+<h2 id='t06_wide24'>t06_wide24: Very wide table: 24 columns x 2 data rows.</h2>
+<table><tr><th>C0</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th><th>C7</th><th>C8</th><th>C9</th><th>C10</th><th>C11</th><th>C12</th><th>C13</th><th>C14</th><th>C15</th><th>C16</th><th>C17</th><th>C18</th><th>C19</th><th>C20</th><th>C21</th><th>C22</th><th>C23</th></tr><tr><td>r1c0</td><td>r1c1</td><td>r1c2</td><td>r1c3</td><td>r1c4</td><td>r1c5</td><td>r1c6</td><td>r1c7</td><td>r1c8</td><td>r1c9</td><td>r1c10</td><td>r1c11</td><td>r1c12</td><td>r1c13</td><td>r1c14</td><td>r1c15</td><td>r1c16</td><td>r1c17</td><td>r1c18</td><td>r1c19</td><td>r1c20</td><td>r1c21</td><td>r1c22</td><td>r1c23</td></tr><tr><td>r2c0</td><td>r2c1</td><td>r2c2</td><td>r2c3</td><td>r2c4</td><td>r2c5</td><td>r2c6</td><td>r2c7</td><td>r2c8</td><td>r2c9</td><td>r2c10</td><td>r2c11</td><td>r2c12</td><td>r2c13</td><td>r2c14</td><td>r2c15</td><td>r2c16</td><td>r2c17</td><td>r2c18</td><td>r2c19</td><td>r2c20</td><td>r2c21</td><td>r2c22</td><td>r2c23</td></tr></table>
+<h2 id='t07_headerless'>t07_headerless: Table with NO header cells — every cell is a <td>.</h2>
+<table>
+<tr><td>2019</td><td>120</td><td>up</td></tr>
+<tr><td>2020</td><td>98</td><td>down</td></tr>
+<tr><td>2021</td><td>141</td><td>up</td></tr>
+</table>
+<h2 id='t08_ragged'>t08_ragged: Malformed table: rows have different numbers of cells (2, 4, 3).</h2>
+<table>
+<tr><td>a</td><td>b</td></tr>
+<tr><td>c</td><td>d</td><td>e</td><td>f</td></tr>
+<tr><td>g</td><td>h</td><td>i</td></tr>
+</table>
+<h2 id='t09_empty_cells'>t09_empty_cells: Table with genuinely empty cells and whitespace-only cells.</h2>
+<table><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead>
+<tbody>
+<tr><td>1</td><td></td><td>3</td></tr>
+<tr><td></td><td>x</td><td>   </td></tr>
+</tbody></table>
+<h2 id='t10_block_in_cell'>t10_block_in_cell: Cells containing a <ul> list, a <br> line break, and a link.</h2>
+<table><thead><tr><th>Feature</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Formats</td><td><ul><li>PDF</li><li>DOCX</li><li>XLSX</li></ul></td></tr>
+<tr><td>Line<br>break</td><td>see <a href="https://example.com/x">docs</a></td></tr>
+</tbody></table>
+<h2 id='t11_rtl'>t11_rtl: Right-to-left (Arabic) text in a table with dir=rtl.</h2>
+<table dir="rtl"><thead><tr><th>الاسم</th><th>المدينة</th></tr></thead>
+<tbody>
+<tr><td>علي</td><td>القاهرة</td></tr>
+<tr><td>سارة</td><td>دبي</td></tr>
+</tbody></table>
+<h2 id='t12_pipe_in_cell'>t12_pipe_in_cell: Cells whose text contains pipe '|', asterisks, and backticks (GFM-significant).</h2>
+<table><thead><tr><th>Expr</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>a | b</td><td>*bold* text</td></tr>
+<tr><td>`code`</td><td>x || y</td></tr>
+</tbody></table>
+<h2 id='t13_caption_tfoot'>t13_caption_tfoot: Full semantic table: <caption>, 2-row <thead>, <tbody>, <tfoot> totals.</h2>
+<table>
+<caption>Sales by Quarter</caption>
+<thead>
+  <tr><th rowspan="2">Region</th><th colspan="2">Half 1</th></tr>
+  <tr><th>Q1</th><th>Q2</th></tr>
+</thead>
+<tbody>
+  <tr><td>East</td><td>10</td><td>12</td></tr>
+  <tr><td>West</td><td>8</td><td>9</td></tr>
+</tbody>
+<tfoot><tr><td>Total</td><td>18</td><td>21</td></tr></tfoot>
+</table>
+</body></html>

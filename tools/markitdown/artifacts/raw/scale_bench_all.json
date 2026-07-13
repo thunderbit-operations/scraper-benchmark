@@ -1,0 +1,83 @@
+{
+  "python": "3.14.2",
+  "results": [
+    {
+      "subject": "pdf_arxiv",
+      "input_bytes": 2215244,
+      "output_chars": 40174,
+      "n_runs": 3,
+      "timings_ms": [
+        13466.1,
+        12603.7,
+        9828.9
+      ],
+      "t_ms_min": 9828.9,
+      "t_ms_median": 12603.7,
+      "t_ms_max": 13466.1,
+      "rss_mb_before": 142.6,
+      "rss_mb_after_first_convert": 167.4,
+      "rss_mb_peak_delta_firstconvert": 24.8,
+      "crashed": false,
+      "process_baseline_rss_mb": 142.6
+    },
+    {
+      "subject": "pdf_nist_492p",
+      "input_bytes": 6073678,
+      "output_chars": 1625365,
+      "n_runs": 3,
+      "timings_ms": [
+        192464.8,
+        201645.7,
+        176709.4
+      ],
+      "t_ms_min": 176709.4,
+      "t_ms_median": 192464.8,
+      "t_ms_max": 201645.7,
+      "rss_mb_before": 141.6,
+      "rss_mb_after_first_convert": 181.9,
+      "rss_mb_peak_delta_firstconvert": 40.2,
+      "crashed": false,
+      "process_baseline_rss_mb": 141.6
+    },
+    {
+      "subject": "xlsx_50k",
+      "input_bytes": 2160285,
+      "output_chars": 3722955,
+      "n_runs": 3,
+      "timings_ms": [
+        100081.1,
+        62107.2,
+        60890.6
+      ],
+      "t_ms_min": 60890.6,
+      "t_ms_median": 62107.2,
+      "t_ms_max": 100081.1,
+      "rss_mb_before": 142.3,
+      "rss_mb_after_first_convert": 516.8,
+      "rss_mb_peak_delta_firstconvert": 374.5,
+      "crashed": false,
+      "process_baseline_rss_mb": 142.3
+    },
+    {
+      "subject": "xlsx_wide64",
+      "input_bytes": 47113,
+      "output_chars": 120129,
+      "n_runs": 5,
+      "timings_ms": [
+        2630.6,
+        4715.6,
+        2883.5,
+        1681.5,
+        5884.3
+      ],
+      "t_ms_min": 1681.5,
+      "t_ms_median": 2883.5,
+      "t_ms_max": 5884.3,
+      "rss_mb_before": 142.2,
+      "rss_mb_after_first_convert": 164.6,
+      "rss_mb_peak_delta_firstconvert": 22.4,
+      "crashed": false,
+      "process_baseline_rss_mb": 142.2
+    }
+  ]
+}

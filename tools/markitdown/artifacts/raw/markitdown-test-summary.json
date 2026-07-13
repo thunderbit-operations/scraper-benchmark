@@ -1,0 +1,141 @@
+{
+  "tool": "markitdown",
+  "as_of": "2026-07-10",
+  "markitdown_version": "0.1.6",
+  "python": "3.14.2",
+  "results": [
+    {
+      "id": "books_toscrape",
+      "url": "https://books.toscrape.com/",
+      "fixture": "books_toscrape.html",
+      "fixture_bytes": 51294,
+      "success": true,
+      "convert_time_s": 0.1624,
+      "output_chars": 10478,
+      "heading_counts": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "md_table_rows": 0,
+      "md_links": 94,
+      "body_probes": {
+        "A Light in the Attic": true,
+        "Tipping the Velvet": true,
+        "£51.77": true
+      },
+      "body_probes_hit": 3,
+      "body_probes_total": 3,
+      "boiler_probes": {
+        "Books to Scrape": true,
+        "Home": true
+      },
+      "expect_table": false,
+      "raw_output": "artifacts/raw/books_toscrape.md"
+    },
+    {
+      "id": "quotes_toscrape",
+      "url": "https://quotes.toscrape.com/",
+      "fixture": "quotes_toscrape.html",
+      "fixture_bytes": 11064,
+      "success": true,
+      "convert_time_s": 0.1624,
+      "output_chars": 2973,
+      "heading_counts": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "md_table_rows": 0,
+      "md_links": 55,
+      "body_probes": {
+        "The world as we have created it": true,
+        "Albert Einstein": true,
+        "J.K. Rowling": true,
+        "change": true
+      },
+      "body_probes_hit": 4,
+      "body_probes_total": 4,
+      "boiler_probes": {
+        "Quotes to Scrape": true,
+        "Login": true
+      },
+      "expect_table": false,
+      "raw_output": "artifacts/raw/quotes_toscrape.md"
+    },
+    {
+      "id": "scrapethissite_forms",
+      "url": "https://www.scrapethissite.com/pages/forms/",
+      "fixture": "scrapethissite_forms.html",
+      "fixture_bytes": 50439,
+      "success": true,
+      "convert_time_s": 0.0847,
+      "output_chars": 3385,
+      "heading_counts": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "md_table_rows": 27,
+      "md_links": 31,
+      "body_probes": {
+        "Boston Bruins": true,
+        "Buffalo Sabres": true,
+        "Team Name": true,
+        "Win %": true
+      },
+      "body_probes_hit": 4,
+      "body_probes_total": 4,
+      "boiler_probes": {
+        "Scrape This Site": true,
+        "Sponsors": false
+      },
+      "expect_table": true,
+      "raw_output": "artifacts/raw/scrapethissite_forms.md"
+    },
+    {
+      "id": "wikipedia_web_scraping",
+      "url": "https://en.wikipedia.org/wiki/Web_scraping",
+      "fixture": "wikipedia_web_scraping.html",
+      "fixture_bytes": 226771,
+      "success": true,
+      "convert_time_s": 0.2209,
+      "output_chars": 60159,
+      "heading_counts": {
+        "h1": 1,
+        "h2": 7,
+        "h3": 12,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "md_table_rows": 9,
+      "md_links": 418,
+      "body_probes": {
+        "Web scraping": true,
+        "HTTP": true,
+        "screen scraping": true,
+        "History": true,
+        "Legal issues": true
+      },
+      "body_probes_hit": 5,
+      "body_probes_total": 5,
+      "boiler_probes": {
+        "Jump to content": true,
+        "Retrieved from": true,
+        "This page was last edited": true
+      },
+      "expect_table": false,
+      "raw_output": "artifacts/raw/wikipedia_web_scraping.md"
+    }
+  ]
+}

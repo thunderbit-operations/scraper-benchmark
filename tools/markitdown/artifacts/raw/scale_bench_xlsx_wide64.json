@@ -1,0 +1,26 @@
+{
+  "python": "3.14.2",
+  "results": [
+    {
+      "subject": "xlsx_wide64",
+      "input_bytes": 47113,
+      "output_chars": 120129,
+      "n_runs": 5,
+      "timings_ms": [
+        2630.6,
+        4715.6,
+        2883.5,
+        1681.5,
+        5884.3
+      ],
+      "t_ms_min": 1681.5,
+      "t_ms_median": 2883.5,
+      "t_ms_max": 5884.3,
+      "rss_mb_before": 142.2,
+      "rss_mb_after_first_convert": 164.6,
+      "rss_mb_peak_delta_firstconvert": 22.4,
+      "crashed": false,
+      "process_baseline_rss_mb": 142.2
+    }
+  ]
+}
