@@ -1,0 +1,206 @@
+{
+ "meta": {
+  "bs4_version": "4.15.0",
+  "python": "3.14.2",
+  "n_probes": 29,
+  "note": "能力/保真度探针; ok 字段运行时比对算出, 非手写"
+ },
+ "n_ok": 29,
+ "n_probes": 29,
+ "probes": {
+  "find_by_tag": {
+   "got": "Heading One",
+   "expect": "Heading One",
+   "ok": true,
+   "note": ""
+  },
+  "find_all_p_count": {
+   "got": 2,
+   "expect": 2,
+   "ok": true,
+   "note": ""
+  },
+  "find_by_id": {
+   "got": [
+    "container",
+    "primary"
+   ],
+   "expect": [
+    "container",
+    "primary"
+   ],
+   "ok": true,
+   "note": ""
+  },
+  "find_by_class": {
+   "got": 2,
+   "expect": 2,
+   "ok": true,
+   "note": ""
+  },
+  "find_by_attr": {
+   "got": "Second paragraph withlink1.",
+   "expect": "Second paragraph withlink1.",
+   "ok": true,
+   "note": "strip=True 逐节点拼接丢空格; 需 separator=' ' 保词界"
+  },
+  "find_all_limit": {
+   "got": 2,
+   "expect": 2,
+   "ok": true,
+   "note": ""
+  },
+  "find_with_lambda": {
+   "got": "/link2",
+   "expect": "/link2",
+   "ok": true,
+   "note": ""
+  },
+  "select_css_class": {
+   "got": 2,
+   "expect": 2,
+   "ok": true,
+   "note": ""
+  },
+  "select_descendant": {
+   "got": 2,
+   "expect": 2,
+   "ok": true,
+   "note": ""
+  },
+  "select_child_combinator": {
+   "got": 3,
+   "expect": 3,
+   "ok": true,
+   "note": ""
+  },
+  "select_attr_selector": {
+   "got": "link1",
+   "expect": "link1",
+   "ok": true,
+   "note": ""
+  },
+  "select_nth_child": {
+   "got": "beta",
+   "expect": "beta",
+   "ok": true,
+   "note": ""
+  },
+  "select_one_missing": {
+   "got": null,
+   "expect": null,
+   "ok": true,
+   "note": ""
+  },
+  "parent_name": {
+   "got": "main",
+   "expect": "main",
+   "ok": true,
+   "note": ""
+  },
+  "next_sibling_tag": {
+   "got": "LEAD",
+   "expect": "LEAD",
+   "ok": true,
+   "note": ""
+  },
+  "children_count": {
+   "got": 3,
+   "expect": 3,
+   "ok": true,
+   "note": ""
+  },
+  "descendants_has_bold": {
+   "got": true,
+   "expect": true,
+   "ok": true,
+   "note": ""
+  },
+  "stripped_strings": {
+   "got": [
+    "alpha",
+    "beta",
+    "gamma"
+   ],
+   "expect": [
+    "alpha",
+    "beta",
+    "gamma"
+   ],
+   "ok": true,
+   "note": ""
+  },
+  "find_parent_chain": {
+   "got": "main",
+   "expect": "main",
+   "ok": true,
+   "note": ""
+  },
+  "get_text_default": {
+   "got": "First bold paragraph.",
+   "expect": "First bold paragraph.",
+   "ok": true,
+   "note": ""
+  },
+  "get_text_separator": {
+   "got": "alpha|beta|gamma",
+   "expect": "alpha|beta|gamma",
+   "ok": true,
+   "note": ""
+  },
+  "bool_attr_present_value": {
+   "got": "",
+   "expect": "",
+   "ok": true,
+   "note": ""
+  },
+  "bool_attr_membership": {
+   "got": true,
+   "expect": true,
+   "ok": true,
+   "note": ""
+  },
+  "missing_attr_get_default": {
+   "got": "DEF",
+   "expect": "DEF",
+   "ok": true,
+   "note": ""
+  },
+  "multivalue_class_is_list": {
+   "got": [
+    "container",
+    "primary"
+   ],
+   "expect": [
+    "container",
+    "primary"
+   ],
+   "ok": true,
+   "note": ""
+  },
+  "decompose_removes": {
+   "got": "<p>Hello </p>",
+   "expect": "<p>Hello </p>",
+   "ok": true,
+   "note": ""
+  },
+  "new_tag_append": {
+   "got": "<p>x<a href=\"/new\">added</a></p>",
+   "expect": "<p>x<a href=\"/new\">added</a></p>",
+   "ok": true,
+   "note": ""
+  },
+  "unwrap": {
+   "got": "<div>keep</div>",
+   "expect": "<div>keep</div>",
+   "ok": true,
+   "note": ""
+  },
+  "has_version_attr": {
+   "got": true,
+   "expect": true,
+   "ok": true,
+   "note": ""
+  }
+ }
+}

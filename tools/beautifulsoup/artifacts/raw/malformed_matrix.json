@@ -1,0 +1,415 @@
+{
+ "meta": {
+  "bs4_version": "4.15.0",
+  "python": "3.14.2",
+  "backends": [
+   "html.parser",
+   "lxml",
+   "html5lib"
+  ],
+  "n_cases": 15,
+  "note": "预注册畸形样本集; expect 谓词写死于源码后再跑三后端; meets_expectation 运行时算出"
+ },
+ "per_backend_meeting_count": {
+  "html.parser": 12,
+  "lxml": 15,
+  "html5lib": 15
+ },
+ "divergent_case_ids": [
+  "broken_table",
+  "bare_li",
+  "dup_attr"
+ ],
+ "cases": [
+  {
+   "id": "unclosed_p",
+   "desc": "连续未闭合 <p>",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 11
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 6,
+     "text_len": 11
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 7,
+     "text_len": 11
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "misnested_bi",
+   "desc": "交叉错误嵌套 <b><i></b></i>",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 14
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 14
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 7,
+     "text_len": 14
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "broken_table",
+   "desc": "缺 tbody + 未闭合 td/tr",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": false,
+     "n_tags": 7,
+     "text_len": 4
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 9,
+     "text_len": 4
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 11,
+     "text_len": 4
+    }
+   },
+   "all_backends_agree": false,
+   "n_backends_meeting": 2
+  },
+  {
+   "id": "no_skeleton",
+   "desc": "裸内容, 无 html/head/body",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 2,
+     "text_len": 13
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 13
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 13
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "unquoted_attr",
+   "desc": "属性未加引号",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 1,
+     "text_len": 4
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 4
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 4
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "stray_close",
+   "desc": "孤立闭合标签在前",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 1,
+     "text_len": 10
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 10
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 10
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "bare_li",
+   "desc": "裸 li 无 ul, 未闭合",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": false,
+     "n_tags": 3,
+     "text_len": 3
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 3
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 6,
+     "text_len": 3
+    }
+   },
+   "all_backends_agree": false,
+   "n_backends_meeting": 2
+  },
+  {
+   "id": "script_lt_gt",
+   "desc": "script 内含裸 < >",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 2,
+     "text_len": 5
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 5
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 27
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "unclosed_comment",
+   "desc": "注释未闭合 <!--",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 1,
+     "text_len": 6
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 6
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 6
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "dup_attr",
+   "desc": "重复属性 id",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": false,
+     "n_tags": 1,
+     "text_len": 1
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 1
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 1
+    }
+   },
+   "all_backends_agree": false,
+   "n_backends_meeting": 2
+  },
+  {
+   "id": "nested_form",
+   "desc": "嵌套 form (规范禁止)",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 0
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 6,
+     "text_len": 0
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 6,
+     "text_len": 0
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "mixed_case",
+   "desc": "大小写混合 <DIV><SPAN>",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 2,
+     "text_len": 4
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 4
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 4
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "bad_entity",
+   "desc": "残缺实体 &amp 无分号",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 1,
+     "text_len": 18
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 18
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 18
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "block_in_inline",
+   "desc": "块级元素嵌在 <a> 内",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 2,
+     "text_len": 10
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 10
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 5,
+     "text_len": 10
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  },
+  {
+   "id": "messy_quote",
+   "desc": "属性值内含裸引号",
+   "backends": {
+    "html.parser": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 1,
+     "text_len": 4
+    },
+    "lxml": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 3,
+     "text_len": 4
+    },
+    "html5lib": {
+     "parsed": true,
+     "meets_expectation": true,
+     "n_tags": 4,
+     "text_len": 4
+    }
+   },
+   "all_backends_agree": true,
+   "n_backends_meeting": 3
+  }
+ ]
+}

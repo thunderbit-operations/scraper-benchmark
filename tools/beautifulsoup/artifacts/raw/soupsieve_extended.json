@@ -1,0 +1,247 @@
+{
+ "meta": {
+  "soupsieve_version": "2.8.4",
+  "python": "3.14.2",
+  "backend": "lxml (well-formed tree)",
+  "n_cases": 20,
+  "note": "补 selectolax 41 例矩阵之外的 bs4/soupsieve 特定用法; status 运行时算出",
+  "reuse_reference": "selectolax pack css_coverage.json 已记录 soupsieve 41/41 (基础 41 例)"
+ },
+ "tally": {
+  "PASS": 20
+ },
+ "cases": [
+  {
+   "name": "is_selector_list",
+   "css": "#root :is(h2, span)",
+   "expected": [
+    "h1",
+    "s1"
+   ],
+   "got": [
+    "h1",
+    "s1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "where_zero_specificity",
+   "css": "#root :where(h2, span)",
+   "expected": [
+    "h1",
+    "s1"
+   ],
+   "got": [
+    "h1",
+    "s1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "not_selector_list",
+   "css": "p:not(.featured):not(:has(a))",
+   "expected": [
+    "p3",
+    "p4"
+   ],
+   "got": [
+    "p3",
+    "p4"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "has_descendant",
+   "css": "p:has(a)",
+   "expected": [
+    "p1"
+   ],
+   "got": [
+    "p1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "has_direct_child",
+   "css": "p:has(> a)",
+   "expected": [
+    "p1"
+   ],
+   "got": [
+    "p1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "general_sibling",
+   "css": "#h1 ~ p",
+   "expected": [
+    "p1",
+    "p2",
+    "p3"
+   ],
+   "got": [
+    "p1",
+    "p2",
+    "p3"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "adjacent_sibling",
+   "css": "#p1 + p",
+   "expected": [
+    "p2"
+   ],
+   "got": [
+    "p2"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "attr_presence",
+   "css": "li[data-k]",
+   "expected": [
+    "li1",
+    "li3"
+   ],
+   "got": [
+    "li1",
+    "li3"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "attr_exact",
+   "css": "li[data-k='v']",
+   "expected": [
+    "li1",
+    "li3"
+   ],
+   "got": [
+    "li1",
+    "li3"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "nth_of_type",
+   "css": "li:nth-of-type(2)",
+   "expected": [
+    "li2"
+   ],
+   "got": [
+    "li2"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "first_child",
+   "css": "li:first-child",
+   "expected": [
+    "li1"
+   ],
+   "got": [
+    "li1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "last_child",
+   "css": "li:last-child",
+   "expected": [
+    "li3"
+   ],
+   "got": [
+    "li3"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "only_child",
+   "css": "#box p:only-child",
+   "expected": [
+    "p4"
+   ],
+   "got": [
+    "p4"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "contains_text",
+   "css": "p:-soup-contains('featured')",
+   "expected": [
+    "p2"
+   ],
+   "got": [
+    "p2"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "contains_own",
+   "css": "a:-soup-contains('a link')",
+   "expected": [
+    "a1"
+   ],
+   "got": [
+    "a1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "disabled_pseudo",
+   "css": "input:disabled",
+   "expected": [
+    "in1"
+   ],
+   "got": [
+    "in1"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "enabled_pseudo",
+   "css": "input:enabled",
+   "expected": [
+    "in2"
+   ],
+   "got": [
+    "in2"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "lang_pseudo",
+   "css": "#box:lang(en) p",
+   "expected": [
+    "p4"
+   ],
+   "got": [
+    "p4"
+   ],
+   "status": "PASS"
+  },
+  {
+   "name": "empty_pseudo",
+   "css": "span:empty",
+   "expected": [],
+   "got": [],
+   "status": "PASS"
+  },
+  {
+   "name": "nested_is_not",
+   "css": "p:is(.body):not(.featured)",
+   "expected": [
+    "p1",
+    "p3"
+   ],
+   "got": [
+    "p1",
+    "p3"
+   ],
+   "status": "PASS"
+  }
+ ]
+}

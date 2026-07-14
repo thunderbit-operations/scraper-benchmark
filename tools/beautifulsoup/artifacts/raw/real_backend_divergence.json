@@ -1,0 +1,346 @@
+{
+ "meta": {
+  "bs4_version": "4.15.0",
+  "python": "3.14.2",
+  "backends": [
+   "html.parser",
+   "lxml",
+   "html5lib"
+  ],
+  "n_pages": 11,
+  "fixture_source": "只读复用 tools/selectolax/artifacts/fixtures/real/ (11 站, fetched 2026-07-10, 过准入门)",
+  "note": "只测三后端抽取一致性, 不测速度 (计时复用 selectolax 分布数据); agree 字段运行时算出"
+ },
+ "n_pages_all_backends_agree": 11,
+ "divergent_pages": [],
+ "template_probe": {
+  "page": "docs_mdn_array.html",
+  "links_per_backend": {
+   "html.parser": 508,
+   "lxml": 508,
+   "html5lib": 508
+  },
+  "note": "MDN 含 <template>; bs4 三后端均把 template 内容 flatten 进主树 (与 selectolax Lexbor 相反)"
+ },
+ "pages": [
+  {
+   "page": "docs_mdn_array.html",
+   "bytes": 243391,
+   "backends": {
+    "html.parser": {
+     "links": 508,
+     "headings": 44,
+     "imgs": 0
+    },
+    "lxml": {
+     "links": 508,
+     "headings": 44,
+     "imgs": 0
+    },
+    "html5lib": {
+     "links": 508,
+     "headings": 44,
+     "imgs": 0
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    508,
+    508
+   ]
+  },
+  {
+   "page": "docs_python.html",
+   "bytes": 79636,
+   "backends": {
+    "html.parser": {
+     "links": 341,
+     "headings": 9,
+     "imgs": 3
+    },
+    "lxml": {
+     "links": 341,
+     "headings": 9,
+     "imgs": 3
+    },
+    "html5lib": {
+     "links": 341,
+     "headings": 9,
+     "imgs": 3
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    341,
+    341
+   ]
+  },
+  {
+   "page": "ecommerce_books.html",
+   "bytes": 51294,
+   "backends": {
+    "html.parser": {
+     "links": 94,
+     "headings": 21,
+     "imgs": 20
+    },
+    "lxml": {
+     "links": 94,
+     "headings": 21,
+     "imgs": 20
+    },
+    "html5lib": {
+     "links": 94,
+     "headings": 21,
+     "imgs": 20
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    94,
+    94
+   ]
+  },
+  {
+   "page": "ecommerce_webscraper_allinone.html",
+   "bytes": 15618,
+   "backends": {
+    "html.parser": {
+     "links": 35,
+     "headings": 9,
+     "imgs": 4
+    },
+    "lxml": {
+     "links": 35,
+     "headings": 9,
+     "imgs": 4
+    },
+    "html5lib": {
+     "links": 35,
+     "headings": 9,
+     "imgs": 4
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    35,
+    35
+   ]
+  },
+  {
+   "page": "forum_reddit.html",
+   "bytes": 129152,
+   "backends": {
+    "html.parser": {
+     "links": 318,
+     "headings": 3,
+     "imgs": 2
+    },
+    "lxml": {
+     "links": 318,
+     "headings": 3,
+     "imgs": 2
+    },
+    "html5lib": {
+     "links": 318,
+     "headings": 3,
+     "imgs": 2
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    318,
+    318
+   ]
+  },
+  {
+   "page": "gov_whitehouse.html",
+   "bytes": 289495,
+   "backends": {
+    "html.parser": {
+     "links": 154,
+     "headings": 12,
+     "imgs": 17
+    },
+    "lxml": {
+     "links": 154,
+     "headings": 12,
+     "imgs": 17
+    },
+    "html5lib": {
+     "links": 154,
+     "headings": 12,
+     "imgs": 17
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    154,
+    154
+   ]
+  },
+  {
+   "page": "news_bbc.html",
+   "bytes": 397766,
+   "backends": {
+    "html.parser": {
+     "links": 255,
+     "headings": 62,
+     "imgs": 50
+    },
+    "lxml": {
+     "links": 255,
+     "headings": 62,
+     "imgs": 50
+    },
+    "html5lib": {
+     "links": 255,
+     "headings": 62,
+     "imgs": 50
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    255,
+    255
+   ]
+  },
+  {
+   "page": "news_hackernews.html",
+   "bytes": 34919,
+   "backends": {
+    "html.parser": {
+     "links": 229,
+     "headings": 0,
+     "imgs": 2
+    },
+    "lxml": {
+     "links": 229,
+     "headings": 0,
+     "imgs": 2
+    },
+    "html5lib": {
+     "links": 229,
+     "headings": 0,
+     "imgs": 2
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    229,
+    229
+   ]
+  },
+  {
+   "page": "oldstyle_craigslist.html",
+   "bytes": 560624,
+   "backends": {
+    "html.parser": {
+     "links": 351,
+     "headings": 1,
+     "imgs": 0
+    },
+    "lxml": {
+     "links": 351,
+     "headings": 1,
+     "imgs": 0
+    },
+    "html5lib": {
+     "links": 351,
+     "headings": 1,
+     "imgs": 0
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    351,
+    351
+   ]
+  },
+  {
+   "page": "spa_quotes_js.html",
+   "bytes": 5808,
+   "backends": {
+    "html.parser": {
+     "links": 5,
+     "headings": 1,
+     "imgs": 0
+    },
+    "lxml": {
+     "links": 5,
+     "headings": 1,
+     "imgs": 0
+    },
+    "html5lib": {
+     "links": 5,
+     "headings": 1,
+     "imgs": 0
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    5,
+    5
+   ]
+  },
+  {
+   "page": "wiki_scraping.html",
+   "bytes": 226771,
+   "backends": {
+    "html.parser": {
+     "links": 460,
+     "headings": 20,
+     "imgs": 10
+    },
+    "lxml": {
+     "links": 460,
+     "headings": 20,
+     "imgs": 10
+    },
+    "html5lib": {
+     "links": 460,
+     "headings": 20,
+     "imgs": 10
+    }
+   },
+   "links_agree": true,
+   "headings_agree": true,
+   "imgs_agree": true,
+   "fully_agree": true,
+   "link_count_range": [
+    460,
+    460
+   ]
+  }
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "cssselect": "1.4.0",
+  "note": "XPath vs cssselect capability gap; hit counts computed at runtime; expected XPath sets pre-registered"
+ },
+ "computed": {
+  "xpath_pass": 10,
+  "total": 10,
+  "css_inexpressible_count": 7,
+  "css_ok_count": 3
+ },
+ "results": [
+  {
+   "case": "text-contains",
+   "xpath": "//p[contains(text(),\"bargain\")]",
+   "xpath_hits": [
+    "p2"
+   ],
+   "xpath_expected": [
+    "p2"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "按文本内容筛选：CSS 无文本谓词（parsel 的 :contains 是扩展，非标准 CSS）"
+  },
+  {
+   "case": "select-parent",
+   "xpath": "//b[text()=\"$10\"]/parent::p",
+   "xpath_hits": [
+    "p1"
+   ],
+   "xpath_expected": [
+    "p1"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "按子节点反选父节点：CSS 无父选择器（:has 只能筛不能返回祖先）"
+  },
+  {
+   "case": "nth-by-position-func",
+   "xpath": "//li[position()=2]",
+   "xpath_hits": [
+    "l2"
+   ],
+   "xpath_expected": [
+    "l2"
+   ],
+   "xpath_pass": true,
+   "css_equiv": "ul li:nth-child(2)",
+   "css_result": {
+    "attempted": true,
+    "outcome": "ok",
+    "hits": [
+     "l2"
+    ]
+   },
+   "why": "位置：两者都能，用于对照 baseline"
+  },
+  {
+   "case": "last-element",
+   "xpath": "//li[last()]",
+   "xpath_hits": [
+    "l4"
+   ],
+   "xpath_expected": [
+    "l4"
+   ],
+   "xpath_pass": true,
+   "css_equiv": "ul li:last-child",
+   "css_result": {
+    "attempted": true,
+    "outcome": "ok",
+    "hits": [
+     "l4"
+    ]
+   },
+   "why": "最后一个：两者都能"
+  },
+  {
+   "case": "attribute-value-extract",
+   "xpath": "//a/@href",
+   "xpath_hits": [
+    "STR:http://example.com",
+    "STR:/internal"
+   ],
+   "xpath_expected": [
+    "STR:http://example.com",
+    "STR:/internal"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "直接取属性值作为结果：CSS 选择器只能返回元素，不能返回属性值"
+  },
+  {
+   "case": "text-node-extract",
+   "xpath": "//p[@id=\"p3\"]/text()",
+   "xpath_hits": [
+    "STR:nothing special"
+   ],
+   "xpath_expected": [
+    "STR:nothing special"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "直接取文本节点作为结果：CSS 不能返回文本节点"
+  },
+  {
+   "case": "ancestor-axis",
+   "xpath": "//td[@id=\"td1\"]/ancestor::div",
+   "xpath_hits": [
+    "wrap"
+   ],
+   "xpath_expected": [
+    "wrap"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "祖先轴：CSS 完全没有向上导航能力"
+  },
+  {
+   "case": "following-sibling-typed",
+   "xpath": "//li[@id=\"l1\"]/following-sibling::li[1]",
+   "xpath_hits": [
+    "l2"
+   ],
+   "xpath_expected": [
+    "l2"
+   ],
+   "xpath_pass": true,
+   "css_equiv": "li#l1 + li",
+   "css_result": {
+    "attempted": true,
+    "outcome": "ok",
+    "hits": [
+     "l2"
+    ]
+   },
+   "why": "紧邻后继同类型：CSS 相邻兄弟选择器可近似"
+  },
+  {
+   "case": "string-length-predicate",
+   "xpath": "//li[string-length(text())>5]",
+   "xpath_hits": [
+    "l2",
+    "l4"
+   ],
+   "xpath_expected": [
+    "l2",
+    "l4"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "按文本长度筛：'second'/'fourth' 长度 6>5 命中；CSS 无字符串长度谓词"
+  },
+  {
+   "case": "count-based",
+   "xpath": "//ul[count(li)=4]",
+   "xpath_hits": [
+    "<ul>"
+   ],
+   "xpath_expected": [
+    "<ul>"
+   ],
+   "xpath_pass": true,
+   "css_equiv": null,
+   "css_result": {
+    "attempted": false,
+    "reason": "no equivalent CSS expressible"
+   },
+   "why": "按子元素计数筛父：CSS 无计数谓词"
+  }
+ ]
+}

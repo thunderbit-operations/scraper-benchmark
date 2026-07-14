@@ -1,0 +1,36 @@
+{
+ "meta": {
+  "bs4_version": "4.15.0",
+  "python": "3.14.2",
+  "iters": 300,
+  "instrument": "count of live bs4.Tag objects via gc.get_objects()",
+  "note": "先校准环存在, 再用对象计数证明 GC 关时堆积/开时回收; 结论运行时算出"
+ },
+ "cycle_calibration": {
+  "child_references_parent": true,
+  "parent_contents_holds_child": true,
+  "is_reference_cycle": true
+ },
+ "bs4_gc_off": {
+  "baseline_tags": 0,
+  "after_del_no_collect_tags": 120900,
+  "after_forced_collect_tags": 0
+ },
+ "bs4_gc_on": {
+  "baseline_tags": 0,
+  "after_del_no_collect_tags": 26598,
+  "after_forced_collect_tags": 0
+ },
+ "control_acyclic_gc_off": {
+  "baseline_objs": 26631,
+  "after_del_objs": 26631,
+  "after_collect_objs": 26631,
+  "delta_after_del": 0
+ },
+ "conclusions": {
+  "tree_is_reference_cycle": true,
+  "accumulates_when_gc_disabled": true,
+  "reclaimed_only_by_gc_collect": true,
+  "bounded_when_gc_enabled": true
+ }
+}

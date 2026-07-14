@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "bs4_version": "4.15.0",
+  "python": "3.14.2",
+  "note": "UnicodeDammit 编码嗅探; recovered 字段运行时比对目标串算出",
+  "chardet_available": true
+ },
+ "n_dammit_recovered": 5,
+ "n_bs4_recovered": 5,
+ "n_cases": 8,
+ "cases": [
+  {
+   "id": "utf8_no_decl",
+   "true_encoding": "utf-8",
+   "declared": null,
+   "dammit_detected_encoding": "utf-8",
+   "dammit_text_recovered": true,
+   "dammit_sample": "<html><body><p>café éè</p></body></html>",
+   "bs4_htmlparser_recovered": true,
+   "bs4_detected_encoding": "utf-8",
+   "bs4_sample": "café éè"
+  },
+  {
+   "id": "latin1_no_decl",
+   "true_encoding": "latin-1",
+   "declared": null,
+   "dammit_detected_encoding": "cp720",
+   "dammit_text_recovered": false,
+   "dammit_sample": "<html><body><p>cafل لك</p></body></html>",
+   "bs4_htmlparser_recovered": false,
+   "bs4_detected_encoding": "cp720",
+   "bs4_sample": "cafل لك"
+  },
+  {
+   "id": "cp1252_no_decl",
+   "true_encoding": "cp1252",
+   "declared": null,
+   "dammit_detected_encoding": "cp862",
+   "dammit_text_recovered": false,
+   "dammit_sample": "<html><body><p>cafΘ א99</p></body></html>",
+   "bs4_htmlparser_recovered": false,
+   "bs4_detected_encoding": "cp862",
+   "bs4_sample": "cafΘ א99"
+  },
+  {
+   "id": "utf16_bom",
+   "true_encoding": "utf-16",
+   "declared": null,
+   "dammit_detected_encoding": "utf-16le",
+   "dammit_text_recovered": true,
+   "dammit_sample": "<html><body><p>café éè</p></body></html>",
+   "bs4_htmlparser_recovered": true,
+   "bs4_detected_encoding": "utf-16le",
+   "bs4_sample": "café éè"
+  },
+  {
+   "id": "gbk_chinese",
+   "true_encoding": "gbk",
+   "declared": null,
+   "dammit_detected_encoding": "gb18030",
+   "dammit_text_recovered": true,
+   "dammit_sample": "<html><body><p>汉字编码测试</p></body></html>",
+   "bs4_htmlparser_recovered": true,
+   "bs4_detected_encoding": "gb18030",
+   "bs4_sample": "汉字编码测试"
+  },
+  {
+   "id": "shiftjis",
+   "true_encoding": "shift_jis",
+   "declared": null,
+   "dammit_detected_encoding": "cp932",
+   "dammit_text_recovered": true,
+   "dammit_sample": "<html><body><p>日本語テスト</p></body></html>",
+   "bs4_htmlparser_recovered": true,
+   "bs4_detected_encoding": "cp932",
+   "bs4_sample": "日本語テスト"
+  },
+  {
+   "id": "latin1_declared_utf8",
+   "true_encoding": "latin-1",
+   "declared": "utf-8",
+   "dammit_detected_encoding": "iso-8859-1",
+   "dammit_text_recovered": true,
+   "dammit_sample": "<html><head><meta charset=\"utf-8\"></head><body><p>café éè</p></body></html>",
+   "bs4_htmlparser_recovered": true,
+   "bs4_detected_encoding": "iso-8859-1",
+   "bs4_sample": "café éè"
+  },
+  {
+   "id": "utf8_declared_latin1",
+   "true_encoding": "utf-8",
+   "declared": "latin-1",
+   "dammit_detected_encoding": "iso-8859-1",
+   "dammit_text_recovered": false,
+   "dammit_sample": "<html><head><meta charset=\"latin-1\"></head><body><p>cafÃ© Ã©Ã¨</p></body></html>",
+   "bs4_htmlparser_recovered": false,
+   "bs4_detected_encoding": "latin-1",
+   "bs4_sample": "cafÃ© Ã©Ã¨"
+  }
+ ]
+}

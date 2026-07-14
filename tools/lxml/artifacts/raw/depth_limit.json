@@ -1,0 +1,51 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "libxml2_version": "2.14.6",
+  "reuse_ref": "selectolax adversarial.json (lxml deep_nesting_1000/5000 has_deep=false, as-of 2026-07-13)",
+  "mechanism": "libxml2 default ~256-level nesting cap = DoS guard; huge_tree=True lifts it (documented; lxml FAQ / launchpad #65510)",
+  "note": "reached_depth / has_deep computed at runtime"
+ },
+ "computed": {
+  "default_caps_around_256": true,
+  "huge_tree_recovers_depth_300": true,
+  "huge_tree_still_capped_at_5000": true,
+  "huge_tree_depth_at_5000": 2045
+ },
+ "probes": [
+  {
+   "requested_depth": 300,
+   "default": {
+    "has_deep": false,
+    "reached_depth": 253
+   },
+   "huge_tree": {
+    "has_deep": true,
+    "reached_depth": 299
+   }
+  },
+  {
+   "requested_depth": 1000,
+   "default": {
+    "has_deep": false,
+    "reached_depth": 253
+   },
+   "huge_tree": {
+    "has_deep": true,
+    "reached_depth": 999
+   }
+  },
+  {
+   "requested_depth": 5000,
+   "default": {
+    "has_deep": false,
+    "reached_depth": 253
+   },
+   "huge_tree": {
+    "has_deep": false,
+    "reached_depth": 2045
+   }
+  }
+ ]
+}

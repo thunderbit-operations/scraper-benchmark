@@ -1,0 +1,47 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "fixture": {
+   "path": "artifacts/fixtures/big_records.xml",
+   "bytes": 26744801,
+   "n_records": 300000
+  },
+  "note": "capability/memory test, NOT timing; each subject in its own subprocess; live_element_* are gc-counted at runtime"
+ },
+ "computed": {
+  "bounded_peak_rss_delta_mb": 1.2,
+  "full_load_peak_rss_delta_mb": 386.1,
+  "noclear_peak_rss_delta_mb": 386.6,
+  "instrument_sees_full_heavier_than_bounded": true,
+  "bounded_is_fraction_of_full": 0.003,
+  "iterparse_yields_before_eof": true,
+  "all_subjects_processed_all_records": true
+ },
+ "results": {
+  "iterparse_clear": {
+   "mode": "iterparse+clear (fast_iter, bounded)",
+   "n_processed": 300000,
+   "rss_baseline_mb": 22.3,
+   "peak_rss_mb": 23.5,
+   "peak_rss_delta_mb": 1.2,
+   "got_event_before_eof": true
+  },
+  "iterparse_noclear": {
+   "mode": "iterparse WITHOUT clear (accumulates)",
+   "n_processed": 300000,
+   "rss_baseline_mb": 22.3,
+   "peak_rss_mb": 408.9,
+   "peak_rss_delta_mb": 386.6,
+   "got_event_before_eof": true
+  },
+  "full_parse": {
+   "mode": "etree.parse (full load) [calibration: known-heavy anchor]",
+   "n_processed": 300000,
+   "rss_baseline_mb": 22.4,
+   "peak_rss_mb": 408.5,
+   "peak_rss_delta_mb": 386.1,
+   "got_event_before_eof": false
+  }
+ }
+}

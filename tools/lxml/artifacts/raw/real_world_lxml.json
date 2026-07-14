@@ -1,0 +1,363 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "libxml2_version": "2.14.6",
+  "reuse_source": {
+   "fixtures": "../selectolax/artifacts/fixtures/real/ (as-of 2026-07-10 curl capture)",
+   "crosscheck_json": "../selectolax/artifacts/raw/real_world.json (field: pages.*.compare.lxml.n_*)"
+  },
+  "note": "capability/fidelity on real dirty HTML, NOT timing; counts computed at runtime; crosscheck compares this run's lxml counts to the reused selectolax pack's lxml counts"
+ },
+ "computed": {
+  "n_fixtures": 11,
+  "n_parsed_lenient": 11,
+  "n_strict_xml_raised": 10,
+  "n_crosscheck_compared": 11,
+  "n_crosscheck_count_match": 11,
+  "all_lenient_parsed": true,
+  "all_crosscheck_match": true
+ },
+ "results": [
+  {
+   "fixture": "docs_mdn_array.html",
+   "size_bytes": 243391,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 508,
+    "n_links_attr_present": 508,
+    "n_links_empty_href": 0,
+    "n_headings": 44,
+    "n_imgs": 0,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "StartTag: invalid element name, line 2, column 8 (<string>, line 2)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 508,
+     "n_headings": 44,
+     "n_imgs": 0
+    },
+    "this_run": {
+     "n_links": 508,
+     "n_headings": 44,
+     "n_imgs": 0
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "docs_python.html",
+   "size_bytes": 79636,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 341,
+    "n_links_attr_present": 343,
+    "n_links_empty_href": 2,
+    "n_headings": 9,
+    "n_imgs": 3,
+    "libxml2_recovery_errors": 2,
+    "first_recovery_error": "<string>:692:40:ERROR:VALID:DTD_ID_REDEFINED: ID cpython-language-and-version already defined"
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "Specification mandates value for attribute defer, line 44, column 21 (<string>, line 44)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 341,
+     "n_headings": 9,
+     "n_imgs": 3
+    },
+    "this_run": {
+     "n_links": 341,
+     "n_headings": 9,
+     "n_imgs": 3
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "ecommerce_books.html",
+   "size_bytes": 51294,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 94,
+    "n_links_attr_present": 94,
+    "n_links_empty_href": 0,
+    "n_headings": 21,
+    "n_imgs": 20,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "Opening and ending tag mismatch: img line 665 and a, line 665, column 193 (<string>, line 665)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 94,
+     "n_headings": 21,
+     "n_imgs": 20
+    },
+    "this_run": {
+     "n_links": 94,
+     "n_headings": 21,
+     "n_imgs": 20
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "ecommerce_webscraper_allinone.html",
+   "size_bytes": 15618,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 35,
+    "n_links_attr_present": 35,
+    "n_links_empty_href": 0,
+    "n_headings": 9,
+    "n_imgs": 4,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "EntityRef: expecting ';', line 13, column 55 (<string>, line 13)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 35,
+     "n_headings": 9,
+     "n_imgs": 4
+    },
+    "this_run": {
+     "n_links": 35,
+     "n_headings": 9,
+     "n_imgs": 4
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "forum_reddit.html",
+   "size_bytes": 129152,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 318,
+    "n_links_attr_present": 318,
+    "n_links_empty_href": 0,
+    "n_headings": 3,
+    "n_imgs": 2,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "StartTag: invalid element name, line 1, column 2 (<string>, line 1)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 318,
+     "n_headings": 3,
+     "n_imgs": 2
+    },
+    "this_run": {
+     "n_links": 318,
+     "n_headings": 3,
+     "n_imgs": 2
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "gov_whitehouse.html",
+   "size_bytes": 289495,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 154,
+    "n_links_attr_present": 154,
+    "n_links_empty_href": 0,
+    "n_headings": 12,
+    "n_imgs": 17,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "Specification mandates value for attribute defer, line 242, column 180 (<string>, line 242)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 154,
+     "n_headings": 12,
+     "n_imgs": 17
+    },
+    "this_run": {
+     "n_links": 154,
+     "n_headings": 12,
+     "n_imgs": 17
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "news_bbc.html",
+   "size_bytes": 397766,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 255,
+    "n_links_attr_present": 255,
+    "n_links_empty_href": 0,
+    "n_headings": 62,
+    "n_imgs": 50,
+    "libxml2_recovery_errors": 4,
+    "first_recovery_error": "<string>:658:50170:ERROR:VALID:DTD_ID_REDEFINED: ID outer already defined"
+   },
+   "lxml_etree_strict": {
+    "outcome": "ok"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 255,
+     "n_headings": 62,
+     "n_imgs": 50
+    },
+    "this_run": {
+     "n_links": 255,
+     "n_headings": 62,
+     "n_imgs": 50
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "news_hackernews.html",
+   "size_bytes": 34919,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 229,
+    "n_links_attr_present": 229,
+    "n_links_empty_href": 0,
+    "n_headings": 0,
+    "n_imgs": 2,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "Opening and ending tag mismatch: link line 1 and head, line 1, column 355 (<string>, line 1)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 229,
+     "n_headings": 0,
+     "n_imgs": 2
+    },
+    "this_run": {
+     "n_links": 229,
+     "n_headings": 0,
+     "n_imgs": 2
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "oldstyle_craigslist.html",
+   "size_bytes": 560624,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 351,
+    "n_links_attr_present": 351,
+    "n_links_empty_href": 0,
+    "n_headings": 1,
+    "n_imgs": 0,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "xmlParseEntityRef: no name, line 28, column 13874 (<string>, line 28)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 351,
+     "n_headings": 1,
+     "n_imgs": 0
+    },
+    "this_run": {
+     "n_links": 351,
+     "n_headings": 1,
+     "n_imgs": 0
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "spa_quotes_js.html",
+   "size_bytes": 5808,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 5,
+    "n_links_attr_present": 5,
+    "n_links_empty_href": 0,
+    "n_headings": 1,
+    "n_imgs": 0,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "Opening and ending tag mismatch: link line 7 and head, line 10, column 8 (<string>, line 10)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 5,
+     "n_headings": 1,
+     "n_imgs": 0
+    },
+    "this_run": {
+     "n_links": 5,
+     "n_headings": 1,
+     "n_imgs": 0
+    },
+    "match": true
+   }
+  },
+  {
+   "fixture": "wiki_scraping.html",
+   "size_bytes": 226771,
+   "lxml_html_lenient": {
+    "parsed": true,
+    "n_links": 460,
+    "n_links_attr_present": 460,
+    "n_links_empty_href": 0,
+    "n_headings": 20,
+    "n_imgs": 10,
+    "libxml2_recovery_errors": 0,
+    "first_recovery_error": null
+   },
+   "lxml_etree_strict": {
+    "outcome": "raised",
+    "error": "Opening and ending tag mismatch: link line 32 and head, line 33, column 8 (<string>, line 33)"
+   },
+   "crosscheck_vs_reused_selectolax_lxml": {
+    "reuse_lxml": {
+     "n_links": 460,
+     "n_headings": 20,
+     "n_imgs": 10
+    },
+    "this_run": {
+     "n_links": 460,
+     "n_headings": 20,
+     "n_imgs": 10
+    },
+    "match": true
+   }
+  }
+ ]
+}

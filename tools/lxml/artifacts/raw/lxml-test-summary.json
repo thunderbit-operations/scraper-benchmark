@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "tool": "lxml",
+  "lxml_version": "6.1.1",
+  "libxml2_version": "2.14.6",
+  "python": "3.14.2",
+  "generated_by": "build_summary.py (all fields computed from raw run artifacts; no hand-written numbers)",
+  "timing_provenance": "reused from selectolax pack (as-of 2026-07-13); this pack produced NO timing numbers"
+ },
+ "capability_tests_this_pack_ran": {
+  "xpath_matrix": {
+   "functional_pass": 32,
+   "functional_total": 32,
+   "fault_finding_pass": 5,
+   "fault_finding_total": 5,
+   "all_pass_after_fault": true
+  },
+  "two_api_behavior": {
+   "cases_matching_prereg": 7,
+   "cases_total": 7
+  },
+  "iterparse_streaming": {
+   "bounded_peak_rss_delta_mb": 1.2,
+   "full_load_peak_rss_delta_mb": 386.1,
+   "bounded_is_fraction_of_full": 0.003,
+   "yields_before_eof": true,
+   "n_records": 300000
+  },
+  "namespaces": {
+   "pass": 12,
+   "total": 12,
+   "default_ns_requires_prefix_binding": true
+  },
+  "xpath_vs_css": {
+   "xpath_pass": 10,
+   "total": 10,
+   "css_inexpressible_count": 7
+  },
+  "real_world_lxml": {
+   "n_fixtures": 11,
+   "n_strict_xml_raised": 10,
+   "crosscheck_count_match": 11,
+   "crosscheck_compared": 11,
+   "all_crosscheck_match": true
+  },
+  "api_capabilities": {
+   "readwrite_dom_all_pass": true,
+   "serialization_all_pass": true,
+   "lxml_recovers_latin1_accents": true,
+   "node_lifecycle_hard_crash": false,
+   "iso88591_canonical_works_latin1_alias_fails": true
+  },
+  "depth_limit": {
+   "default_caps_around_256": true,
+   "huge_tree_recovers_depth_300": true,
+   "huge_tree_still_capped_at_5000": true,
+   "huge_tree_depth_at_5000": 2045
+  }
+ },
+ "reused_selectolax_timing_for_lxml": {
+  "parse_only_p50_ms_lxml": {
+   "10kb": 0.0824,
+   "100kb": 0.7655,
+   "1mb": 7.689,
+   "10mb": 77.8501
+  },
+  "parse_only_lxml_faster_than_lexbor_pct": {
+   "10kb": 51.6,
+   "100kb": 52.0,
+   "1mb": 51.3,
+   "10mb": 49.8
+  },
+  "throughput_100k_nodes_per_sec_lxml": 3002646,
+  "two_lxml_apis_crosscheck": {
+   "100kb": {
+    "both_lxml_apis_beat_selectolax_lexbor": true,
+    "two_api_margin_pct": 0.72,
+    "lexbor_slower_than_lxml_html_by_pct": 50.8
+   },
+   "1mb": {
+    "both_lxml_apis_beat_selectolax_lexbor": true,
+    "two_api_margin_pct": 1.56,
+    "lexbor_slower_than_lxml_html_by_pct": 58.7
+   },
+   "10mb": {
+    "both_lxml_apis_beat_selectolax_lexbor": true,
+    "two_api_margin_pct": 3.97,
+    "lexbor_slower_than_lxml_html_by_pct": 62.6
+   }
+  },
+  "thread_scaling_lxml": {
+   "n_tasks": 48,
+   "threads": 4,
+   "single_thread_s": 0.4591,
+   "threaded_s": 0.3784,
+   "speedup": 1.213,
+   "gil_release_signal": "inconclusive"
+  },
+  "mem_growth_lxml_verdict": "no_monotonic_growth_bounded_working_set"
+ }
+}

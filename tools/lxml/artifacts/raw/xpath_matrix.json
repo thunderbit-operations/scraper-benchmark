@@ -1,0 +1,407 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "libxml2_version": "2.14.6",
+  "xpath_engine": "libxml2 XPath 1.0",
+  "note": "PASS/WRONG/SILENT_ACCEPT computed from run; expected sets pre-registered in source before running",
+  "n_total": 37,
+  "n_functional": 32,
+  "n_fault_finding": 5
+ },
+ "tally": {
+  "PASS": 37
+ },
+ "computed": {
+  "functional_pass": 32,
+  "functional_total": 32,
+  "fault_pass": 5,
+  "fault_total": 5,
+  "all_pass_after_fault_finding": true
+ },
+ "results": [
+  {
+   "category": "axis:child",
+   "xpath": "//ul[@id=\"list\"]/li",
+   "status": "PASS",
+   "returned": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "expected": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ]
+  },
+  {
+   "category": "axis:descendant",
+   "xpath": "//div[@id=\"wrap\"]//a",
+   "status": "PASS",
+   "returned": [
+    "lnk",
+    "fa"
+   ],
+   "expected": [
+    "lnk",
+    "fa"
+   ]
+  },
+  {
+   "category": "axis:parent",
+   "xpath": "//a[@id=\"lnk\"]/parent::p",
+   "status": "PASS",
+   "returned": [
+    "p1"
+   ],
+   "expected": [
+    "p1"
+   ]
+  },
+  {
+   "category": "axis:ancestor",
+   "xpath": "//a[@id=\"fa\"]/ancestor::div",
+   "status": "PASS",
+   "returned": [
+    "wrap"
+   ],
+   "expected": [
+    "wrap"
+   ]
+  },
+  {
+   "category": "axis:following-sib",
+   "xpath": "//li[@id=\"b\"]/following-sibling::li",
+   "status": "PASS",
+   "returned": [
+    "c",
+    "d",
+    "e"
+   ],
+   "expected": [
+    "c",
+    "d",
+    "e"
+   ]
+  },
+  {
+   "category": "axis:preceding-sib",
+   "xpath": "//li[@id=\"d\"]/preceding-sibling::li",
+   "status": "PASS",
+   "returned": [
+    "a",
+    "b",
+    "c"
+   ],
+   "expected": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "category": "axis:self",
+   "xpath": "//li[@id=\"c\"]/self::li",
+   "status": "PASS",
+   "returned": [
+    "c"
+   ],
+   "expected": [
+    "c"
+   ]
+  },
+  {
+   "category": "axis:attribute",
+   "xpath": "//div[@id=\"wrap\"]/@data-role",
+   "status": "PASS",
+   "returned": [
+    "STR:LEAD"
+   ],
+   "expected": [
+    "STR:LEAD"
+   ]
+  },
+  {
+   "category": "axis:following",
+   "xpath": "//h1[@id=\"t\"]/following::span",
+   "status": "PASS",
+   "returned": [
+    "s1"
+   ],
+   "expected": [
+    "s1"
+   ]
+  },
+  {
+   "category": "axis:preceding",
+   "xpath": "//span[@id=\"s1\"]/preceding::h1",
+   "status": "PASS",
+   "returned": [
+    "t"
+   ],
+   "expected": [
+    "t"
+   ]
+  },
+  {
+   "category": "pred:index",
+   "xpath": "(//li)[1]",
+   "status": "PASS",
+   "returned": [
+    "a"
+   ],
+   "expected": [
+    "a"
+   ]
+  },
+  {
+   "category": "pred:last",
+   "xpath": "//li[last()]",
+   "status": "PASS",
+   "returned": [
+    "e"
+   ],
+   "expected": [
+    "e"
+   ]
+  },
+  {
+   "category": "pred:position-lt",
+   "xpath": "//li[position()<3]",
+   "status": "PASS",
+   "returned": [
+    "a",
+    "b"
+   ],
+   "expected": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "category": "pred:attr-eq",
+   "xpath": "//li[@data-n=\"3\"]",
+   "status": "PASS",
+   "returned": [
+    "c"
+   ],
+   "expected": [
+    "c"
+   ]
+  },
+  {
+   "category": "pred:attr-exists",
+   "xpath": "//li[@class]",
+   "status": "PASS",
+   "returned": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "expected": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+   ]
+  },
+  {
+   "category": "pred:and",
+   "xpath": "//li[@class=\"item\" and @data-n=\"5\"]",
+   "status": "PASS",
+   "returned": [
+    "e"
+   ],
+   "expected": [
+    "e"
+   ]
+  },
+  {
+   "category": "pred:or",
+   "xpath": "//li[@id=\"a\" or @id=\"e\"]",
+   "status": "PASS",
+   "returned": [
+    "a",
+    "e"
+   ],
+   "expected": [
+    "a",
+    "e"
+   ]
+  },
+  {
+   "category": "pred:nested",
+   "xpath": "//div[.//a[@href]]",
+   "status": "PASS",
+   "returned": [
+    "wrap"
+   ],
+   "expected": [
+    "wrap"
+   ]
+  },
+  {
+   "category": "pred:not-func",
+   "xpath": "//li[not(@data-n=\"1\")]",
+   "status": "PASS",
+   "returned": [
+    "b",
+    "c",
+    "d",
+    "e"
+   ],
+   "expected": [
+    "b",
+    "c",
+    "d",
+    "e"
+   ]
+  },
+  {
+   "category": "fn:text",
+   "xpath": "//p[@id=\"p2\"]/text()",
+   "status": "PASS",
+   "returned": [
+    "STR:second paragraph"
+   ],
+   "expected": [
+    "STR:second paragraph"
+   ]
+  },
+  {
+   "category": "fn:contains",
+   "xpath": "//li[contains(text(),\"gamma\")]",
+   "status": "PASS",
+   "returned": [
+    "c"
+   ],
+   "expected": [
+    "c"
+   ]
+  },
+  {
+   "category": "fn:starts-with",
+   "xpath": "//li[starts-with(@id,\"a\")]",
+   "status": "PASS",
+   "returned": [
+    "a"
+   ],
+   "expected": [
+    "a"
+   ]
+  },
+  {
+   "category": "fn:count",
+   "xpath": "count(//li)",
+   "status": "PASS",
+   "returned": 5.0,
+   "expected": 5.0
+  },
+  {
+   "category": "fn:string-length",
+   "xpath": "string-length(//h1[@id=\"t\"])",
+   "status": "PASS",
+   "returned": 9.0,
+   "expected": 9.0
+  },
+  {
+   "category": "fn:normalize-space",
+   "xpath": "normalize-space(//p[@id=\"p1\"])",
+   "status": "PASS",
+   "returned": "first link text tail",
+   "expected": "first link text tail"
+  },
+  {
+   "category": "fn:concat",
+   "xpath": "concat(//li[@id=\"a\"]/text(),\"/\",//li[@id=\"b\"]/text())",
+   "status": "PASS",
+   "returned": "alpha/beta",
+   "expected": "alpha/beta"
+  },
+  {
+   "category": "fn:substring",
+   "xpath": "substring(//h1[@id=\"t\"],1,5)",
+   "status": "PASS",
+   "returned": "Title",
+   "expected": "Title"
+  },
+  {
+   "category": "fn:name",
+   "xpath": "name(//div[@id=\"wrap\"])",
+   "status": "PASS",
+   "returned": "div",
+   "expected": "div"
+  },
+  {
+   "category": "fn:string-scalar",
+   "xpath": "string(//a[@id=\"lnk\"]/@href)",
+   "status": "PASS",
+   "returned": "http://example.com/path",
+   "expected": "http://example.com/path"
+  },
+  {
+   "category": "ret:boolean-true",
+   "xpath": "boolean(//li[@id=\"a\"])",
+   "status": "PASS",
+   "returned": true,
+   "expected": true
+  },
+  {
+   "category": "ret:boolean-false",
+   "xpath": "boolean(//li[@id=\"zzz\"])",
+   "status": "PASS",
+   "returned": false,
+   "expected": false
+  },
+  {
+   "category": "ret:number",
+   "xpath": "number(//li[@id=\"c\"]/@data-n)",
+   "status": "PASS",
+   "returned": 3.0,
+   "expected": 3.0
+  },
+  {
+   "category": "fault:xpath2-matches",
+   "xpath": "matches(\"abc\",\"a.c\")",
+   "status": "PASS",
+   "raised": "XPathEvalError: Unregistered function",
+   "why": "matches() 是 XPath 2.0 函数；libxml2 只实现 XPath 1.0"
+  },
+  {
+   "category": "fault:xpath2-seq",
+   "xpath": "(1,2,3)",
+   "status": "PASS",
+   "raised": "XPathEvalError: Invalid expression",
+   "why": "序列构造是 XPath 2.0；1.0 不支持逗号序列"
+  },
+  {
+   "category": "fault:xpath2-if",
+   "xpath": "if (//li) then 1 else 0",
+   "status": "PASS",
+   "raised": "XPathEvalError: Invalid expression",
+   "why": "if/then/else 是 XPath 2.0 条件表达式"
+  },
+  {
+   "category": "fault:xpath2-except",
+   "xpath": "//li except //li[@id=\"a\"]",
+   "status": "PASS",
+   "raised": "XPathEvalError: Invalid expression",
+   "why": "except 集合运算是 XPath 2.0"
+  },
+  {
+   "category": "fault:bad-syntax",
+   "xpath": "//li[",
+   "status": "PASS",
+   "raised": "XPathEvalError: Invalid expression",
+   "why": "语法错误必须报错而不是静默返回空集"
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "libxml2_version": "2.14.6",
+  "note": "behavior labels (raises/recovers/accepts) computed from run; expected labels pre-registered before running"
+ },
+ "computed": {
+  "cases_matching_prereg": 7,
+  "cases_total": 7
+ },
+ "results": [
+  {
+   "case": "unclosed_tag",
+   "input": "<root><a>text</root>",
+   "expected_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "raised",
+     "error": "Opening and ending tag mismatch: a line 1 and root, line 1, column 21 (<string>, line 1)",
+     "n_errors_logged": 1
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "root",
+     "n_descendants": 2,
+     "n_errors_logged": 1,
+     "first_error": "<string>:1:21:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: a line 1 and root"
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "root",
+     "n_descendants": 2
+    }
+   }
+  },
+  {
+   "case": "mismatched_nesting",
+   "input": "<root><b><i>x</b></i></root>",
+   "expected_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "raised",
+     "error": "Opening and ending tag mismatch: i line 1 and b, line 1, column 18 (<string>, line 1)",
+     "n_errors_logged": 2
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "root",
+     "n_descendants": 3,
+     "n_errors_logged": 2,
+     "first_error": "<string>:1:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: i line 1 and b"
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "root",
+     "n_descendants": 3
+    }
+   }
+  },
+  {
+   "case": "undefined_entity",
+   "input": "<root>&nbsp;</root>",
+   "expected_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "raised",
+     "error": "Entity 'nbsp' not defined, line 1, column 13 (<string>, line 1)",
+     "n_errors_logged": 1
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "root",
+     "n_descendants": 1,
+     "n_errors_logged": 1,
+     "first_error": "<string>:1:13:FATAL:PARSER:ERR_UNDECLARED_ENTITY: Entity 'nbsp' not defined"
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "root",
+     "n_descendants": 1
+    }
+   }
+  },
+  {
+   "case": "bare_ampersand",
+   "input": "<root>Tom & Jerry</root>",
+   "expected_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "raised",
+     "error": "xmlParseEntityRef: no name, line 1, column 12 (<string>, line 1)",
+     "n_errors_logged": 1
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "root",
+     "n_descendants": 1,
+     "n_errors_logged": 1,
+     "first_error": "<string>:1:12:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name"
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "root",
+     "n_descendants": 1
+    }
+   }
+  },
+  {
+   "case": "multiple_roots",
+   "input": "<a>1</a><b>2</b>",
+   "expected_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "raised",
+     "error": "Extra content at the end of the document, line 1, column 9 (<string>, line 1)",
+     "n_errors_logged": 1
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "a",
+     "n_descendants": 1,
+     "n_errors_logged": 1,
+     "first_error": "<string>:1:9:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document"
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "span",
+     "n_descendants": 3
+    }
+   }
+  },
+  {
+   "case": "well_formed_xml",
+   "input": "<root><a>ok</a></root>",
+   "expected_behavior": {
+    "etree_strict": "accepts",
+    "etree_recover": "accepts",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "accepts",
+    "etree_recover": "accepts",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "ok",
+     "root_tag": "root",
+     "n_descendants": 2,
+     "n_errors_logged": 0,
+     "first_error": null
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "root",
+     "n_descendants": 2,
+     "n_errors_logged": 0,
+     "first_error": null
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "root",
+     "n_descendants": 2
+    }
+   }
+  },
+  {
+   "case": "html_boolean_attr",
+   "input": "<input disabled><p>hi",
+   "expected_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "actual_behavior": {
+    "etree_strict": "raises",
+    "etree_recover": "recovers",
+    "html": "accepts"
+   },
+   "matches_expectation": {
+    "etree_strict": true,
+    "etree_recover": true,
+    "html": true
+   },
+   "all_match": true,
+   "detail": {
+    "etree_strict": {
+     "outcome": "raised",
+     "error": "Specification mandates value for attribute disabled, line 1, column 16 (<string>, line 1)",
+     "n_errors_logged": 1
+    },
+    "etree_recover": {
+     "outcome": "recovered",
+     "root_tag": "input",
+     "n_descendants": 2,
+     "n_errors_logged": 1,
+     "first_error": "<string>:1:16:FATAL:PARSER:ERR_ATTRIBUTE_WITHOUT_VALUE: Specification mandates value for attribute disabled"
+    },
+    "lxml_html": {
+     "outcome": "ok",
+     "root_tag": "div",
+     "n_descendants": 3
+    }
+   }
+  }
+ ]
+}

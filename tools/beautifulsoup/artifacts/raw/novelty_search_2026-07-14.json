@@ -1,0 +1,77 @@
+{
+ "meta": {
+  "date": "2026-07-14",
+  "method": "方法论 v3 闸门 1: 每候选 finding 搜三处 (上游 bug tracker + 官方文档 + SERP 前 20), 三分类 EXCLUSIVE / KNOWN-ISSUE / DOCUMENTED",
+  "tracker_note": "bs4 的规范 home 是 crummy.com + Launchpad (git.launchpad.net/beautifulsoup, bugs.launchpad.net/beautifulsoup), 非 GitHub。issue tracker = Launchpad + bs4 官方文档 (自身即最权威规范)。",
+  "conclusion": "bs4 是 20 年老库, 所测行为 100% 由官方文档明载或社区公开记录; 本 pack 零 EXCLUSIVE, 这符合预期 —— bs4 的价值叙事是「易用性+容错 vs 速度」的量化权衡, 不是独家发现。"
+ },
+ "candidates": [
+  {
+   "finding": "html.parser 不实现 HTML5 optional-end-tag 规则: 未闭合 <td>/<li> 被嵌套而非自动闭合, 单元格文本渗漏 (abcd/bcd/cd/d); lxml 与 html5lib 正确闭合",
+   "verdict": "DOCUMENTED",
+   "evidence": "bs4 官方文档 'Differences between parsers' 节明确: html.parser 'less lenient than html5lib', 并给出 <a></p> 三后端不同结果的示例; lxml.de/elementsoup.html 亦述 lxml 比 html.parser 更宽容。多篇教程 (pytutorial, tutorialspoint) 复述。本 pack 贡献 = 用预注册畸形矩阵量化到具体 case (broken_table / bare_li)。",
+   "sources": [
+    "https://www.crummy.com/software/BeautifulSoup/bs4/doc/ (Differences between parsers)",
+    "https://lxml.de/elementsoup.html"
+   ]
+  },
+  {
+   "finding": "重复属性: html.parser 保留最后一个值 (on_duplicate_attribute=REPLACE 默认); lxml/html5lib 保留第一个",
+   "verdict": "KNOWN-ISSUE (partial / 文档半载)",
+   "evidence": "bs4 自 4.9.1 起提供 on_duplicate_attribute 参数, 文档记载 html.parser 默认 REPLACE=保留后者。文档**未**并列对比 lxml/html5lib 的重复属性行为 (WebFetch 官方文档确认 '不 mention 不同 parser 如何处理重复属性')。'lxml/html5lib 保留第一个' 这半边是文档缺口, 但 html.parser 那半边是明载的; 且 HTML5 规范本身规定重复属性保留第一个。故判 KNOWN-ISSUE partial, 非独家。",
+   "sources": [
+    "https://tedboy.github.io/bs4_doc/9_specifying_the_parser.html (on_duplicate_attribute since 4.9.1)",
+    "HTML5 spec: duplicate attribute -> parse error, ignore subsequent"
+   ]
+  },
+  {
+   "finding": "UnicodeDammit 在短 latin-1/cp1252 样本上误判 (本 pack 观测 cp720/cp862 —— Arabic/Hebrew DOS 代码页); 声明错误 charset 时会跟随错误声明",
+   "verdict": "DOCUMENTED",
+   "evidence": "bs4 官方文档 Encoding 节几乎给出同款示例: 一段短 ISO-8859-8 文档 'so short that Unicode, Dammit can't get a lock on it, and misidentifies it as ISO-8859-7'; 并说明 'The more data you give Unicode, Dammit, the more accurately it will guess'。DOS box-drawing 字符与 Latin-1 重叠导致范围检测失效是公开已知难题 (unicode.org 邮件档 2007)。本 pack 贡献 = 系统化的声明-vs-实际字符集矩阵 + 具体误判代码页。",
+   "sources": [
+    "https://www.crummy.com/software/BeautifulSoup/bs4/doc/ (Encodings)",
+    "https://tedboy.github.io/bs4_doc/10_encodings.html",
+    "https://unicode.org/mail-arch/unicode-ml/y2007-m02/0078.html"
+   ]
+  },
+  {
+   "finding": "bs4 解析树是父子双向引用环: GC 关闭时 del soup 不回收 (本 pack 300 iters 堆积 120,900 个 Tag 对象), 必须靠 CPython 分代 GC 或 decompose() 回收",
+   "verdict": "DOCUMENTED",
+   "evidence": "bs4 官方文档明确: 'Beautiful Soup objects are very densely interconnected, exactly the sort of object that a garbage collector would have trouble with'; decompose() 文档述其 'recursively disassembles ... to break circular references'; NavigableString 会 'carry around a reference to the entire parse tree'。selectolax pack 方法论段亦点名 'bs4 循环引用树需 GC 回收'。本 pack 贡献 = 用已知信号校准的仪器 (对象计数 + 无环对照组) 量化堆积规模并证明 collect 后归零。",
+   "sources": [
+    "https://www.crummy.com/software/BeautifulSoup/bs4/doc/ (Improving Performance / decompose)",
+    "tools/selectolax/research-materials.md (方法论段: bs4 循环引用树)"
+   ]
+  },
+  {
+   "finding": "三后端在良构真实 HTML 上抽取结果一致 (11/11 站 link/heading/img 计数全等), 包括 MDN <template> 页三后端均得 508 链接 (flatten template 内容)",
+   "verdict": "DOCUMENTED (推论) / 复用 selectolax FINDING-14 的镜像",
+   "evidence": "bs4 三后端 flatten <template> 是 selectolax pack FINDING-14 已记录的对照事实 (lxml/bs4-两后端/Modest 均得 508, 仅 selectolax-Lexbor 得 497 因严格遵循 HTML5 template=inert DocumentFragment)。'良构页三后端一致' 是 bs4 文档 parser 差异只在畸形 HTML 上显现这一表述的直接推论。非独家。",
+   "sources": [
+    "tools/selectolax/artifacts/raw/template_repro.json (lexbor_only_drops_template_anchor: true)",
+    "https://github.com/rushter/selectolax/issues/146"
+   ]
+  },
+  {
+   "finding": "get_text(strip=True) 逐节点 strip 后无分隔拼接, 节点间空格丢失 ('with'+'link1' -> 'withlink1')",
+   "verdict": "DOCUMENTED",
+   "evidence": "bs4 文档 get_text 节说明 strip 与 separator 参数语义; 逐节点 strip 拼接是文档化行为, 与 selectolax pack 记录的同款 strip-space 陷阱一致 (selectolax api_usability: strip=True 'HelloWorld')。非独家, 跨库共性。",
+   "sources": [
+    "https://www.crummy.com/software/BeautifulSoup/bs4/doc/ (get_text separator/strip)",
+    "tools/selectolax/research-materials.md §5 (strip-space quirk)"
+   ]
+  },
+  {
+   "finding": "soupsieve 支持 :lang() / :-soup-contains() / :is() / :where() / :has(> a) / :not(list) 等 (本 pack 20 例扩展全过), 覆盖 selectolax-Lexbor 不支持的 :lang/:dir",
+   "verdict": "DOCUMENTED",
+   "evidence": "soupsieve 官方文档逐条列出其支持的伪类/组合器 (含 :-soup-contains 独有拼写、:is/:where、:has)。selectolax pack css_coverage.json 已记录 soupsieve 基础 41 例 41/41。本 pack 只是补文档明载的扩展用法, 非独家。",
+   "sources": [
+    "https://facelessuser.github.io/soupsieve/selectors/",
+    "tools/selectolax/artifacts/raw/css_coverage.json (soupsieve 41/41)"
+   ]
+  }
+ ],
+ "exclusive_count": 0,
+ "known_issue_count": 1,
+ "documented_count": 6
+}

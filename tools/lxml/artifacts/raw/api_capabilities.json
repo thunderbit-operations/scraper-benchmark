@@ -1,0 +1,52 @@
+{
+ "meta": {
+  "python": "3.14.2",
+  "lxml": "6.1.1",
+  "libxml2_version": "2.14.6",
+  "note": "non-timing capability facts; thread speedup reused from ../selectolax/artifacts/raw/production_dims.json (thread_scaling.lxml); node lifecycle run in subprocess (hard crash => nonzero exit)"
+ },
+ "thread_api_surface": {
+  "xmlparser_has_copy": true,
+  "copy_returns_parser": true,
+  "has_get_default_parser": true,
+  "has_set_default_parser": true,
+  "has_XPathEvaluator": true,
+  "libxml2_version": "2.14.6",
+  "faq_ref": "lxml FAQ: GIL freed during parse if default parser (replicated per thread) or per-thread parser; shared parser serializes; XPath evaluators use internal lock"
+ },
+ "readwrite_dom": {
+  "subelement_append": true,
+  "insert_at_0": true,
+  "remove_child": true,
+  "replace_child": true,
+  "strip_tags_keeps_text": true,
+  "strip_elements_removes_content": true,
+  "drop_tree": true,
+  "text_tail_model": true
+ },
+ "serialization": {
+  "tostring_xml": true,
+  "tostring_html_void": true,
+  "pretty_print": true,
+  "c14n_available": true,
+  "roundtrip_stable": true
+ },
+ "encoding_bytes": {
+  "lxml_html_latin1_text": "café éè",
+  "lxml_html_recovers_accents": true,
+  "lxml_html_no_replacement_char": true,
+  "xml_declared_latin1_alias_raises": true,
+  "xml_declared_latin1_alias_error": "XMLSyntaxError: Unsupported encoding: latin-1, line 1, column 39 (<string>, line 1)",
+  "xml_declared_iso88591_text": "café",
+  "xml_declared_iso88591_correct": true
+ },
+ "node_lifecycle": {
+  "subprocess_exit_code": 0,
+  "hard_crash": false,
+  "after_tree_gc_usable": true,
+  "after_drop_tree_usable": true,
+  "after_drop_tree_text": "a",
+  "removed_node_parent_is_none": true,
+  "removed_node_still_usable": true
+ }
+}
