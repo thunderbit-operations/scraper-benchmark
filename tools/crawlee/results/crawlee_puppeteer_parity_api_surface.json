@@ -1,0 +1,232 @@
+{
+  "tool": "crawlee",
+  "probe": "engine-parity API surface (Cheerio vs Playwright vs Puppeteer)",
+  "measured_at_utc": "2026-07-14T06:12:03.761Z",
+  "node": "v22.22.3",
+  "installed_crawlee_version": "3.17.0",
+  "puppeteer_peer_installed": false,
+  "note": "capability inventory only; class import + prototype introspection; zero timing; no browser launch, no chromium download, no network navigation. Every field is computed at runtime (anti-hardcode).",
+  "top_level_exports": {
+    "CheerioCrawler": "function",
+    "PlaywrightCrawler": "function",
+    "PuppeteerCrawler": "function",
+    "BasicCrawler": "function",
+    "HttpCrawler": "function",
+    "BrowserCrawler": "function",
+    "JSDOMCrawler": "function",
+    "RequestQueue": "function",
+    "Dataset": "function",
+    "KeyValueStore": "function",
+    "Router": "function",
+    "createCheerioRouter": "function",
+    "createPlaywrightRouter": "function",
+    "createPuppeteerRouter": "function",
+    "createBasicRouter": "function"
+  },
+  "per_engine": {
+    "CheerioCrawler": {
+      "prototype_chain": [
+        "CheerioCrawler",
+        "HttpCrawler",
+        "BasicCrawler"
+      ],
+      "extends_BasicCrawler": true,
+      "extends_BrowserCrawler": false,
+      "extends_HttpCrawler": true,
+      "public_method_count": 25,
+      "public_methods": [
+        "addCrawlDepthRequestGenerator",
+        "addRequests",
+        "calculateEnqueuedRequestLimit",
+        "delayRequest",
+        "enqueueLinksWithCrawlDepth",
+        "exportData",
+        "getData",
+        "getDataset",
+        "getPeriodicLogger",
+        "getRequestQueue",
+        "getRobotsTxtFileForUrl",
+        "handleSkippedRequest",
+        "initializeRequestManager",
+        "isAllowedBasedOnRobotsTxtFile",
+        "isProxyError",
+        "isRequestBlocked",
+        "logOncePerRun",
+        "pushData",
+        "requestMatchesEnqueueStrategy",
+        "run",
+        "setStatusMessage",
+        "stop",
+        "teardown",
+        "use",
+        "useState"
+      ]
+    },
+    "PlaywrightCrawler": {
+      "prototype_chain": [
+        "PlaywrightCrawler",
+        "BrowserCrawler",
+        "BasicCrawler"
+      ],
+      "extends_BasicCrawler": true,
+      "extends_BrowserCrawler": true,
+      "extends_HttpCrawler": false,
+      "public_method_count": 25,
+      "public_methods": [
+        "addCrawlDepthRequestGenerator",
+        "addRequests",
+        "calculateEnqueuedRequestLimit",
+        "containsSelectors",
+        "delayRequest",
+        "enqueueLinksWithCrawlDepth",
+        "exportData",
+        "getData",
+        "getDataset",
+        "getPeriodicLogger",
+        "getRequestQueue",
+        "getRobotsTxtFileForUrl",
+        "handleSkippedRequest",
+        "initializeRequestManager",
+        "isAllowedBasedOnRobotsTxtFile",
+        "isProxyError",
+        "isRequestBlocked",
+        "logOncePerRun",
+        "pushData",
+        "requestMatchesEnqueueStrategy",
+        "run",
+        "setStatusMessage",
+        "stop",
+        "teardown",
+        "useState"
+      ]
+    },
+    "PuppeteerCrawler": {
+      "prototype_chain": [
+        "PuppeteerCrawler",
+        "BrowserCrawler",
+        "BasicCrawler"
+      ],
+      "extends_BasicCrawler": true,
+      "extends_BrowserCrawler": true,
+      "extends_HttpCrawler": false,
+      "public_method_count": 25,
+      "public_methods": [
+        "addCrawlDepthRequestGenerator",
+        "addRequests",
+        "calculateEnqueuedRequestLimit",
+        "containsSelectors",
+        "delayRequest",
+        "enqueueLinksWithCrawlDepth",
+        "exportData",
+        "getData",
+        "getDataset",
+        "getPeriodicLogger",
+        "getRequestQueue",
+        "getRobotsTxtFileForUrl",
+        "handleSkippedRequest",
+        "initializeRequestManager",
+        "isAllowedBasedOnRobotsTxtFile",
+        "isProxyError",
+        "isRequestBlocked",
+        "logOncePerRun",
+        "pushData",
+        "requestMatchesEnqueueStrategy",
+        "run",
+        "setStatusMessage",
+        "stop",
+        "teardown",
+        "useState"
+      ]
+    }
+  },
+  "parity": {
+    "shared_by_all_three_count": 24,
+    "shared_by_all_three": [
+      "addCrawlDepthRequestGenerator",
+      "addRequests",
+      "calculateEnqueuedRequestLimit",
+      "delayRequest",
+      "enqueueLinksWithCrawlDepth",
+      "exportData",
+      "getData",
+      "getDataset",
+      "getPeriodicLogger",
+      "getRequestQueue",
+      "getRobotsTxtFileForUrl",
+      "handleSkippedRequest",
+      "initializeRequestManager",
+      "isAllowedBasedOnRobotsTxtFile",
+      "isProxyError",
+      "isRequestBlocked",
+      "logOncePerRun",
+      "pushData",
+      "requestMatchesEnqueueStrategy",
+      "run",
+      "setStatusMessage",
+      "stop",
+      "teardown",
+      "useState"
+    ],
+    "cheerio_only": [
+      "use"
+    ],
+    "browser_only_shared_by_playwright_and_puppeteer": [
+      "containsSelectors"
+    ],
+    "playwright_not_in_puppeteer": [],
+    "puppeteer_not_in_playwright": [],
+    "puppeteer_playwright_prototype_methods_identical": true
+  },
+  "handler_context_from_type_defs": {
+    "source": "static read of installed @crawlee/*/**.d.ts (structural, not executed)",
+    "RestrictedCrawlingContext": {
+      "found": true,
+      "declaration_head": "export interface RestrictedCrawlingContext<UserData extends Dictionary = Dictionary> extends Record<string & {}, unknown> {",
+      "contains": {
+        "request": true,
+        "pushData": true,
+        "enqueueLinks": true,
+        "addRequests": true,
+        "useState": true,
+        "getKeyValueStore": true,
+        "log": true
+      }
+    },
+    "BrowserCrawlingContext": {
+      "found": true,
+      "declaration_head": "export interface BrowserCrawlingContext<Crawler = unknown, Page extends CommonPage = CommonPage, Response = Dictionary, ProvidedController = BrowserController, UserData extends Dictionary = Dictionary> extends CrawlingContext<Crawler, UserData> {",
+      "contains": {
+        "page": true,
+        "response": true,
+        "browserController": true
+      }
+    },
+    "CheerioCrawlingContext": {
+      "found": true,
+      "declaration_head": "export interface CheerioCrawlingContext<UserData extends Dictionary = any, // with default to Dictionary we cant use a typed router in untyped crawler",
+      "contains": {
+        "$:": true,
+        "parseWithCheerio": true,
+        "waitForSelector": true
+      }
+    },
+    "PlaywrightCrawlingContext": {
+      "found": true,
+      "declaration_head": "export interface PlaywrightCrawlingContext<UserData extends Dictionary = Dictionary> extends BrowserCrawlingContext<PlaywrightCrawler, Page, Response, PlaywrightController, UserData>, PlaywrightContextUtils {",
+      "contains": {
+        "BrowserCrawlingContext": true,
+        "PlaywrightCrawler": true,
+        "Page": true
+      }
+    },
+    "PuppeteerCrawlingContext": {
+      "found": true,
+      "declaration_head": "export interface PuppeteerCrawlingContext<UserData extends Dictionary = Dictionary> extends BrowserCrawlingContext<PuppeteerCrawler, Page, HTTPResponse, PuppeteerController, UserData>, PuppeteerContextUtils {",
+      "contains": {
+        "BrowserCrawlingContext": true,
+        "PuppeteerCrawler": true,
+        "Page": true
+      }
+    }
+  }
+}
