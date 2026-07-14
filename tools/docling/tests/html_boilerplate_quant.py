@@ -77,7 +77,10 @@ def main():
               f"main heading at line {a['main_heading_line']}")
     outp = os.path.join(ROOT, "artifacts", "raw", "html_boilerplate_quant.json")
     with open(outp, "w") as f:
-        json.dump({"tool": "docling", "note": "raw full-document conversion, no main-content extraction",
+        # _method describes HOW the numbers were produced (metadata), not a conclusion
+        # about the tool; the interpretation lives in research-materials.md, not here.
+        json.dump({"tool": "docling",
+                   "_method": "counts boilerplate-marker lines (see BOILER list) and pre-main-heading lines in Docling's raw HTML->Markdown export; no main-content extraction is applied by the test or the tool",
                    "results": results}, f, indent=2)
     print("WROTE", outp)
 

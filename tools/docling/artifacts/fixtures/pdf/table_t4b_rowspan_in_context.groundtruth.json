@@ -1,0 +1,68 @@
+{
+  "name": "table_t4b_rowspan_in_context",
+  "title": "T4b \u2014 Same rowspan table, surrounded by body text",
+  "n_rows": 6,
+  "n_cols": 4,
+  "cells": [
+    [
+      "Zone",
+      "City",
+      "Stores",
+      "AOV"
+    ],
+    [
+      "North",
+      "Boston",
+      "12",
+      "84.20"
+    ],
+    [
+      "North",
+      "Chicago",
+      "9",
+      "77.10"
+    ],
+    [
+      "North",
+      "Detroit",
+      "5",
+      "69.90"
+    ],
+    [
+      "South",
+      "Austin",
+      "14",
+      "91.30"
+    ],
+    [
+      "South",
+      "Miami",
+      "8",
+      "88.75"
+    ]
+  ],
+  "spans": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ]
+    ]
+  ],
+  "ab_isolated_variant": "table_t4_rowspan",
+  "note": "In-context (text-surrounded) variant for the FINDING-D3 sparse-page A/B."
+}

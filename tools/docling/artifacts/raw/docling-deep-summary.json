@@ -4,7 +4,11 @@
     "import_s": 5.122,
     "first_pdf_convert_s_incl_download": 223.916,
     "second_pdf_convert_s_warm": 0.546,
-    "hf_model_download_mb_reported": 1060.2
+    "hf_walk_mb_raw_double_counts_symlinks": 1060.2,
+    "hf_on_disk_mb": 530.0,
+    "hf_on_disk_mib": 505.5,
+    "rapidocr_resident_mb": 75.6,
+    "rapidocr_downloaded_first_run_mb": 40.1
   },
   "table_fidelity": {
     "n_tables_tested": 7,
@@ -12,6 +16,8 @@
     "n_dims_match": 5,
     "n_recall_1.0": 5,
     "mean_cell_recall_of_detected": 1.0,
+    "n_inrow_1.0": 3,
+    "mean_inrow_rate_of_detected": 0.9862,
     "not_detected": [
       "table_t1_simple_grid",
       "table_t4_rowspan"
@@ -21,42 +27,49 @@
         "detected": false,
         "dims_match": null,
         "cell_recall": 0.0,
+        "inrow_rate": null,
         "convert_s": 12.141
       },
       "table_t2_borderless": {
         "detected": true,
         "dims_match": true,
         "cell_recall": 1.0,
+        "inrow_rate": 1.0,
         "convert_s": 2.52
       },
       "table_t3_colspan_header": {
         "detected": true,
         "dims_match": true,
         "cell_recall": 1.0,
+        "inrow_rate": 0.9655,
         "convert_s": 1.911
       },
       "table_t4_rowspan": {
         "detected": false,
         "dims_match": null,
         "cell_recall": 0.0,
+        "inrow_rate": null,
         "convert_s": 0.463
       },
       "table_t5_span_borderless": {
         "detected": true,
         "dims_match": true,
         "cell_recall": 1.0,
+        "inrow_rate": 0.9655,
         "convert_s": 2.034
       },
       "table_t6_financial_blankcol": {
         "detected": true,
         "dims_match": true,
         "cell_recall": 1.0,
+        "inrow_rate": 1.0,
         "convert_s": 2.105
       },
       "table_t7_wide_12col": {
         "detected": true,
         "dims_match": true,
         "cell_recall": 1.0,
+        "inrow_rate": 1.0,
         "convert_s": 2.789
       }
     }
@@ -143,6 +156,114 @@
       "pct_boilerplate_lines": 1.6,
       "boilerplate_marker_lines": 1,
       "lines_before_main_heading": null
+    }
+  },
+  "sparse_page_ab": {
+    "T1_bordered_grid": {
+      "isolated_tables": 0,
+      "isolated_pictures": 1,
+      "isolated_text_layer_chars": 327,
+      "in_context_tables": 1,
+      "in_context_md_has_table": true,
+      "drops_when_isolated_converts_in_context": true,
+      "drop_survives_do_ocr_false": true,
+      "in_context_rowspan_repeats": null
+    },
+    "T4_rowspan": {
+      "isolated_tables": 0,
+      "isolated_pictures": 1,
+      "isolated_text_layer_chars": 221,
+      "in_context_tables": 1,
+      "in_context_md_has_table": true,
+      "drops_when_isolated_converts_in_context": true,
+      "drop_survives_do_ocr_false": true,
+      "in_context_rowspan_repeats": 3
+    }
+  },
+  "warm_timing_repeats": {
+    "table_t1_simple_grid": {
+      "median_s": 0.0935,
+      "min_s": 0.093,
+      "max_s": 0.0949,
+      "spread_pct": 2.0,
+      "n_runs": 3
+    },
+    "table_t2_borderless": {
+      "median_s": 0.4493,
+      "min_s": 0.4438,
+      "max_s": 0.4673,
+      "spread_pct": 5.2,
+      "n_runs": 3
+    },
+    "table_t3_colspan_header": {
+      "median_s": 0.3773,
+      "min_s": 0.3771,
+      "max_s": 0.391,
+      "spread_pct": 3.7,
+      "n_runs": 3
+    },
+    "table_t4_rowspan": {
+      "median_s": 0.0978,
+      "min_s": 0.0928,
+      "max_s": 0.1109,
+      "spread_pct": 18.5,
+      "n_runs": 3
+    },
+    "table_t5_span_borderless": {
+      "median_s": 0.383,
+      "min_s": 0.3729,
+      "max_s": 0.3843,
+      "spread_pct": 3.0,
+      "n_runs": 3
+    },
+    "table_t6_financial_blankcol": {
+      "median_s": 0.4117,
+      "min_s": 0.3732,
+      "max_s": 0.6262,
+      "spread_pct": 61.5,
+      "n_runs": 3
+    },
+    "table_t7_wide_12col": {
+      "median_s": 0.6075,
+      "min_s": 0.5881,
+      "max_s": 0.6383,
+      "spread_pct": 8.3,
+      "n_runs": 3
+    },
+    "table_t1b_grid_in_context": {
+      "median_s": 0.5293,
+      "min_s": 0.524,
+      "max_s": 0.6071,
+      "spread_pct": 15.7,
+      "n_runs": 3
+    },
+    "table_t4b_rowspan_in_context": {
+      "median_s": 0.4063,
+      "min_s": 0.3781,
+      "max_s": 0.4207,
+      "spread_pct": 10.5,
+      "n_runs": 3
+    },
+    "report.docx": {
+      "median_s": 0.0173,
+      "min_s": 0.0169,
+      "max_s": 0.0182,
+      "spread_pct": 7.5,
+      "n_runs": 3
+    },
+    "workbook.xlsx": {
+      "median_s": 0.0018,
+      "min_s": 0.0017,
+      "max_s": 0.0021,
+      "spread_pct": 22.2,
+      "n_runs": 3
+    },
+    "deck.pptx": {
+      "median_s": 0.006,
+      "min_s": 0.0058,
+      "max_s": 0.0062,
+      "spread_pct": 6.7,
+      "n_runs": 3
     }
   }
 }

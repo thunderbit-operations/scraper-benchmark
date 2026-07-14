@@ -1,0 +1,63 @@
+{
+  "tool": "docling",
+  "test": "sparse_page_ab",
+  "description": "Same table isolated vs surrounded by text; layout-context effect isolation for FINDING-D3.",
+  "results": [
+    {
+      "pair": "T1_bordered_grid",
+      "isolated_fixture": "table_t1_simple_grid.pdf",
+      "in_context_fixture": "table_t1b_grid_in_context.pdf",
+      "isolated": {
+        "text_layer_chars": 327,
+        "n_doc_tables": 0,
+        "n_doc_pictures": 1,
+        "md_has_table": false,
+        "convert_s": 4.964
+      },
+      "in_context": {
+        "text_layer_chars": 1819,
+        "n_doc_tables": 1,
+        "n_doc_pictures": 0,
+        "md_has_table": true,
+        "convert_s": 0.516
+      },
+      "isolated_do_ocr_false": {
+        "n_doc_tables": 0,
+        "n_doc_pictures": 1,
+        "md_has_table": false
+      },
+      "drops_when_isolated_converts_in_context": true,
+      "isolated_classified_as_picture": true,
+      "drop_survives_do_ocr_false": true
+    },
+    {
+      "pair": "T4_rowspan",
+      "isolated_fixture": "table_t4_rowspan.pdf",
+      "in_context_fixture": "table_t4b_rowspan_in_context.pdf",
+      "isolated": {
+        "text_layer_chars": 221,
+        "n_doc_tables": 0,
+        "n_doc_pictures": 1,
+        "md_has_table": false,
+        "convert_s": 0.11
+      },
+      "in_context": {
+        "text_layer_chars": 1636,
+        "n_doc_tables": 1,
+        "n_doc_pictures": 0,
+        "md_has_table": true,
+        "convert_s": 0.393
+      },
+      "isolated_do_ocr_false": {
+        "n_doc_tables": 0,
+        "n_doc_pictures": 1,
+        "md_has_table": false
+      },
+      "drops_when_isolated_converts_in_context": true,
+      "isolated_classified_as_picture": true,
+      "drop_survives_do_ocr_false": true,
+      "in_context_rowspan_label": "North",
+      "in_context_rowspan_repeats": 3
+    }
+  ]
+}

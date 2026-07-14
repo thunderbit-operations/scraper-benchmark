@@ -67,6 +67,46 @@ def grid_border(nc, nr):
     ]
 
 
+LOREM = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+         "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+         "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ") * 3
+
+
+def render_in_context(name, title, data, style_cmds, base_name, spans=None):
+    """Render the SAME table matrix as `base_name`, but embedded between ordinary body
+    paragraphs so the page is text-dense (the "B" arm of the FINDING-D3 A/B). The
+    ground truth is the base table's matrix (identical cells); we only add a pointer to
+    the isolated "A" fixture so the A/B scorer can pair them."""
+    path = os.path.join(OUT, f"{name}.pdf")
+    doc = SimpleDocTemplate(path, pagesize=letter,
+                            leftMargin=0.6*inch, rightMargin=0.6*inch,
+                            topMargin=0.7*inch, bottomMargin=0.7*inch)
+    story = [
+        Paragraph("Section 1. Overview", styles["Heading2"]), Spacer(1, 8),
+        Paragraph(LOREM, styles["Normal"]), Spacer(1, 14),
+        Paragraph("Section 2. Results table", styles["Heading2"]), Spacer(1, 8),
+        Paragraph("The following table summarizes the results.", styles["Normal"]), Spacer(1, 8),
+    ]
+    t = Table(data, hAlign="LEFT")
+    t.setStyle(TableStyle(style_cmds))
+    story += [t, Spacer(1, 14),
+              Paragraph("Section 3. Discussion", styles["Heading2"]), Spacer(1, 8),
+              Paragraph(LOREM, styles["Normal"])]
+    doc.build(story)
+    gt = {
+        "name": name, "title": title,
+        "n_rows": len(data), "n_cols": len(data[0]) if data else 0,
+        "cells": data, "spans": spans or [],
+        "ab_isolated_variant": base_name,
+        "note": "In-context (text-surrounded) variant for the FINDING-D3 sparse-page A/B.",
+    }
+    with open(os.path.join(OUT, f"{name}.groundtruth.json"), "w") as f:
+        json.dump(gt, f, indent=2)
+    size = os.path.getsize(path)
+    print(f"  {name}.pdf  (in-context, {len(data)}x{len(data[0])})  {size} bytes")
+    return gt
+
+
 def main():
     manifest = []
 
@@ -170,6 +210,19 @@ def main():
     manifest.append(render("table_t7_wide_12col", "T7 — Wide table (12 columns)",
                            data_t7, grid_border(12, 5),
                            note="12 columns to stress horizontal layout / column-shift on a wide grid."))
+
+    # ---- A/B in-context variants (FINDING-D3): the SAME T1 and T4 tables, but
+    # surrounded by ordinary body paragraphs so the page is no longer sparse.
+    # These are the "B" arm of the controlled A/B; the "A" arm is the isolated
+    # T1 / T4 above (each alone on its page). The A/B is scored by
+    # pdf_sparse_page_ab.py, not by pdf_table_fidelity.py.
+    render_in_context("table_t1b_grid_in_context",
+                      "T1b — Same bordered grid, surrounded by body text",
+                      [hdr] + rows, grid_border(5, 8),
+                      base_name="table_t1_simple_grid")
+    render_in_context("table_t4b_rowspan_in_context",
+                      "T4b — Same rowspan table, surrounded by body text",
+                      data_t4, style_t4, base_name="table_t4_rowspan", spans=spans_t4)
 
     with open(os.path.join(OUT, "TABLE_GROUNDTRUTH_INDEX.json"), "w") as f:
         json.dump([{"name": m["name"], "n_rows": m["n_rows"], "n_cols": m["n_cols"],

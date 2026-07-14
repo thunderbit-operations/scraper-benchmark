@@ -26,7 +26,13 @@ def main():
             "import_s": cold.get("import_s"),
             "first_pdf_convert_s_incl_download": cold.get("first_pdf_convert_s"),
             "second_pdf_convert_s_warm": cold.get("second_pdf_convert_s"),
-            "hf_model_download_mb_reported": cold.get("model_download_mb"),
+            # raw os.walk figure (double-counts snapshot symlinks) — kept for provenance
+            "hf_walk_mb_raw_double_counts_symlinks": cold.get("model_download_mb"),
+            # de-duplicated on-disk model footprint (matches du); the honest number
+            "hf_on_disk_mb": cold.get("durable_hub_mb"),
+            "hf_on_disk_mib": cold.get("durable_hub_mib"),
+            "rapidocr_resident_mb": cold.get("rapidocr_models_mb"),
+            "rapidocr_downloaded_first_run_mb": cold.get("rapidocr_downloaded_at_first_run_mb"),
         }
 
     tf = load("pdf_table_fidelity.json")
@@ -40,10 +46,14 @@ def main():
             "n_recall_1.0": sum(1 for r in detected if r.get("cell_recall") == 1.0),
             "mean_cell_recall_of_detected": round(
                 sum(r.get("cell_recall", 0) for r in detected) / max(len(detected), 1), 4),
+            "n_inrow_1.0": sum(1 for r in detected if r.get("inrow_rate") == 1.0),
+            "mean_inrow_rate_of_detected": round(
+                sum(r.get("inrow_rate", r.get("cell_recall", 0)) for r in detected) / max(len(detected), 1), 4),
             "not_detected": [r["name"] for r in rows if not r.get("detected")],
             "per_table": {r["name"]: {"detected": r.get("detected"),
                                        "dims_match": r.get("dims_match"),
                                        "cell_recall": r.get("cell_recall"),
+                                       "inrow_rate": r.get("inrow_rate"),
                                        "convert_s": r.get("convert_s")} for r in rows},
         }
 
@@ -84,6 +94,28 @@ def main():
                         "boilerplate_marker_lines": r.get("boilerplate_marker_lines"),
                         "lines_before_main_heading": r.get("lines_before_main_heading")}
             for r in bp["results"]}
+
+    ab = load("pdf_sparse_page_ab.json")
+    if ab:
+        summary["sparse_page_ab"] = {
+            r["pair"]: {
+                "isolated_tables": r["isolated"]["n_doc_tables"],
+                "isolated_pictures": r["isolated"]["n_doc_pictures"],
+                "isolated_text_layer_chars": r["isolated"]["text_layer_chars"],
+                "in_context_tables": r["in_context"]["n_doc_tables"],
+                "in_context_md_has_table": r["in_context"]["md_has_table"],
+                "drops_when_isolated_converts_in_context": r.get("drops_when_isolated_converts_in_context"),
+                "drop_survives_do_ocr_false": r.get("drop_survives_do_ocr_false"),
+                "in_context_rowspan_repeats": r.get("in_context_rowspan_repeats"),
+            } for r in ab["results"]}
+
+    wt = load("warm_timing_repeats.json")
+    if wt:
+        summary["warm_timing_repeats"] = {
+            r["file"]: {"median_s": r.get("median_s"), "min_s": r.get("min_s"),
+                        "max_s": r.get("max_s"), "spread_pct": r.get("spread_pct"),
+                        "n_runs": r.get("n_runs")}
+            for r in wt["results"]}
 
     outp = os.path.join(RAW, "docling-deep-summary.json")
     with open(outp, "w") as f:

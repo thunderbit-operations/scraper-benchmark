@@ -11,8 +11,12 @@ Metrics per table (all COMPUTED, never hand-written):
   - gt_dims / got_dims  : (rows, cols)
   - dims_match          : structure recovered exactly
   - cell_recall         : fraction of ground-truth non-empty cell *values* that appear
-                          somewhere in the correct row of the detected table (order-tolerant
-                          within row, so a column shift that keeps values in-row still scores)
+                          ANYWHERE in the detected table (in-row OR shifted to another row)
+  - inrow_rate          : fraction of ground-truth non-empty values that appear in the
+                          CORRECT row index (order-tolerant within the row). This is the
+                          stricter placement metric; cell_recall >= inrow_rate always.
+                          A multi-level header that pushes a value one row down keeps
+                          cell_recall at 1.0 but drops inrow_rate below 1.0.
   - exact_grid_match    : strict cell-for-cell equality after normalisation
   - notes               : structural failure mode if any
 

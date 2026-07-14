@@ -1,6 +1,6 @@
 {
   "tool": "docling",
-  "note": "raw full-document conversion, no main-content extraction",
+  "_method": "counts boilerplate-marker lines (see html_boilerplate_quant.py BOILER list) and pre-main-heading lines in Docling's raw HTML->Markdown export; no main-content extraction is applied by the test or the tool",
   "results": [
     {
       "total_nonblank_md_lines": 255,

@@ -1,0 +1,163 @@
+{
+  "tool": "docling",
+  "test": "warm_timing_repeats",
+  "note": "warm (cached-model) convert timing over 3 runs; cheap fixtures only",
+  "results": [
+    {
+      "file": "table_t1_simple_grid",
+      "n_runs": 3,
+      "runs_s": [
+        0.093,
+        0.0949,
+        0.0935
+      ],
+      "median_s": 0.0935,
+      "min_s": 0.093,
+      "max_s": 0.0949,
+      "spread_pct": 2.0
+    },
+    {
+      "file": "table_t2_borderless",
+      "n_runs": 3,
+      "runs_s": [
+        0.4673,
+        0.4438,
+        0.4493
+      ],
+      "median_s": 0.4493,
+      "min_s": 0.4438,
+      "max_s": 0.4673,
+      "spread_pct": 5.2
+    },
+    {
+      "file": "table_t3_colspan_header",
+      "n_runs": 3,
+      "runs_s": [
+        0.3773,
+        0.391,
+        0.3771
+      ],
+      "median_s": 0.3773,
+      "min_s": 0.3771,
+      "max_s": 0.391,
+      "spread_pct": 3.7
+    },
+    {
+      "file": "table_t4_rowspan",
+      "n_runs": 3,
+      "runs_s": [
+        0.0928,
+        0.1109,
+        0.0978
+      ],
+      "median_s": 0.0978,
+      "min_s": 0.0928,
+      "max_s": 0.1109,
+      "spread_pct": 18.5
+    },
+    {
+      "file": "table_t5_span_borderless",
+      "n_runs": 3,
+      "runs_s": [
+        0.3729,
+        0.3843,
+        0.383
+      ],
+      "median_s": 0.383,
+      "min_s": 0.3729,
+      "max_s": 0.3843,
+      "spread_pct": 3.0
+    },
+    {
+      "file": "table_t6_financial_blankcol",
+      "n_runs": 3,
+      "runs_s": [
+        0.3732,
+        0.4117,
+        0.6262
+      ],
+      "median_s": 0.4117,
+      "min_s": 0.3732,
+      "max_s": 0.6262,
+      "spread_pct": 61.5
+    },
+    {
+      "file": "table_t7_wide_12col",
+      "n_runs": 3,
+      "runs_s": [
+        0.5881,
+        0.6383,
+        0.6075
+      ],
+      "median_s": 0.6075,
+      "min_s": 0.5881,
+      "max_s": 0.6383,
+      "spread_pct": 8.3
+    },
+    {
+      "file": "table_t1b_grid_in_context",
+      "n_runs": 3,
+      "runs_s": [
+        0.6071,
+        0.5293,
+        0.524
+      ],
+      "median_s": 0.5293,
+      "min_s": 0.524,
+      "max_s": 0.6071,
+      "spread_pct": 15.7
+    },
+    {
+      "file": "table_t4b_rowspan_in_context",
+      "n_runs": 3,
+      "runs_s": [
+        0.3781,
+        0.4207,
+        0.4063
+      ],
+      "median_s": 0.4063,
+      "min_s": 0.3781,
+      "max_s": 0.4207,
+      "spread_pct": 10.5
+    },
+    {
+      "file": "report.docx",
+      "n_runs": 3,
+      "runs_s": [
+        0.0173,
+        0.0169,
+        0.0182
+      ],
+      "median_s": 0.0173,
+      "min_s": 0.0169,
+      "max_s": 0.0182,
+      "spread_pct": 7.5
+    },
+    {
+      "file": "workbook.xlsx",
+      "n_runs": 3,
+      "runs_s": [
+        0.0021,
+        0.0018,
+        0.0017
+      ],
+      "median_s": 0.0018,
+      "min_s": 0.0017,
+      "max_s": 0.0021,
+      "spread_pct": 22.2
+    },
+    {
+      "file": "deck.pptx",
+      "n_runs": 3,
+      "runs_s": [
+        0.0062,
+        0.006,
+        0.0058
+      ],
+      "median_s": 0.006,
+      "min_s": 0.0058,
+      "max_s": 0.0062,
+      "spread_pct": 6.7
+    }
+  ]
+}

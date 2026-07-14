@@ -28,7 +28,9 @@
         "in_order": true,
         "n_present": 3,
         "n_total": 4
-      }
+      },
+      "text_layer_chars": 48969,
+      "has_text_layer": true
     },
     {
       "file": "arxiv_attention.pdf",
@@ -59,7 +61,9 @@
         "in_order": true,
         "n_present": 5,
         "n_total": 5
-      }
+      },
+      "text_layer_chars": 40407,
+      "has_text_layer": true
     },
     {
       "file": "ocr_test.pdf",
@@ -74,7 +78,9 @@
       "reading_order": null,
       "ocr_body_chars": 94,
       "ocr_sample": "Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package",
-      "ocr_produced_text": true
+      "ocr_produced_text": true,
+      "text_layer_chars": 0,
+      "has_text_layer": false
     },
     {
       "file": "nemotron_multipage.pdf",
@@ -89,7 +95,9 @@
       "reading_order": null,
       "ocr_body_chars": 292,
       "ocr_sample": "Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package package Docling bundles PDF document conversion to package JSON and Markdown in an easy self contained Docling bundles PDF document conversion to JSON and Markdown in an easy self contained package",
-      "ocr_produced_text": true
+      "ocr_produced_text": true,
+      "text_layer_chars": 0,
+      "has_text_layer": false
     }
   ]
 }

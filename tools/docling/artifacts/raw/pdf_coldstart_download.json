@@ -10,5 +10,22 @@
   "hf_cache_after_bytes": 1060176468,
   "model_download_bytes": 1060176468,
   "model_download_mb": 1060.2,
-  "second_pdf_convert_s": 0.546
+  "second_pdf_convert_s": 0.546,
+  "walk_total_bytes_at_run": 1060176468,
+  "walk_total_mb_at_run": 1060.2,
+  "durable_hub_bytes": 530003224,
+  "durable_hub_mb": 530.0,
+  "durable_hub_mib": 505.5,
+  "xet_cache_bytes_now": 166852,
+  "rapidocr_models_bytes": 73790433,
+  "rapidocr_models_mb": 75.6,
+  "rapidocr_models_mib": 70.4,
+  "_size_note": "RECONCILIATION of the 1060.2 figure. model_download_mb (1060.2) came from os.walk + os.path.getsize over HF_HOME, and os.path.getsize FOLLOWS symlinks: the HF cache stores each model file once in blobs/ and exposes it again as a snapshots/ symlink, so os.walk counted the 14 model files twice. The real on-disk footprint is blobs-only = 530 MB decimal = 505.5 MiB (matches `du -sh HF_HOME/hub` = 505M; TableFormer 342M + docling-layout-heron 164M). The hf-xet transfer cache is NOT the cause (xet is ~0.2 MB). RapidOCR weights live in site-packages (outside HF_HOME): ~40.1 MB were DOWNLOADED at first PDF run (PP-OCRv4 .pth, per pdf_coldstart.log); resident total is 75.6 MB decimal (70.4 MiB) once the PP-OCRv6 .onnx files that ship with the pip install are included. So: on-disk models ~506 MiB (HF) + ~70 MiB (RapidOCR); first-run DOWNLOAD ~506 MiB HF + ~40 MB RapidOCR.",
+  "blobs_only_bytes": 530000694,
+  "blobs_only_mb": 530.0,
+  "blobs_only_mib": 505.4,
+  "walk_follows_symlinks_bytes": 1060003918,
+  "walk_follows_symlinks_mb": 1060.0,
+  "n_snapshot_symlinks": 14,
+  "rapidocr_downloaded_at_first_run_mb": 40.1
 }

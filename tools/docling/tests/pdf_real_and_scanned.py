@@ -56,6 +56,18 @@ def heading_counts(md):
     return hc
 
 
+def text_layer_chars(path, pdfium):
+    """Total embedded text-layer character count across all pages (0 => no text layer,
+    i.e. genuinely scanned; any recovered text must then be OCR output, not a hidden
+    layer). This is the probe that substantiates the 'verified zero text layer' claim."""
+    pd = pdfium.PdfDocument(path)
+    total = 0
+    for i in range(len(pd)):
+        total += len(pd[i].get_textpage().get_text_range())
+    pd.close()
+    return total
+
+
 def ordered_markers(md, markers):
     """Return which markers appear and whether they appear in the given order."""
     lower = md.lower()
@@ -81,19 +93,22 @@ def main():
             results.append({"file": fname, "error": "missing fixture"})
             continue
         pd = pdfium.PdfDocument(path); n_pages = len(pd); pd.close()
+        tl_chars = text_layer_chars(path, pdfium)
         t0 = time.perf_counter()
         res = conv.convert(path)
         dt = round(time.perf_counter() - t0, 2)
         md = res.document.export_to_markdown()
         entry = {
             "file": fname, "n_pages": n_pages, "expected_pages": exp_pages,
+            "text_layer_chars": tl_chars, "has_text_layer": tl_chars > 0,
             "convert_s": dt, "s_per_page": round(dt / max(n_pages, 1), 2),
             "md_chars": len(md), "n_md_tables": count_md_tables(md),
             "heading_counts": heading_counts(md),
             "probe_hits": {p: (p.lower() in md.lower()) for p in probes},
             "reading_order": ordered_markers(md, markers) if markers else None,
         }
-        # for scanned docs, capture a text sample to prove OCR fired (non-empty body)
+        # for scanned docs, capture a text sample to prove OCR fired (non-empty body).
+        # text_layer_chars==0 above proves the recovered text is OCR, not a hidden layer.
         if not probes:
             body = re.sub(r"\s+", " ", md).strip()
             entry["ocr_body_chars"] = len(body)
