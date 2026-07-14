@@ -31,3 +31,18 @@ python run_tests.py
 - Clean side: the article fixture came back with the title, 3/3 paragraphs, and author + date, with every boilerplate marker stripped.
 
 Absolute character counts here are a within-tool signal only — see the [comparability boundary](../../METHODOLOGY.md#the-comparability-boundary).
+
+## Bonus: real-article extraction fidelity demo (non-timed)
+
+Added 2026-07-14. A **capability demonstration with a reproducible artifact — not a scored benchmark** (no gold standard, so no F1 / precision / recall). It runs trafilatura on two **real** article pages saved as offline fixtures, filling the "add a genuine news/article example outside toscrape" gap. **No timing is performed** (this measures extraction fidelity, not speed) and the runner touches **no network** at runtime (it reads saved fixtures).
+
+```bash
+# from tools/trafilatura, with trafilatura installed in a venv
+python tests/run_trafilatura_fidelity_demo.py
+```
+
+- Fixtures (`fixtures/real/`, fetched once each 2026-07-14, source URL + SHA-256 recorded in `results/FIDELITY_DEMO_README.md` and the RM):
+  - `news_wikipedia_web_scraping.html` — https://en.wikipedia.org/wiki/Web_scraping (encyclopedic article)
+  - `news_wikinews_7th_heaven.html` — a Wikinews archived **news article**
+- Outputs (`results/`): `fidelity_<name>.{txt,md,json}` + `trafilatura-fidelity-summary.json` + `FIDELITY_DEMO_README.md`.
+- Result: on both pages every checked site-chrome marker was dropped from the extracted body; title/date/hostname captured; `author`/`sitename` returned null (reported as misses). Body/raw byte ratios (~0.116 Wikipedia, ~0.028 Wikinews) measure boilerplate compression, **not** accuracy. The external ~0.945 F1 cited in the RM stays attributed to the ScrapingHub benchmark (older 0.5.1 line) and is **not** re-run here.

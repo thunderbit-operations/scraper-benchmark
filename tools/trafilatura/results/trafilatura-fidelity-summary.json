@@ -1,0 +1,122 @@
+{
+  "run_started_at": "2026-07-14T05:59:30.003061+00:00",
+  "tool": "trafilatura",
+  "trafilatura_version": "2.1.0",
+  "demo_kind": "real-article extraction fidelity DEMO (non-timed, offline fixtures)",
+  "not_a_benchmark": "No gold standard, no F1/precision/recall. This is a reproducible capability demonstration, not a scored benchmark.",
+  "timing_performed": false,
+  "network_used_at_runtime": false,
+  "fixtures": [
+    {
+      "name": "news_wikipedia_web_scraping",
+      "kind": "encyclopedic article",
+      "source_url": "https://en.wikipedia.org/wiki/Web_scraping",
+      "fetched": "2026-07-14",
+      "sha256_expected": "b0d7e4117f4f1d365bc88bc7c09f2a1d8b748a06b47cb734096a77c1741c92cd",
+      "sha256_actual": "b0d7e4117f4f1d365bc88bc7c09f2a1d8b748a06b47cb734096a77c1741c92cd",
+      "sha256_match": true,
+      "extraction_succeeded": true,
+      "raw_html_bytes": 230049,
+      "extracted_body_bytes": 26673,
+      "extracted_over_raw_ratio": 0.1159,
+      "boilerplate_markers_checked": [
+        "Jump to content",
+        "Privacy policy",
+        "Powered by MediaWiki",
+        "This page was last edited"
+      ],
+      "boilerplate_dropped": [
+        "Jump to content",
+        "Privacy policy",
+        "Powered by MediaWiki",
+        "This page was last edited"
+      ],
+      "boilerplate_leaked": [],
+      "boilerplate_all_dropped": true,
+      "body_markers_checked": [
+        "Web scraping",
+        "HTML"
+      ],
+      "body_markers_kept": [
+        "Web scraping",
+        "HTML"
+      ],
+      "body_markers_missing": [],
+      "metadata_field_hits": {
+        "title": true,
+        "author": false,
+        "date": true,
+        "sitename": false,
+        "hostname": true,
+        "categories": false,
+        "tags": false
+      },
+      "metadata_title": "Web scraping - Wikipedia",
+      "metadata_author": null,
+      "metadata_date": "2005-09-17",
+      "metadata_sitename": null,
+      "metadata_hostname": "wikipedia.org",
+      "outputs": [
+        "results/fidelity_news_wikipedia_web_scraping.txt",
+        "results/fidelity_news_wikipedia_web_scraping.md",
+        "results/fidelity_news_wikipedia_web_scraping.json"
+      ]
+    },
+    {
+      "name": "news_wikinews_7th_heaven",
+      "kind": "news article (archived)",
+      "source_url": "https://en.wikinews.org/wiki/\"7th_Heaven\"_television_series_comes_to_an_end",
+      "fetched": "2026-07-14",
+      "sha256_expected": "074c414c411f6d7a9f599ae0df7a70c616c5dbb90c124c92b0cd84ab8918ce7c",
+      "sha256_actual": "074c414c411f6d7a9f599ae0df7a70c616c5dbb90c124c92b0cd84ab8918ce7c",
+      "sha256_match": true,
+      "extraction_succeeded": true,
+      "raw_html_bytes": 79716,
+      "extracted_body_bytes": 2200,
+      "extracted_over_raw_ratio": 0.0276,
+      "boilerplate_markers_checked": [
+        "Jump to content",
+        "Privacy policy",
+        "Powered by MediaWiki",
+        "This page was last edited",
+        "free news source"
+      ],
+      "boilerplate_dropped": [
+        "Jump to content",
+        "Privacy policy",
+        "Powered by MediaWiki",
+        "This page was last edited",
+        "free news source"
+      ],
+      "boilerplate_leaked": [],
+      "boilerplate_all_dropped": true,
+      "body_markers_checked": [
+        "7th Heaven"
+      ],
+      "body_markers_kept": [
+        "7th Heaven"
+      ],
+      "body_markers_missing": [],
+      "metadata_field_hits": {
+        "title": true,
+        "author": false,
+        "date": true,
+        "sitename": false,
+        "hostname": true,
+        "categories": false,
+        "tags": false
+      },
+      "metadata_title": "\"7th Heaven\" television series comes to an end - Wikinews, the free news source",
+      "metadata_author": null,
+      "metadata_date": "2005-11-29",
+      "metadata_sitename": null,
+      "metadata_hostname": "wikinews.org",
+      "outputs": [
+        "results/fidelity_news_wikinews_7th_heaven.txt",
+        "results/fidelity_news_wikinews_7th_heaven.md",
+        "results/fidelity_news_wikinews_7th_heaven.json"
+      ]
+    }
+  ],
+  "run_completed_at": "2026-07-14T05:59:30.188302+00:00"
+}

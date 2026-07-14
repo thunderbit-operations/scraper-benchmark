@@ -99,3 +99,51 @@ Cross-checked against `metadata-snapshot.md`.
 - **Version:** RM tests 2.1.0 "= latest"; the snapshot confirms PyPI 2.1.0 / GitHub release v2.1.0 (2026-06-07), unchanged across the 2026-07-09 refresh (no version gap). Traceable.
 - **External-benchmark provenance (extra care):** the accuracy F1 figures (e.g. ~0.945) come from the ScrapingHub benchmark and are tied to specific trafilatura versions in those sources (e.g. the reported 0.945 is for an older 0.5.1 line); the writer must **date and version-qualify** any imported benchmark number to its source, not attach it to the 2.1.0 tested here without checking the source's version. Flagged.
 - **Instruction (do not fetch live):** star/version not re-pulled live this pass; Richard refreshes pre-publication. This section certifies traceability to the dated 2026-07-09 snapshot and recommends the "as of 2026-07-09" qualifier at point of use.
+
+---
+
+## Real-article extraction fidelity demo (bonus, 2026-07-14)
+
+Added post-hoc (2026-07-14) as a **capability demonstration with a reproducible artifact** — deliberately **not** a scored benchmark. It fills the gap the original pack flagged twice ("add a genuine news/article public example (outside toscrape)"; the earlier public test used a Books-to-Scrape *product-description block*, not a real article). Runner: `tests/run_trafilatura_fidelity_demo.py`. trafilatura 2.1.0, Python 3.14, macOS arm64, same venv. **No timing was performed** (the machine runs concurrent workloads; timing would be meaningless here — this measures extraction *fidelity*, not speed). The runner reads saved fixtures from disk and does **not** touch the network, so it is deterministic and re-runnable offline.
+
+### Method
+
+Two real article pages were fetched **once each** (rate-limited, single request each) and saved as offline fixtures. For each, trafilatura's core path was run — `extract(..., output_format="txt" / "markdown" / "json", with_metadata=True, include_comments=False)` — and the following were recorded from the run output (not hand-typed): raw-HTML bytes vs extracted-body bytes; which known site-chrome markers were dropped vs leaked; which metadata fields were populated vs null; and a runtime SHA-256 cross-check against the recorded fixture hash.
+
+### Fixtures (source + date + hash)
+
+| Fixture | Kind | Source URL | Fetched | SHA-256 (raw HTML) |
+|---|---|---|---|---|
+| `news_wikipedia_web_scraping` | encyclopedic article | https://en.wikipedia.org/wiki/Web_scraping | 2026-07-14 | `b0d7e4117f4f1d365bc88bc7c09f2a1d8b748a06b47cb734096a77c1741c92cd` |
+| `news_wikinews_7th_heaven` | news article (archived) | `https://en.wikinews.org/wiki/"7th_Heaven"_television_series_comes_to_an_end` | 2026-07-14 | `074c414c411f6d7a9f599ae0df7a70c616c5dbb90c124c92b0cd84ab8918ce7c` |
+
+Fixtures under `artifacts/fixtures/`; fetch log `artifacts/logs/fidelity-fetch.log`. Both were chosen for long-term stability and genuine boilerplate (nav bar, sidebar/infobox, "Powered by MediaWiki" footer, edit/privacy chrome). The Wikinews page is in `Category:Archived` (frozen). A block-page signature scan was clean (the substring "captcha" appears only inside MediaWiki's `wgConfirmEdit…` edit-form JS config and, on the Wikipedia page, in the article's own prose about CAPTCHA — not an anti-bot challenge).
+
+### Results (from `artifacts/results/trafilatura-fidelity-summary.json`)
+
+| Fixture | Raw HTML bytes | Extracted body bytes | Body/raw ratio | Chrome markers dropped | Title | Date | Hostname | Author | Sitename |
+|---|---:|---:|---:|---|---|---|---|---|---|
+| Wikipedia `Web_scraping` | 230,049 | 26,673 | 0.116 | 4/4 | ✓ | 2005-09-17 | wikipedia.org | null | null |
+| Wikinews `7th Heaven…` | 79,716 | 2,200 | 0.028 | 5/5 | ✓ | 2005-11-29 | wikinews.org | null | null |
+
+On both pages every checked site-chrome marker ("Jump to content", "Privacy policy", "Powered by MediaWiki", "This page was last edited", plus "free news source" on Wikinews) was absent from the extracted body, and the expected article-body phrases survived. Per-fixture extraction outputs: `artifacts/raw/fidelity_<name>.txt` / `.md` / `.json`.
+
+### Boundaries and honest notes
+
+- **Not a benchmark.** The body/raw ratio measures how much markup + chrome was stripped, **not** extraction accuracy. There is no gold-standard corpus here, so **no F1 / precision / recall is computed or implied**. This demo neither confirms nor scores any accuracy figure.
+- **The external accuracy figures are unchanged and still external.** The ~0.945 F1 cited elsewhere in this pack remains attributed to the **ScrapingHub article-extraction-benchmark** and is version-qualified there (that reported figure is for an older 0.5.1 line, **not** the 2.1.0 tested here). This bonus demo does **not** re-run that benchmark and must not be read as corroborating any specific F1 number.
+- **Metadata misses reported, not hidden.** On both MediaWiki pages `author` and `sitename` came back null; those are recorded as misses in the summary JSON. `title`, `date`, and `hostname` were populated. (The extracted `date` reflects trafilatura's date detection on these pages — 2005 dates consistent with the articles' original publication — and is reported as-returned, not independently verified against a ground-truth publish date.)
+- **What "body" includes.** Extracted body contains article-embedded content such as Wikipedia's reference/citation list and a "needs more citations" maintenance banner. That is article content, not site chrome — consistent with content extraction, and noted so the byte ratio is not over-read.
+- **Scope of the fixtures.** Two MediaWiki-family pages (one encyclopedic, one news). They exercise real boilerplate removal on genuine articles but are a small, single-CMS sample; this is a demonstration, not a representative corpus.
+
+### Novelty classification (this section)
+
+`[DOCUMENTED]`. Main-content/boilerplate-stripped article extraction plus title/date metadata is trafilatura's advertised core capability. This section adds a *reproducible artifact on real article pages*; it does **not** claim any exclusive or undocumented behavior.
+
+### Part 6 self-check (this appended section only)
+
+1. **Self-contradicting winner sentence (D1)** — *Pass.* No cross-tool ranking and no "fastest/best" claim; no timing at all. The only comparative numbers are within-fixture byte ratios, explicitly labeled as compression, not accuracy.
+2. **Claim-without-artifact (D4)** — *Pass.* Every quantitative value (byte counts, ratios, marker-drop counts, metadata hits) is emitted by `tests/run_trafilatura_fidelity_demo.py` into `artifacts/results/trafilatura-fidelity-summary.json` and the per-fixture `artifacts/raw/fidelity_*` files; SHA-256s are cross-checked at runtime. The external ~0.945 F1 is *not* presented as this section's measurement — it is re-flagged as external and version-qualified.
+3. **Blind instrument (D2)** — *Pass (N/A).* No timing/memory/leak instrument is used; no speed or resource claim is made. The one instrument (byte-length + substring drop-check) is trivially self-evident and its raw inputs (the `.txt` outputs) are saved for inspection.
+4. **Mis-attribution (D3)** — *Pass.* Null `author`/`sitename` are attributed to trafilatura returning no value on these MediaWiki pages (reported as misses), not spun as a defect; the maintenance banner and citation list in the body are attributed to article content, not to a boilerplate-removal failure.
+5. **Novelty-tag coverage + self-praise lint (D7/D12)** — *Pass.* Section tagged `[DOCUMENTED]`; `grep -iE 'honest|independent|strongest|trustworthy|best|fastest|unique'` over this section finds no self-evaluative adjective applied to the tool (the word "honest" appears only as a subsection label describing disclosure discipline, not as a claim about trafilatura).
