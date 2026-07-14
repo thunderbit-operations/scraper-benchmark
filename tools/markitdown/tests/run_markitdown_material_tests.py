@@ -13,9 +13,9 @@ microsoft/markitdown, and records quantitative metrics for each page:
   - conversion wall-clock time
   - success / failure
 
-Honest by design: only real measured numbers are written. No fabrication.
-Raw markdown outputs are saved to artifacts/raw/. A JSON summary is written to
-artifacts/raw/markitdown-test-summary.json.
+Every numeric field is computed from the conversion output at runtime; nothing
+is hand-written. Raw markdown outputs are saved to artifacts/raw/. A JSON
+summary is written to artifacts/raw/markitdown-test-summary.json.
 """
 import json
 import os

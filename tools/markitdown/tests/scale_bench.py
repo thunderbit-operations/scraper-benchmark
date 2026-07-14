@@ -15,7 +15,7 @@ Because subjects run in one process sequentially, ru_maxrss is monotonic, so we
 report the *incremental* peak (max_rss_after - max_rss_before) which is only a
 valid lower bound for later subjects; the PDF (first, heaviest) gets the clean
 reading. A note is emitted for subjects after the peak-setter.  Timings are
-independent of this and always valid.
+unaffected by this and always valid.
 
 For a clean per-subject peak, pass a subject name as argv[1] and the caller runs
 one subprocess per subject (run_scale.sh does this).

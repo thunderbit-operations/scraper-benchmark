@@ -173,7 +173,7 @@ case(
 # T09 — empty cells and whitespace cells
 case(
     "t09_empty_cells",
-    "Table with genuinely empty cells and whitespace-only cells.",
+    "Table with truly empty cells and whitespace-only cells.",
     """<table><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead>
 <tbody>
 <tr><td>1</td><td></td><td>3</td></tr>

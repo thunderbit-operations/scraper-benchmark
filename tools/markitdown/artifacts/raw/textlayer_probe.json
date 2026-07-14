@@ -1,0 +1,13 @@
+{
+  "tool": "pdfminer.six",
+  "pdfminer_version": "20260107",
+  "python": "3.14.2",
+  "scanned_financial": {
+    "fixture": "artifacts/fixtures/docs/scanned_financial.pdf",
+    "input_bytes": 88791,
+    "extractor": "pdfminer.six high_level.extract_text",
+    "raw_chars": 1,
+    "stripped_chars": 0,
+    "has_text_layer": false
+  }
+}
