@@ -1,0 +1,61 @@
+{
+  "run_started_at": "2026-07-23T15:40:40.402072+00:00",
+  "tool": "chromedp",
+  "base_url": "http://127.0.0.1:53371",
+  "platform_note": "macOS arm64. chromedp allocate.go uses exec.CommandContext; the force-kill-children guarantee in godoc is Linux-scoped.",
+  "cancel_runs": [
+    {
+      "chrome_browser_procs_after_cancel": 0,
+      "chrome_browser_procs_before_cancel": 1,
+      "reap_ms": 13,
+      "reaped": true
+    },
+    {
+      "chrome_browser_procs_after_cancel": 0,
+      "chrome_browser_procs_before_cancel": 1,
+      "reap_ms": 13,
+      "reaped": true
+    },
+    {
+      "chrome_browser_procs_after_cancel": 0,
+      "chrome_browser_procs_before_cancel": 1,
+      "reap_ms": 12,
+      "reaped": true
+    }
+  ],
+  "orphan_runs": [
+    {
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 1,
+      "orphaned": true,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 1,
+      "orphaned": true,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 1,
+      "orphaned": true,
+      "browser_procs_after_cleanup": 0
+    }
+  ],
+  "reading": {
+    "cancel_reaps_all": true,
+    "reap_ms_values": [
+      13,
+      13,
+      12
+    ],
+    "orphan_on_exit_all": true,
+    "all_orphans_cleaned": true,
+    "note": "cancel => Chrome reaped (exec.CommandContext kill); exit-without-cancel on macOS => Chrome orphaned (no parent-death signal). Contrast is the finding."
+  },
+  "run_completed_at": "2026-07-23T15:40:47.082636+00:00"
+}

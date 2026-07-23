@@ -1,0 +1,95 @@
+{
+  "run_started_at": "2026-07-23T15:40:27.119103+00:00",
+  "tool": "chromedp",
+  "base_url": "http://127.0.0.1:53318",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:53318",
+    "A_static_marker": "STATIC_ALPHA_MARKER_A",
+    "A_static_href": "/page/alpha",
+    "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+    "B_sync_href": "/sync/injected-11",
+    "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+    "C_delayed_href": "/delayed/injected-42",
+    "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+    "waitsem_visible_marker": "VISIBLE_MARKER_V"
+  },
+  "runs": [
+    {
+      "hidden_node": {
+        "waitready_err": "",
+        "waitready_ms": 6,
+        "waitready_returned": true,
+        "waitvisible_err": "context deadline exceeded",
+        "waitvisible_ms": 4000,
+        "waitvisible_returned": false
+      },
+      "selector_semantics_visible_node": {
+        "byid_err": "",
+        "byid_ms": 1,
+        "byid_returned": true,
+        "byquery_err": "",
+        "byquery_ms": 1,
+        "byquery_returned": true,
+        "default_query_err": "",
+        "default_query_ms": 12,
+        "default_query_returned": true
+      },
+      "timeout_ms": 4000
+    },
+    {
+      "hidden_node": {
+        "waitready_err": "",
+        "waitready_ms": 5,
+        "waitready_returned": true,
+        "waitvisible_err": "context deadline exceeded",
+        "waitvisible_ms": 4000,
+        "waitvisible_returned": false
+      },
+      "selector_semantics_visible_node": {
+        "byid_err": "",
+        "byid_ms": 2,
+        "byid_returned": true,
+        "byquery_err": "",
+        "byquery_ms": 1,
+        "byquery_returned": true,
+        "default_query_err": "",
+        "default_query_ms": 4,
+        "default_query_returned": true
+      },
+      "timeout_ms": 4000
+    },
+    {
+      "hidden_node": {
+        "waitready_err": "",
+        "waitready_ms": 6,
+        "waitready_returned": true,
+        "waitvisible_err": "context deadline exceeded",
+        "waitvisible_ms": 4000,
+        "waitvisible_returned": false
+      },
+      "selector_semantics_visible_node": {
+        "byid_err": "",
+        "byid_ms": 2,
+        "byid_returned": true,
+        "byquery_err": "",
+        "byquery_ms": 1,
+        "byquery_returned": true,
+        "default_query_err": "",
+        "default_query_ms": 6,
+        "default_query_returned": true
+      },
+      "timeout_ms": 4000
+    }
+  ],
+  "reading": {
+    "hidden_node_waitready_returns_all": true,
+    "hidden_node_waitvisible_times_out_all": true,
+    "waitvisible_deadline_error_all": true,
+    "default_query_returns_all": true,
+    "byid_returns_all": true,
+    "byquery_returns_all": true,
+    "selector_440_hang_reproduced": false,
+    "note": "WaitReady = node attached to DOM; WaitVisible = node actually visible. On a display:none attached node they diverge cleanly. The #440 default-query hang is reported as reproduced only if measured."
+  },
+  "run_completed_at": "2026-07-23T15:40:39.761339+00:00"
+}

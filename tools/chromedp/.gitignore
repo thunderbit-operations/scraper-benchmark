@@ -1,0 +1,25 @@
+# Never commit the local virtualenv (recreate via the README).
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Run logs may carry absolute local paths — the JSON summaries carry the numbers.
+*.log
+*.out
+*.stdout
+artifacts/logs/
+
+# Go build products (recreate via `go build -o chromedp_probe .`).
+# go.mod / go.sum ARE committed (pin the chromedp version); the binary is not.
+tests/harness/chromedp_probe
+*.test
+*.exe
+
+# Chrome runtime state / temp user-data-dirs (created under $TMPDIR at runtime).
+chromedp_*/
+.chromedp-*/
+
+# OS noise
+.DS_Store

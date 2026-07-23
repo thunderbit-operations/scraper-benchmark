@@ -1,0 +1,88 @@
+{
+  "run_started_at": "2026-07-23T15:41:09.290101+00:00",
+  "tool": "chromedp",
+  "base_url": "http://127.0.0.1:53486",
+  "n_concurrent": 4,
+  "reps": 3,
+  "shared_one_browser": {
+    "runs": [
+      {
+        "chrome_procs_peak": 1,
+        "first_error": "",
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 209
+      },
+      {
+        "chrome_procs_peak": 1,
+        "first_error": "",
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 219
+      },
+      {
+        "chrome_procs_peak": 1,
+        "first_error": "",
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 214
+      }
+    ],
+    "wall_ms": {
+      "p50": 214,
+      "min": 209,
+      "max": 219
+    },
+    "chrome_procs_peak": {
+      "min": 1,
+      "max": 1
+    }
+  },
+  "separate_browsers": {
+    "runs": [
+      {
+        "chrome_procs_peak": 4,
+        "first_error": "",
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 264
+      },
+      {
+        "chrome_procs_peak": 4,
+        "first_error": "",
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 261
+      },
+      {
+        "chrome_procs_peak": 4,
+        "first_error": "",
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 278
+      }
+    ],
+    "wall_ms": {
+      "p50": 264,
+      "min": 261,
+      "max": 278
+    },
+    "chrome_procs_peak": {
+      "min": 4,
+      "max": 4
+    }
+  },
+  "verdict": {
+    "wall_ranges_overlap": false,
+    "shared_peak_procs": {
+      "min": 1,
+      "max": 1
+    },
+    "separate_peak_procs": {
+      "min": 4,
+      "max": 4
+    },
+    "note": "Shared-browser tabs run N navigations in ONE Chrome process; separate mode spends N browser processes. Wall-time is a tie if ranges overlap."
+  },
+  "run_completed_at": "2026-07-23T15:41:09.290115+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "run_started_at": "2026-07-23T15:40:57.452103+00:00",
+  "tool": "chromedp",
+  "base_url": "http://127.0.0.1:53445",
+  "chrome": "~/Library/Caches/ms-playwright/chromium_headless_shell-1232/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "n_runs": 5,
+  "cold_start_ms_samples": [
+    102,
+    111,
+    105,
+    98,
+    98
+  ],
+  "cold_start_ms": {
+    "p50": 102,
+    "min": 98,
+    "max": 111,
+    "mean": 102.8
+  },
+  "runtime_dependency": {
+    "requires_external_chrome": true,
+    "note": "chromedp is pure Go (no cgo) at the module level, but requires a Chrome/Chromium executable at runtime (supplied here via ExecPath). The measurement fails immediately with no Chrome present."
+  },
+  "run_completed_at": "2026-07-23T15:40:57.452131+00:00"
+}

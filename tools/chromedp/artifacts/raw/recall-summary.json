@@ -1,0 +1,188 @@
+{
+  "run_started_at": "2026-07-23T15:39:53.948765+00:00",
+  "tool": "chromedp",
+  "chrome": "~/Library/Caches/ms-playwright/chromium_headless_shell-1232/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "base_url": "http://127.0.0.1:53121",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:53121",
+    "A_static_marker": "STATIC_ALPHA_MARKER_A",
+    "A_static_href": "/page/alpha",
+    "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+    "B_sync_href": "/sync/injected-11",
+    "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+    "C_delayed_href": "/delayed/injected-42",
+    "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+    "waitsem_visible_marker": "VISIBLE_MARKER_V"
+  },
+  "recall_matrix_delay800": {
+    "none": {
+      "delay_ms": 800,
+      "elapsed_ms": 317,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": false
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    },
+    "waitready": {
+      "delay_ms": 800,
+      "elapsed_ms": 107,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": false
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    },
+    "waitvisible": {
+      "delay_ms": 800,
+      "elapsed_ms": 912,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    },
+    "poll": {
+      "delay_ms": 800,
+      "elapsed_ms": 972,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    }
+  },
+  "determinism_found_sets": {
+    "none": {
+      "runs": [
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected"
+      ],
+      "stable": true
+    },
+    "waitready": {
+      "runs": [
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected"
+      ],
+      "stable": true
+    },
+    "waitvisible": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    },
+    "poll": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    }
+  },
+  "injection_timing_gradient": [
+    {
+      "delay_ms": 0,
+      "none": {
+        "C_found": true,
+        "elapsed_ms": 127
+      },
+      "waitvisible": {
+        "C_found": true,
+        "elapsed_ms": 109
+      }
+    },
+    {
+      "delay_ms": 100,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 105
+      },
+      "waitvisible": {
+        "C_found": true,
+        "elapsed_ms": 208
+      }
+    },
+    {
+      "delay_ms": 400,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 113
+      },
+      "waitvisible": {
+        "C_found": true,
+        "elapsed_ms": 519
+      }
+    },
+    {
+      "delay_ms": 800,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 116
+      },
+      "waitvisible": {
+        "C_found": true,
+        "elapsed_ms": 911
+      }
+    },
+    {
+      "delay_ms": 1500,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 113
+      },
+      "waitvisible": {
+        "C_found": true,
+        "elapsed_ms": 1625
+      }
+    }
+  ],
+  "contrast": {
+    "C_delayed_found_by": [
+      "waitvisible",
+      "poll"
+    ],
+    "naive_navigate_misses_C": true,
+    "waitready_body_misses_C": true,
+    "waitvisible_node_finds_C": true,
+    "poll_finds_C": true,
+    "note": "A live browser sees the runtime-injected node only with a wait keyed to that node; Navigate (returns on load) and WaitReady(body) both miss it."
+  },
+  "run_completed_at": "2026-07-23T15:40:04.700079+00:00"
+}
