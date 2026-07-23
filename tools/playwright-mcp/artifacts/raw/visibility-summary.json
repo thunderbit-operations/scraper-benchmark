@@ -1,0 +1,106 @@
+{
+  "run_started_at": "2026-07-23T14:57:59.267994+00:00",
+  "tool": "playwright-mcp",
+  "base_url": "http://127.0.0.1:60150",
+  "checks": [
+    {
+      "key": "A_heading",
+      "content_class": "A_semantic",
+      "hiding_mechanism": "heading role",
+      "consensus_note": "present",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "A_link_alpha",
+      "content_class": "A_semantic",
+      "hiding_mechanism": "link role",
+      "consensus_note": "present",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "A_button",
+      "content_class": "A_semantic",
+      "hiding_mechanism": "button role",
+      "consensus_note": "present",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "A_input",
+      "content_class": "A_semantic",
+      "hiding_mechanism": "textbox role",
+      "consensus_note": "present",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "B_runtime_injected",
+      "content_class": "B_runtime",
+      "hiding_mechanism": "JS-injected at runtime, no literal in bytes",
+      "consensus_note": "present (live tree)",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "C_nonsemantic_div",
+      "content_class": "C_hidden",
+      "hiding_mechanism": "bare <div>, no role, visible",
+      "consensus_note": "consensus: 'only semantic'",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "C_aria_hidden",
+      "content_class": "C_hidden",
+      "hiding_mechanism": "aria-hidden=true",
+      "consensus_note": "consensus: omitted",
+      "present_in_snapshot": true
+    },
+    {
+      "key": "C_display_none",
+      "content_class": "C_hidden",
+      "hiding_mechanism": "display:none",
+      "consensus_note": "hidden",
+      "present_in_snapshot": false
+    },
+    {
+      "key": "C_visibility_hidden",
+      "content_class": "C_hidden",
+      "hiding_mechanism": "visibility:hidden",
+      "consensus_note": "hidden",
+      "present_in_snapshot": false
+    },
+    {
+      "key": "D_canvas_text",
+      "content_class": "D_canvas",
+      "hiding_mechanism": "canvas fillText, pixels only",
+      "consensus_note": "invisible to a11y",
+      "present_in_snapshot": false
+    }
+  ],
+  "server_info": {
+    "name": "Playwright",
+    "version": "1.62.0-alpha-1783623505000"
+  },
+  "snapshot_text": "### Page\n- Page URL: http://127.0.0.1:60150/classes\n- Page Title: Content Classes\n### Snapshot\n```yaml\n- generic [active] [ref=e1]:\n  - heading \"Semantic Section Heading\" [level=1] [ref=e2]\n  - link \"Alpha Page Link\" [ref=e3] [cursor=pointer]:\n    - /url: /page/alpha\n  - link \"Beta Page Link\" [ref=e4] [cursor=pointer]:\n    - /url: /page/beta\n  - button \"Submit Order Button\" [ref=e5]\n  - generic [ref=e6]:\n    - text: Search Query Field\n    - textbox \"Search Query Field\" [ref=e7]\n  - generic [ref=e8]: NONSEMANTIC_DIV_TEXT_ZZ\n  - generic [ref=e9]: ARIA_HIDDEN_SECRET_QQ\n  - img \"chart\" [ref=e10]\n  - link \"Runtime Injected Link 77\" [ref=e11] [cursor=pointer]:\n    - /url: /runtime/injected-77\n```",
+  "boundary_map": {
+    "surfaced_mechanisms": [
+      "heading role",
+      "link role",
+      "button role",
+      "textbox role",
+      "JS-injected at runtime, no literal in bytes",
+      "bare <div>, no role, visible",
+      "aria-hidden=true"
+    ],
+    "dropped_mechanisms": [
+      "display:none",
+      "visibility:hidden",
+      "canvas fillText, pixels only"
+    ],
+    "aria_hidden_surfaced_contradicts_consensus": true,
+    "nonsemantic_div_surfaced_contradicts_only_semantic": true,
+    "runtime_injected_surfaced_by_live_tree": true,
+    "canvas_text_invisible": true,
+    "display_none_dropped": true,
+    "visibility_hidden_dropped": true
+  },
+  "cross_series_note": "class B (runtime-injected, no literal in bytes) is surfaced here by the live accessibility snapshot; the same content class is missed by a static crawl (katana standard mode class C). Live-DOM read vs static parse.",
+  "run_completed_at": "2026-07-23T14:58:01.039246+00:00"
+}

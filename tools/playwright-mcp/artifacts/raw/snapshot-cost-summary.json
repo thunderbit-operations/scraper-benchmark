@@ -1,0 +1,278 @@
+{
+  "run_started_at": "2026-07-23T14:57:55.574030+00:00",
+  "tool": "playwright-mcp",
+  "base_url": "http://127.0.0.1:60097",
+  "tokenizers": [
+    "o200k_base",
+    "cl100k_base"
+  ],
+  "doc_claim_tokens_upper": 400,
+  "snapshots_per_page": 3,
+  "gradient": [
+    {
+      "label": "gradient_n0",
+      "url": "http://127.0.0.1:60097/gradient?n=0",
+      "navigate_response": {
+        "bytes": 321,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 190,
+        "tokens_o200k": 73,
+        "tokens_cl100k": 74
+      },
+      "snapshot_bytes_all_calls": [
+        190,
+        190,
+        190
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.002,
+        "min": 0.002,
+        "max": 0.003
+      },
+      "exceeds_doc_400_token_claim": false,
+      "n_interactive_elements": 0
+    },
+    {
+      "label": "gradient_n1",
+      "url": "http://127.0.0.1:60097/gradient?n=1",
+      "navigate_response": {
+        "bytes": 321,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 261,
+        "tokens_o200k": 101,
+        "tokens_cl100k": 102
+      },
+      "snapshot_bytes_all_calls": [
+        261,
+        261,
+        261
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.002,
+        "min": 0.001,
+        "max": 0.002
+      },
+      "exceeds_doc_400_token_claim": false,
+      "n_interactive_elements": 1
+    },
+    {
+      "label": "gradient_n10",
+      "url": "http://127.0.0.1:60097/gradient?n=10",
+      "navigate_response": {
+        "bytes": 324,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 763,
+        "tokens_o200k": 263,
+        "tokens_cl100k": 264
+      },
+      "snapshot_bytes_all_calls": [
+        763,
+        763,
+        763
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.002,
+        "min": 0.001,
+        "max": 0.002
+      },
+      "exceeds_doc_400_token_claim": false,
+      "n_interactive_elements": 10
+    },
+    {
+      "label": "gradient_n50",
+      "url": "http://127.0.0.1:60097/gradient?n=50",
+      "navigate_response": {
+        "bytes": 324,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 3043,
+        "tokens_o200k": 983,
+        "tokens_cl100k": 984
+      },
+      "snapshot_bytes_all_calls": [
+        3043,
+        3043,
+        3043
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.002,
+        "min": 0.002,
+        "max": 0.003
+      },
+      "exceeds_doc_400_token_claim": true,
+      "n_interactive_elements": 50
+    },
+    {
+      "label": "gradient_n100",
+      "url": "http://127.0.0.1:60097/gradient?n=100",
+      "navigate_response": {
+        "bytes": 327,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 5900,
+        "tokens_o200k": 1883,
+        "tokens_cl100k": 1884
+      },
+      "snapshot_bytes_all_calls": [
+        5900,
+        5900,
+        5900
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.002,
+        "min": 0.002,
+        "max": 0.003
+      },
+      "exceeds_doc_400_token_claim": true,
+      "n_interactive_elements": 100
+    },
+    {
+      "label": "gradient_n250",
+      "url": "http://127.0.0.1:60097/gradient?n=250",
+      "navigate_response": {
+        "bytes": 327,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 14750,
+        "tokens_o200k": 4583,
+        "tokens_cl100k": 4584
+      },
+      "snapshot_bytes_all_calls": [
+        14750,
+        14750,
+        14750
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.005,
+        "min": 0.005,
+        "max": 0.009
+      },
+      "exceeds_doc_400_token_claim": true,
+      "n_interactive_elements": 250
+    },
+    {
+      "label": "gradient_n500",
+      "url": "http://127.0.0.1:60097/gradient?n=500",
+      "navigate_response": {
+        "bytes": 327,
+        "tokens_o200k": 129,
+        "tokens_cl100k": 130
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 29500,
+        "tokens_o200k": 9083,
+        "tokens_cl100k": 9084
+      },
+      "snapshot_bytes_all_calls": [
+        29500,
+        29500,
+        29500
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.006,
+        "min": 0.006,
+        "max": 0.007
+      },
+      "exceeds_doc_400_token_claim": true,
+      "n_interactive_elements": 500
+    },
+    {
+      "label": "gradient_n1000",
+      "url": "http://127.0.0.1:60097/gradient?n=1000",
+      "navigate_response": {
+        "bytes": 330,
+        "tokens_o200k": 132,
+        "tokens_cl100k": 133
+      },
+      "navigate_inlines_full_snapshot": false,
+      "snapshot_cost": {
+        "bytes": 59007,
+        "tokens_o200k": 18090,
+        "tokens_cl100k": 18091
+      },
+      "snapshot_bytes_all_calls": [
+        59007,
+        59007,
+        59007
+      ],
+      "snapshot_bytes_stable_across_calls": true,
+      "snapshot_latency_seconds": {
+        "p50": 0.013,
+        "min": 0.011,
+        "max": 0.015
+      },
+      "exceeds_doc_400_token_claim": true,
+      "n_interactive_elements": 1000
+    }
+  ],
+  "server_info": {
+    "name": "Playwright",
+    "version": "1.62.0-alpha-1783623505000"
+  },
+  "bytes_per_element_estimate": 58.8,
+  "first_n_exceeding_doc_claim": 50,
+  "screenshot_cost_cliff": {
+    "classes": {
+      "a11y_snapshot": {
+        "bytes": 721,
+        "tokens_o200k": 260,
+        "tokens_cl100k": 259
+      },
+      "screenshot_text_response": {
+        "bytes": 548,
+        "tokens_o200k": 214,
+        "tokens_cl100k": 214
+      },
+      "screenshot_returns_inline_image": true,
+      "screenshot_png_bytes": 33923,
+      "screenshot_base64_len": 45232,
+      "a11y_bytes_vs_screenshot_png_bytes_ratio": 47.05
+    },
+    "gradient_n100": {
+      "a11y_snapshot": {
+        "bytes": 5900,
+        "tokens_o200k": 1883,
+        "tokens_cl100k": 1884
+      },
+      "screenshot_text_response": {
+        "bytes": 548,
+        "tokens_o200k": 214,
+        "tokens_cl100k": 214
+      },
+      "screenshot_returns_inline_image": true,
+      "screenshot_png_bytes": 134847,
+      "screenshot_base64_len": 179796,
+      "a11y_bytes_vs_screenshot_png_bytes_ratio": 22.86
+    }
+  },
+  "run_completed_at": "2026-07-23T14:57:58.722707+00:00"
+}

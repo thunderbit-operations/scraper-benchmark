@@ -1,0 +1,33 @@
+{
+  "run_started_at": "2026-07-23T14:58:01.606317+00:00",
+  "tool": "playwright-mcp",
+  "base_url": "http://127.0.0.1:60179",
+  "isolation": {
+    "within_same_session_cookie_present": true,
+    "server_cookie_hits_session1": 1,
+    "new_isolated_session_cookie_present": false,
+    "server_cookie_hits_new_session": 0,
+    "isolation_holds": true
+  },
+  "persistence": {
+    "cookie_live_within_session1": true,
+    "persistent_profile_cookie_present_after_restart": true,
+    "server_cookie_hits_after_restart": 1,
+    "persistence_holds": true,
+    "graceful_close_used": true
+  },
+  "refs": {
+    "noop_resnapshot_refs_identical": true,
+    "ref_count_before_mutation": 11,
+    "ref_count_after_mutation": 12,
+    "new_button_in_snapshot": true,
+    "runtime_link_present_after_mutation": true,
+    "mutation_added_refs": true
+  },
+  "tabs": {
+    "tabs_listing_excerpt": "### Result\n- 0: [Content Classes](http://127.0.0.1:60179/classes)\n- 1: (current) [Gradient 5](http://127.0.0.1:60179/gradient?n=5)",
+    "listing_mentions_two_urls": true,
+    "tab_line_count_heuristic": 2
+  },
+  "run_completed_at": "2026-07-23T14:58:13.493291+00:00"
+}

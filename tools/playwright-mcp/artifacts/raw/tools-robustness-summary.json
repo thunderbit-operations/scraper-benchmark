@@ -1,0 +1,55 @@
+{
+  "run_started_at": "2026-07-23T14:58:14.017085+00:00",
+  "tool": "playwright-mcp",
+  "tool_surface": {
+    "default_tool_count": 24,
+    "vision_tool_count": 30,
+    "tools_added_by_caps_vision": [
+      "browser_mouse_click_xy",
+      "browser_mouse_down",
+      "browser_mouse_drag_xy",
+      "browser_mouse_move_xy",
+      "browser_mouse_up",
+      "browser_mouse_wheel"
+    ],
+    "default_tools": [
+      "browser_click",
+      "browser_close",
+      "browser_console_messages",
+      "browser_drag",
+      "browser_drop",
+      "browser_evaluate",
+      "browser_file_upload",
+      "browser_fill_form",
+      "browser_find",
+      "browser_handle_dialog",
+      "browser_hover",
+      "browser_navigate",
+      "browser_navigate_back",
+      "browser_network_request",
+      "browser_network_requests",
+      "browser_press_key",
+      "browser_resize",
+      "browser_run_code_unsafe",
+      "browser_select_option",
+      "browser_snapshot",
+      "browser_tabs",
+      "browser_take_screenshot",
+      "browser_type",
+      "browser_wait_for"
+    ]
+  },
+  "robustness": {
+    "http_500": {
+      "navigate_ok": true,
+      "snapshot_returned_nonempty": true,
+      "snapshot_bytes": 196
+    },
+    "http_404": {
+      "navigate_ok": true,
+      "snapshot_returned_nonempty": true,
+      "snapshot_bytes": 195
+    }
+  },
+  "run_completed_at": "2026-07-23T14:58:21.072615+00:00"
+}
