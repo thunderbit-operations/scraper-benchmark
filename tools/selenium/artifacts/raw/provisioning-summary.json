@@ -1,0 +1,61 @@
+{
+  "run_started_at": "2026-07-23T17:05:25.537344+00:00",
+  "tool": "selenium",
+  "selenium_version": "4.46.0",
+  "selenium_manager_version": "selenium-manager 0.4.46",
+  "browser": "Google Chrome for Testing 151.0.7922.10",
+  "browser_path": "~/Library/Caches/ms-playwright/chromium-1232/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "note": "Selenium Manager resolves + downloads a matching chromedriver on a driverless webdriver.Chrome(). Cache dirs here are isolated temp dirs; the user's ~/.cache/selenium is not modified.",
+  "cold": {
+    "wall_ms": 4054,
+    "driver_path": "$TMPDIR/se_prov_cold_h6__6mbt/chromedriver/mac-arm64/151.0.7922.47/chromedriver",
+    "driver_version": "151.0.7922.47",
+    "cache_had_driver_before": false
+  },
+  "warm_runs": [
+    {
+      "wall_ms": 28,
+      "driver_path": "$TMPDIR/se_prov_cold_h6__6mbt/chromedriver/mac-arm64/151.0.7922.47/chromedriver",
+      "driver_version": "151.0.7922.47"
+    },
+    {
+      "wall_ms": 25,
+      "driver_path": "$TMPDIR/se_prov_cold_h6__6mbt/chromedriver/mac-arm64/151.0.7922.47/chromedriver",
+      "driver_version": "151.0.7922.47"
+    },
+    {
+      "wall_ms": 25,
+      "driver_path": "$TMPDIR/se_prov_cold_h6__6mbt/chromedriver/mac-arm64/151.0.7922.47/chromedriver",
+      "driver_version": "151.0.7922.47"
+    }
+  ],
+  "stale_cache_145_present": {
+    "seeded_145": true,
+    "resolved": {
+      "wall_ms": 4201,
+      "driver_path": "$TMPDIR/se_prov_stale_fpciu8so/chromedriver/mac-arm64/151.0.7922.47/chromedriver",
+      "driver_version": "151.0.7922.47"
+    },
+    "driver_versions_in_cache_after": [
+      "145.0.7632.117",
+      "151.0.7922.47"
+    ],
+    "reused_stale_145": false,
+    "fetched_matching_151": true
+  },
+  "reading": {
+    "browser_version_short": "151.0.7922.10",
+    "resolved_driver_version": "151.0.7922.47",
+    "driver_matches_browser_build": true,
+    "driver_patch_differs_from_browser_patch": true,
+    "cold_resolution_ms": 4054,
+    "warm_resolution_ms_values": [
+      28,
+      25,
+      25
+    ],
+    "cold_over_warm_ratio": 155.9,
+    "note": "Selenium Manager matches chromedriver on the browser's major.minor.build (151.0.7922) and takes the latest available patch (not the browser's own patch); cold resolution pays a one-time network download, warm is cache-hit only; a stale mismatched driver in cache is NOT reused — the matching version is fetched."
+  },
+  "run_completed_at": "2026-07-23T17:05:33.877949+00:00"
+}

@@ -1,0 +1,99 @@
+{
+  "run_started_at": "2026-07-23T17:06:44.315247+00:00",
+  "tool": "selenium",
+  "base_url": "http://127.0.0.1:57490",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:57490",
+    "A_static_marker": "STATIC_ALPHA_MARKER_A",
+    "A_static_href": "/page/alpha",
+    "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+    "B_sync_href": "/sync/injected-11",
+    "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+    "C_delayed_href": "/delayed/injected-42",
+    "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+    "waitsem_visible_marker": "VISIBLE_MARKER_V"
+  },
+  "runs": [
+    {
+      "timeout_ms": 4000,
+      "hidden_node": {
+        "presence_returned": true,
+        "presence_ms": 5,
+        "presence_err": "",
+        "visibility_returned": false,
+        "visibility_ms": 4168,
+        "visibility_err": "TimeoutException"
+      },
+      "selector_model_visible_node": {
+        "css_returned": true,
+        "css_ms": 5,
+        "css_err": "",
+        "xpath_returned": true,
+        "xpath_ms": 7,
+        "xpath_err": ""
+      },
+      "never_appears": {
+        "returned": false,
+        "ms": 2053,
+        "err": "TimeoutException"
+      }
+    },
+    {
+      "timeout_ms": 4000,
+      "hidden_node": {
+        "presence_returned": true,
+        "presence_ms": 5,
+        "presence_err": "",
+        "visibility_returned": false,
+        "visibility_ms": 4167,
+        "visibility_err": "TimeoutException"
+      },
+      "selector_model_visible_node": {
+        "css_returned": true,
+        "css_ms": 5,
+        "css_err": "",
+        "xpath_returned": true,
+        "xpath_ms": 4,
+        "xpath_err": ""
+      },
+      "never_appears": {
+        "returned": false,
+        "ms": 2071,
+        "err": "TimeoutException"
+      }
+    },
+    {
+      "timeout_ms": 4000,
+      "hidden_node": {
+        "presence_returned": true,
+        "presence_ms": 6,
+        "presence_err": "",
+        "visibility_returned": false,
+        "visibility_ms": 4146,
+        "visibility_err": "TimeoutException"
+      },
+      "selector_model_visible_node": {
+        "css_returned": true,
+        "css_ms": 5,
+        "css_err": "",
+        "xpath_returned": true,
+        "xpath_ms": 4,
+        "xpath_err": ""
+      },
+      "never_appears": {
+        "returned": false,
+        "ms": 2078,
+        "err": "TimeoutException"
+      }
+    }
+  ],
+  "reading": {
+    "hidden_node_presence_returns_all": true,
+    "hidden_node_visibility_times_out_all": true,
+    "css_returns_all": true,
+    "xpath_returns_all": true,
+    "never_appears_times_out_all": true,
+    "note": "find_element = node present/attached in DOM; explicit visibility_of_element_located = node actually visible. On a display:none attached node they diverge cleanly: presence returns fast, visibility blocks to the deadline (clean TimeoutException). By.CSS_SELECTOR and By.XPATH both resolve the visible node. Never-appearing selector fails with a clean timeout, no hang."
+  },
+  "run_completed_at": "2026-07-23T17:07:06.238466+00:00"
+}

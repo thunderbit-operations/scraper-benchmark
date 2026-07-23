@@ -1,0 +1,132 @@
+{
+  "run_started_at": "2026-07-23T17:21:57.543634+00:00",
+  "tool": "selenium",
+  "base_url": "http://127.0.0.1:63399",
+  "platform_note": "macOS arm64. Selenium chain = python -> chromedriver -> chrome. chromedriver is a separate child process; there is no leakless-style guardian and no parent-death signal wired by default, so a no-quit exit / crash orphans BOTH the driver and the browser. Contrast: chromedp orphans the browser only (1 proc) on macOS exit-without-cancel; rod's default leakless reaps everything on exit AND crash.",
+  "graceful_runs": [
+    {
+      "chromedriver_pid": 94513,
+      "browser_procs_before_quit": 1,
+      "chromedriver_alive_before_quit": true,
+      "browser_procs_after_quit": 0,
+      "chromedriver_alive_after_quit": false,
+      "reaped_both": true,
+      "reap_ms": 99
+    },
+    {
+      "chromedriver_pid": 94558,
+      "browser_procs_before_quit": 1,
+      "chromedriver_alive_before_quit": true,
+      "browser_procs_after_quit": 0,
+      "chromedriver_alive_after_quit": false,
+      "reaped_both": true,
+      "reap_ms": 86
+    },
+    {
+      "chromedriver_pid": 94596,
+      "browser_procs_before_quit": 1,
+      "chromedriver_alive_before_quit": true,
+      "browser_procs_after_quit": 0,
+      "chromedriver_alive_after_quit": false,
+      "reaped_both": true,
+      "reap_ms": 87
+    }
+  ],
+  "exit_no_quit_runs": [
+    {
+      "probe_ok": true,
+      "chromedriver_pid": 94628,
+      "browser_procs_up": 1,
+      "chromedriver_orphaned": true,
+      "browser_procs_after_exit": 1,
+      "both_orphaned": true,
+      "browser_procs_after_cleanup": 0,
+      "chromedriver_alive_after_cleanup": 0
+    },
+    {
+      "probe_ok": true,
+      "chromedriver_pid": 94668,
+      "browser_procs_up": 1,
+      "chromedriver_orphaned": true,
+      "browser_procs_after_exit": 1,
+      "both_orphaned": true,
+      "browser_procs_after_cleanup": 0,
+      "chromedriver_alive_after_cleanup": 0
+    },
+    {
+      "probe_ok": true,
+      "chromedriver_pid": 94713,
+      "browser_procs_up": 1,
+      "chromedriver_orphaned": true,
+      "browser_procs_after_exit": 1,
+      "both_orphaned": true,
+      "browser_procs_after_cleanup": 0,
+      "chromedriver_alive_after_cleanup": 0
+    }
+  ],
+  "kill_crash_runs": [
+    {
+      "probe_started": true,
+      "chromedriver_pid": 94753,
+      "browser_procs_while_up": 1,
+      "chromedriver_orphaned": true,
+      "browser_procs_after_parent_kill": 1,
+      "both_orphaned": true,
+      "browser_procs_after_cleanup": 0,
+      "chromedriver_alive_after_cleanup": 0
+    },
+    {
+      "probe_started": true,
+      "chromedriver_pid": 94808,
+      "browser_procs_while_up": 1,
+      "chromedriver_orphaned": true,
+      "browser_procs_after_parent_kill": 1,
+      "both_orphaned": true,
+      "browser_procs_after_cleanup": 0,
+      "chromedriver_alive_after_cleanup": 0
+    },
+    {
+      "probe_started": true,
+      "chromedriver_pid": 94865,
+      "browser_procs_while_up": 1,
+      "chromedriver_orphaned": true,
+      "browser_procs_after_parent_kill": 1,
+      "both_orphaned": true,
+      "browser_procs_after_cleanup": 0,
+      "chromedriver_alive_after_cleanup": 0
+    }
+  ],
+  "reading": {
+    "graceful_reaps_both_all": true,
+    "graceful_reap_ms_values": [
+      99,
+      86,
+      87
+    ],
+    "exit_both_orphaned_all": true,
+    "exit_chromedriver_orphaned": [
+      true,
+      true,
+      true
+    ],
+    "exit_browser_procs_after": [
+      1,
+      1,
+      1
+    ],
+    "kill_both_orphaned_all": true,
+    "kill_chromedriver_orphaned": [
+      true,
+      true,
+      true
+    ],
+    "kill_browser_procs_after": [
+      1,
+      1,
+      1
+    ],
+    "all_orphans_cleaned": true,
+    "note": "graceful quit() reaps BOTH chromedriver + chrome. A no-quit exit AND a SIGKILL crash each orphan BOTH the chromedriver process and the browser (no guardian, no parent-death signal) — the opposite of rod's leakless default, and one process worse than chromedp's browser-only orphan. All orphans were force-cleaned (kill chromedriver pid + pkill udd)."
+  },
+  "run_completed_at": "2026-07-23T17:22:19.908302+00:00"
+}

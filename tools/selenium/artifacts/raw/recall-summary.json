@@ -1,0 +1,193 @@
+{
+  "run_started_at": "2026-07-23T17:05:46.426861+00:00",
+  "tool": "selenium",
+  "base_url": "http://127.0.0.1:56587",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:56587",
+    "A_static_marker": "STATIC_ALPHA_MARKER_A",
+    "A_static_href": "/page/alpha",
+    "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+    "B_sync_href": "/sync/injected-11",
+    "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+    "C_delayed_href": "/delayed/injected-42",
+    "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+    "waitsem_visible_marker": "VISIBLE_MARKER_V"
+  },
+  "recall_matrix_delay800": {
+    "pagesource": {
+      "delay_ms": 800,
+      "elapsed_ms": 74,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": false
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11"
+      ],
+      "server_side_hits": {
+        "/classes": 1,
+        "/favicon.ico": 1
+      }
+    },
+    "implicit": {
+      "delay_ms": 800,
+      "elapsed_ms": 901,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1,
+        "/favicon.ico": 1
+      }
+    },
+    "explicit": {
+      "delay_ms": 800,
+      "elapsed_ms": 1080,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1,
+        "/favicon.ico": 1
+      }
+    },
+    "poll": {
+      "delay_ms": 800,
+      "elapsed_ms": 936,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1,
+        "/favicon.ico": 1
+      }
+    }
+  },
+  "determinism_found_sets": {
+    "pagesource": {
+      "runs": [
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected"
+      ],
+      "stable": true
+    },
+    "implicit": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    },
+    "explicit": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    },
+    "poll": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    }
+  },
+  "injection_timing_gradient": [
+    {
+      "delay_ms": 0,
+      "pagesource": {
+        "C_found": true,
+        "elapsed_ms": 43
+      },
+      "explicit": {
+        "C_found": true,
+        "elapsed_ms": 44
+      }
+    },
+    {
+      "delay_ms": 100,
+      "pagesource": {
+        "C_found": false,
+        "elapsed_ms": 41
+      },
+      "explicit": {
+        "C_found": true,
+        "elapsed_ms": 567
+      }
+    },
+    {
+      "delay_ms": 400,
+      "pagesource": {
+        "C_found": false,
+        "elapsed_ms": 41
+      },
+      "explicit": {
+        "C_found": true,
+        "elapsed_ms": 567
+      }
+    },
+    {
+      "delay_ms": 800,
+      "pagesource": {
+        "C_found": false,
+        "elapsed_ms": 42
+      },
+      "explicit": {
+        "C_found": true,
+        "elapsed_ms": 1084
+      }
+    },
+    {
+      "delay_ms": 1500,
+      "pagesource": {
+        "C_found": false,
+        "elapsed_ms": 39
+      },
+      "explicit": {
+        "C_found": true,
+        "elapsed_ms": 1580
+      }
+    }
+  ],
+  "contrast": {
+    "C_delayed_found_by": [
+      "implicit",
+      "explicit",
+      "poll"
+    ],
+    "pagesource_misses_C": true,
+    "implicit_wait_finds_C": true,
+    "explicit_wait_finds_C": true,
+    "poll_finds_C": true,
+    "note": "Selenium's default page_source reads at the load event and misses class C; an explicit WebDriverWait (presence_of) recovers it (idiomatic). Whether implicit_wait recovers it is measured here, not assumed — implicit wait governs element finds, and page_source is read after the find returns. Same at-load footgun as chromedp's naive read / rod's WaitLoad+HTML; the recovery idiom (explicit wait) parallels chromedp's explicit WaitVisible."
+  },
+  "run_completed_at": "2026-07-23T17:06:21.761383+00:00"
+}

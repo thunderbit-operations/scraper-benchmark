@@ -1,0 +1,110 @@
+{
+  "run_started_at": "2026-07-23T17:13:24.110631+00:00",
+  "tool": "selenium",
+  "base_url": "http://127.0.0.1:60934",
+  "n_concurrent": 4,
+  "reps": 3,
+  "shared_one_driver": {
+    "runs": [
+      {
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 3061,
+        "chrome_browser_procs_peak": 1,
+        "chromedriver_procs_peak": 1,
+        "first_error": ""
+      },
+      {
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 2942,
+        "chrome_browser_procs_peak": 1,
+        "chromedriver_procs_peak": 1,
+        "first_error": ""
+      },
+      {
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 2915,
+        "chrome_browser_procs_peak": 1,
+        "chromedriver_procs_peak": 1,
+        "first_error": ""
+      }
+    ],
+    "wall_ms": {
+      "p50": 2942,
+      "min": 2915,
+      "max": 3061
+    },
+    "chrome_browser_procs_peak": {
+      "min": 1,
+      "max": 1
+    },
+    "chromedriver_procs_peak": {
+      "min": 1,
+      "max": 1
+    }
+  },
+  "separate_drivers": {
+    "runs": [
+      {
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 1255,
+        "chrome_browser_procs_peak": 4,
+        "chromedriver_procs_peak": 4,
+        "first_error": ""
+      },
+      {
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 1193,
+        "chrome_browser_procs_peak": 4,
+        "chromedriver_procs_peak": 4,
+        "first_error": ""
+      },
+      {
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 1243,
+        "chrome_browser_procs_peak": 4,
+        "chromedriver_procs_peak": 4,
+        "first_error": ""
+      }
+    ],
+    "wall_ms": {
+      "p50": 1243,
+      "min": 1193,
+      "max": 1255
+    },
+    "chrome_browser_procs_peak": {
+      "min": 4,
+      "max": 4
+    },
+    "chromedriver_procs_peak": {
+      "min": 4,
+      "max": 4
+    }
+  },
+  "verdict": {
+    "wall_ranges_overlap": false,
+    "shared_browser_peak": {
+      "min": 1,
+      "max": 1
+    },
+    "shared_driver_peak": {
+      "min": 1,
+      "max": 1
+    },
+    "separate_browser_peak": {
+      "min": 4,
+      "max": 4
+    },
+    "separate_driver_peak": {
+      "min": 4,
+      "max": 4
+    },
+    "note": "Shared: one driver + one chrome, N tabs. Separate: N chromedrivers + N chromes — the Selenium-specific double cost (a driver process PER browser). Wall-time is a tie if ranges overlap. Mirror of the chromedp/rod shared-vs-separate test, plus the extra driver-process tier."
+  },
+  "run_completed_at": "2026-07-23T17:13:24.110650+00:00"
+}

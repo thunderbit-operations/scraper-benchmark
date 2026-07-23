@@ -1,0 +1,28 @@
+# Never commit the local virtualenv (recreate via the README: uv venv + uv pip install).
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Run logs may carry absolute local paths — the JSON summaries carry the numbers.
+*.log
+*.out
+*.stdout
+artifacts/logs/
+
+# Selenium Manager caches chromedriver under ~/.cache/selenium and drops a per-arch
+# binary; NEVER copy a chromedriver binary or any browser into the pack. Only paths +
+# versions are recorded in metadata. Guard against a stray local copy landing here.
+chromedriver
+*chromedriver*/
+selenium-manager
+.cache/selenium/
+
+# Stray temp user-data-dirs / isolated SM caches (runners clean these; belt-and-suspenders).
+sel_*/
+se_prov_*/
+se_cache_*/
+
+# OS noise
+.DS_Store

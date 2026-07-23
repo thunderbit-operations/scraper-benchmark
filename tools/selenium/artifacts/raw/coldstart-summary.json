@@ -1,0 +1,55 @@
+{
+  "run_started_at": "2026-07-23T17:09:27.389758+00:00",
+  "tool": "selenium",
+  "base_url": "http://127.0.0.1:58754",
+  "n_runs": 5,
+  "cold_start_ms_samples_selenium_manager": [
+    849,
+    850,
+    848,
+    847,
+    829
+  ],
+  "cold_start_ms_selenium_manager": {
+    "p50": 848,
+    "min": 829,
+    "max": 850,
+    "mean": 844.6
+  },
+  "cold_start_ms_samples_explicit_driver": [
+    821,
+    800,
+    857,
+    809,
+    818
+  ],
+  "cold_start_ms_explicit_driver": {
+    "p50": 818,
+    "min": 800,
+    "max": 857,
+    "mean": 821.0
+  },
+  "cold_start_ms_samples_headless_shell": [
+    282,
+    168,
+    118,
+    124,
+    170
+  ],
+  "cold_start_ms_headless_shell": {
+    "p50": 168,
+    "min": 118,
+    "max": 282,
+    "mean": 172.4
+  },
+  "selenium_manager_per_call_tax_ms_p50": 30,
+  "selenium_manager_tax_ranges_overlap": true,
+  "full_chrome_over_headless_shell_p50_delta_ms": 650,
+  "note": "cold start = fresh process: instantiate webdriver.Chrome -> navigate -> first execute_script. 'selenium_manager' runs SM every call (driver cached; SM still spawns to resolve); 'explicit_driver' passes Service(path), skips SM, drives full Chrome + --headless=new (the pack default, needed for the process-truth udd); 'headless_shell' drives the SAME chrome-headless-shell binary chromedp/rod used (explicit driver, no custom udd) to isolate the binary effect from the chromedriver/W3C overhead. tax = SM.p50 - path.p50. The one-time SM network DOWNLOAD is in run_provisioning.py. Compare to chromedp 102 ms and rod 119 ms p50 on the same host/Chrome build.",
+  "runtime_dependency": {
+    "requires_external_chrome": true,
+    "requires_chromedriver": true,
+    "note": "Selenium needs BOTH an external Chrome AND a chromedriver binary; Selenium Manager auto-supplies chromedriver, but the browser must exist."
+  },
+  "run_completed_at": "2026-07-23T17:09:27.389780+00:00"
+}
