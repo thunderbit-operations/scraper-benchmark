@@ -1,0 +1,12 @@
+# Never ship dependency trees — huge; reproduce from package-lock.json / uv pip install.
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Logs / scratch (raw result JSON under artifacts/raw/ IS committed)
+artifacts/logs/
+*.log
+*.out
+.DS_Store

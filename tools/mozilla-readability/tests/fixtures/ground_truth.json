@@ -1,0 +1,771 @@
+{
+  "f1_canonical": {
+    "description": "Well-formed news article in <article> with realistic chrome (nav/ad/sidebar/footer/comments on unlikely-regex classes) plus one neutral-classed long low-link promo sibling.",
+    "intent": "Baseline article recall + per-boilerplate-class leak. Predict chrome strips; neutral promo is the leak risk (sibling append).",
+    "units": [
+      {
+        "id": "f1-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzart01",
+        "text": "zzart01vf64 zzart01v56i zzart01vz5b zzart01vp5q zzart01ub7p zzart01u183 zzart01uv6w zzart01ul7b zzart01xn2x zzart01xd3c, zzart01180d zzart0118ac zzart0118kc zzart0118uc zzart0116we zzart01176e zzart0117ge zzart0117qd zzart0115sg zzart01162g, zzart014m9c zzart014c9r zzart01568k zzart014w8y zzart013iax."
+      },
+      {
+        "id": "f1-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzart02",
+        "text": "zzart02evn3 zzart02f5mp zzart02ebnw zzart02elnh zzart02fzli zzart02g9l3 zzart02ffma zzart02fplw zzart02cnq9 zzart02cxpv, zzart02z5xq zzart02yvy4 zzart02zpwy zzart02zfxc zzart02109w zzart02zzwj zzart0210tv zzart0210jv zzart0211du zzart02113u, zzart023ixl zzart023sx6 zzart0242ws zzart024cwe zzart024mvz zzart024wvl zzart0256v7 zzart025gus zzart021b0r."
+      },
+      {
+        "id": "f1-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzart03",
+        "text": "zzart037tge zzart037jgs zzart0379h6 zzart036zhl zzart036phz zzart036fid zzart0365ir zzart035vj6 zzart03a1d7 zzart039rdm, zzart031t1u zzart031tbu zzart031shv zzart031srv zzart031u5t zzart031ufs zzart031tlt zzart031tvt zzart031v9r zzart031vjr, zzart0310qv zzart0310gw."
+      },
+      {
+        "id": "f1-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzart04",
+        "text": "zzart041pyn zzart041q8n zzart041qin zzart041qsm zzart041oup zzart041p4p zzart041peo zzart041poo zzart041nqr zzart041o0q, zzart04x2v5 zzart04wsvj zzart04wivx zzart04w8wc zzart04vywq zzart04vox4 zzart04vexj zzart04v4xx zzart04zary zzart04z0sd, zzart04yqvw zzart04z0vi zzart04y6wp zzart04ygwb."
+      },
+      {
+        "id": "f1-nav",
+        "label": "boilerplate",
+        "btype": "nav",
+        "sentinel": "zznav01",
+        "text": "zznav011u9q zznav011tzq zznav011utp zznav011ujp zznav011t5r."
+      },
+      {
+        "id": "f1-ad",
+        "label": "boilerplate",
+        "btype": "ad",
+        "sentinel": "zzad01",
+        "text": "zzad011o2r zzad011nss zzad011nis zzad011n8s zzad011p6q zzad011owq zzad011omq zzad011ocr zzad011qao."
+      },
+      {
+        "id": "f1-aside",
+        "label": "boilerplate",
+        "btype": "aside",
+        "sentinel": "zzaside01",
+        "text": "zzaside011l3e zzaside011lde zzaside011kjf zzaside011ktf zzaside011m7d zzaside011mhc zzaside011lne zzaside011lxd zzaside011nbb."
+      },
+      {
+        "id": "f1-footer",
+        "label": "boilerplate",
+        "btype": "footer",
+        "sentinel": "zzfooter01",
+        "text": "zzfooter011i56 zzfooter011hv7 zzfooter011ip5 zzfooter011if6 zzfooter011h18 zzfooter011gr8."
+      },
+      {
+        "id": "f1-comments",
+        "label": "boilerplate",
+        "btype": "comments",
+        "sentinel": "zzcomments01",
+        "text": "zzcomments011amt zzcomments011aws zzcomments011a2t zzcomments011act zzcomments011bqr zzcomments011c0r zzcomments011b6s zzcomments011bgr zzcomments011cuq."
+      },
+      {
+        "id": "f1-promo",
+        "label": "boilerplate",
+        "btype": "related-promo-neutral",
+        "sentinel": "zzpromo01",
+        "text": "zzpromo011ewg zzpromo011emg zzpromo011ech zzpromo011e2h zzpromo011g0e zzpromo011fqf zzpromo011fgf zzpromo011f6g zzpromo011coj zzpromo011cek, zzpromo0111bj zzpromo0111lj zzpromo0110rk zzpromo01111k zzpromo01107l."
+      }
+    ]
+  },
+  "f1_malformed": {
+    "description": "Same shape as f1 but with unclosed <p>, misnested <b>/<i>, and a stray </div> — measures jsdom parse-quirk sensitivity of recall.",
+    "intent": "Does malformed HTML (jsdom's HTML5 tree-builder recovery) change article recall vs the well-formed twin?",
+    "units": [
+      {
+        "id": "fm-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzmart01",
+        "text": "zzmart011ipt zzmart011izs zzmart011j9s zzmart011jjr zzmart011jtr zzmart011k3r zzmart011kdq zzmart011knq zzmart011ghw zzmart011grv, zzmart011ptk zzmart011pjl zzmart011p9l zzmart011ozm zzmart011qxj zzmart011qnj zzmart011qdk zzmart011q3k zzmart011nlo zzmart011nbo, zzmart011rhl zzmart011rrl zzmart011qxm."
+      },
+      {
+        "id": "fm-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzmart02",
+        "text": "zzmart021rop zzmart021rep zzmart021r4q zzmart021quq zzmart021qkq zzmart021qar zzmart021q0r zzmart021pqr zzmart021pgs zzmart021p6s, zzmart027j4d zzmart027t3z zzmart026z56 zzmart02794r zzmart028n2s zzmart028x2e zzmart02833k zzmart028d36 zzmart025b7k zzmart025l75, zzmart025v3l zzmart025l40 zzmart025b4e zzmart02514s zzmart024r57 zzmart024h5l."
+      },
+      {
+        "id": "fm-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzmart03",
+        "text": "zzmart031pv8 zzmart031q58 zzmart031pb9 zzmart031pl9 zzmart031qz7 zzmart031r96 zzmart031qf7 zzmart031qp7 zzmart031s35 zzmart031sd5, zzmart03d2op zzmart03csp3 zzmart03dmnw zzmart03dcoa zzmart03e6n4 zzmart03dwni zzmart03eqmb zzmart03egmp zzmart03aurv zzmart03aksa."
+      },
+      {
+        "id": "fm-nav",
+        "label": "boilerplate",
+        "btype": "nav",
+        "sentinel": "zzmnav01",
+        "text": "zzmnav011wbd zzmnav011wlc zzmnav011wvc zzmnav011x5b zzmnav011xfb."
+      },
+      {
+        "id": "fm-footer",
+        "label": "boilerplate",
+        "btype": "footer",
+        "sentinel": "zzmfooter01",
+        "text": "zzmfooter01hqwp zzmfooter01i0wb zzmfooter01h6xi zzmfooter01hgx4 zzmfooter01gmyb."
+      }
+    ]
+  },
+  "f2_sib_len120_ld000": {
+    "description": "Decisive 4-paragraph <article> + ONE neutral-classed sibling <p> (sibling-len120-ld0.00). Isolates the (len>80 && linkDensity<0.25) append gate.",
+    "intent": "Predict: len120 with linkDensity<0.25 LEAKS; >=0.25 DROPS; short(<80)+period+0-link may LEAK (second branch); short(<80) no-period DROPS.",
+    "units": [
+      {
+        "id": "f2siblen-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena1",
+        "text": "f2siblena11ekx f2siblena11eux f2siblena11f4x f2siblena11few f2siblena11fow f2siblena11fyv f2siblena11g8v f2siblena11giv f2siblena11gsu f2siblena11h2u, f2siblena1mg0u f2siblena1m619 f2siblena1lw1n f2siblena1lm21 f2siblena1njz9 f2siblena1n9zn f2siblena1n002 f2siblena1mq0g f2siblena1onxo f2siblena1ody2, f2siblena11nmm f2siblena11nwm."
+      },
+      {
+        "id": "f2siblen-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena2",
+        "text": "f2siblena2o191 f2siblena2nr9f f2siblena2nh9u f2siblena2n7a8 f2siblena2mxam f2siblena2mnb1 f2siblena2mdbf f2siblena2m3bt f2siblena2q95v f2siblena2pz69, f2siblena212ua f2siblena2134a f2siblena212ab f2siblena212kb f2siblena213y9 f2siblena21488 f2siblena213ea f2siblena213o9 f2siblena21527 f2siblena215c7."
+      },
+      {
+        "id": "f2siblen-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena3",
+        "text": "f2siblena3v3fq f2siblena3vdfc f2siblena3ujgj f2siblena3utg5 f2siblena3w7e5 f2siblena3whdr f2siblena3vney f2siblena3vxej f2siblena3svix f2siblena3t5ij, f2siblena318gz f2siblena3186z f2siblena3190y f2siblena318qy f2siblena319kx f2siblena319ax f2siblena31a4w f2siblena319ux f2siblena31aov f2siblena31aew."
+      },
+      {
+        "id": "f2siblen-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena4",
+        "text": "f2siblena41v02 f2siblena41uq2 f2siblena41vk1 f2siblena41va1 f2siblena41w40 f2siblena41vu1 f2siblena41wnz f2siblena41we0 f2siblena41x7z f2siblena41wxz, f2siblena498f2 f2siblena4j80r f2siblena4t7mg f2siblena41378 f2siblena41d6t f2siblena41n6f f2siblena41x61 f2siblena4275m f2siblena42h58."
+      },
+      {
+        "id": "f2_sib_len120_ld000-promo",
+        "label": "boilerplate",
+        "btype": "sibling-len120-ld0.00",
+        "sentinel": "zzsibp000",
+        "text": "zzsibp0001ihn zzsibp0001i7n zzsibp0001j1m zzsibp0001irn zzsibp0001jll zzsibp0001jbm zzsibp0001k5l zzsibp0001jvl zzsibp0001g9q."
+      }
+    ]
+  },
+  "f2_sib_len120_ld015": {
+    "description": "Decisive 4-paragraph <article> + ONE neutral-classed sibling <p> (sibling-len120-ld0.15). Isolates the (len>80 && linkDensity<0.25) append gate.",
+    "intent": "Predict: len120 with linkDensity<0.25 LEAKS; >=0.25 DROPS; short(<80)+period+0-link may LEAK (second branch); short(<80) no-period DROPS.",
+    "units": [
+      {
+        "id": "f2siblen-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena1",
+        "text": "f2siblena11ekx f2siblena11eux f2siblena11f4x f2siblena11few f2siblena11fow f2siblena11fyv f2siblena11g8v f2siblena11giv f2siblena11gsu f2siblena11h2u, f2siblena1mg0u f2siblena1m619 f2siblena1lw1n f2siblena1lm21 f2siblena1njz9 f2siblena1n9zn f2siblena1n002 f2siblena1mq0g f2siblena1onxo f2siblena1ody2, f2siblena11nmm f2siblena11nwm."
+      },
+      {
+        "id": "f2siblen-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena2",
+        "text": "f2siblena2o191 f2siblena2nr9f f2siblena2nh9u f2siblena2n7a8 f2siblena2mxam f2siblena2mnb1 f2siblena2mdbf f2siblena2m3bt f2siblena2q95v f2siblena2pz69, f2siblena212ua f2siblena2134a f2siblena212ab f2siblena212kb f2siblena213y9 f2siblena21488 f2siblena213ea f2siblena213o9 f2siblena21527 f2siblena215c7."
+      },
+      {
+        "id": "f2siblen-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena3",
+        "text": "f2siblena3v3fq f2siblena3vdfc f2siblena3ujgj f2siblena3utg5 f2siblena3w7e5 f2siblena3whdr f2siblena3vney f2siblena3vxej f2siblena3svix f2siblena3t5ij, f2siblena318gz f2siblena3186z f2siblena3190y f2siblena318qy f2siblena319kx f2siblena319ax f2siblena31a4w f2siblena319ux f2siblena31aov f2siblena31aew."
+      },
+      {
+        "id": "f2siblen-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena4",
+        "text": "f2siblena41v02 f2siblena41uq2 f2siblena41vk1 f2siblena41va1 f2siblena41w40 f2siblena41vu1 f2siblena41wnz f2siblena41we0 f2siblena41x7z f2siblena41wxz, f2siblena498f2 f2siblena4j80r f2siblena4t7mg f2siblena41378 f2siblena41d6t f2siblena41n6f f2siblena41x61 f2siblena4275m f2siblena42h58."
+      },
+      {
+        "id": "f2_sib_len120_ld015-promo",
+        "label": "boilerplate",
+        "btype": "sibling-len120-ld0.15",
+        "sentinel": "zzsibp015",
+        "text": "zzsibp015qlhf zzsibp015qbht zzsibp015q1i8 zzsibp015prim zzsibp015phj0 zzsibp015p7jf zzsibp015oxjt zzsibp015onk7 zzsibp015odkl."
+      }
+    ]
+  },
+  "f2_sib_len120_ld029": {
+    "description": "Decisive 4-paragraph <article> + ONE neutral-classed sibling <p> (sibling-len120-ld0.29). Isolates the (len>80 && linkDensity<0.25) append gate.",
+    "intent": "Predict: len120 with linkDensity<0.25 LEAKS; >=0.25 DROPS; short(<80)+period+0-link may LEAK (second branch); short(<80) no-period DROPS.",
+    "units": [
+      {
+        "id": "f2siblen-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena1",
+        "text": "f2siblena11ekx f2siblena11eux f2siblena11f4x f2siblena11few f2siblena11fow f2siblena11fyv f2siblena11g8v f2siblena11giv f2siblena11gsu f2siblena11h2u, f2siblena1mg0u f2siblena1m619 f2siblena1lw1n f2siblena1lm21 f2siblena1njz9 f2siblena1n9zn f2siblena1n002 f2siblena1mq0g f2siblena1onxo f2siblena1ody2, f2siblena11nmm f2siblena11nwm."
+      },
+      {
+        "id": "f2siblen-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena2",
+        "text": "f2siblena2o191 f2siblena2nr9f f2siblena2nh9u f2siblena2n7a8 f2siblena2mxam f2siblena2mnb1 f2siblena2mdbf f2siblena2m3bt f2siblena2q95v f2siblena2pz69, f2siblena212ua f2siblena2134a f2siblena212ab f2siblena212kb f2siblena213y9 f2siblena21488 f2siblena213ea f2siblena213o9 f2siblena21527 f2siblena215c7."
+      },
+      {
+        "id": "f2siblen-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena3",
+        "text": "f2siblena3v3fq f2siblena3vdfc f2siblena3ujgj f2siblena3utg5 f2siblena3w7e5 f2siblena3whdr f2siblena3vney f2siblena3vxej f2siblena3svix f2siblena3t5ij, f2siblena318gz f2siblena3186z f2siblena3190y f2siblena318qy f2siblena319kx f2siblena319ax f2siblena31a4w f2siblena319ux f2siblena31aov f2siblena31aew."
+      },
+      {
+        "id": "f2siblen-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena4",
+        "text": "f2siblena41v02 f2siblena41uq2 f2siblena41vk1 f2siblena41va1 f2siblena41w40 f2siblena41vu1 f2siblena41wnz f2siblena41we0 f2siblena41x7z f2siblena41wxz, f2siblena498f2 f2siblena4j80r f2siblena4t7mg f2siblena41378 f2siblena41d6t f2siblena41n6f f2siblena41x61 f2siblena4275m f2siblena42h58."
+      },
+      {
+        "id": "f2_sib_len120_ld029-promo",
+        "label": "boilerplate",
+        "btype": "sibling-len120-ld0.29",
+        "sentinel": "zzsibp029",
+        "text": "zzsibp029eh43 zzsibp029er3p zzsibp029dx4w zzsibp029e74h zzsibp029dd5o zzsibp029dn5a zzsibp029ct6h zzsibp029d363 zzsibp029c97a."
+      }
+    ]
+  },
+  "f2_sib_len120_ld050": {
+    "description": "Decisive 4-paragraph <article> + ONE neutral-classed sibling <p> (sibling-len120-ld0.50). Isolates the (len>80 && linkDensity<0.25) append gate.",
+    "intent": "Predict: len120 with linkDensity<0.25 LEAKS; >=0.25 DROPS; short(<80)+period+0-link may LEAK (second branch); short(<80) no-period DROPS.",
+    "units": [
+      {
+        "id": "f2siblen-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena1",
+        "text": "f2siblena11ekx f2siblena11eux f2siblena11f4x f2siblena11few f2siblena11fow f2siblena11fyv f2siblena11g8v f2siblena11giv f2siblena11gsu f2siblena11h2u, f2siblena1mg0u f2siblena1m619 f2siblena1lw1n f2siblena1lm21 f2siblena1njz9 f2siblena1n9zn f2siblena1n002 f2siblena1mq0g f2siblena1onxo f2siblena1ody2, f2siblena11nmm f2siblena11nwm."
+      },
+      {
+        "id": "f2siblen-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena2",
+        "text": "f2siblena2o191 f2siblena2nr9f f2siblena2nh9u f2siblena2n7a8 f2siblena2mxam f2siblena2mnb1 f2siblena2mdbf f2siblena2m3bt f2siblena2q95v f2siblena2pz69, f2siblena212ua f2siblena2134a f2siblena212ab f2siblena212kb f2siblena213y9 f2siblena21488 f2siblena213ea f2siblena213o9 f2siblena21527 f2siblena215c7."
+      },
+      {
+        "id": "f2siblen-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena3",
+        "text": "f2siblena3v3fq f2siblena3vdfc f2siblena3ujgj f2siblena3utg5 f2siblena3w7e5 f2siblena3whdr f2siblena3vney f2siblena3vxej f2siblena3svix f2siblena3t5ij, f2siblena318gz f2siblena3186z f2siblena3190y f2siblena318qy f2siblena319kx f2siblena319ax f2siblena31a4w f2siblena319ux f2siblena31aov f2siblena31aew."
+      },
+      {
+        "id": "f2siblen-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena4",
+        "text": "f2siblena41v02 f2siblena41uq2 f2siblena41vk1 f2siblena41va1 f2siblena41w40 f2siblena41vu1 f2siblena41wnz f2siblena41we0 f2siblena41x7z f2siblena41wxz, f2siblena498f2 f2siblena4j80r f2siblena4t7mg f2siblena41378 f2siblena41d6t f2siblena41n6f f2siblena41x61 f2siblena4275m f2siblena42h58."
+      },
+      {
+        "id": "f2_sib_len120_ld050-promo",
+        "label": "boilerplate",
+        "btype": "sibling-len120-ld0.50",
+        "sentinel": "zzsibp050",
+        "text": "zzsibp05017th zzsibp050183g zzsibp050179h zzsibp05017jh zzsibp05018xf zzsibp050197f zzsibp05018dg zzsibp05018nf zzsibp05015lk."
+      }
+    ]
+  },
+  "f2_sib_len60_period": {
+    "description": "Decisive 4-paragraph <article> + ONE neutral-classed sibling <p> (sibling-len60-period-ld0). Isolates the (len>80 && linkDensity<0.25) append gate.",
+    "intent": "Predict: len120 with linkDensity<0.25 LEAKS; >=0.25 DROPS; short(<80)+period+0-link may LEAK (second branch); short(<80) no-period DROPS.",
+    "units": [
+      {
+        "id": "f2siblen-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena1",
+        "text": "f2siblena11ekx f2siblena11eux f2siblena11f4x f2siblena11few f2siblena11fow f2siblena11fyv f2siblena11g8v f2siblena11giv f2siblena11gsu f2siblena11h2u, f2siblena1mg0u f2siblena1m619 f2siblena1lw1n f2siblena1lm21 f2siblena1njz9 f2siblena1n9zn f2siblena1n002 f2siblena1mq0g f2siblena1onxo f2siblena1ody2, f2siblena11nmm f2siblena11nwm."
+      },
+      {
+        "id": "f2siblen-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena2",
+        "text": "f2siblena2o191 f2siblena2nr9f f2siblena2nh9u f2siblena2n7a8 f2siblena2mxam f2siblena2mnb1 f2siblena2mdbf f2siblena2m3bt f2siblena2q95v f2siblena2pz69, f2siblena212ua f2siblena2134a f2siblena212ab f2siblena212kb f2siblena213y9 f2siblena21488 f2siblena213ea f2siblena213o9 f2siblena21527 f2siblena215c7."
+      },
+      {
+        "id": "f2siblen-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena3",
+        "text": "f2siblena3v3fq f2siblena3vdfc f2siblena3ujgj f2siblena3utg5 f2siblena3w7e5 f2siblena3whdr f2siblena3vney f2siblena3vxej f2siblena3svix f2siblena3t5ij, f2siblena318gz f2siblena3186z f2siblena3190y f2siblena318qy f2siblena319kx f2siblena319ax f2siblena31a4w f2siblena319ux f2siblena31aov f2siblena31aew."
+      },
+      {
+        "id": "f2siblen-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena4",
+        "text": "f2siblena41v02 f2siblena41uq2 f2siblena41vk1 f2siblena41va1 f2siblena41w40 f2siblena41vu1 f2siblena41wnz f2siblena41we0 f2siblena41x7z f2siblena41wxz, f2siblena498f2 f2siblena4j80r f2siblena4t7mg f2siblena41378 f2siblena41d6t f2siblena41n6f f2siblena41x61 f2siblena4275m f2siblena42h58."
+      },
+      {
+        "id": "f2_sib_len60_period-promo",
+        "label": "boilerplate",
+        "btype": "sibling-len60-period-ld0",
+        "sentinel": "zzsibsp",
+        "text": "zzsibsp1lwk zzsibsp1m6k zzsibsp1mgj zzsibsp1mqj zzsibsp1n0i."
+      }
+    ]
+  },
+  "f2_sib_len60_noperiod": {
+    "description": "Decisive 4-paragraph <article> + ONE neutral-classed sibling <p> (sibling-len60-noperiod-ld0). Isolates the (len>80 && linkDensity<0.25) append gate.",
+    "intent": "Predict: len120 with linkDensity<0.25 LEAKS; >=0.25 DROPS; short(<80)+period+0-link may LEAK (second branch); short(<80) no-period DROPS.",
+    "units": [
+      {
+        "id": "f2siblen-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena1",
+        "text": "f2siblena11ekx f2siblena11eux f2siblena11f4x f2siblena11few f2siblena11fow f2siblena11fyv f2siblena11g8v f2siblena11giv f2siblena11gsu f2siblena11h2u, f2siblena1mg0u f2siblena1m619 f2siblena1lw1n f2siblena1lm21 f2siblena1njz9 f2siblena1n9zn f2siblena1n002 f2siblena1mq0g f2siblena1onxo f2siblena1ody2, f2siblena11nmm f2siblena11nwm."
+      },
+      {
+        "id": "f2siblen-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena2",
+        "text": "f2siblena2o191 f2siblena2nr9f f2siblena2nh9u f2siblena2n7a8 f2siblena2mxam f2siblena2mnb1 f2siblena2mdbf f2siblena2m3bt f2siblena2q95v f2siblena2pz69, f2siblena212ua f2siblena2134a f2siblena212ab f2siblena212kb f2siblena213y9 f2siblena21488 f2siblena213ea f2siblena213o9 f2siblena21527 f2siblena215c7."
+      },
+      {
+        "id": "f2siblen-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena3",
+        "text": "f2siblena3v3fq f2siblena3vdfc f2siblena3ujgj f2siblena3utg5 f2siblena3w7e5 f2siblena3whdr f2siblena3vney f2siblena3vxej f2siblena3svix f2siblena3t5ij, f2siblena318gz f2siblena3186z f2siblena3190y f2siblena318qy f2siblena319kx f2siblena319ax f2siblena31a4w f2siblena319ux f2siblena31aov f2siblena31aew."
+      },
+      {
+        "id": "f2siblen-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "f2siblena4",
+        "text": "f2siblena41v02 f2siblena41uq2 f2siblena41vk1 f2siblena41va1 f2siblena41w40 f2siblena41vu1 f2siblena41wnz f2siblena41we0 f2siblena41x7z f2siblena41wxz, f2siblena498f2 f2siblena4j80r f2siblena4t7mg f2siblena41378 f2siblena41d6t f2siblena41n6f f2siblena41x61 f2siblena4275m f2siblena42h58."
+      },
+      {
+        "id": "f2_sib_len60_noperiod-promo",
+        "label": "boilerplate",
+        "btype": "sibling-len60-noperiod-ld0",
+        "sentinel": "zzsibsn",
+        "text": "zzsibsnjp6y zzsibsnjz6k zzsibsnj57r zzsibsnjf7d zzsibsnil8k"
+      }
+    ]
+  },
+  "f3_short_120": {
+    "description": "Single clean article, body ~120 chars. Used to sweep the charThreshold=500 cliff (parse null/degraded below threshold).",
+    "intent": "Predict: parse() returns null / degrades when article text < charThreshold (default 500); cliff moves when charThreshold option changes.",
+    "units": [
+      {
+        "id": "f3-120-art",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzshort120",
+        "text": "zzshort120xpvk zzshort120xzv6 zzshort120y9ur zzshort120yjud zzshort120wlx5 zzshort120wvwr zzshort120x5wd zzshort120xfvy."
+      }
+    ]
+  },
+  "f3_short_300": {
+    "description": "Single clean article, body ~300 chars. Used to sweep the charThreshold=500 cliff (parse null/degraded below threshold).",
+    "intent": "Predict: parse() returns null / degrades when article text < charThreshold (default 500); cliff moves when charThreshold option changes.",
+    "units": [
+      {
+        "id": "f3-300-art",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzshort300",
+        "text": "zzshort300ut08 zzshort300v2zt zzshort300vczf zzshort300vmz1 zzshort300vwyn zzshort300w6y8 zzshort300wgxu zzshort300wqxg zzshort300sl3e zzshort300sv30, zzshort3005y3f zzshort3005o3t zzshort3005e47 zzshort300544m zzshort300721u zzshort3006s28 zzshort3006i2m zzshort3006831 zzshort3003q6l zzshort3003g70."
+      }
+    ]
+  },
+  "f3_short_460": {
+    "description": "Single clean article, body ~460 chars. Used to sweep the charThreshold=500 cliff (parse null/degraded below threshold).",
+    "intent": "Predict: parse() returns null / degrades when article text < charThreshold (default 500); cliff moves when charThreshold option changes.",
+    "units": [
+      {
+        "id": "f3-460-art",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzshort460",
+        "text": "zzshort4601v2q zzshort4601usr zzshort4601vmq zzshort4601vcq zzshort4601tys zzshort4601tos zzshort4601uir zzshort4601u8s zzshort4601xan zzshort4601x0o, zzshort460fvjd zzshort460g5iz zzshort460gfik zzshort460gpi6 zzshort460erky zzshort460f1kk zzshort460fbk6 zzshort460fljr zzshort460dnmk zzshort460dxm5, zzshort4601bij zzshort4601b8j zzshort4601c2i zzshort4601bsj zzshort4601ael zzshort4601a4l zzshort4601ayk zzshort4601aok zzshort4601dqg zzshort4601dgg, zzshort460abxm."
+      }
+    ]
+  },
+  "f3_short_520": {
+    "description": "Single clean article, body ~520 chars. Used to sweep the charThreshold=500 cliff (parse null/degraded below threshold).",
+    "intent": "Predict: parse() returns null / degrades when article text < charThreshold (default 500); cliff moves when charThreshold option changes.",
+    "units": [
+      {
+        "id": "f3-520-art",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzshort520",
+        "text": "zzshort52071br zzshort5207bbd zzshort5207lay zzshort5207vak zzshort52085a6 zzshort5208f9s zzshort5208p9d zzshort5208z8z zzshort5204tey zzshort52053ej, zzshort5201bc6 zzshort5201b26 zzshort5201as7 zzshort5201ai7 zzshort5201cg4 zzshort5201c65 zzshort5201bw5 zzshort5201bm5 zzshort5201949 zzshort52018u9, zzshort5201d07 zzshort5201da6 zzshort5201cg7 zzshort5201cq7 zzshort5201bw8 zzshort5201c68 zzshort5201bc9 zzshort5201bm9 zzshort5201asa zzshort5201b29, zzshort5206a1p zzshort5206023 zzshort5206u0w zzshort5206k1a zzshort5207e03."
+      }
+    ]
+  },
+  "f3_short_800": {
+    "description": "Single clean article, body ~800 chars. Used to sweep the charThreshold=500 cliff (parse null/degraded below threshold).",
+    "intent": "Predict: parse() returns null / degrades when article text < charThreshold (default 500); cliff moves when charThreshold option changes.",
+    "units": [
+      {
+        "id": "f3-800-art",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzshort800",
+        "text": "zzshort8001et4 zzshort8001ej5 zzshort8001e95 zzshort8001dz6 zzshort8001dp6 zzshort8001df6 zzshort8001d57 zzshort8001cv7 zzshort8001cl8 zzshort8001cb8, zzshort80012yh zzshort800138g zzshort80012ei zzshort80012oh zzshort800142f zzshort80014cf zzshort80013ig zzshort80013sg zzshort80010qk zzshort800110k, zzshort80011ag zzshort800110g zzshort80010qh zzshort80010gh zzshort800106i zzshort800zwih zzshort800zmiv zzshort800zcj9 zzshort80013id zzshort800138d, zzshort800zmfq zzshort800zwfb zzshort800106e zzshort80010ge zzshort800yihb zzshort800ysgx zzshort800z2gi zzshort800zcg4 zzshort80011uc zzshort800124c, zzshort8001xgx zzshort8001x6y zzshort8001y0x zzshort8001xqx zzshort8001ykw zzshort8001yaw zzshort8003rfu zzshort8001yuv zzshort800nqn8 zzshort800dr1j, zzshort8005ngc zzshort8005xfx zzshort80053h4."
+      }
+    ]
+  },
+  "f3_short_1500": {
+    "description": "Single clean article, body ~1500 chars. Used to sweep the charThreshold=500 cliff (parse null/degraded below threshold).",
+    "intent": "Predict: parse() returns null / degrades when article text < charThreshold (default 500); cliff moves when charThreshold option changes.",
+    "units": [
+      {
+        "id": "f3-1500-art",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzshort1500",
+        "text": "zzshort15001qmt zzshort15001gn7 zzshort150016nm zzshort1500wo0e zzshort15002ul8 zzshort15002klm zzshort15002am0 zzshort150020mf zzshort15001yju zzshort15001y9u, zzshort1500oyts zzshort1500p8te zzshort1500oeul zzshort1500oou6 zzshort1500nuvd zzshort1500o4uz zzshort1500naw6 zzshort1500nkvr zzshort1500mqwy zzshort1500n0wk, zzshort1500nat0 zzshort1500n0tf zzshort1500mqtt zzshort1500mgu7 zzshort1500oerf zzshort1500o4rt zzshort1500nus8 zzshort1500nksm zzshort1500l2w7 zzshort1500kswl, zzshort1500lms9 zzshort1500lwru zzshort1500m6rg zzshort1500mgr2 zzshort1500mqqn zzshort1500n0q9 zzshort1500napv zzshort1500nkpg zzshort1500jevf zzshort1500jov1, zzshort1500ofck zzshort1500o5cy zzshort1500ozbr zzshort1500opc5 zzshort1500nbe5 zzshort1500n1ej zzshort1500nvdc zzshort1500nldr zzshort1500m7fq zzshort1500lxg4, zzshort1500mrbs zzshort1500n1be zzshort1500m7cl zzshort1500mhc6 zzshort1500nva7 zzshort1500o59s zzshort1500nbaz zzshort1500nlal zzshort1500kjey zzshort1500ktek, zzshort15001klt zzshort15001kbu zzshort15001k1u zzshort15001jrv zzshort15001jhv zzshort15001j7v zzshort15001ixw zzshort15001inw zzshort15001mtq zzshort15001mjr, zzshort15001ixt zzshort15001j7s zzshort15001jhs zzshort15001jrr zzshort15001htu zzshort15001i3u zzshort15001idt zzshort15001int zzshort15001l5p zzshort15001lfp, zzshort1500m69h zzshort1500lw9v zzshort1500mq8o zzshort1500mg93 zzshort1500na7w zzshort1500n08a zzshort1500nu73 zzshort1500nk7h zzshort1500jycn zzshort1500jod2, zzshort1500ki8p zzshort1500ks8b zzshort1500jy9i zzshort1500k894."
+      }
+    ]
+  },
+  "f3_empty": {
+    "description": "A page with only a nav and a ~10-char blurb — essentially no article. Bounds where parse() returns null.",
+    "intent": "Predict: parse() returns null (no attempt yields meaningful text) — the true null boundary, unlike short-but-clean articles which the sieve recovers.",
+    "units": [
+      {
+        "id": "f3e-nav",
+        "label": "boilerplate",
+        "btype": "nav",
+        "sentinel": "zzemptynav",
+        "text": "zzemptynavobmr zzemptynavo1n6 zzemptynavnrnk."
+      },
+      {
+        "id": "f3e-blurb",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzemptyblurb",
+        "text": "zzemptyblurb hi."
+      }
+    ]
+  },
+  "f4_semantic": {
+    "description": "Article wrapped in <main><article><h1> with descriptive classes; plus a nav.",
+    "intent": "Baseline recall WITH the semantic scaffold Readability's heuristics favor.",
+    "units": [
+      {
+        "id": "f4s-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4s01",
+        "text": "zzf4s01tmk9 zzf4s01tcko zzf4s01t2l2 zzf4s01sslg zzf4s01silv zzf4s01s8m9 zzf4s01rymn zzf4s01ron2 zzf4s01reng zzf4s01r4nu, zzf4s01lncc zzf4s01lxbx zzf4s01l3d4 zzf4s01ldcq zzf4s01mraq zzf4s01n1ac zzf4s01m7bj zzf4s01mhb5 zzf4s01jffi zzf4s01jpf4, zzf4s01jzbk zzf4s01jpby zzf4s01jfcc zzf4s01j5cr zzf4s01ivd5."
+      },
+      {
+        "id": "f4s-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4s02",
+        "text": "zzf4s021jtv zzf4s021k3v zzf4s021kdu zzf4s021knu zzf4s021kxu zzf4s021l7t zzf4s021lht zzf4s021lrs zzf4s021hly zzf4s021hvy, zzf4s02189z zzf4s0217zz zzf4s0217pz zzf4s0217g0 zzf4s0219dx zzf4s02193x zzf4s0218ty zzf4s0218jy zzf4s021622 zzf4s0215s2, zzf4s02afh0 zzf4s02apgm zzf4s029vht zzf4s02a5he zzf4s029bil zzf4s029li7 zzf4s028rje."
+      },
+      {
+        "id": "f4s-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4s03",
+        "text": "zzf4s031h8a zzf4s031gya zzf4s031hs9 zzf4s031hi9 zzf4s031g4b zzf4s031fub zzf4s031goa zzf4s031geb zzf4s031f0d zzf4s031eqd, zzf4s03r8su zzf4s03risf zzf4s03rss1 zzf4s03s2rn zzf4s03q4uf zzf4s03qeu0 zzf4s03qotm zzf4s03qyt8 zzf4s03tgpn zzf4s03tqp9, zzf4s03w8v5 zzf4s03vyvj zzf4s03wsuc zzf4s03wiuq."
+      },
+      {
+        "id": "f4s-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4s04",
+        "text": "zzf4s041jd3 zzf4s041jn2 zzf4s041it4 zzf4s041j33 zzf4s041i94 zzf4s041ij4 zzf4s041hp5 zzf4s041hz5 zzf4s041h56 zzf4s041hf6, zzf4s041p5b zzf4s041ovb zzf4s041ppa zzf4s041pfa zzf4s041o1c zzf4s041nrd zzf4s041olc zzf4s041obc zzf4s041mxe zzf4s041mne, zzf4s04kmnw zzf4s04kwnh."
+      },
+      {
+        "id": "f4s-nav",
+        "label": "boilerplate",
+        "btype": "nav",
+        "sentinel": "zzf4snav",
+        "text": "zzf4snavqjld zzf4snavq9lr zzf4snavr3kk zzf4snavqtky zzf4snavrnjs."
+      }
+    ]
+  },
+  "f4_neutral": {
+    "description": "IDENTICAL article text but neutralized: no <article>/<main>/<h1>, generic <div class=x> wrappers, paragraphs as <div>.",
+    "intent": "Recall WITHOUT semantic scaffold — measures structural sensitivity delta vs f4_semantic.",
+    "units": [
+      {
+        "id": "f4n-art-01",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4n01",
+        "text": "zzf4n011xlx zzf4n011xvx zzf4n011x1y zzf4n011xby zzf4n011whz zzf4n011wrz zzf4n011vy0 zzf4n011w7z zzf4n011ve1 zzf4n011vo0, zzf4n011lkc zzf4n011lad zzf4n011m4b zzf4n011luc zzf4n011kge zzf4n011k6e zzf4n011l0d zzf4n011kqd zzf4n011jcf zzf4n011j2g, zzf4n011gka zzf4n011gua zzf4n011h49 zzf4n011he9 zzf4n011fgb."
+      },
+      {
+        "id": "f4n-art-02",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4n02",
+        "text": "zzf4n02fgqf zzf4n02f6qt zzf4n02g0pm zzf4n02fqq0 zzf4n02gkot zzf4n02gap8 zzf4n02h4o1 zzf4n02guof zzf4n02d8tl zzf4n02cytz, zzf4n02ii84 zzf4n02is7p zzf4n02j27b zzf4n02jc6x zzf4n02jm6i zzf4n02jw64 zzf4n02k65q zzf4n02kg5b zzf4n02gaba zzf4n02gkaw, zzf4n021e58 zzf4n021dv8 zzf4n021ep7 zzf4n021ef7 zzf4n021f96 zzf4n021ez7 zzf4n021ft5."
+      },
+      {
+        "id": "f4n-art-03",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4n03",
+        "text": "zzf4n03hrhc zzf4n03i1gy zzf4n03ibgj zzf4n03ilg5 zzf4n03gnix zzf4n03gxij zzf4n03h7i5 zzf4n03hhhq zzf4n03jze5 zzf4n03k9dr, zzf4n03p19c zzf4n03or9q zzf4n03oha5 zzf4n03o7aj zzf4n03nxax zzf4n03nnbc zzf4n03ndbq zzf4n03n3c4 zzf4n03mtci zzf4n03mjcx, zzf4n03htmt zzf4n03i3mf zzf4n03h9nm zzf4n03hjn8."
+      },
+      {
+        "id": "f4n-art-04",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzf4n04",
+        "text": "zzf4n0417j1 zzf4n041791 zzf4n0416z2 zzf4n0416p2 zzf4n0416f2 zzf4n041653 zzf4n0415v3 zzf4n0415l4 zzf4n0415b4 zzf4n041514, zzf4n04lkrm zzf4n04lur7 zzf4n04l0se zzf4n04las0 zzf4n04moq1 zzf4n04mypm zzf4n04m4qt zzf4n04meqf zzf4n04jcus zzf4n04jmue, zzf4n04jwqu zzf4n04jmr8."
+      },
+      {
+        "id": "f4n-nav",
+        "label": "boilerplate",
+        "btype": "nav",
+        "sentinel": "zzf4nnav",
+        "text": "zzf4nnav5r06 zzf4nnav60zs zzf4nnav570z zzf4nnav5h0k zzf4nnav6uyl."
+      }
+    ]
+  },
+  "f5_ipr_li_only": {
+    "description": "Real article content lives entirely in <ul><li> (issue #662 shape); isProbablyReaderable queries only p/pre/article.",
+    "intent": "Predict: isProbablyReaderable() = false (no p/pre/article nodes) even though content is substantial; contrast with parse().",
+    "units": [
+      {
+        "id": "f5li-1",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzli01",
+        "text": "zzli01fqs5 zzli01fgsj zzli01garc zzli01g0rr zzli01guqk zzli01gkqy zzli01hepr zzli01h4q5 zzli01divb zzli01d8vq, zzli011an1 zzli011ax1 zzli011b71 zzli011bh0 zzli011br0 zzli011c0z zzli011caz."
+      },
+      {
+        "id": "f5li-2",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzli02",
+        "text": "zzli02ypu9 zzli02yztu zzli02y5v1 zzli02yfun zzli02xlvu zzli02xvvg zzli02x1wn zzli02xbw8 zzli02whxf zzli02wrx1, zzli021b0n zzli021aqn zzli021bkm zzli021bam zzli0219wo zzli0219mp zzli021ago."
+      },
+      {
+        "id": "f5li-3",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzli03",
+        "text": "zzli03rnnk zzli03rdny zzli03r3oc zzli03qtoq zzli03srly zzli03shmd zzli03s7mr zzli03rxn5 zzli03pfqq zzli03p5r4, zzli035vg1 zzli0365fm zzli035bgt zzli035lgf zzli034rhm zzli0351h8 zzli0347if."
+      },
+      {
+        "id": "f5li-4",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzli04",
+        "text": "zzli041ycr zzli041ymr zzli041ywr zzli045mmk zzli04fm89 zzli04pltx zzli04zlfm zzli0419l1 zzli041w4v zzli041weu, zzli04xbbe zzli04x1bs zzli04wrc7 zzli04whcl zzli04yf9t zzli04y5a7 zzli04xval."
+      },
+      {
+        "id": "f5li-5",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzli05",
+        "text": "zzli051w3j zzli051vtk zzli051wnj zzli051wdj zzli051uzl zzli051upl zzli051vjk zzli051v9l zzli051tvm zzli051tln, zzli05crr5 zzli05d1qr zzli05dbqd zzli05dlpy zzli05bnsr zzli05bxsc zzli05c7ry."
+      },
+      {
+        "id": "f5li-6",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzli06",
+        "text": "zzli066th0 zzli0673gm zzli0669ht zzli066jhe zzli067xff zzli0687f1 zzli067dg7 zzli067nft zzli0691du zzli069bdf, zzli06gkmg zzli06gamu zzli06h4ln zzli06gum2 zzli06hokv zzli06hel9 zzli06i8k2."
+      }
+    ]
+  },
+  "f5_ipr_many_short": {
+    "description": "Ten <p> paragraphs, each < minContentLength (140 chars). Each alone scores 0 in the sqrt(len-140) formula.",
+    "intent": "Predict: isProbablyReaderable() = false (each paragraph below minContentLength scores nothing) though total content is large; contrast with parse().",
+    "units": [
+      {
+        "id": "f5ms-1",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms01",
+        "text": "zzms011y7r zzms011yhq zzms011yrq zzms01lugl zzms011x3s zzms011xds zzms011xnr zzms011xxr zzms011eju zzms011ojg."
+      },
+      {
+        "id": "f5ms-2",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms02",
+        "text": "zzms0217yw zzms0217ox zzms0217ex zzms02174y zzms02192v zzms0218sv zzms0218iw zzms02188w zzms0215r0 zzms0215h0."
+      },
+      {
+        "id": "f5ms-3",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms03",
+        "text": "zzms031f13 zzms031fb3 zzms031eh4 zzms031er3 zzms031dx5 zzms031e74 zzms031dd5 zzms031dn5 zzms031ct6 zzms031d36."
+      },
+      {
+        "id": "f5ms-4",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms04",
+        "text": "zzms04ddp2 zzms04d3pg zzms04dxoa zzms04dnoo zzms04c9qn zzms04bzr2 zzms04ctpv zzms04cjq9 zzms04b5s9 zzms04avsn."
+      },
+      {
+        "id": "f5ms-5",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms05",
+        "text": "zzms05fzap zzms05g9aa zzms05gj9w zzms05gt9i zzms05h394 zzms05hd8p zzms05hn8b zzms05hx7x zzms05drdv zzms05e1dh."
+      },
+      {
+        "id": "f5ms-6",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms06",
+        "text": "zzms06oy6w zzms06oo7b zzms06oe7p zzms06o483 zzms06nu8i zzms06nk8w zzms06na9a zzms06n09p zzms06mqa3 zzms06mgah."
+      },
+      {
+        "id": "f5ms-7",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms07",
+        "text": "zzms07n4qb zzms07nepx zzms07mkr4 zzms07muqq zzms07o8oq zzms07oioc zzms07nopj zzms07nyp5 zzms07pcn5 zzms07pmmr."
+      },
+      {
+        "id": "f5ms-8",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms08",
+        "text": "zzms081kgx zzms081k6x zzms081l0w zzms081kqw zzms081lkv zzms081lav zzms081m4u zzms081luv zzms081mot zzms081meu."
+      },
+      {
+        "id": "f5ms-9",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms09",
+        "text": "zzms091vzo zzms091w9o zzms091wjo zzms091wtn zzms091uvq zzms091v5p zzms091vfp zzms091vpp zzms091trr zzms091u1r."
+      },
+      {
+        "id": "f5ms-10",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzms10",
+        "text": "zzms10ul7s zzms10uv7d zzms10u18k zzms10ub86 zzms10th9d zzms10tr8y zzms10sxa5 zzms10t79r zzms10sday zzms10snak."
+      }
+    ]
+  },
+  "f5_ipr_one_long": {
+    "description": "Single <p> well over minContentLength — control that SHOULD be readerable.",
+    "intent": "Control: isProbablyReaderable() = true expected.",
+    "units": [
+      {
+        "id": "f5ol",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zzonelong",
+        "text": "zzonelongzwah zzonelongzmaw zzonelong10g9 zzonelong106a zzonelong1108 zzonelong10q9 zzonelong11k8 zzonelong11a8 zzonelongxodo zzonelongxee2, zzonelonguu79 zzonelongv46v zzonelongve6h zzonelongvo62 zzonelongvy5o zzonelongw85a zzonelongwi4v zzonelongws4h zzonelongsmag zzonelongswa1, zzonelong1qh7 zzonelong1q77 zzonelong1r16 zzonelong1qr7 zzonelong1rl5 zzonelong1rb6 zzonelong1s55 zzonelong1rv5 zzonelong1sp4."
+      }
+    ]
+  },
+  "f5_ipr_normal": {
+    "description": "Ordinary multi-paragraph article — control (readerable + parse succeeds).",
+    "intent": "Control: isProbablyReaderable() = true AND parse() succeeds.",
+    "units": [
+      {
+        "id": "f5n-1",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zznorm01",
+        "text": "zznorm01uaew zznorm01ukei zznorm01tqfp zznorm01u0fa zznorm01vedb zznorm01vocw zznorm01uue3 zznorm01v4dp zznorm01s2i2 zznorm01scho, zznorm011tuf zznorm011tkf zznorm011uee zznorm011u4f zznorm011uyd zznorm011uoe zznorm011vid zznorm011v8d zznorm011w2c zznorm011vsc, zznorm01y7ff zznorm01yhf0 zznorm01yrem."
+      },
+      {
+        "id": "f5n-2",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zznorm02",
+        "text": "zznorm021atx zznorm021ajy zznorm021bdx zznorm021b3x zznorm0219pz zznorm0219fz zznorm021a9y zznorm0219zz zznorm021d1u zznorm021crv, zznorm023nr1 zznorm023xqm zznorm0247q8 zznorm024hpu zznorm022jsm zznorm022ts8 zznorm0233rt zznorm023drf zznorm021fu7 zznorm021ptt, zznorm02zar6 zznorm02z0rl zznorm02zuqe."
+      },
+      {
+        "id": "f5n-3",
+        "label": "article",
+        "btype": "body",
+        "sentinel": "zznorm03",
+        "text": "zznorm03dwyf zznorm03e6y0 zznorm03egxm zznorm03eqx8 zznorm03f0wt zznorm03fawf zznorm03fkw1 zznorm03fuvn zznorm03g4v8 zznorm03geuu, zznorm031azh zznorm031api zznorm031afi zznorm031a5i zznorm031c3g zznorm031btg zznorm031bjg zznorm031b9h zznorm031d7e zznorm031cxe, zznorm031cni zznorm031cxi zznorm031c3j."
+      }
+    ]
+  },
+  "f6_nonprose": {
+    "description": "Article whose legitimate content includes a data <table>, a <pre> code block, sub-25-char one-line <p>, and a <figcaption> alongside prose.",
+    "intent": "Predict: prose recovered; sub-25-char lines (uncounted by scoring) + some table/caption text at risk of being dropped.",
+    "units": [
+      {
+        "id": "f6-prose-01",
+        "label": "article",
+        "btype": "prose",
+        "sentinel": "zznp_prose01",
+        "text": "zznp_prose011fvz zznp_prose011g5z zznp_prose011fc0 zznp_prose011fm0 zznp_prose011es1 zznp_prose011f21 zznp_prose011e82 zznp_prose011ei1 zznp_prose011i3w zznp_prose011idw, zznp_prose011c34 zznp_prose011bt5 zznp_prose011cn4 zznp_prose011cd4 zznp_prose011az6 zznp_prose011ap6 zznp_prose011bj5 zznp_prose011b96 zznp_prose011eb1."
+      },
+      {
+        "id": "f6-prose-02",
+        "label": "article",
+        "btype": "prose",
+        "sentinel": "zznp_prose02",
+        "text": "zznp_prose021wrw zznp_prose021whw zznp_prose021xbv zznp_prose021x1w zznp_prose021xvu zznp_prose021xlv zznp_prose021yfu zznp_prose021y5u zznp_prose021yzt zznp_prose021ypt, zznp_prose0218jj zznp_prose0218ti zznp_prose02193i zznp_prose0219dh zznp_prose0219nh zznp_prose0219xh zznp_prose021a7g zznp_prose021ahg."
+      },
+      {
+        "id": "f6-table-01",
+        "label": "article",
+        "btype": "table-cell",
+        "sentinel": "zznp_tbl01",
+        "text": "zznp_tbl0113uo zznp_tbl01tv2c."
+      },
+      {
+        "id": "f6-table-02",
+        "label": "article",
+        "btype": "table-cell",
+        "sentinel": "zznp_tbl02",
+        "text": "zznp_tbl021j92 zznp_tbl021jj1."
+      },
+      {
+        "id": "f6-code",
+        "label": "article",
+        "btype": "pre-code",
+        "sentinel": "zznp_code01",
+        "text": "zznp_code013ro5 zznp_code0141nr zznp_code014bnc zznp_code014lmy zznp_code012npq zznp_code012xpc zznp_code0137oy zznp_code013hoj."
+      },
+      {
+        "id": "f6-short-01",
+        "label": "article",
+        "btype": "short-line",
+        "sentinel": "zznp_short01",
+        "text": "zznp_short01 ok."
+      },
+      {
+        "id": "f6-short-02",
+        "label": "article",
+        "btype": "short-line",
+        "sentinel": "zznp_short02",
+        "text": "zznp_short02 ok."
+      },
+      {
+        "id": "f6-cap-01",
+        "label": "article",
+        "btype": "figcaption",
+        "sentinel": "zznp_cap01",
+        "text": "zznp_cap011wey zznp_cap011w4y."
+      }
+    ]
+  }
+}

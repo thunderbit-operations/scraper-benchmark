@@ -1,0 +1,228 @@
+{
+  "same_testbed": true,
+  "readability_micro": {
+    "token_precision": 0.9017,
+    "token_recall": 1.0,
+    "token_f1": 0.9483,
+    "unit_article_recall": 1.0,
+    "unit_boilerplate_leak_rate": 0.2941,
+    "article_units": 40,
+    "article_units_recovered": 40,
+    "boilerplate_units": 17,
+    "boilerplate_units_leaked": 5,
+    "boilerplate_token_contamination": 41
+  },
+  "trafilatura_micro": {
+    "token_precision": 0.9394,
+    "token_recall": 1.0,
+    "token_f1": 0.9688,
+    "unit_article_recall": 1.0,
+    "unit_boilerplate_leak_rate": 0.0588,
+    "article_units": 40,
+    "article_units_recovered": 40,
+    "boilerplate_units": 17,
+    "boilerplate_units_leaked": 1,
+    "boilerplate_token_contamination": 3
+  },
+  "per_fixture": [
+    {
+      "fixture": "f1_canonical",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 1,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9009,
+      "trafilatura_token_f1": 0.9662
+    },
+    {
+      "fixture": "f1_malformed",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9583,
+      "trafilatura_token_f1": 0.9583
+    },
+    {
+      "fixture": "f2_sib_len120_ld000",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 1,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9153,
+      "trafilatura_token_f1": 0.9643
+    },
+    {
+      "fixture": "f2_sib_len120_ld015",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 1,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9153,
+      "trafilatura_token_f1": 0.9643
+    },
+    {
+      "fixture": "f2_sib_len120_ld029",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9643,
+      "trafilatura_token_f1": 0.9643
+    },
+    {
+      "fixture": "f2_sib_len120_ld050",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9643,
+      "trafilatura_token_f1": 0.9643
+    },
+    {
+      "fixture": "f2_sib_len60_period",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 1,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9364,
+      "trafilatura_token_f1": 0.9643
+    },
+    {
+      "fixture": "f2_sib_len60_noperiod",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9643,
+      "trafilatura_token_f1": 0.9643
+    },
+    {
+      "fixture": "f3_short_120",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.8,
+      "trafilatura_token_f1": 0.5714
+    },
+    {
+      "fixture": "f3_short_300",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9091,
+      "trafilatura_token_f1": 0.9091
+    },
+    {
+      "fixture": "f3_short_460",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9394,
+      "trafilatura_token_f1": 0.9394
+    },
+    {
+      "fixture": "f3_short_520",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9459,
+      "trafilatura_token_f1": 0.9459
+    },
+    {
+      "fixture": "f3_short_800",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9636,
+      "trafilatura_token_f1": 0.9636
+    },
+    {
+      "fixture": "f3_short_1500",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9792,
+      "trafilatura_token_f1": 0.9792
+    },
+    {
+      "fixture": "f3_empty",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 1,
+      "trafilatura_boiler_leaked": 1,
+      "readability_token_f1": 0.5714,
+      "trafilatura_token_f1": 0.5714
+    },
+    {
+      "fixture": "f4_semantic",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9849,
+      "trafilatura_token_f1": 0.9849
+    },
+    {
+      "fixture": "f4_neutral",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 1.0,
+      "trafilatura_token_f1": 1.0
+    },
+    {
+      "fixture": "f5_ipr_li_only",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9854,
+      "trafilatura_token_f1": 0.9903
+    },
+    {
+      "fixture": "f5_ipr_many_short",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9802,
+      "trafilatura_token_f1": 1.0
+    },
+    {
+      "fixture": "f5_ipr_one_long",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9333,
+      "trafilatura_token_f1": 1.0
+    },
+    {
+      "fixture": "f5_ipr_normal",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 1.0,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 1.0,
+      "trafilatura_token_f1": 0.9928
+    },
+    {
+      "fixture": "f6_nonprose",
+      "readability_article_recall": 1.0,
+      "trafilatura_article_recall": 0.875,
+      "readability_boiler_leaked": 0,
+      "trafilatura_boiler_leaked": 0,
+      "readability_token_f1": 0.9818,
+      "trafilatura_token_f1": 0.9585
+    }
+  ],
+  "caveat": "Controlled synthetic fixtures; NOT a replacement for the public real-corpus benchmark (scrapinghub Readability.js word-F1 0.887). Both tools see identical HTML bytes; trafilatura uses its own parser, Readability uses jsdom."
+}
