@@ -1,0 +1,99 @@
+{
+  "run_started_at": "2026-07-23T16:23:35.688182+00:00",
+  "tool": "rod",
+  "base_url": "http://127.0.0.1:63027",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:63027",
+    "A_static_marker": "STATIC_ALPHA_MARKER_A",
+    "A_static_href": "/page/alpha",
+    "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+    "B_sync_href": "/sync/injected-11",
+    "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+    "C_delayed_href": "/delayed/injected-42",
+    "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+    "waitsem_visible_marker": "VISIBLE_MARKER_V"
+  },
+  "runs": [
+    {
+      "hidden_node": {
+        "element_err": "",
+        "element_ms": 2,
+        "element_returned": true,
+        "waitvisible_err": "context deadline exceeded",
+        "waitvisible_ms": 4000,
+        "waitvisible_returned": false
+      },
+      "never_appears": {
+        "err": "context deadline exceeded",
+        "ms": 2002,
+        "returned": false
+      },
+      "selector_model_visible_node": {
+        "css_element_err": "",
+        "css_element_ms": 4,
+        "css_element_returned": true,
+        "xpath_elementx_err": "",
+        "xpath_elementx_ms": 6,
+        "xpath_elementx_returned": true
+      },
+      "timeout_ms": 4000
+    },
+    {
+      "hidden_node": {
+        "element_err": "",
+        "element_ms": 0,
+        "element_returned": true,
+        "waitvisible_err": "context deadline exceeded",
+        "waitvisible_ms": 4000,
+        "waitvisible_returned": false
+      },
+      "never_appears": {
+        "err": "context deadline exceeded",
+        "ms": 2002,
+        "returned": false
+      },
+      "selector_model_visible_node": {
+        "css_element_err": "",
+        "css_element_ms": 4,
+        "css_element_returned": true,
+        "xpath_elementx_err": "",
+        "xpath_elementx_ms": 4,
+        "xpath_elementx_returned": true
+      },
+      "timeout_ms": 4000
+    },
+    {
+      "hidden_node": {
+        "element_err": "",
+        "element_ms": 0,
+        "element_returned": true,
+        "waitvisible_err": "context deadline exceeded",
+        "waitvisible_ms": 4001,
+        "waitvisible_returned": false
+      },
+      "never_appears": {
+        "err": "context deadline exceeded",
+        "ms": 2000,
+        "returned": false
+      },
+      "selector_model_visible_node": {
+        "css_element_err": "",
+        "css_element_ms": 6,
+        "css_element_returned": true,
+        "xpath_elementx_err": "",
+        "xpath_elementx_ms": 3,
+        "xpath_elementx_returned": true
+      },
+      "timeout_ms": 4000
+    }
+  ],
+  "reading": {
+    "hidden_node_element_returns_all": true,
+    "hidden_node_waitvisible_times_out_all": true,
+    "css_element_returns_all": true,
+    "xpath_elementx_returns_all": true,
+    "never_appears_times_out_all": true,
+    "note": "Element = node attached to DOM; Element.WaitVisible = node actually visible. On a display:none attached node they diverge cleanly. rod's CSS Element and XPath ElementX both resolve the visible node (no chromedp-#440-style default-query trap). Never-appearing selector fails with a clean timeout, no hang."
+  },
+  "run_completed_at": "2026-07-23T16:23:57.410400+00:00"
+}

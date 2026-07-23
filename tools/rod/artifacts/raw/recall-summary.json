@@ -1,0 +1,188 @@
+{
+  "run_started_at": "2026-07-23T16:22:39.043275+00:00",
+  "tool": "rod",
+  "chrome": "~/Library/Caches/ms-playwright/chromium_headless_shell-1232/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "base_url": "http://127.0.0.1:62702",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:62702",
+    "A_static_marker": "STATIC_ALPHA_MARKER_A",
+    "A_static_href": "/page/alpha",
+    "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+    "B_sync_href": "/sync/injected-11",
+    "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+    "C_delayed_href": "/delayed/injected-42",
+    "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+    "waitsem_visible_marker": "VISIBLE_MARKER_V"
+  },
+  "recall_matrix_delay800": {
+    "none": {
+      "delay_ms": 800,
+      "elapsed_ms": 43,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": false
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    },
+    "waitload": {
+      "delay_ms": 800,
+      "elapsed_ms": 13,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": false
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    },
+    "element": {
+      "delay_ms": 800,
+      "elapsed_ms": 1555,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    },
+    "poll": {
+      "delay_ms": 800,
+      "elapsed_ms": 851,
+      "classes_found": {
+        "A_static": true,
+        "B_sync_injected": true,
+        "C_delayed_injected": true
+      },
+      "hrefs": [
+        "/page/alpha",
+        "/sync/injected-11",
+        "/delayed/injected-42"
+      ],
+      "server_side_hits": {
+        "/classes": 1
+      }
+    }
+  },
+  "determinism_found_sets": {
+    "none": {
+      "runs": [
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected"
+      ],
+      "stable": true
+    },
+    "waitload": {
+      "runs": [
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected",
+        "A_static,B_sync_injected"
+      ],
+      "stable": true
+    },
+    "element": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    },
+    "poll": {
+      "runs": [
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected",
+        "A_static,B_sync_injected,C_delayed_injected"
+      ],
+      "stable": true
+    }
+  },
+  "injection_timing_gradient": [
+    {
+      "delay_ms": 0,
+      "none": {
+        "C_found": true,
+        "elapsed_ms": 11
+      },
+      "element": {
+        "C_found": true,
+        "elapsed_ms": 12
+      }
+    },
+    {
+      "delay_ms": 100,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 12
+      },
+      "element": {
+        "C_found": true,
+        "elapsed_ms": 214
+      }
+    },
+    {
+      "delay_ms": 400,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 12
+      },
+      "element": {
+        "C_found": true,
+        "elapsed_ms": 628
+      }
+    },
+    {
+      "delay_ms": 800,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 10
+      },
+      "element": {
+        "C_found": true,
+        "elapsed_ms": 1428
+      }
+    },
+    {
+      "delay_ms": 1500,
+      "none": {
+        "C_found": false,
+        "elapsed_ms": 10
+      },
+      "element": {
+        "C_found": true,
+        "elapsed_ms": 2858
+      }
+    }
+  ],
+  "contrast": {
+    "C_delayed_found_by": [
+      "element",
+      "poll"
+    ],
+    "naive_html_misses_C": true,
+    "waitload_html_misses_C": true,
+    "element_autowait_finds_C": true,
+    "poll_finds_C": true,
+    "note": "rod's auto-waiting Element() recovers the runtime-injected node with no explicit wait call; a naive HTML snapshot (none) and WaitLoad+HTML both miss it — same footgun as chromedp's naive read, different ergonomic default."
+  },
+  "run_completed_at": "2026-07-23T16:23:16.595018+00:00"
+}

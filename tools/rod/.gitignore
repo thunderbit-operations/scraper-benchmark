@@ -1,0 +1,30 @@
+# Never commit the local virtualenv (runners use stdlib only; recreate via the README).
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Run logs may carry absolute local paths — the JSON summaries carry the numbers.
+*.log
+*.out
+*.stdout
+artifacts/logs/
+
+# Go build products (recreate via `go build -o rod_probe .`).
+# go.mod / go.sum ARE committed (pin rod + leakless versions); the binary is not.
+tests/harness/rod_probe
+*_probe
+*.test
+*.exe
+
+# Chrome / rod runtime state, temp user-data-dirs, and the leakless guardian binary.
+# rod may auto-download a browser under ~/.cache/rod and drops the leakless guardian
+# under $TMPDIR — never commit either; only their paths are recorded in metadata.
+rod_*/
+.rod-*/
+leakless-*/
+.cache/rod/
+
+# OS noise
+.DS_Store

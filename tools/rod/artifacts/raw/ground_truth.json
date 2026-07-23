@@ -1,0 +1,11 @@
+{
+  "base_url": "http://127.0.0.1:62702",
+  "A_static_marker": "STATIC_ALPHA_MARKER_A",
+  "A_static_href": "/page/alpha",
+  "B_sync_marker": "SYNC_INJECTED_MARKER_B",
+  "B_sync_href": "/sync/injected-11",
+  "C_delayed_marker": "DELAYED_INJECTED_MARKER_C",
+  "C_delayed_href": "/delayed/injected-42",
+  "waitsem_hidden_marker": "HIDDEN_ATTACHED_MARKER_H",
+  "waitsem_visible_marker": "VISIBLE_MARKER_V"
+}

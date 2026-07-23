@@ -1,0 +1,134 @@
+{
+  "run_started_at": "2026-07-23T16:24:11.684047+00:00",
+  "tool": "rod",
+  "base_url": "http://127.0.0.1:63166",
+  "platform_note": "macOS arm64. rod launcher enables leakless by default: a separate guardian binary bridged to the Go process over TCP kills the browser when the connection closes (parent exit OR crash). Contrast: chromedp on macOS orphans on exit-without-cancel (allocate_other.go no-op).",
+  "graceful_runs": [
+    {
+      "chrome_browser_procs_after_close": 0,
+      "chrome_browser_procs_before_close": 1,
+      "leakless": true,
+      "reap_ms": 16,
+      "reaped": true
+    },
+    {
+      "chrome_browser_procs_after_close": 0,
+      "chrome_browser_procs_before_close": 1,
+      "leakless": true,
+      "reap_ms": 15,
+      "reaped": true
+    },
+    {
+      "chrome_browser_procs_after_close": 0,
+      "chrome_browser_procs_before_close": 1,
+      "leakless": true,
+      "reap_ms": 13,
+      "reaped": true
+    }
+  ],
+  "exit_leakless_on_runs": [
+    {
+      "leakless": true,
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 0,
+      "orphaned": false,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "leakless": true,
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 0,
+      "orphaned": false,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "leakless": true,
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 0,
+      "orphaned": false,
+      "browser_procs_after_cleanup": 0
+    }
+  ],
+  "exit_leakless_off_runs": [
+    {
+      "leakless": false,
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 1,
+      "orphaned": true,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "leakless": false,
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 1,
+      "orphaned": true,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "leakless": false,
+      "probe_ok": true,
+      "browser_procs_before": 0,
+      "browser_procs_after_probe_exit": 1,
+      "orphaned": true,
+      "browser_procs_after_cleanup": 0
+    }
+  ],
+  "kill_leakless_on_runs": [
+    {
+      "leakless": true,
+      "parent_signal": "SIGKILL",
+      "probe_started": true,
+      "browser_procs_while_up": 1,
+      "browser_procs_after_parent_kill": 0,
+      "orphaned": false,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "leakless": true,
+      "parent_signal": "SIGKILL",
+      "probe_started": true,
+      "browser_procs_while_up": 1,
+      "browser_procs_after_parent_kill": 0,
+      "orphaned": false,
+      "browser_procs_after_cleanup": 0
+    },
+    {
+      "leakless": true,
+      "parent_signal": "SIGKILL",
+      "probe_started": true,
+      "browser_procs_while_up": 1,
+      "browser_procs_after_parent_kill": 0,
+      "orphaned": false,
+      "browser_procs_after_cleanup": 0
+    }
+  ],
+  "reading": {
+    "graceful_reaps_all": true,
+    "graceful_reap_ms_values": [
+      16,
+      15,
+      13
+    ],
+    "exit_leakless_on_orphans": [
+      false,
+      false,
+      false
+    ],
+    "exit_leakless_on_reaped_all": true,
+    "exit_leakless_off_orphans": [
+      true,
+      true,
+      true
+    ],
+    "exit_leakless_off_orphaned_all": true,
+    "kill_leakless_on_reaped_all": true,
+    "all_orphans_cleaned": true,
+    "note": "leakless ON => browser reaped on exit AND on SIGKILL (guardian TCP-close kill). leakless OFF => orphan on exit, same as chromedp on macOS. The on/off toggle attributes the reaping to leakless, not to rod broadly. Boundary (#865): leakless fires on PROCESS EXIT, not per-browser-close inside a long-running process — not exercised here."
+  },
+  "run_completed_at": "2026-07-23T16:24:34.214314+00:00"
+}

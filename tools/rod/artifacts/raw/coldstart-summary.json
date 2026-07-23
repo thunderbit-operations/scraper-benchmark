@@ -1,0 +1,42 @@
+{
+  "run_started_at": "2026-07-23T16:25:59.852636+00:00",
+  "tool": "rod",
+  "base_url": "http://127.0.0.1:63577",
+  "chrome": "~/Library/Caches/ms-playwright/chromium_headless_shell-1232/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "n_runs": 5,
+  "leakless": true,
+  "cold_start_ms_samples": [
+    117,
+    119,
+    118,
+    119,
+    124
+  ],
+  "cold_start_ms": {
+    "p50": 119,
+    "min": 117,
+    "max": 124,
+    "mean": 119.4
+  },
+  "cold_start_leakless_off_samples": [
+    108,
+    114,
+    107,
+    114,
+    124
+  ],
+  "cold_start_leakless_off_ms": {
+    "p50": 114,
+    "min": 107,
+    "max": 124,
+    "mean": 113.4
+  },
+  "leakless_tax_ms_p50": 5,
+  "leakless_tax_ranges_overlap": true,
+  "note": "cold_start_ms is rod's DEFAULT (leakless ON), incl. the guardian spawn tax. leakless_off is the same cycle without the guardian, to isolate the tax (tax = on.p50 - off.p50; ranges overlap => tax within noise). Guardian binary pre-warmed. Compare to chromedp 102 ms p50 on the same host/Chrome.",
+  "runtime_dependency": {
+    "requires_external_chrome": true,
+    "note": "rod is pure Go at the module level, but drives a Chrome/Chromium binary at runtime (supplied here via launcher.Bin, which disables auto-download). With no Chrome and auto-download disabled, launch fails."
+  },
+  "run_completed_at": "2026-07-23T16:25:59.852655+00:00"
+}

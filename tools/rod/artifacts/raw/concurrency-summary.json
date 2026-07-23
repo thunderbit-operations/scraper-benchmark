@@ -1,0 +1,88 @@
+{
+  "run_started_at": "2026-07-23T16:26:24.950692+00:00",
+  "tool": "rod",
+  "base_url": "http://127.0.0.1:63758",
+  "n_concurrent": 4,
+  "reps": 3,
+  "shared_one_browser": {
+    "runs": [
+      {
+        "chrome_procs_peak": 1,
+        "first_error": "",
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 211
+      },
+      {
+        "chrome_procs_peak": 1,
+        "first_error": "",
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 211
+      },
+      {
+        "chrome_procs_peak": 1,
+        "first_error": "",
+        "mode": "shared",
+        "n": 4,
+        "wall_ms": 210
+      }
+    ],
+    "wall_ms": {
+      "p50": 211,
+      "min": 210,
+      "max": 211
+    },
+    "chrome_procs_peak": {
+      "min": 1,
+      "max": 1
+    }
+  },
+  "separate_browsers": {
+    "runs": [
+      {
+        "chrome_procs_peak": 4,
+        "first_error": "",
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 1306
+      },
+      {
+        "chrome_procs_peak": 4,
+        "first_error": "",
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 1302
+      },
+      {
+        "chrome_procs_peak": 4,
+        "first_error": "",
+        "mode": "separate",
+        "n": 4,
+        "wall_ms": 1294
+      }
+    ],
+    "wall_ms": {
+      "p50": 1302,
+      "min": 1294,
+      "max": 1306
+    },
+    "chrome_procs_peak": {
+      "min": 4,
+      "max": 4
+    }
+  },
+  "verdict": {
+    "wall_ranges_overlap": false,
+    "shared_peak_procs": {
+      "min": 1,
+      "max": 1
+    },
+    "separate_peak_procs": {
+      "min": 4,
+      "max": 4
+    },
+    "note": "Shared-browser pages run N navigations in ONE Chrome process; separate mode spends N browser processes. Wall-time is a tie if ranges overlap. Mirror of the chromedp shared-vs-separate test."
+  },
+  "run_completed_at": "2026-07-23T16:26:24.950707+00:00"
+}
