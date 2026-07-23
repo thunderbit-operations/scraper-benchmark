@@ -1,0 +1,47 @@
+{
+  "run_id": "discovery_headless",
+  "cmd": [
+    "~/go/bin/katana",
+    "-u",
+    "http://127.0.0.1:52039",
+    "-silent",
+    "-nc",
+    "-d",
+    "4",
+    "-hl"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 69.14,
+  "emitted_in_scope_paths": [
+    "/",
+    "/broken-xyz",
+    "/depth/1",
+    "/depth/2",
+    "/depth/3",
+    "/dynamic/runtime",
+    "/failure/500",
+    "/page/a",
+    "/page/b",
+    "/page/c",
+    "/runtime-only/endpoint42",
+    "/static/app.js"
+  ],
+  "emitted_external": [],
+  "server_side_hits": {
+    "/": 2,
+    "/static/app.js": 3,
+    "/favicon.ico": 1,
+    "/page/a": 1,
+    "/page/b": 1,
+    "/page/c": 1,
+    "/depth/1": 2,
+    "/broken-xyz": 1,
+    "/failure/500": 1,
+    "/dynamic/runtime": 1,
+    "/runtime-only/endpoint42": 1,
+    "/depth/2": 1,
+    "/depth/3": 1
+  },
+  "stderr_tail": ""
+}

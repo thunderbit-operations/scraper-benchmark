@@ -1,0 +1,200 @@
+{
+  "run_started_at": "2026-07-23T14:22:35.155997+00:00",
+  "tool": "katana",
+  "katana_version_line": "[\u001b[34mINF\u001b[0m] Current version: v1.6.1",
+  "base_url": "http://127.0.0.1:52039",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:52039",
+    "class_A_html": [
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/depth/1"
+    ],
+    "class_A_depth_chain": [
+      "/depth/1",
+      "/depth/2",
+      "/depth/3"
+    ],
+    "class_B_js_literal": [
+      "/api/js-endpoint-7",
+      "/api/js-endpoint-8"
+    ],
+    "class_C_runtime_dom_only": "/runtime-only/endpoint42",
+    "known_file_sitemap": [
+      "/sitemap/hidden-1",
+      "/sitemap/hidden-2"
+    ],
+    "external_out_of_scope": "https://example.com/external-should-not-be-crawled"
+  },
+  "modes": {
+    "standard": {
+      "cmd_extra": [],
+      "elapsed_seconds": 15.12,
+      "rc": 0,
+      "in_scope_count": 11,
+      "class_breakdown": {
+        "A_html": {
+          "found": 4,
+          "expected": 4,
+          "recall": 1.0,
+          "missing": []
+        },
+        "A_depth_chain": {
+          "found": 3,
+          "expected": 3,
+          "recall": 1.0,
+          "missing": []
+        },
+        "B_js_literal": {
+          "found": 0,
+          "expected": 2,
+          "recall": 0.0,
+          "missing": [
+            "/api/js-endpoint-7",
+            "/api/js-endpoint-8"
+          ]
+        },
+        "C_runtime_dom_only": {
+          "found": false,
+          "path": "/runtime-only/endpoint42"
+        }
+      },
+      "external_discovered": []
+    },
+    "standard_jc": {
+      "cmd_extra": [
+        "-jc"
+      ],
+      "elapsed_seconds": 14.36,
+      "rc": 0,
+      "in_scope_count": 13,
+      "class_breakdown": {
+        "A_html": {
+          "found": 4,
+          "expected": 4,
+          "recall": 1.0,
+          "missing": []
+        },
+        "A_depth_chain": {
+          "found": 3,
+          "expected": 3,
+          "recall": 1.0,
+          "missing": []
+        },
+        "B_js_literal": {
+          "found": 2,
+          "expected": 2,
+          "recall": 1.0,
+          "missing": []
+        },
+        "C_runtime_dom_only": {
+          "found": false,
+          "path": "/runtime-only/endpoint42"
+        }
+      },
+      "external_discovered": []
+    },
+    "headless": {
+      "cmd_extra": [
+        "-hl"
+      ],
+      "elapsed_seconds": 69.14,
+      "rc": 0,
+      "in_scope_count": 12,
+      "class_breakdown": {
+        "A_html": {
+          "found": 4,
+          "expected": 4,
+          "recall": 1.0,
+          "missing": []
+        },
+        "A_depth_chain": {
+          "found": 3,
+          "expected": 3,
+          "recall": 1.0,
+          "missing": []
+        },
+        "B_js_literal": {
+          "found": 0,
+          "expected": 2,
+          "recall": 0.0,
+          "missing": [
+            "/api/js-endpoint-7",
+            "/api/js-endpoint-8"
+          ]
+        },
+        "C_runtime_dom_only": {
+          "found": true,
+          "path": "/runtime-only/endpoint42"
+        }
+      },
+      "external_discovered": []
+    },
+    "headless_jc": {
+      "cmd_extra": [
+        "-hl",
+        "-jc"
+      ],
+      "elapsed_seconds": 68.61,
+      "rc": 0,
+      "in_scope_count": 12,
+      "class_breakdown": {
+        "A_html": {
+          "found": 4,
+          "expected": 4,
+          "recall": 1.0,
+          "missing": []
+        },
+        "A_depth_chain": {
+          "found": 3,
+          "expected": 3,
+          "recall": 1.0,
+          "missing": []
+        },
+        "B_js_literal": {
+          "found": 0,
+          "expected": 2,
+          "recall": 0.0,
+          "missing": [
+            "/api/js-endpoint-7",
+            "/api/js-endpoint-8"
+          ]
+        },
+        "C_runtime_dom_only": {
+          "found": true,
+          "path": "/runtime-only/endpoint42"
+        }
+      },
+      "external_discovered": []
+    }
+  },
+  "coverage_contrast": {
+    "B_js_literal_found_by": [
+      "standard_jc"
+    ],
+    "C_runtime_dom_only_found_by": [
+      "headless",
+      "headless_jc"
+    ],
+    "note": "if B and C are found by disjoint modes, neither standard+jc nor headless alone is complete; only headless+jc covers both classes",
+    "headless_alone_misses_B": true,
+    "standard_jc_misses_C": true,
+    "headless_jc_covers_both": false
+  },
+  "known_files": {
+    "sitemap_requested": true,
+    "robots_requested": true,
+    "sitemap_endpoints_fetched": [],
+    "sitemap_endpoint_recall": {
+      "found": 0,
+      "expected": 2,
+      "recall": 0.0,
+      "missing": [
+        "/sitemap/hidden-1",
+        "/sitemap/hidden-2"
+      ]
+    }
+  },
+  "run_completed_at": "2026-07-23T14:25:36.710166+00:00"
+}

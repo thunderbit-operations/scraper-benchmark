@@ -1,0 +1,43 @@
+{
+  "run_id": "discovery_standard",
+  "cmd": [
+    "~/go/bin/katana",
+    "-u",
+    "http://127.0.0.1:52039",
+    "-silent",
+    "-nc",
+    "-d",
+    "4"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 15.12,
+  "emitted_in_scope_paths": [
+    "",
+    "/broken-xyz",
+    "/depth/1",
+    "/depth/2",
+    "/depth/3",
+    "/dynamic/runtime",
+    "/failure/500",
+    "/page/a",
+    "/page/b",
+    "/page/c",
+    "/static/app.js"
+  ],
+  "emitted_external": [],
+  "server_side_hits": {
+    "/": 1,
+    "/failure/500": 1,
+    "/page/c": 1,
+    "/dynamic/runtime": 1,
+    "/broken-xyz": 1,
+    "/page/a": 1,
+    "/page/b": 1,
+    "/depth/1": 1,
+    "/static/app.js": 1,
+    "/depth/2": 1,
+    "/depth/3": 1
+  },
+  "stderr_tail": ""
+}

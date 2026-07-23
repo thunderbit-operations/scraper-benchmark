@@ -1,0 +1,70 @@
+{
+  "run_started_at": "2026-07-23T14:26:33.053003+00:00",
+  "tool": "katana",
+  "primary": "http://127.0.0.1:52996",
+  "secondary": "http://localhost:52997",
+  "seed": "http://127.0.0.1:52996/scope-seed",
+  "configs": {
+    "default": {
+      "label": "default",
+      "cmd_extra": [],
+      "returncode": 0,
+      "secondary_host_fetched": false,
+      "secondary_host_discovered_in_output": false,
+      "page_out_hits": 0,
+      "emitted_urls": [
+        "http://127.0.0.1:52996/page/a",
+        "http://127.0.0.1:52996/scope-seed"
+      ]
+    },
+    "fs_fqdn": {
+      "label": "fs_fqdn",
+      "cmd_extra": [
+        "-fs",
+        "fqdn"
+      ],
+      "returncode": 0,
+      "secondary_host_fetched": false,
+      "secondary_host_discovered_in_output": false,
+      "page_out_hits": 0,
+      "emitted_urls": [
+        "http://127.0.0.1:52996/page/a",
+        "http://127.0.0.1:52996/scope-seed"
+      ]
+    },
+    "cs_localhost": {
+      "label": "cs_localhost",
+      "cmd_extra": [
+        "-cs",
+        "localhost"
+      ],
+      "returncode": 0,
+      "secondary_host_fetched": false,
+      "secondary_host_discovered_in_output": false,
+      "page_out_hits": 0,
+      "emitted_urls": []
+    },
+    "fs_custom_both": {
+      "label": "fs_custom_both",
+      "cmd_extra": [
+        "-fs",
+        "(127.0.0.1|localhost)"
+      ],
+      "returncode": 0,
+      "secondary_host_fetched": true,
+      "secondary_host_discovered_in_output": true,
+      "page_out_hits": 1,
+      "emitted_urls": [
+        "http://127.0.0.1:52996/page/a",
+        "http://127.0.0.1:52996/scope-seed",
+        "http://localhost:52997/page/out"
+      ]
+    }
+  },
+  "analysis": {
+    "default_excludes_out_of_scope_host": true,
+    "fqdn_excludes_out_of_scope_host": true,
+    "cs_regex_alone_includes_it": false,
+    "custom_field_scope_includes_it": true
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "run_started_at": "2026-07-23T14:27:17.002091+00:00",
+  "tool": "katana",
+  "base_url": "http://127.0.0.1:53137",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:53137",
+    "class_A_html": [
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/depth/1"
+    ],
+    "class_A_depth_chain": [
+      "/depth/1",
+      "/depth/2",
+      "/depth/3"
+    ],
+    "class_B_js_literal": [
+      "/api/js-endpoint-7",
+      "/api/js-endpoint-8"
+    ],
+    "class_C_runtime_dom_only": "/runtime-only/endpoint42",
+    "known_file_sitemap": [
+      "/sitemap/hidden-1",
+      "/sitemap/hidden-2"
+    ],
+    "external_out_of_scope": "https://example.com/external-should-not-be-crawled"
+  },
+  "resume_file_location": "~/.config/katana/resume-<xid>.cfg",
+  "full_baseline": {
+    "distinct_paths": [
+      "/",
+      "/broken-xyz",
+      "/depth/1",
+      "/depth/2",
+      "/depth/3",
+      "/dynamic/runtime",
+      "/failure/500",
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/static/app.js"
+    ],
+    "distinct_path_count": 11,
+    "total_fetches": 11
+  },
+  "interrupt_resume": {
+    "interrupt_after_seconds": 3.0,
+    "resume_cfg_written": true,
+    "resume_file_name": "resume-d9h29kmhsbtgmr6j6190.cfg",
+    "resume_file_contents": {
+      "InFlightUrls": {
+        "ReadOnly": {},
+        "Map": {
+          "http://127.0.0.1:53137": {}
+        }
+      }
+    },
+    "interrupted_fetched_paths": [
+      "/",
+      "/broken-xyz",
+      "/depth/1",
+      "/depth/2",
+      "/dynamic/runtime",
+      "/failure/500",
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/static/app.js"
+    ],
+    "interrupted_fetch_count": 10,
+    "resume_returncode": 0,
+    "resume_fetched_paths": [
+      "/",
+      "/broken-xyz",
+      "/depth/1",
+      "/depth/2",
+      "/depth/3",
+      "/dynamic/runtime",
+      "/failure/500",
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/static/app.js"
+    ],
+    "resume_fetch_count": 11,
+    "resume_emitted_urls": [
+      "http://127.0.0.1:53137",
+      "http://127.0.0.1:53137/broken-xyz",
+      "http://127.0.0.1:53137/depth/1",
+      "http://127.0.0.1:53137/depth/2",
+      "http://127.0.0.1:53137/depth/3",
+      "http://127.0.0.1:53137/dynamic/runtime",
+      "http://127.0.0.1:53137/failure/500",
+      "http://127.0.0.1:53137/page/a",
+      "http://127.0.0.1:53137/page/b",
+      "http://127.0.0.1:53137/page/c",
+      "http://127.0.0.1:53137/static/app.js"
+    ]
+  },
+  "analysis": {
+    "resume_file_stores_only_inflight_seeds": true,
+    "union_covers_baseline": true,
+    "baseline_minus_union": [],
+    "resume_covers_full_baseline": true,
+    "resume_refetched_already_completed_pages": [
+      "/",
+      "/broken-xyz",
+      "/depth/1",
+      "/depth/2",
+      "/dynamic/runtime",
+      "/failure/500",
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/static/app.js"
+    ],
+    "resume_refetched_count": 10,
+    "checkpoint_granularity": "per-input-seed (resume re-crawls the whole seed; completed pages are re-fetched)"
+  }
+}

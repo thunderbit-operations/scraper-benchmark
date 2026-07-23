@@ -1,0 +1,35 @@
+{
+  "run_started_at": "2026-07-23T13:57:45.036361+00:00",
+  "tool": "katana",
+  "runs_per_mode": 3,
+  "base_url": "http://127.0.0.1:62260",
+  "standard": {
+    "raw": [
+      13.17,
+      13.08,
+      13.07
+    ],
+    "runs": 3,
+    "min": 13.07,
+    "p50": 13.08,
+    "max": 13.17,
+    "mean": 13.11
+  },
+  "headless": {
+    "raw": [
+      67.68,
+      66.78,
+      66.82
+    ],
+    "runs": 3,
+    "min": 66.78,
+    "p50": 66.82,
+    "max": 67.68,
+    "mean": 67.09
+  },
+  "verdict": {
+    "ranges_overlap": false,
+    "headless_over_standard_p50_ratio": 5.1,
+    "call": "headless ~5.1x standard"
+  }
+}
