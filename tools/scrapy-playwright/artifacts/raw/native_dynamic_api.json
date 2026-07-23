@@ -1,0 +1,10 @@
+[
+{"source": "native_dynamic_api", "product_id": 1, "name": "Scrapy Fixture Product 01", "price": 17.9, "category": "commerce"},
+{"source": "native_dynamic_api", "product_id": 2, "name": "Scrapy Fixture Product 02", "price": 20.8, "category": "ops"},
+{"source": "native_dynamic_api", "product_id": 3, "name": "Scrapy Fixture Product 03", "price": 23.7, "category": "analytics"},
+{"source": "native_dynamic_api", "product_id": 4, "name": "Scrapy Fixture Product 04", "price": 26.6, "category": "commerce"},
+{"source": "native_dynamic_api", "product_id": 5, "name": "Scrapy Fixture Product 05", "price": 29.5, "category": "ops"},
+{"source": "native_dynamic_api", "product_id": 6, "name": "Scrapy Fixture Product 06", "price": 32.4, "category": "analytics"},
+{"source": "native_dynamic_api", "product_id": 7, "name": "Scrapy Fixture Product 07", "price": 35.3, "category": "commerce"},
+{"source": "native_dynamic_api", "product_id": 8, "name": "Scrapy Fixture Product 08", "price": 38.2, "category": "ops"}
+]

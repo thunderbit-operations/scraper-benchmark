@@ -1,0 +1,3 @@
+[
+{"source": "native_failure_500", "url": "http://127.0.0.1:64731/failure/500", "status": 500, "outcome": "response_received"}
+]

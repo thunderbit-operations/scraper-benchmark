@@ -1,0 +1,3 @@
+[
+{"source": "pw_dynamic_rendered", "url": "http://127.0.0.1:64731/dynamic/late?delay_ms=1500", "status": 200, "run_config": {"target": "late", "wait_mode": "selector", "delay_ms": 1500, "fixed_ms": 100, "timeout_ms": 5000}, "product_cards_found": 1, "product_names": ["Scrapy Fixture Product 01"], "status_text": null, "outcome": "rendered"}
+]

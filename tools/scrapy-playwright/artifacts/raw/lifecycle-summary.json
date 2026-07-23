@@ -1,0 +1,225 @@
+{
+  "run_started_at": "2026-07-23T12:03:43.692038+00:00",
+  "tool": "scrapy-playwright",
+  "tests": {
+    "page_concurrency_vs_setting": {
+      "check": "playwright/page_count/max_concurrent should rise with CONCURRENT_REQUESTS",
+      "runs": {
+        "1": {
+          "run_id": "lifecycle_concurrency_1",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 8.04,
+          "items_total": 8,
+          "items_rendered": 8,
+          "items_errback": 0,
+          "pw_stats": {
+            "finish_reason": "finished",
+            "item_scraped_count": 8,
+            "playwright/browser_count": 1,
+            "playwright/context_count": 1,
+            "playwright/context_count/max_concurrent": 1,
+            "playwright/context_count/persistent/False": 1,
+            "playwright/context_count/remote/False": 1,
+            "playwright/page_count": 8,
+            "playwright/page_count/max_concurrent": 2,
+            "playwright/request_count": 16,
+            "playwright/request_count/method/GET": 16,
+            "playwright/request_count/navigation": 8,
+            "playwright/request_count/resource_type/document": 8,
+            "playwright/request_count/resource_type/fetch": 8,
+            "playwright/response_count": 16,
+            "playwright/response_count/method/GET": 16,
+            "playwright/response_count/resource_type/document": 8,
+            "playwright/response_count/resource_type/fetch": 8
+          }
+        },
+        "4": {
+          "run_id": "lifecycle_concurrency_4",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 2.562,
+          "items_total": 8,
+          "items_rendered": 8,
+          "items_errback": 0,
+          "pw_stats": {
+            "finish_reason": "finished",
+            "item_scraped_count": 8,
+            "playwright/browser_count": 1,
+            "playwright/context_count": 1,
+            "playwright/context_count/max_concurrent": 1,
+            "playwright/context_count/persistent/False": 1,
+            "playwright/context_count/remote/False": 1,
+            "playwright/page_count": 8,
+            "playwright/page_count/max_concurrent": 8,
+            "playwright/request_count": 16,
+            "playwright/request_count/method/GET": 16,
+            "playwright/request_count/navigation": 8,
+            "playwright/request_count/resource_type/document": 8,
+            "playwright/request_count/resource_type/fetch": 8,
+            "playwright/response_count": 16,
+            "playwright/response_count/method/GET": 16,
+            "playwright/response_count/resource_type/document": 8,
+            "playwright/response_count/resource_type/fetch": 8
+          }
+        },
+        "8": {
+          "run_id": "lifecycle_concurrency_8",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.67,
+          "items_total": 8,
+          "items_rendered": 8,
+          "items_errback": 0,
+          "pw_stats": {
+            "finish_reason": "finished",
+            "item_scraped_count": 8,
+            "playwright/browser_count": 1,
+            "playwright/context_count": 1,
+            "playwright/context_count/max_concurrent": 1,
+            "playwright/context_count/persistent/False": 1,
+            "playwright/context_count/remote/False": 1,
+            "playwright/page_count": 8,
+            "playwright/page_count/max_concurrent": 8,
+            "playwright/request_count": 16,
+            "playwright/request_count/method/GET": 16,
+            "playwright/request_count/navigation": 8,
+            "playwright/request_count/resource_type/document": 8,
+            "playwright/request_count/resource_type/fetch": 8,
+            "playwright/response_count": 16,
+            "playwright/response_count/method/GET": 16,
+            "playwright/response_count/resource_type/document": 8,
+            "playwright/response_count/resource_type/fetch": 8
+          }
+        }
+      },
+      "observed_max_concurrent": {
+        "1": 2,
+        "4": 8,
+        "8": 8
+      }
+    },
+    "page_cap_backpressure": {
+      "check": "PLAYWRIGHT_MAX_PAGES_PER_CONTEXT=2 caps concurrency but all 8 still complete",
+      "run": {
+        "run_id": "lifecycle_pagecap_2",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 4.556,
+        "items_total": 8,
+        "items_rendered": 8,
+        "items_errback": 0,
+        "pw_stats": {
+          "finish_reason": "finished",
+          "item_scraped_count": 8,
+          "playwright/browser_count": 1,
+          "playwright/context_count": 1,
+          "playwright/context_count/max_concurrent": 1,
+          "playwright/context_count/persistent/False": 1,
+          "playwright/context_count/remote/False": 1,
+          "playwright/page_count": 8,
+          "playwright/page_count/max_concurrent": 2,
+          "playwright/request_count": 16,
+          "playwright/request_count/method/GET": 16,
+          "playwright/request_count/navigation": 8,
+          "playwright/request_count/resource_type/document": 8,
+          "playwright/request_count/resource_type/fetch": 8,
+          "playwright/response_count": 16,
+          "playwright/response_count/method/GET": 16,
+          "playwright/response_count/resource_type/document": 8,
+          "playwright/response_count/resource_type/fetch": 8
+        }
+      },
+      "max_concurrent": 2,
+      "items_rendered": 8
+    },
+    "context_cap": {
+      "check": "PLAYWRIGHT_MAX_CONTEXTS=1: single context, all pages still complete",
+      "run": {
+        "run_id": "lifecycle_contextcap_1",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 1.662,
+        "items_total": 8,
+        "items_rendered": 8,
+        "items_errback": 0,
+        "pw_stats": {
+          "finish_reason": "finished",
+          "item_scraped_count": 8,
+          "playwright/browser_count": 1,
+          "playwright/context_count": 1,
+          "playwright/context_count/max_concurrent": 1,
+          "playwright/context_count/persistent/False": 1,
+          "playwright/context_count/remote/False": 1,
+          "playwright/page_count": 8,
+          "playwright/page_count/max_concurrent": 8,
+          "playwright/request_count": 16,
+          "playwright/request_count/method/GET": 16,
+          "playwright/request_count/navigation": 8,
+          "playwright/request_count/resource_type/document": 8,
+          "playwright/request_count/resource_type/fetch": 8,
+          "playwright/response_count": 16,
+          "playwright/response_count/method/GET": 16,
+          "playwright/response_count/resource_type/document": 8,
+          "playwright/response_count/resource_type/fetch": 8
+        }
+      },
+      "context_max_concurrent": 1,
+      "items_rendered": 8
+    },
+    "auto_closed_pages": {
+      "check": "handler auto-close path: page_count/closed == page_count, no leak",
+      "run": {
+        "run_id": "lifecycle_closed_pages",
+        "returncode": 0,
+        "timed_out": false,
+        "elapsed_seconds": 2.466,
+        "items_total": 6,
+        "items_rendered": 6,
+        "items_errback": 0,
+        "pw_stats": {
+          "finish_reason": "finished",
+          "item_scraped_count": 6,
+          "playwright/browser_count": 1,
+          "playwright/context_count": 1,
+          "playwright/context_count/max_concurrent": 1,
+          "playwright/context_count/persistent/False": 1,
+          "playwright/context_count/remote/False": 1,
+          "playwright/page_count": 6,
+          "playwright/page_count/closed": 6,
+          "playwright/page_count/max_concurrent": 4,
+          "playwright/request_count": 12,
+          "playwright/request_count/method/GET": 12,
+          "playwright/request_count/navigation": 6,
+          "playwright/request_count/resource_type/document": 6,
+          "playwright/request_count/resource_type/fetch": 6,
+          "playwright/response_count": 12,
+          "playwright/response_count/method/GET": 12,
+          "playwright/response_count/resource_type/document": 6,
+          "playwright/response_count/resource_type/fetch": 6
+        }
+      },
+      "page_count": 6,
+      "page_count_closed": 6
+    },
+    "unclosed_page_wedge": {
+      "check": "hold pages open under cap=2 => cap-many render then the crawl wedges; closespider_timeout cannot clean up stuck page-semaphore downloads; external kill needed",
+      "run": {
+        "run_id": "lifecycle_unclosed_stall",
+        "returncode": -1,
+        "timed_out": true,
+        "elapsed_seconds": 22.01,
+        "items_total": 0,
+        "items_rendered": 0,
+        "items_errback": 0,
+        "pw_stats": {}
+      },
+      "page_cap": 2,
+      "pages_requested": 6,
+      "rendered_before_wedge_sidechannel": 2,
+      "graceful_shutdown_succeeded": false,
+      "required_external_kill": true
+    }
+  },
+  "run_completed_at": "2026-07-23T12:04:26.665431+00:00"
+}

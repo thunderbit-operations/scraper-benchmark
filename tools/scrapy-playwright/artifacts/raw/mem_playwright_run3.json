@@ -1,0 +1,13 @@
+[
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/", "status": 200, "depth": 0, "rendered_with_playwright": true, "title": "Fixture Home", "product_cards_found": 0, "links_found": 4},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/article/1", "status": 200, "depth": 1, "rendered_with_playwright": true, "title": "How Operations Teams Evaluate Web Scraping Tools", "product_cards_found": 0, "links_found": 1},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/static/catalog?page=1", "status": 200, "depth": 1, "rendered_with_playwright": true, "title": "Static Catalog Page 1", "product_cards_found": 6, "links_found": 9},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/static/catalog?page=2", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Static Catalog Page 2", "product_cards_found": 6, "links_found": 8},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/product/5", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Scrapy Fixture Product 05", "product_cards_found": 0, "links_found": 0},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/product/6", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Scrapy Fixture Product 06", "product_cards_found": 0, "links_found": 0},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/product/4", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Scrapy Fixture Product 04", "product_cards_found": 0, "links_found": 0},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/product/3", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Scrapy Fixture Product 03", "product_cards_found": 0, "links_found": 0},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/product/2", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Scrapy Fixture Product 02", "product_cards_found": 0, "links_found": 0},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/product/1", "status": 200, "depth": 2, "rendered_with_playwright": true, "title": "Scrapy Fixture Product 01", "product_cards_found": 0, "links_found": 0},
+{"source": "mixed_crawl_graph", "url": "http://127.0.0.1:63022/dynamic/catalog", "status": 200, "depth": 1, "rendered_with_playwright": true, "title": "Dynamic Catalog", "product_cards_found": 8, "links_found": 0}
+]

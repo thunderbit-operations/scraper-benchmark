@@ -1,0 +1,325 @@
+{
+  "run_started_at": "2026-07-23T12:04:39.870877+00:00",
+  "tool": "scrapy-playwright",
+  "runs_per_condition": 3,
+  "poll_seconds": 0.05,
+  "note": "peak_tree_rss_mb = scrapy process + all descendant (browser) processes, sampled externally",
+  "selective_vs_all": {
+    "parity_assert": {
+      "same_extraction": true,
+      "selective_signature": {
+        "http://127.0.0.1:63022": 0,
+        "http://127.0.0.1:63022/article/1": 0,
+        "http://127.0.0.1:63022/static/catalog?page=1": 6,
+        "http://127.0.0.1:63022/static/catalog?page=2": 6,
+        "http://127.0.0.1:63022/product/6": 0,
+        "http://127.0.0.1:63022/product/5": 0,
+        "http://127.0.0.1:63022/product/4": 0,
+        "http://127.0.0.1:63022/product/3": 0,
+        "http://127.0.0.1:63022/product/2": 0,
+        "http://127.0.0.1:63022/product/1": 0,
+        "http://127.0.0.1:63022/dynamic/catalog": 8
+      },
+      "all_signature": {
+        "http://127.0.0.1:63022": 0,
+        "http://127.0.0.1:63022/article/1": 0,
+        "http://127.0.0.1:63022/static/catalog?page=1": 6,
+        "http://127.0.0.1:63022/static/catalog?page=2": 6,
+        "http://127.0.0.1:63022/product/6": 0,
+        "http://127.0.0.1:63022/product/5": 0,
+        "http://127.0.0.1:63022/product/4": 0,
+        "http://127.0.0.1:63022/product/3": 0,
+        "http://127.0.0.1:63022/product/2": 0,
+        "http://127.0.0.1:63022/product/1": 0,
+        "http://127.0.0.1:63022/dynamic/catalog": 8
+      }
+    },
+    "elapsed_seconds": {
+      "metric": "elapsed_seconds",
+      "verdict": "tie_overlapping_ranges",
+      "p50_gap_pct": 1.3,
+      "selective": {
+        "runs": 3,
+        "min": 1.759,
+        "p50": 1.761,
+        "max": 1.901,
+        "mean": 1.807
+      },
+      "all": {
+        "runs": 3,
+        "min": 1.778,
+        "p50": 1.784,
+        "max": 1.785,
+        "mean": 1.782
+      }
+    },
+    "peak_tree_rss_mb": {
+      "metric": "peak_tree_rss_mb",
+      "verdict": "selective_lower",
+      "p50_gap_pct": 33.1,
+      "selective": {
+        "runs": 3,
+        "min": 660.8,
+        "p50": 664.5,
+        "max": 665.4,
+        "mean": 663.567
+      },
+      "all": {
+        "runs": 3,
+        "min": 840.0,
+        "p50": 884.7,
+        "max": 886.6,
+        "mean": 870.433
+      }
+    },
+    "raw_runs": {
+      "selective": [
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.901,
+          "peak_tree_rss_mb": 665.4,
+          "rss_samples": 30,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 72826880,
+            "memusage/max": 72843264,
+            "playwright/request_count": 2,
+            "playwright/page_count": 1
+          },
+          "run_index": 1,
+          "items": 11
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.759,
+          "peak_tree_rss_mb": 664.5,
+          "rss_samples": 28,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 72892416,
+            "memusage/max": 72892416,
+            "playwright/request_count": 2,
+            "playwright/page_count": 1
+          },
+          "run_index": 2,
+          "items": 11
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.761,
+          "peak_tree_rss_mb": 660.8,
+          "rss_samples": 28,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73203712,
+            "memusage/max": 73220096,
+            "playwright/request_count": 2,
+            "playwright/page_count": 1
+          },
+          "run_index": 3,
+          "items": 11
+        }
+      ],
+      "all": [
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.785,
+          "peak_tree_rss_mb": 886.6,
+          "rss_samples": 29,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73121792,
+            "memusage/max": 73138176,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 1,
+          "items": 11
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.784,
+          "peak_tree_rss_mb": 884.7,
+          "rss_samples": 29,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73056256,
+            "memusage/max": 73072640,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 2,
+          "items": 11
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.778,
+          "peak_tree_rss_mb": 840.0,
+          "rss_samples": 29,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73007104,
+            "memusage/max": 73039872,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 3,
+          "items": 11
+        }
+      ]
+    }
+  },
+  "memory_visibility": {
+    "hypothesis": "default MemoryUsage reports Python-only; playwright extension includes browser procs",
+    "default_extension_memusage_max_mb": [
+      75.3,
+      75.8,
+      75.6
+    ],
+    "playwright_extension_memusage_max_mb": [
+      834.7,
+      737.4,
+      736.2
+    ],
+    "external_psutil_peak_tree_rss_mb": {
+      "under_default_extension_runs": [
+        853.7,
+        859.1,
+        836.8
+      ],
+      "under_playwright_extension_runs": [
+        858.0,
+        843.4,
+        937.9
+      ]
+    },
+    "raw_runs": {
+      "default_extension": [
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.825,
+          "peak_tree_rss_mb": 853.7,
+          "rss_samples": 30,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 72974336,
+            "memusage/max": 78970880,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 1
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.828,
+          "peak_tree_rss_mb": 859.1,
+          "rss_samples": 30,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73039872,
+            "memusage/max": 79478784,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 2
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.777,
+          "peak_tree_rss_mb": 836.8,
+          "rss_samples": 29,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73220096,
+            "memusage/max": 79249408,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 3
+        }
+      ],
+      "playwright_extension": [
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.898,
+          "peak_tree_rss_mb": 858.0,
+          "rss_samples": 31,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73678848,
+            "memusage/max": 875233280,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 1
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.894,
+          "peak_tree_rss_mb": 843.4,
+          "rss_samples": 31,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 74055680,
+            "memusage/max": 773259264,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 2
+        },
+        {
+          "spider": "mixed_crawl_graph_spider.py",
+          "returncode": 0,
+          "timed_out": false,
+          "elapsed_seconds": 1.831,
+          "peak_tree_rss_mb": 937.9,
+          "rss_samples": 30,
+          "scrapy_stats": {
+            "downloader/request_count": 15,
+            "item_scraped_count": 11,
+            "memusage/startup": 73695232,
+            "memusage/max": 771981312,
+            "playwright/request_count": 15,
+            "playwright/page_count": 14
+          },
+          "run_index": 3
+        }
+      ]
+    },
+    "reading_guide": "compare each memusage/max stat against the external psutil tree peak from the same run"
+  },
+  "run_completed_at": "2026-07-23T12:05:01.702818+00:00"
+}

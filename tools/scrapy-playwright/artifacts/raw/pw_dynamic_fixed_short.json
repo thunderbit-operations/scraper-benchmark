@@ -1,0 +1,3 @@
+[
+{"source": "pw_dynamic_rendered", "url": "http://127.0.0.1:64731/dynamic/catalog?delay_ms=450", "status": 200, "run_config": {"target": "catalog", "wait_mode": "fixed", "delay_ms": 450, "fixed_ms": 100, "timeout_ms": 5000}, "product_cards_found": 0, "product_names": [], "status_text": "Loading products...", "outcome": "rendered"}
+]

@@ -1,0 +1,9 @@
+category,name,price,product_id,source
+commerce,Scrapy Fixture Product 01,17.9,1,native_dynamic_api
+ops,Scrapy Fixture Product 02,20.8,2,native_dynamic_api
+analytics,Scrapy Fixture Product 03,23.7,3,native_dynamic_api
+commerce,Scrapy Fixture Product 04,26.6,4,native_dynamic_api
+ops,Scrapy Fixture Product 05,29.5,5,native_dynamic_api
+analytics,Scrapy Fixture Product 06,32.4,6,native_dynamic_api
+commerce,Scrapy Fixture Product 07,35.3,7,native_dynamic_api
+ops,Scrapy Fixture Product 08,38.2,8,native_dynamic_api
