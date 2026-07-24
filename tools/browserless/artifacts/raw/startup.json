@@ -1,0 +1,253 @@
+{
+  "docker_run_argv_example": "docker run -d --name bl_start_pre_2 --shm-size=2g --add-host host.docker.internal:host-gateway -p 3000:3000 -e TOKEN=<TOKEN> -e PREBOOT=true ghcr.io/browserless/chromium:latest",
+  "hypothesis": "H1 startup + first-usable-session latency (cold/warm/preboot)",
+  "image": "ghcr.io/browserless/chromium:latest",
+  "n_boots_each": 3,
+  "runs_default": [
+    {
+      "container_ready_s": 0.7762,
+      "first_content_cold_ok": true,
+      "first_content_cold_s": 0.3179,
+      "preboot": false,
+      "warm_calls": [
+        {
+          "elapsed_s": 0.1497,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1361,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1538,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1867,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.2339,
+          "ok": true,
+          "status": 200
+        }
+      ],
+      "warm_median_s": 0.1538
+    },
+    {
+      "container_ready_s": 0.8693,
+      "first_content_cold_ok": true,
+      "first_content_cold_s": 0.4122,
+      "preboot": false,
+      "warm_calls": [
+        {
+          "elapsed_s": 0.1495,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1399,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.159,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1428,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1495,
+          "ok": true,
+          "status": 200
+        }
+      ],
+      "warm_median_s": 0.1495
+    },
+    {
+      "container_ready_s": 0.7039,
+      "first_content_cold_ok": true,
+      "first_content_cold_s": 0.2777,
+      "preboot": false,
+      "warm_calls": [
+        {
+          "elapsed_s": 0.1607,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1469,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1431,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1407,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1476,
+          "ok": true,
+          "status": 200
+        }
+      ],
+      "warm_median_s": 0.1469
+    }
+  ],
+  "runs_preboot": [
+    {
+      "container_ready_s": 0.7163,
+      "first_content_cold_ok": true,
+      "first_content_cold_s": 0.3088,
+      "preboot": true,
+      "warm_calls": [
+        {
+          "elapsed_s": 0.1444,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.139,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1534,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1787,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1738,
+          "ok": true,
+          "status": 200
+        }
+      ],
+      "warm_median_s": 0.1534
+    },
+    {
+      "container_ready_s": 0.7005,
+      "first_content_cold_ok": true,
+      "first_content_cold_s": 0.3141,
+      "preboot": true,
+      "warm_calls": [
+        {
+          "elapsed_s": 0.1699,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1575,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1627,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.2348,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1528,
+          "ok": true,
+          "status": 200
+        }
+      ],
+      "warm_median_s": 0.1627
+    },
+    {
+      "container_ready_s": 0.7224,
+      "first_content_cold_ok": true,
+      "first_content_cold_s": 0.3599,
+      "preboot": true,
+      "warm_calls": [
+        {
+          "elapsed_s": 0.203,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1813,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.1597,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.7322,
+          "ok": true,
+          "status": 200
+        },
+        {
+          "elapsed_s": 0.194,
+          "ok": true,
+          "status": 200
+        }
+      ],
+      "warm_median_s": 0.194
+    }
+  ],
+  "summary_default": {
+    "container_ready_s": {
+      "max": 0.8693,
+      "median": 0.7762,
+      "min": 0.7039
+    },
+    "first_content_cold_s": {
+      "max": 0.4122,
+      "median": 0.3179,
+      "min": 0.2777
+    },
+    "label": "PREBOOT=off",
+    "n_boots": 3,
+    "warm_content_s": {
+      "max": 0.1538,
+      "median": 0.1495,
+      "min": 0.1469
+    }
+  },
+  "summary_preboot": {
+    "container_ready_s": {
+      "max": 0.7224,
+      "median": 0.7163,
+      "min": 0.7005
+    },
+    "first_content_cold_s": {
+      "max": 0.3599,
+      "median": 0.3141,
+      "min": 0.3088
+    },
+    "label": "PREBOOT=on",
+    "n_boots": 3,
+    "warm_content_s": {
+      "max": 0.194,
+      "median": 0.1627,
+      "min": 0.1534
+    }
+  },
+  "warm_calls_each_boot": 5
+}

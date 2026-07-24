@@ -1,0 +1,1174 @@
+{
+  "configs": [
+    {
+      "ceiling_matches_C_plus_Q": true,
+      "client": {
+        "http_200": 4,
+        "http_429": 4,
+        "other_status": []
+      },
+      "config": {
+        "CONCURRENT": 2,
+        "QUEUED": 2,
+        "ceiling_CplusQ": 4
+      },
+      "fired": 8,
+      "ok_elapsed_s": {
+        "max": 10.995,
+        "median": 8.338,
+        "min": 5.673
+      },
+      "pressure_samples": [
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 0,
+          "running": 0,
+          "t": 621694.955
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621695.213
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621695.469
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621695.726
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621695.981
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621696.233
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621696.492
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621696.749
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621697.007
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621697.262
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621697.518
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621697.774
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621698.03
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621698.288
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621698.545
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621698.8
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621699.053
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621699.308
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621699.56
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621699.817
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621700.073
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621700.331
+        },
+        {
+          "isAvailable": false,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621700.583
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621700.837
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621701.094
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621701.349
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621701.604
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621701.856
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621702.119
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621702.376
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621702.632
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621702.889
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621703.142
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621703.395
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621703.652
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621703.909
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621704.164
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621704.421
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621704.674
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621704.931
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621705.185
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621705.442
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621705.7
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 0,
+          "t": 621705.962
+        }
+      ],
+      "rejected_matches_over": true,
+      "server_peak": {
+        "queued": 2,
+        "recentlyRejected": 4,
+        "running": 2
+      }
+    },
+    {
+      "ceiling_matches_C_plus_Q": true,
+      "client": {
+        "http_200": 8,
+        "http_429": 4,
+        "other_status": []
+      },
+      "config": {
+        "CONCURRENT": 3,
+        "QUEUED": 5,
+        "ceiling_CplusQ": 8
+      },
+      "fired": 12,
+      "ok_elapsed_s": {
+        "max": 16.539,
+        "median": 11.209,
+        "min": 5.849
+      },
+      "pressure_samples": [
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 0,
+          "running": 0,
+          "t": 621707.658
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621707.919
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621708.192
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621708.449
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621708.707
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621708.963
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621709.219
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621709.476
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621709.733
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621709.991
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621710.249
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621710.506
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621710.761
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621711.016
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621711.268
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621711.524
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621711.778
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621712.032
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621712.289
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621712.542
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621712.797
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621713.049
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621713.305
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621713.563
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621713.817
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621714.074
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621714.33
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621714.587
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621714.839
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621715.095
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621715.356
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621715.622
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621715.877
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621716.13
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621716.388
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621716.643
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621716.9
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621717.152
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621717.411
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621717.668
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621717.925
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621718.178
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621718.435
+        },
+        {
+          "isAvailable": true,
+          "queued": 2,
+          "recentlyRejected": 4,
+          "running": 3,
+          "t": 621718.691
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621718.95
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621719.202
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621719.455
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621719.712
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621719.966
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621720.221
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621720.478
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621720.735
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621720.99
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621721.243
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621721.501
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621721.753
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621722.007
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621722.26
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621722.517
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621722.771
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621723.028
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621723.285
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621723.542
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621723.8
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 2,
+          "t": 621724.055
+        }
+      ],
+      "rejected_matches_over": true,
+      "server_peak": {
+        "queued": 5,
+        "recentlyRejected": 4,
+        "running": 3
+      }
+    },
+    {
+      "ceiling_matches_C_plus_Q": true,
+      "client": {
+        "http_200": 10,
+        "http_429": 4,
+        "other_status": []
+      },
+      "config": {
+        "CONCURRENT": 5,
+        "QUEUED": 5,
+        "ceiling_CplusQ": 10
+      },
+      "fired": 14,
+      "ok_elapsed_s": {
+        "max": 11.518,
+        "median": 8.655,
+        "min": 5.797
+      },
+      "pressure_samples": [
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 0,
+          "running": 0,
+          "t": 621725.501
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621725.763
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621726.023
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621726.287
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621726.543
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621726.797
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621727.049
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621727.306
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621727.559
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621727.817
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621728.074
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621728.329
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621728.585
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621728.842
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621729.1
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621729.353
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621729.608
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621729.863
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621730.12
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621730.377
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621730.629
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621730.883
+        },
+        {
+          "isAvailable": false,
+          "queued": 5,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621731.14
+        },
+        {
+          "isAvailable": true,
+          "queued": 4,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621731.398
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621731.652
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621731.915
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621732.169
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621732.426
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621732.679
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621732.934
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621733.191
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621733.444
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621733.701
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621733.957
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621734.211
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621734.466
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621734.723
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621734.978
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621735.232
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621735.489
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621735.742
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621735.995
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621736.249
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621736.506
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 5,
+          "t": 621736.76
+        },
+        {
+          "isAvailable": true,
+          "queued": 0,
+          "recentlyRejected": 4,
+          "running": 1,
+          "t": 621737.016
+        }
+      ],
+      "rejected_matches_over": true,
+      "server_peak": {
+        "queued": 5,
+        "recentlyRejected": 4,
+        "running": 5
+      }
+    }
+  ],
+  "hold_ms": 5000,
+  "hypothesis": "H2 concurrency ceiling: running=CONCURRENT, queued<=QUEUED, beyond C+Q -> HTTP 429 (client + server truth)",
+  "image": "ghcr.io/browserless/chromium:latest",
+  "over": 4
+}

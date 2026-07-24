@@ -1,0 +1,53 @@
+{
+  "endpoints": {
+    "/content": {
+      "bytes": 811,
+      "has_runtime_injected": true,
+      "has_static_heading": true,
+      "has_static_paragraph": true,
+      "status": 200
+    },
+    "/pdf": {
+      "bytes": 40974,
+      "pdf_magic": true,
+      "status": 200
+    },
+    "/scrape": {
+      "bytes": 422,
+      "returned_scrape_target": true,
+      "sample": "{\n  \"data\": [\n    {\n      \"results\": [\n        {\n          \"attributes\": [\n            {\n              \"name\": \"id\",\n              \"value\": \"scrape-me\"\n            }\n          ],\n          \"height\": 17,\n          \"html\": \"SCRAPE_TARGET_VALUE_CC\",\n          \"left\": 8,\n          \"text\": \"SCRAPE_TARGET_VALUE_CC\",\n          \"top\": 131.875,\n          \"width\": 220\n        }\n      ],\n      \"selector\": \"#",
+      "status": 200
+    },
+    "/screenshot": {
+      "bytes": 18621,
+      "png_magic": true,
+      "status": 200
+    }
+  },
+  "fixture_render_url": "http://host.docker.internal:52026/render",
+  "hypothesis": "H3 REST endpoint fidelity on ground truth",
+  "image": "ghcr.io/browserless/chromium:latest",
+  "observability_endpoints": {
+    "/config": "200",
+    "/pressure": "200",
+    "/sessions": "200"
+  },
+  "token_gate": {
+    "/content": {
+      "gated": true,
+      "no_token_status": 401
+    },
+    "/pdf": {
+      "gated": true,
+      "no_token_status": 401
+    },
+    "/scrape": {
+      "gated": true,
+      "no_token_status": 401
+    },
+    "/screenshot": {
+      "gated": true,
+      "no_token_status": 401
+    }
+  }
+}

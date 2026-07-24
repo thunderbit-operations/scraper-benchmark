@@ -1,0 +1,76 @@
+{
+  "h4_resource": {
+    "container_mem_bytes": {
+      "baseline": 309120204,
+      "growth_baseline_to_settle": 9542042,
+      "peak": 318662246,
+      "series": [
+        {
+          "after_sessions": 0,
+          "mem_bytes": 309120204
+        },
+        {
+          "after_sessions": 5,
+          "mem_bytes": 314572800
+        },
+        {
+          "after_sessions": 10,
+          "mem_bytes": 316145664
+        },
+        {
+          "after_sessions": 15,
+          "mem_bytes": 316774809
+        },
+        {
+          "after_sessions": 20,
+          "mem_bytes": 317508812
+        },
+        {
+          "after_sessions": 25,
+          "mem_bytes": 318242816
+        },
+        {
+          "after_sessions": 30,
+          "mem_bytes": 318662246
+        }
+      ],
+      "settle_after_run": 318662246
+    },
+    "idle_sessions_endpoint": 0,
+    "instrument_calibration": {
+      "chrome_procs_midflight": 11,
+      "detector_can_see_chrome": true
+    },
+    "k_sessions": 30,
+    "post_run_procs": {
+      "chrome_procs": 0,
+      "comm_counts": {
+        "MainThread": 1,
+        "Xvfb": 1,
+        "dumb-init": 1,
+        "sh": 1,
+        "start.sh": 1
+      },
+      "zombies": 0
+    },
+    "sessions_ok": 30
+  },
+  "h5_timeout": {
+    "over_timeout": {
+      "elapsed_s": 5.007,
+      "hold_ms": 15000,
+      "killed_near_timeout": true,
+      "killed_non_200": true,
+      "status": 408
+    },
+    "timeout_ms": 5000,
+    "under_timeout": {
+      "elapsed_s": 2.406,
+      "hold_ms": 2000,
+      "ok": true,
+      "status": 200
+    }
+  },
+  "hypothesis": "H4 resource/session/zombie lifecycle + H5 TIMEOUT kill",
+  "image": "ghcr.io/browserless/chromium:latest"
+}

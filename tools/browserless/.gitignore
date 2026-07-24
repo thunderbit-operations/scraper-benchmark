@@ -1,0 +1,23 @@
+# Never commit the Docker image or any browser binary — the image is 4.3 GB and is
+# pulled by tag+digest per the README/metadata. Only the tag + digest are recorded.
+# (Nothing here should ever hold an image tarball, but guard against a stray `docker save`.)
+*.tar
+*.tar.gz
+image/
+
+# Run logs may carry absolute local paths / the local container token — the JSON
+# summaries under artifacts/raw/ carry the (redacted) numbers.
+*.log
+*.out
+*.stdout
+artifacts/logs/
+
+# Python noise (harness is pure stdlib; no venv is needed, but guard anyway).
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS noise
+.DS_Store
