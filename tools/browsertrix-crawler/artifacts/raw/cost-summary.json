@@ -1,0 +1,93 @@
+{
+  "run_started_at": "2026-07-24T06:21:33.415845+00:00",
+  "tool": "browsertrix-crawler",
+  "image": "webrecorder/browsertrix-crawler:latest",
+  "seed": "http://host.docker.internal:53503/",
+  "runs": 3,
+  "per_run": [
+    {
+      "collection": "cost_run_0",
+      "returncode": 0,
+      "elapsed_seconds": 30.27,
+      "warc_gz_bytes": 24174,
+      "wacz_bytes": 53446,
+      "response_bytes_total": 5339,
+      "response_record_count": 13,
+      "pages_count": 11,
+      "record_type_content_bytes": {
+        "warcinfo": 92,
+        "response": 5339,
+        "request": 6764,
+        "resource": 4527,
+        "revisit": 154
+      }
+    },
+    {
+      "collection": "cost_run_1",
+      "returncode": 0,
+      "elapsed_seconds": 28.22,
+      "warc_gz_bytes": 24250,
+      "wacz_bytes": 53523,
+      "response_bytes_total": 5339,
+      "response_record_count": 13,
+      "pages_count": 11,
+      "record_type_content_bytes": {
+        "warcinfo": 92,
+        "response": 5339,
+        "request": 6912,
+        "resource": 4527,
+        "revisit": 154
+      }
+    },
+    {
+      "collection": "cost_run_2",
+      "returncode": 0,
+      "elapsed_seconds": 29.75,
+      "warc_gz_bytes": 24262,
+      "wacz_bytes": 53533,
+      "response_bytes_total": 5339,
+      "response_record_count": 13,
+      "pages_count": 11,
+      "record_type_content_bytes": {
+        "warcinfo": 92,
+        "response": 5339,
+        "request": 6912,
+        "resource": 4527,
+        "revisit": 154
+      }
+    }
+  ],
+  "distributions": {
+    "elapsed_seconds": {
+      "min": 28.22,
+      "median": 29.75,
+      "max": 30.27,
+      "n": 3
+    },
+    "warc_gz_bytes": {
+      "min": 24174,
+      "median": 24250,
+      "max": 24262,
+      "n": 3
+    },
+    "wacz_bytes": {
+      "min": 53446,
+      "median": 53523,
+      "max": 53533,
+      "n": 3
+    },
+    "response_bytes_total": {
+      "min": 5339,
+      "median": 5339,
+      "max": 5339,
+      "n": 3
+    }
+  },
+  "cost_ratios_of_medians": {
+    "warc_gz_bytes_per_response_byte": 4.542,
+    "wacz_bytes_per_response_byte": 10.025,
+    "warc_gz_bytes_per_page": 2204.545,
+    "wacz_bytes_per_page": 4865.727
+  },
+  "run_completed_at": "2026-07-24T06:21:33.415930+00:00"
+}

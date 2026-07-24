@@ -1,0 +1,250 @@
+{
+  "run_started_at": "2026-07-24T06:32:51.481029+00:00",
+  "tool": "browsertrix-crawler",
+  "image": "webrecorder/browsertrix-crawler:latest",
+  "image_digest": "webrecorder/browsertrix-crawler@sha256:9d6800a8c50723dde1ad768ede91bf5d9704e848d70524c6b71e8492e006ddd4",
+  "seed": "http://host.docker.internal:59145/",
+  "fixture_port": 59145,
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:59145",
+    "class_A_html": [
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/depth/1"
+    ],
+    "class_A_depth_chain": [
+      "/depth/1",
+      "/depth/2",
+      "/depth/3"
+    ],
+    "class_B_js_literal_never_called": [
+      "/api/js-endpoint-7",
+      "/api/js-endpoint-8"
+    ],
+    "class_C_runtime_dom_link": "/runtime-only/endpoint42",
+    "class_D_runtime_fetch": "/api/runtime-xhr-99",
+    "known_file_sitemap": [
+      "/sitemap/hidden-1",
+      "/sitemap/hidden-2"
+    ],
+    "out_of_scope_host_alias": "outofscope.test"
+  },
+  "container_network": {
+    "method": "host.docker.internal via --add-host=host.docker.internal:host-gateway (colima)",
+    "fixture_bind": "0.0.0.0"
+  },
+  "crawl": {
+    "returncode": 0,
+    "elapsed_seconds": 28.62
+  },
+  "archives_found": {
+    "warc_count": 1,
+    "warc_names": [
+      "rec-33034ccd674f-capture_default-20260724063252703-0.warc.gz"
+    ],
+    "wacz_count": 1,
+    "wacz_names": [
+      "capture_default.wacz"
+    ]
+  },
+  "capture_matrix": {
+    "A_html": {
+      "in_archive": {
+        "found": 4,
+        "expected": 4,
+        "recall": 1.0,
+        "missing": []
+      },
+      "server_fetched": {
+        "found": 4,
+        "expected": 4,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "A_depth_chain": {
+      "in_archive": {
+        "found": 3,
+        "expected": 3,
+        "recall": 1.0,
+        "missing": []
+      },
+      "server_fetched": {
+        "found": 3,
+        "expected": 3,
+        "recall": 1.0,
+        "missing": []
+      }
+    },
+    "B_js_literal_never_called": {
+      "in_archive": {
+        "found": 0,
+        "expected": 2,
+        "recall": 0.0,
+        "missing": [
+          "/api/js-endpoint-7",
+          "/api/js-endpoint-8"
+        ]
+      },
+      "server_fetched": {
+        "found": 0,
+        "expected": 2,
+        "recall": 0.0,
+        "missing": [
+          "/api/js-endpoint-7",
+          "/api/js-endpoint-8"
+        ]
+      }
+    },
+    "C_runtime_dom_link": {
+      "in_archive": true,
+      "server_fetched": true,
+      "path": "/runtime-only/endpoint42"
+    },
+    "D_runtime_fetch": {
+      "in_archive": true,
+      "server_fetched": true,
+      "path": "/api/runtime-xhr-99"
+    }
+  },
+  "class_b_boundary": {
+    "app_js_archived": true,
+    "class_b_literals_in_archived_js": [
+      "/api/js-endpoint-7",
+      "/api/js-endpoint-8"
+    ]
+  },
+  "replay_fidelity": {
+    "class_C_body_in_archive": true,
+    "class_D_body_in_archive": true,
+    "archived_response_bytes": {
+      "/api/runtime-xhr-99": 201,
+      "/runtime-only/endpoint42": 206
+    },
+    "note": "response body (with JSON payload) present in WARC => replayable content; pywb replay-server rendering PARKED"
+  },
+  "archival_cost": {
+    "warc_inventory": {
+      "warc_gz_files": [
+        "rec-33034ccd674f-capture_default-20260724063252703-0.warc.gz"
+      ],
+      "warc_gz_bytes": 24259,
+      "wacz_bytes": 0,
+      "record_type_counts": {
+        "warcinfo": 1,
+        "response": 13,
+        "request": 14,
+        "resource": 11,
+        "revisit": 1
+      },
+      "record_type_content_bytes": {
+        "warcinfo": 92,
+        "response": 5339,
+        "request": 6912,
+        "resource": 4527,
+        "revisit": 154
+      },
+      "response_record_count": 13,
+      "response_paths_sorted": [
+        "/",
+        "/api/runtime-xhr-99",
+        "/depth/1",
+        "/depth/2",
+        "/depth/3",
+        "/dynamic/runtime",
+        "/failure/500",
+        "/favicon.ico",
+        "/page/a",
+        "/page/b",
+        "/page/c",
+        "/runtime-only/endpoint42",
+        "/static/app.js"
+      ],
+      "response_bytes_total": 5339,
+      "request_bytes_total": 6912,
+      "pages_count": null,
+      "wacz_entry_bytes": {},
+      "cost_ratios": {
+        "wacz_bytes_per_response_byte": 0.0,
+        "warc_gz_bytes_per_response_byte": 4.544,
+        "wacz_bytes_per_page": null,
+        "warc_gz_bytes_per_page": null,
+        "response_payload_share_of_warc_content": 0.314
+      }
+    },
+    "wacz_inventory": {
+      "warc_gz_files": [
+        "archive/rec-33034ccd674f-capture_default-20260724063252703-0.warc.gz"
+      ],
+      "warc_gz_bytes": 24259,
+      "wacz_bytes": 53675,
+      "record_type_counts": {
+        "warcinfo": 1,
+        "response": 13,
+        "request": 14,
+        "resource": 11,
+        "revisit": 1
+      },
+      "record_type_content_bytes": {
+        "warcinfo": 92,
+        "response": 5339,
+        "request": 6912,
+        "resource": 4527,
+        "revisit": 154
+      },
+      "response_record_count": 13,
+      "response_paths_sorted": [
+        "/",
+        "/api/runtime-xhr-99",
+        "/depth/1",
+        "/depth/2",
+        "/depth/3",
+        "/dynamic/runtime",
+        "/failure/500",
+        "/favicon.ico",
+        "/page/a",
+        "/page/b",
+        "/page/c",
+        "/runtime-only/endpoint42",
+        "/static/app.js"
+      ],
+      "response_bytes_total": 5339,
+      "request_bytes_total": 6912,
+      "pages_count": 11,
+      "wacz_entry_bytes": {
+        "archive/rec-33034ccd674f-capture_default-20260724063252703-0.warc.gz": 24259,
+        "indexes/index.cdxj": 8531,
+        "pages/extraPages.jsonl": 2109,
+        "pages/pages.jsonl": 284,
+        "logs/20260724063251906.log": 16114,
+        "datapackage.json": 1215,
+        "datapackage-digest.json": 117
+      },
+      "cost_ratios": {
+        "wacz_bytes_per_response_byte": 10.053,
+        "warc_gz_bytes_per_response_byte": 4.544,
+        "wacz_bytes_per_page": 4879.545,
+        "warc_gz_bytes_per_page": 2205.364,
+        "response_payload_share_of_warc_content": 0.314
+      }
+    }
+  },
+  "server_side_hit_paths": [
+    "/",
+    "/api/runtime-xhr-99",
+    "/broken-xyz",
+    "/depth/1",
+    "/depth/2",
+    "/depth/3",
+    "/dynamic/runtime",
+    "/failure/500",
+    "/favicon.ico",
+    "/page/a",
+    "/page/b",
+    "/page/c",
+    "/runtime-only/endpoint42",
+    "/static/app.js"
+  ],
+  "run_completed_at": "2026-07-24T06:33:20.140030+00:00"
+}

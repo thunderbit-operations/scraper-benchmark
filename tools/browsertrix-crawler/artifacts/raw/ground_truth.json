@@ -1,0 +1,25 @@
+{
+  "base_url": "http://127.0.0.1:59145",
+  "class_A_html": [
+    "/page/a",
+    "/page/b",
+    "/page/c",
+    "/depth/1"
+  ],
+  "class_A_depth_chain": [
+    "/depth/1",
+    "/depth/2",
+    "/depth/3"
+  ],
+  "class_B_js_literal_never_called": [
+    "/api/js-endpoint-7",
+    "/api/js-endpoint-8"
+  ],
+  "class_C_runtime_dom_link": "/runtime-only/endpoint42",
+  "class_D_runtime_fetch": "/api/runtime-xhr-99",
+  "known_file_sitemap": [
+    "/sitemap/hidden-1",
+    "/sitemap/hidden-2"
+  ],
+  "out_of_scope_host_alias": "outofscope.test"
+}

@@ -1,0 +1,53 @@
+{
+  "run_started_at": "2026-07-24T06:34:59.910161+00:00",
+  "tool": "browsertrix-crawler",
+  "image": "webrecorder/browsertrix-crawler:latest",
+  "seed": "http://host.docker.internal:59723/",
+  "out_of_scope_link": "http://outofscope.test:59723/page/out",
+  "configs": {
+    "prefix": {
+      "scopeType": "prefix",
+      "returncode": 0,
+      "out_of_scope_host_fetched": false,
+      "out_of_scope_page_out_hits": 0,
+      "in_scope_paths_fetched": [
+        "/",
+        "/api/runtime-xhr-99",
+        "/broken-xyz",
+        "/depth/1",
+        "/depth/2",
+        "/dynamic/runtime",
+        "/failure/500",
+        "/favicon.ico",
+        "/page/a",
+        "/page/b",
+        "/page/c",
+        "/runtime-only/endpoint42",
+        "/static/app.js"
+      ]
+    },
+    "any": {
+      "scopeType": "any",
+      "returncode": 0,
+      "out_of_scope_host_fetched": true,
+      "out_of_scope_page_out_hits": 2,
+      "in_scope_paths_fetched": [
+        "/",
+        "/api/runtime-xhr-99",
+        "/broken-xyz",
+        "/depth/1",
+        "/depth/2",
+        "/dynamic/runtime",
+        "/failure/500",
+        "/favicon.ico",
+        "/page/a",
+        "/page/b",
+        "/page/c",
+        "/runtime-only/endpoint42",
+        "/static/app.js"
+      ]
+    }
+  },
+  "reading": "prefix scope must not fetch outofscope.test; any scope must fetch it (proving the link is reachable and the negative is real discipline)",
+  "run_completed_at": "2026-07-24T06:35:56.009561+00:00"
+}

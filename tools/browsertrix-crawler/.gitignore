@@ -1,0 +1,29 @@
+# Never commit the local virtualenv (harnesses are stdlib-only anyway).
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Crawl output: WARC/WACZ archives, browser profile, CDX, and the whole crawls
+# tree are large local binaries — the JSON summaries in artifacts/raw/ carry the
+# numbers. NEVER publish these.
+artifacts/crawls/
+*.warc
+*.warc.gz
+*.wacz
+*.cdx
+*.cdxj
+
+# Run logs may carry absolute local paths / host headers; summaries carry numbers.
+*.log
+*.out
+*.stdout
+*.stderr
+artifacts/logs/
+
+# Scratch
+_synthetic.*
+
+# OS noise
+.DS_Store
