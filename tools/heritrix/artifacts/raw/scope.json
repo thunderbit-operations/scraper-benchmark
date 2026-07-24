@@ -1,0 +1,13 @@
+{
+  "seed": "http://127.0.0.1:64455/scope-seed",
+  "primary": "http://127.0.0.1:64455",
+  "secondary": "http://localhost:64456",
+  "page_out_hits_on_secondary": 0,
+  "in_scope_page_a_hits": 1,
+  "secondary_host_fetched": false,
+  "secondary_appeared_in_crawl_log": false,
+  "observation": {
+    "default_surt_scope_excludes_other_host": true,
+    "in_scope_host_still_crawled": true
+  }
+}

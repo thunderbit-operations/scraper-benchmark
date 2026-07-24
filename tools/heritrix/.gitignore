@@ -1,0 +1,32 @@
+# Never commit the Heritrix release package or anything it unpacks/produces.
+# The README documents how to download it into vendor/ and re-run the harness.
+vendor/
+heritrix-*/
+*.tar.gz
+*.zip
+
+# Crawl output: WARCs, per-job launch dirs, logs, checkpoints, bdb state.
+# The JSON summaries in artifacts/raw/ carry the measured numbers.
+*.warc
+*.warc.gz
+jobs/
+**/warcs/
+**/logs/
+**/reports/
+**/state/
+**/scratch/
+*.log
+*.out
+*.stdout
+engine-boot.log
+artifacts/logs/
+
+# Python venv / caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS noise
+.DS_Store

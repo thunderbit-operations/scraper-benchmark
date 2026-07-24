@@ -1,0 +1,29 @@
+{
+  "job": "warc-fidelity",
+  "launch_dir": "~/Documents/claude/github-open-source-scraping-tools-single-review-research-2026/tools/heritrix/vendor/heritrix-3.16.0/jobs/warc-fidelity/20260724060818",
+  "record_type_counts": {
+    "warcinfo": 1,
+    "response": 20,
+    "request": 20,
+    "metadata": 20
+  },
+  "warcinfo_present": true,
+  "response_records": 20,
+  "request_records": 20,
+  "metadata_records": 20,
+  "responses_with_payload_digest": 20,
+  "responses_with_ip": 20,
+  "requests_concurrent_to_a_response": 20,
+  "response_status_lines_sample": [
+    "HTTP/1.0 200 OK",
+    "HTTP/1.0 404 Not Found",
+    "HTTP/1.0 500 Internal Server Error"
+  ],
+  "request_line_style": "GET /robots.txt HTTP/1.0",
+  "observation": {
+    "default_profile_emits_request_and_response": true,
+    "every_response_has_sha1_payload_digest": true,
+    "every_response_has_ip": true,
+    "request_response_fully_linked": true
+  }
+}

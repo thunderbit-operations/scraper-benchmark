@@ -1,0 +1,17 @@
+{
+  "denied_path": "/robots-denied/secret",
+  "robots_txt_disallow": "/robots-denied/",
+  "obey_mode": {
+    "denied_path_server_hits": 0,
+    "robots_txt_fetched": true,
+    "denied_in_crawl_log_as_blocked": true
+  },
+  "ignore_mode": {
+    "denied_path_server_hits": 1
+  },
+  "observation": {
+    "obey_suppresses_disallowed_fetch": true,
+    "ignore_reaches_disallowed_path": true,
+    "robots_txt_actually_requested": true
+  }
+}

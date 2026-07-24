@@ -1,0 +1,34 @@
+{
+  "dup_paths": [
+    "/dup/one",
+    "/dup/two"
+  ],
+  "default": {
+    "dup_urls_seen": [
+      "http://127.0.0.1:64455/dup/one",
+      "http://127.0.0.1:64455/dup/two"
+    ],
+    "dup_response_records": 2,
+    "dup_revisit_records": 0,
+    "identical_payload_digest_shared": 2,
+    "revisit_profiles": []
+  },
+  "dedup_enabled": {
+    "dup_urls_seen": [
+      "http://127.0.0.1:64455/dup/one",
+      "http://127.0.0.1:64455/dup/two"
+    ],
+    "dup_response_records": 1,
+    "dup_revisit_records": 1,
+    "identical_payload_digest_shared": 1,
+    "revisit_profiles": [
+      "http://netpreserve.org/warc/1.0/revisit/identical-payload-digest"
+    ]
+  },
+  "observation": {
+    "default_writes_full_duplicate_responses": true,
+    "both_dup_urls_share_one_digest": true,
+    "enabling_chain_produces_revisit": true,
+    "revisit_reduces_full_responses": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "host": "127.0.0.1:64455",
+  "runs_per_mode": 3,
+  "modes": {
+    "default_politeness": {
+      "wall_ms_runs": [
+        57659.0,
+        57663.0,
+        57700.0
+      ],
+      "wall_ms_min": 57659.0,
+      "wall_ms_max": 57700.0,
+      "wall_ms_median": 57663.0,
+      "same_host_gap_ms_median": 3036.0,
+      "same_host_gap_ms_min": 3021.0,
+      "same_host_gap_ms_max": 9107.0,
+      "n_gaps": 48
+    },
+    "zero_politeness": {
+      "wall_ms_runs": [
+        27.0,
+        26.0,
+        68.0
+      ],
+      "wall_ms_min": 26.0,
+      "wall_ms_max": 68.0,
+      "wall_ms_median": 27.0,
+      "same_host_gap_ms_median": 2.0,
+      "same_host_gap_ms_min": 0.0,
+      "same_host_gap_ms_max": 12.0,
+      "n_gaps": 48
+    }
+  },
+  "observation": {
+    "default_median_gap_near_min_delay_3000ms": true,
+    "default_wall_time_multiplier_over_zero": 2135.7
+  }
+}

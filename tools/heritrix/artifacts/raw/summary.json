@@ -1,0 +1,32 @@
+{
+  "run_started_at": "2026-07-24T06:08:11.129125+00:00",
+  "tool": "heritrix",
+  "primary": "http://127.0.0.1:64455",
+  "secondary": "http://localhost:64456",
+  "heritrix_version": "3.16.0",
+  "warc_fidelity": {
+    "default_profile_emits_request_and_response": true,
+    "every_response_has_sha1_payload_digest": true,
+    "every_response_has_ip": true,
+    "request_response_fully_linked": true
+  },
+  "dedup": {
+    "default_writes_full_duplicate_responses": true,
+    "both_dup_urls_share_one_digest": true,
+    "enabling_chain_produces_revisit": true,
+    "revisit_reduces_full_responses": true
+  },
+  "scope": {
+    "default_surt_scope_excludes_other_host": true,
+    "in_scope_host_still_crawled": true
+  },
+  "politeness": {
+    "default_median_gap_near_min_delay_3000ms": true,
+    "default_wall_time_multiplier_over_zero": 2135.7
+  },
+  "robots": {
+    "obey_suppresses_disallowed_fetch": true,
+    "ignore_reaches_disallowed_path": true,
+    "robots_txt_actually_requested": true
+  }
+}

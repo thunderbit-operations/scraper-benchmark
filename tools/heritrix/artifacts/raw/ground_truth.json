@@ -1,0 +1,29 @@
+{
+  "base_url": "http://127.0.0.1:64455",
+  "class_A_html": [
+    "/page/a",
+    "/page/b",
+    "/page/c",
+    "/depth/1"
+  ],
+  "class_A_depth_chain": [
+    "/depth/1",
+    "/depth/2",
+    "/depth/3"
+  ],
+  "class_B_js_literal": [
+    "/api/js-endpoint-7",
+    "/api/js-endpoint-8"
+  ],
+  "class_C_runtime_dom_only": "/runtime-only/endpoint42",
+  "known_file_sitemap": [
+    "/sitemap/hidden-1",
+    "/sitemap/hidden-2"
+  ],
+  "external_out_of_scope": "https://example.com/external-should-not-be-crawled",
+  "dup_identical_content": [
+    "/dup/one",
+    "/dup/two"
+  ],
+  "robots_denied": "/robots-denied/secret"
+}
