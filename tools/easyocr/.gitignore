@@ -1,0 +1,20 @@
+# Never ship the torch dependency tree or the OCR models — huge; reproduce via uv pip install + one-time auto-download.
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# EasyOCR model cache (~94 MB, auto-downloaded on first run to ~/.EasyOCR)
+.EasyOCR/
+
+# torch / hf caches if they land locally
+.cache/
+*.pth
+
+# Logs / scratch (raw + computed JSON under artifacts/raw/ IS committed)
+artifacts/logs/
+*.log
+*.out
+.DS_Store
+
+# Any oversized fixture image (>1MB) — current fixtures are all <130KB, committed

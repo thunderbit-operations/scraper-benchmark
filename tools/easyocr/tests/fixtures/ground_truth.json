@@ -1,0 +1,626 @@
+{
+  "canonical_text": "Sphinx of black quartz, judge my vow. 1234567890",
+  "render_notes": "Pillow truetype render; canvas auto-sized to text bbox + 16px pad; rotation via RGBA layer rotate(expand=True) composited on bg. GT string is exact (rendered, not annotated).",
+  "single_line": {
+    "font_arial": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_arial.png"
+    },
+    "font_times": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "times",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_times.png"
+    },
+    "font_courier": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "courier",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_courier.png"
+    },
+    "font_georgia": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "georgia",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_georgia.png"
+    },
+    "font_verdana": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "verdana",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_verdana.png"
+    },
+    "font_comicsans": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "comicsans",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_comicsans.png"
+    },
+    "font_impact": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "font",
+      "params": {
+        "font": "impact",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/font_impact.png"
+    },
+    "size_08": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 8,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_08.png"
+    },
+    "size_10": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 10,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_10.png"
+    },
+    "size_12": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 12,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_12.png"
+    },
+    "size_16": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 16,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_16.png"
+    },
+    "size_20": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 20,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_20.png"
+    },
+    "size_28": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 28,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_28.png"
+    },
+    "size_40": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 40,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_40.png"
+    },
+    "size_64": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 64,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "image": "fixtures/size_64.png"
+    },
+    "contrast_000": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255,
+        "weber": 1.0,
+        "michelson": 1.0
+      },
+      "image": "fixtures/contrast_000.png"
+    },
+    "contrast_064": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 64,
+        "bg_gray": 255,
+        "weber": 0.749,
+        "michelson": 0.5987
+      },
+      "image": "fixtures/contrast_064.png"
+    },
+    "contrast_110": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 110,
+        "bg_gray": 255,
+        "weber": 0.5686,
+        "michelson": 0.3973
+      },
+      "image": "fixtures/contrast_110.png"
+    },
+    "contrast_150": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 150,
+        "bg_gray": 255,
+        "weber": 0.4118,
+        "michelson": 0.2593
+      },
+      "image": "fixtures/contrast_150.png"
+    },
+    "contrast_180": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 180,
+        "bg_gray": 255,
+        "weber": 0.2941,
+        "michelson": 0.1724
+      },
+      "image": "fixtures/contrast_180.png"
+    },
+    "contrast_200": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 200,
+        "bg_gray": 255,
+        "weber": 0.2157,
+        "michelson": 0.1209
+      },
+      "image": "fixtures/contrast_200.png"
+    },
+    "contrast_220": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 220,
+        "bg_gray": 255,
+        "weber": 0.1373,
+        "michelson": 0.0737
+      },
+      "image": "fixtures/contrast_220.png"
+    },
+    "rot_00": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 0
+      },
+      "image": "fixtures/rot_00.png"
+    },
+    "rot_05": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 5
+      },
+      "image": "fixtures/rot_05.png"
+    },
+    "rot_10": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 10
+      },
+      "image": "fixtures/rot_10.png"
+    },
+    "rot_15": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 15
+      },
+      "image": "fixtures/rot_15.png"
+    },
+    "rot_20": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 20
+      },
+      "image": "fixtures/rot_20.png"
+    },
+    "rot_30": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 30
+      },
+      "image": "fixtures/rot_30.png"
+    },
+    "rot_45": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 45
+      },
+      "image": "fixtures/rot_45.png"
+    },
+    "rot_ortho_90": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation_ortho",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 90
+      },
+      "image": "fixtures/rot_ortho_90.png"
+    },
+    "rot_ortho_180": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation_ortho",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 180
+      },
+      "image": "fixtures/rot_ortho_180.png"
+    },
+    "rot_ortho_270": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "rotation_ortho",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 270
+      },
+      "image": "fixtures/rot_ortho_270.png"
+    },
+    "bg_solid": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "background",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "bg_kind": "solid_color_lightblue"
+      },
+      "image": "fixtures/bg_solid.png"
+    },
+    "bg_gradient": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "background",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "bg_kind": "vertical_gradient_255_145"
+      },
+      "image": "fixtures/bg_gradient.png"
+    },
+    "bg_noise": {
+      "gt_text": "Sphinx of black quartz, judge my vow. 1234567890",
+      "kind": "background",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "bg_kind": "gaussian_noise_mu200_sd22"
+      },
+      "image": "fixtures/bg_noise.png"
+    }
+  },
+  "screenshot": {
+    "image": "fixtures/screenshot.png",
+    "note": "Rendered app-window mock; each element has exact GT text + pixel bbox [x0,y0,x1,y1]. metrics.py matches recognized boxes to elements by IoU.",
+    "elements": [
+      {
+        "id": "title",
+        "gt_text": "Sales Dashboard",
+        "bbox": [
+          28,
+          24,
+          261,
+          46
+        ],
+        "font_size": 30,
+        "note": "white on dark header"
+      },
+      {
+        "id": "badge",
+        "gt_text": "A",
+        "bbox": [
+          859,
+          24,
+          881,
+          46
+        ],
+        "font_size": 30,
+        "note": "single-letter badge (issue #460)"
+      },
+      {
+        "id": "kpi1_label",
+        "gt_text": "Revenue",
+        "bbox": [
+          48,
+          120,
+          127,
+          135
+        ],
+        "font_size": 20,
+        "note": ""
+      },
+      {
+        "id": "kpi1_value",
+        "gt_text": "$57,912",
+        "bbox": [
+          48,
+          155,
+          171,
+          186
+        ],
+        "font_size": 34,
+        "note": ""
+      },
+      {
+        "id": "kpi2_label",
+        "gt_text": "Active Users",
+        "bbox": [
+          343,
+          120,
+          456,
+          135
+        ],
+        "font_size": 20,
+        "note": ""
+      },
+      {
+        "id": "kpi2_value",
+        "gt_text": "1,284",
+        "bbox": [
+          344,
+          156,
+          429,
+          186
+        ],
+        "font_size": 34,
+        "note": ""
+      },
+      {
+        "id": "kpi3_label",
+        "gt_text": "Status",
+        "bbox": [
+          640,
+          120,
+          697,
+          135
+        ],
+        "font_size": 20,
+        "note": ""
+      },
+      {
+        "id": "kpi3_value",
+        "gt_text": "OK",
+        "bbox": [
+          640,
+          156,
+          689,
+          181
+        ],
+        "font_size": 34,
+        "note": "short token on colored panel"
+      },
+      {
+        "id": "btn_save",
+        "gt_text": "Save",
+        "bbox": [
+          58,
+          262,
+          108,
+          278
+        ],
+        "font_size": 22,
+        "note": "button, blue"
+      },
+      {
+        "id": "btn_cancel",
+        "gt_text": "Cancel",
+        "bbox": [
+          188,
+          262,
+          256,
+          278
+        ],
+        "font_size": 22,
+        "note": "button, gray"
+      },
+      {
+        "id": "btn_export",
+        "gt_text": "Export CSV",
+        "bbox": [
+          334,
+          262,
+          449,
+          282
+        ],
+        "font_size": 22,
+        "note": "button, green"
+      },
+      {
+        "id": "th_q",
+        "gt_text": "Quarter",
+        "bbox": [
+          40,
+          341,
+          102,
+          356
+        ],
+        "font_size": 18,
+        "note": ""
+      },
+      {
+        "id": "th_amt",
+        "gt_text": "Amount",
+        "bbox": [
+          227,
+          341,
+          290,
+          355
+        ],
+        "font_size": 18,
+        "note": ""
+      },
+      {
+        "id": "cell_q1",
+        "gt_text": "Q1",
+        "bbox": [
+          40,
+          378,
+          67,
+          394
+        ],
+        "font_size": 20,
+        "note": "short cell token"
+      },
+      {
+        "id": "cell_amt1",
+        "gt_text": "$12,004",
+        "bbox": [
+          228,
+          377,
+          300,
+          396
+        ],
+        "font_size": 20,
+        "note": ""
+      },
+      {
+        "id": "cell_q2",
+        "gt_text": "Q2",
+        "bbox": [
+          40,
+          418,
+          67,
+          434
+        ],
+        "font_size": 20,
+        "note": "short cell token"
+      },
+      {
+        "id": "cell_amt2",
+        "gt_text": "$18,330",
+        "bbox": [
+          228,
+          417,
+          300,
+          436
+        ],
+        "font_size": 20,
+        "note": ""
+      },
+      {
+        "id": "cell_q3",
+        "gt_text": "Q3",
+        "bbox": [
+          40,
+          458,
+          67,
+          474
+        ],
+        "font_size": 20,
+        "note": "short cell token"
+      },
+      {
+        "id": "cell_amt3",
+        "gt_text": "$25,178",
+        "bbox": [
+          228,
+          457,
+          300,
+          476
+        ],
+        "font_size": 20,
+        "note": ""
+      }
+    ]
+  }
+}

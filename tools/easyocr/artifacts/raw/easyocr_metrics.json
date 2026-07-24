@@ -1,0 +1,1533 @@
+{
+  "tool": "easyocr",
+  "meta": {
+    "easyocr_version": "1.7.2",
+    "torch_version": "2.13.0",
+    "torchvision_version": "0.28.0",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.1",
+    "pillow_version": "12.3.0",
+    "python_version": "3.12.13",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "gpu": false,
+    "cuda_available": false,
+    "mps_available": true,
+    "recog_network": "standard (english_g2)",
+    "detector": "CRAFT",
+    "torch_num_threads": 8,
+    "readtext_defaults_used": "detail=1, decoder=greedy, contrast_ths=0.1, adjust_contrast=0.5, min_size=10, text_threshold=0.7, mag_ratio=1",
+    "reader_init_s": 1.7163
+  },
+  "computed_at": "2026-07-24T02:51:47.891213+00:00",
+  "method": {
+    "join": "line-aware: boxes grouped into visual lines by vertical bbox overlap, lines top-to-bottom, boxes left-to-right within a line, single-space",
+    "normalization": "collapse whitespace, strip, CASE-SENSITIVE",
+    "cer": "Levenshtein(chars)/len(gt_chars)",
+    "wer": "Levenshtein(words)/len(gt_words)",
+    "collapse_cer": 0.3,
+    "clean_cer": 0.05,
+    "iou_match": 0.3
+  },
+  "H1_font_floor": {
+    "per_font": [
+      {
+        "font": "arial",
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false
+      },
+      {
+        "font": "times",
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false
+      },
+      {
+        "font": "courier",
+        "cer": 0.1042,
+        "cer_ci": 0.0417,
+        "wer": 0.375,
+        "exact": false,
+        "exact_ci": false
+      },
+      {
+        "font": "georgia",
+        "cer": 0.0625,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true
+      },
+      {
+        "font": "verdana",
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false
+      },
+      {
+        "font": "comicsans",
+        "cer": 0.0417,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false
+      },
+      {
+        "font": "impact",
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false
+      }
+    ],
+    "perfect_fonts_case_sensitive": [],
+    "perfect_fonts_case_insensitive": [
+      "georgia"
+    ],
+    "mean_cer": 0.0714,
+    "mean_cer_ci": 0.0238,
+    "max_cer": 0.1042,
+    "note": "residual clean-text CER is dominated by a case-flip (vow->VOW) and punctuation; case-insensitive CER isolates character loss"
+  },
+  "H2_size_sweep": {
+    "steps": [
+      {
+        "value": 8,
+        "cer": 0.7708,
+        "wer": 1.0,
+        "n_boxes": 2
+      },
+      {
+        "value": 10,
+        "cer": 0.1458,
+        "wer": 0.5,
+        "n_boxes": 3
+      },
+      {
+        "value": 12,
+        "cer": 0.0417,
+        "wer": 0.25,
+        "n_boxes": 1
+      },
+      {
+        "value": 16,
+        "cer": 0.0,
+        "wer": 0.0,
+        "n_boxes": 1
+      },
+      {
+        "value": 20,
+        "cer": 0.0208,
+        "wer": 0.125,
+        "n_boxes": 1
+      },
+      {
+        "value": 28,
+        "cer": 0.0208,
+        "wer": 0.125,
+        "n_boxes": 2
+      },
+      {
+        "value": 40,
+        "cer": 0.0625,
+        "wer": 0.125,
+        "n_boxes": 1
+      },
+      {
+        "value": 64,
+        "cer": 0.0625,
+        "wer": 0.125,
+        "n_boxes": 1
+      }
+    ],
+    "boundary": {
+      "first_collapse_value": 8,
+      "clean_values": [
+        12,
+        16,
+        20,
+        28
+      ],
+      "collapsed_values": [
+        8
+      ],
+      "collapse_cer_threshold": 0.3,
+      "clean_cer_threshold": 0.05
+    }
+  },
+  "H2_contrast_sweep": {
+    "steps": [
+      {
+        "value": 0,
+        "weber": 1.0,
+        "michelson": 1.0,
+        "cer": 0.0833,
+        "adjust_contrast_hi_cer": 0.0833,
+        "prebrighten_cer": 0.0625
+      },
+      {
+        "value": 64,
+        "weber": 0.749,
+        "michelson": 0.5987,
+        "cer": 0.0833,
+        "adjust_contrast_hi_cer": 0.0833,
+        "prebrighten_cer": 0.0625
+      },
+      {
+        "value": 110,
+        "weber": 0.5686,
+        "michelson": 0.3973,
+        "cer": 0.0833,
+        "adjust_contrast_hi_cer": 0.0833,
+        "prebrighten_cer": 0.0833
+      },
+      {
+        "value": 150,
+        "weber": 0.4118,
+        "michelson": 0.2593,
+        "cer": 0.1042,
+        "adjust_contrast_hi_cer": 0.1042,
+        "prebrighten_cer": 0.0833
+      },
+      {
+        "value": 180,
+        "weber": 0.2941,
+        "michelson": 0.1724,
+        "cer": 0.0625,
+        "adjust_contrast_hi_cer": 0.0625,
+        "prebrighten_cer": 0.0833
+      },
+      {
+        "value": 200,
+        "weber": 0.2157,
+        "michelson": 0.1209,
+        "cer": 0.0417,
+        "adjust_contrast_hi_cer": 0.0417,
+        "prebrighten_cer": 0.0833
+      },
+      {
+        "value": 220,
+        "weber": 0.1373,
+        "michelson": 0.0737,
+        "cer": 0.0417,
+        "adjust_contrast_hi_cer": 0.0417,
+        "prebrighten_cer": 0.0625
+      }
+    ],
+    "boundary": {
+      "first_collapse_value": null,
+      "clean_values": [
+        0.2157,
+        0.1373
+      ],
+      "collapsed_values": [],
+      "collapse_cer_threshold": 0.3,
+      "clean_cer_threshold": 0.05
+    }
+  },
+  "H2_H4_rotation": {
+    "small_angle_steps": [
+      {
+        "value": 0,
+        "cer": 0.0833,
+        "rotation_info_cer": 0.0833
+      },
+      {
+        "value": 5,
+        "cer": 0.0417,
+        "rotation_info_cer": 0.0417
+      },
+      {
+        "value": 10,
+        "cer": 0.0208,
+        "rotation_info_cer": 0.0833
+      },
+      {
+        "value": 15,
+        "cer": 0.2917,
+        "rotation_info_cer": 0.375
+      },
+      {
+        "value": 20,
+        "cer": 0.75,
+        "rotation_info_cer": 0.7708
+      },
+      {
+        "value": 30,
+        "cer": 0.8958,
+        "rotation_info_cer": 0.875
+      },
+      {
+        "value": 45,
+        "cer": 0.8958,
+        "rotation_info_cer": 0.875
+      }
+    ],
+    "orthogonal_steps": [
+      {
+        "value": 90,
+        "cer": 0.8125,
+        "rotation_info_cer": 0.9167
+      },
+      {
+        "value": 180,
+        "cer": 0.8542,
+        "rotation_info_cer": 0.6667
+      },
+      {
+        "value": 270,
+        "cer": 0.8333,
+        "rotation_info_cer": 0.1042
+      }
+    ],
+    "boundary": {
+      "first_collapse_value": 20,
+      "clean_values": [
+        5,
+        10
+      ],
+      "collapsed_values": [
+        20,
+        30,
+        45
+      ],
+      "collapse_cer_threshold": 0.3,
+      "clean_cer_threshold": 0.05
+    }
+  },
+  "backgrounds": [
+    {
+      "bg_kind": "solid_color_lightblue",
+      "cer": 0.0833,
+      "wer": 0.125
+    },
+    {
+      "bg_kind": "vertical_gradient_255_145",
+      "cer": 0.0208,
+      "wer": 0.125
+    },
+    {
+      "bg_kind": "gaussian_noise_mu200_sd22",
+      "cer": 0.0,
+      "wer": 0.0
+    }
+  ],
+  "H5_screenshot": {
+    "n_elements": 19,
+    "detection_recall": 0.8421,
+    "n_matched": 16,
+    "missed_elements": [
+      "badge",
+      "cell_q1",
+      "cell_q2"
+    ],
+    "mean_cer_matched": 0.0268,
+    "exact_matched": 13,
+    "elements": [
+      {
+        "id": "title",
+        "gt_text": "Sales Dashboard",
+        "font_size": 30,
+        "note": "white on dark header",
+        "matched": true,
+        "best_iou": 0.673,
+        "recognized": "Sales Dashboard",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "badge",
+        "gt_text": "A",
+        "font_size": 30,
+        "note": "single-letter badge (issue #460)",
+        "matched": false,
+        "best_iou": 0.0,
+        "recognized": null,
+        "cer": 1.0,
+        "exact": false
+      },
+      {
+        "id": "kpi1_label",
+        "gt_text": "Revenue",
+        "font_size": 20,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.588,
+        "recognized": "Revenue",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "kpi1_value",
+        "gt_text": "$57,912",
+        "font_size": 34,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.688,
+        "recognized": "S57,912",
+        "cer": 0.1429,
+        "exact": false
+      },
+      {
+        "id": "kpi2_label",
+        "gt_text": "Active Users",
+        "font_size": 20,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.599,
+        "recognized": "Active Users",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "kpi2_value",
+        "gt_text": "1,284",
+        "font_size": 34,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.708,
+        "recognized": "1,284",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "kpi3_label",
+        "gt_text": "Status",
+        "font_size": 20,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.557,
+        "recognized": "Status",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "kpi3_value",
+        "gt_text": "OK",
+        "font_size": 34,
+        "note": "short token on colored panel",
+        "matched": true,
+        "best_iou": 0.587,
+        "recognized": "OK",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "btn_save",
+        "gt_text": "Save",
+        "font_size": 22,
+        "note": "button, blue",
+        "matched": true,
+        "best_iou": 0.575,
+        "recognized": "Save",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "btn_cancel",
+        "gt_text": "Cancel",
+        "font_size": 22,
+        "note": "button, gray",
+        "matched": true,
+        "best_iou": 0.613,
+        "recognized": "Cancel",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "btn_export",
+        "gt_text": "Export CSV",
+        "font_size": 22,
+        "note": "button, green",
+        "matched": true,
+        "best_iou": 0.685,
+        "recognized": "Export CSV",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "th_q",
+        "gt_text": "Quarter",
+        "font_size": 18,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.705,
+        "recognized": "Quarter",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "th_amt",
+        "gt_text": "Amount",
+        "font_size": 18,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.668,
+        "recognized": "Amount",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "cell_q1",
+        "gt_text": "Q1",
+        "font_size": 20,
+        "note": "short cell token",
+        "matched": false,
+        "best_iou": 0.0,
+        "recognized": null,
+        "cer": 1.0,
+        "exact": false
+      },
+      {
+        "id": "cell_amt1",
+        "gt_text": "$12,004",
+        "font_size": 20,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.675,
+        "recognized": "$12,004",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "cell_q2",
+        "gt_text": "Q2",
+        "font_size": 20,
+        "note": "short cell token",
+        "matched": false,
+        "best_iou": 0.0,
+        "recognized": null,
+        "cer": 1.0,
+        "exact": false
+      },
+      {
+        "id": "cell_amt2",
+        "gt_text": "$18,330",
+        "font_size": 20,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.658,
+        "recognized": "S18,330",
+        "cer": 0.1429,
+        "exact": false
+      },
+      {
+        "id": "cell_q3",
+        "gt_text": "Q3",
+        "font_size": 20,
+        "note": "short cell token",
+        "matched": true,
+        "best_iou": 0.72,
+        "recognized": "Q3",
+        "cer": 0.0,
+        "exact": true
+      },
+      {
+        "id": "cell_amt3",
+        "gt_text": "$25,178",
+        "font_size": 20,
+        "note": "",
+        "matched": true,
+        "best_iou": 0.658,
+        "recognized": "S25,178",
+        "cer": 0.1429,
+        "exact": false
+      }
+    ]
+  },
+  "resource": {
+    "model_total_bytes": 98296327,
+    "model_total_mib": 93.7,
+    "model_files_bytes": {
+      "craft_mlt_25k.pth": 83152330,
+      "english_g2.pth": 15143997
+    },
+    "reader_init_s_cold_model_load": 1.7163,
+    "warm_latency_p50_s": 0.0616,
+    "warm_latency_p25_s": 0.0589,
+    "warm_latency_p75_s": 0.0666,
+    "warm_latency_min_s": 0.0576,
+    "warm_latency_max_s": 0.0757,
+    "warm_samples_n": 20,
+    "detail1_median_s": 0.0625,
+    "detail0_median_s": 0.062,
+    "peak_rss_bytes_fresh_process": 1032339456,
+    "peak_rss_mib_fresh_process": 984.5,
+    "determinism_all_identical": true,
+    "timing_caveat": "CPU (gpu=False), torch default threads; measured under possible concurrent worker load (parallel packs). Report p50 + IQR, not a universal number."
+  },
+  "per_fixture": {
+    "font_arial": {
+      "kind": "font",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.1632
+      }
+    },
+    "font_times": {
+      "kind": "font",
+      "params": {
+        "font": "times",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my vow _ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0562
+      }
+    },
+    "font_courier": {
+      "kind": "font",
+      "params": {
+        "font": "courier",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz , judge my VOW 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.1042,
+        "cer_ci": 0.0417,
+        "wer": 0.375,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.1024
+      }
+    },
+    "font_georgia": {
+      "kind": "font",
+      "params": {
+        "font": "georgia",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 1,
+        "latency_s": 0.0494
+      }
+    },
+    "font_verdana": {
+      "kind": "font",
+      "params": {
+        "font": "verdana",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0796
+      }
+    },
+    "font_comicsans": {
+      "kind": "font",
+      "params": {
+        "font": "comicsans",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my Vow: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 1,
+        "latency_s": 0.1048
+      }
+    },
+    "font_impact": {
+      "kind": "font",
+      "params": {
+        "font": "impact",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx Of black quartz, judge my VOw: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 1,
+        "latency_s": 0.0521
+      }
+    },
+    "size_08": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 8,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "s1003xq7 [u 5 123435733]",
+        "gt_len_chars": 48,
+        "cer": 0.7708,
+        "cer_ci": 0.75,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0834
+      }
+    },
+    "size_10": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 10,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx black quarz, judge my vow: 234587890",
+        "gt_len_chars": 48,
+        "cer": 0.1458,
+        "cer_ci": 0.1458,
+        "wer": 0.5,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 3,
+        "latency_s": 0.0631
+      }
+    },
+    "size_12": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 12,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz; judge my vow: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 1,
+        "latency_s": 0.037
+      }
+    },
+    "size_16": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 16,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my vow. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0,
+        "cer_ci": 0.0,
+        "wer": 0.0,
+        "exact": true,
+        "exact_ci": true,
+        "n_boxes": 1,
+        "latency_s": 0.0387
+      }
+    },
+    "size_20": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 20,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my vow: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0208,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 1,
+        "latency_s": 0.0409
+      }
+    },
+    "size_28": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 28,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my Vow. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0208,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 2,
+        "latency_s": 0.0517
+      }
+    },
+    "size_40": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 40,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 1,
+        "latency_s": 0.0681
+      }
+    },
+    "size_64": {
+      "kind": "size",
+      "params": {
+        "font": "arial",
+        "font_size": 64,
+        "fg_gray": 0,
+        "bg_gray": 255
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 1,
+        "latency_s": 0.1004
+      }
+    },
+    "contrast_000": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 0,
+        "bg_gray": 255,
+        "weber": 1.0,
+        "michelson": 1.0
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.059
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0628
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz, judge my VOW. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 1,
+        "latency_s": 0.0564
+      }
+    },
+    "contrast_064": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 64,
+        "bg_gray": 255,
+        "weber": 0.749,
+        "michelson": 0.5987
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0643
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0623
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz, judge my VOW. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 2,
+        "latency_s": 0.0582
+      }
+    },
+    "contrast_110": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 110,
+        "bg_gray": 255,
+        "weber": 0.5686,
+        "michelson": 0.3973
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0589
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0978
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0958
+      }
+    },
+    "contrast_150": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 150,
+        "bg_gray": 255,
+        "weber": 0.4118,
+        "michelson": 0.2593
+      },
+      "default": {
+        "pred": "Sphinx of black quartz; judge my VOW 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.1042,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0605
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz; judge my VOW 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.1042,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0558
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0518
+      }
+    },
+    "contrast_180": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 180,
+        "bg_gray": 255,
+        "weber": 0.2941,
+        "michelson": 0.1724
+      },
+      "default": {
+        "pred": "Sphinx of black quartz; judge my voW_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0617
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz; judge my voW_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0538
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0529
+      }
+    },
+    "contrast_200": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 200,
+        "bg_gray": 255,
+        "weber": 0.2157,
+        "michelson": 0.1209
+      },
+      "default": {
+        "pred": "Sphinx of black quartz; judge my vow_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.053
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz; judge my vow_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0662
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz, judge my VOW_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0541
+      }
+    },
+    "contrast_220": {
+      "kind": "contrast",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "fg_gray": 220,
+        "bg_gray": 255,
+        "weber": 0.1373,
+        "michelson": 0.0737
+      },
+      "default": {
+        "pred": "Sphinx of black quartz; judge my vow_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0526
+      },
+      "adjust_contrast_hi": {
+        "pred": "Sphinx of black quartz; judge my vow_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0515
+      },
+      "prebrighten": {
+        "pred": "Sphinx of black quartz; judge my voW_ 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0625,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0556
+      }
+    },
+    "rot_00": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 0
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0544
+      },
+      "rotation_info": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.1775
+      }
+    },
+    "rot_05": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 5
+      },
+      "default": {
+        "pred": "Sphinx of black quartz judge my vow: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.1211
+      },
+      "rotation_info": {
+        "pred": "Sphinx of black quartz judge my vow: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0417,
+        "cer_ci": 0.0417,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.1522
+      }
+    },
+    "rot_10": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 10
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my voW. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0208,
+        "cer_ci": 0.0,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": true,
+        "n_boxes": 8,
+        "latency_s": 0.2253
+      },
+      "rotation_info": {
+        "pred": "Sphinx of black quartz, judge my 8 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0833,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.549
+      }
+    },
+    "rot_15": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 15
+      },
+      "default": {
+        "pred": "of black quartz, judge my vow. 1234567890 Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.2917,
+        "cer_ci": 0.2917,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.293
+      },
+      "rotation_info": {
+        "pred": "of black quartz, judge my 8 1234567890 Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.375,
+        "cer_ci": 0.375,
+        "wer": 0.375,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.3772
+      }
+    },
+    "rot_20": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 20
+      },
+      "default": {
+        "pred": "my voW. 1234567890 of black quartz, judge Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.75,
+        "cer_ci": 0.75,
+        "wer": 0.75,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.4914
+      },
+      "rotation_info": {
+        "pred": "my MOA 1234567890 of black quartz, _ judge Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.7708,
+        "cer_ci": 0.7708,
+        "wer": 0.875,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.4573
+      }
+    },
+    "rot_30": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 30
+      },
+      "default": {
+        "pred": "1234567890 my vow. judge quartz, of black Sphinx =",
+        "gt_len_chars": 48,
+        "cer": 0.8958,
+        "cer_ci": 0.8958,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.4616
+      },
+      "rotation_info": {
+        "pred": "1234567890 my 8 judge 'zuuenb of black xuyds",
+        "gt_len_chars": 48,
+        "cer": 0.875,
+        "cer_ci": 0.875,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.4478
+      }
+    },
+    "rot_45": {
+      "kind": "rotation",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 45
+      },
+      "default": {
+        "pred": "1234567890 voW. judge my quartz, 6 black Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.8958,
+        "cer_ci": 0.8958,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.5827
+      },
+      "rotation_info": {
+        "pred": "1234567890 8 judge my quartz, Or black Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.875,
+        "cer_ci": 0.875,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.5368
+      }
+    },
+    "rot_ortho_90": {
+      "kind": "rotation_ortho",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 90
+      },
+      "default": {
+        "pred": "0 g 2 g 1 3 5 8",
+        "gt_len_chars": 48,
+        "cer": 0.8125,
+        "cer_ci": 0.8125,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.0938
+      },
+      "rotation_info": {
+        "pred": "1234567890 MOA my judge 'zuuenb black of Sphinx",
+        "gt_len_chars": 48,
+        "cer": 0.9167,
+        "cer_ci": 0.8958,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.4766
+      }
+    },
+    "rot_ortho_180": {
+      "kind": "rotation_ortho",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 180
+      },
+      "default": {
+        "pred": "06829GVEl 'MOA Ku abpn{ 'zuenb xoeIq Jo xuyds",
+        "gt_len_chars": 48,
+        "cer": 0.8542,
+        "cer_ci": 0.8542,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 3,
+        "latency_s": 0.0882
+      },
+      "rotation_info": {
+        "pred": "1234567890 1 Sphinx of black quartz, judge",
+        "gt_len_chars": 48,
+        "cer": 0.6667,
+        "cer_ci": 0.6667,
+        "wer": 0.625,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 3,
+        "latency_s": 0.2472
+      }
+    },
+    "rot_ortho_270": {
+      "kind": "rotation_ortho",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "angle_deg": 270
+      },
+      "default": {
+        "pred": "{ 9 { 1 8 2 2 1",
+        "gt_len_chars": 48,
+        "cer": 0.8333,
+        "cer_ci": 0.8333,
+        "wer": 1.0,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.0975
+      },
+      "rotation_info": {
+        "pred": "Sphinx of black quartz judge my MOA 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.1042,
+        "cer_ci": 0.0833,
+        "wer": 0.25,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 8,
+        "latency_s": 0.3435
+      }
+    },
+    "bg_solid": {
+      "kind": "background",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "bg_kind": "solid_color_lightblue"
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my VOW: 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0833,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 2,
+        "latency_s": 0.0621
+      }
+    },
+    "bg_gradient": {
+      "kind": "background",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "bg_kind": "vertical_gradient_255_145"
+      },
+      "default": {
+        "pred": "Sphinx of black quartz; judge my vow. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0208,
+        "cer_ci": 0.0208,
+        "wer": 0.125,
+        "exact": false,
+        "exact_ci": false,
+        "n_boxes": 1,
+        "latency_s": 0.0816
+      }
+    },
+    "bg_noise": {
+      "kind": "background",
+      "params": {
+        "font": "arial",
+        "font_size": 32,
+        "bg_kind": "gaussian_noise_mu200_sd22"
+      },
+      "default": {
+        "pred": "Sphinx of black quartz, judge my vow. 1234567890",
+        "gt_len_chars": 48,
+        "cer": 0.0,
+        "cer_ci": 0.0,
+        "wer": 0.0,
+        "exact": true,
+        "exact_ci": true,
+        "n_boxes": 1,
+        "latency_s": 0.0585
+      }
+    }
+  }
+}
