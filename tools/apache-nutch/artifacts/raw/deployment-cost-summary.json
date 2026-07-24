@@ -1,0 +1,143 @@
+{
+  "run_started_at": "2026-07-24T06:21:25.614864+00:00",
+  "tool": "apache-nutch",
+  "nutch_home": "<TMP>/claude-501/nutch-build/apache-nutch-1.22",
+  "base_url": "http://127.0.0.1:54008",
+  "jdk_matrix": {
+    "jdk_new_plain": {
+      "tag": "jdk_new_plain",
+      "java_home": "/opt/homebrew/opt/openjdk",
+      "java_version": "openjdk version \"26.0.1\" 2026-04-21",
+      "extra_opts": null,
+      "returncode": 255,
+      "elapsed_seconds": 1.043,
+      "inject_succeeded": false,
+      "error_signatures": [
+        "getSubject is not supported",
+        "UnsupportedOperationException"
+      ],
+      "first_exception_line": "java.lang.UnsupportedOperationException: getSubject is not supported"
+    },
+    "jdk_new_secmgr_allow": {
+      "tag": "jdk_new_secmgr",
+      "java_home": "/opt/homebrew/opt/openjdk",
+      "java_version": "openjdk version \"26.0.1\" 2026-04-21",
+      "extra_opts": "-Djava.security.manager=allow",
+      "returncode": 1,
+      "elapsed_seconds": 0.104,
+      "inject_succeeded": false,
+      "error_signatures": [
+        "Enabling a Security Manager is not supported"
+      ],
+      "first_exception_line": ""
+    },
+    "jdk_lts_plain": {
+      "tag": "jdk_lts_plain",
+      "java_home": "/opt/homebrew/opt/openjdk@17",
+      "java_version": "openjdk version \"17.0.20\" 2026-07-21",
+      "extra_opts": null,
+      "returncode": 0,
+      "elapsed_seconds": 2.089,
+      "inject_succeeded": true,
+      "error_signatures": [
+        "Total new urls injected"
+      ],
+      "first_exception_line": ""
+    }
+  },
+  "footprint": {
+    "unpacked_bytes": 396317495,
+    "unpacked_mb": 396.3,
+    "lib_jar_count": 188,
+    "lib_bytes": 113267265,
+    "lib_mb": 113.3,
+    "bundled_hadoop_jars": [
+      "hadoop-annotations-3.4.2.jar",
+      "hadoop-auth-3.4.2.jar",
+      "hadoop-common-3.4.2.jar",
+      "hadoop-hdfs-3.4.2.jar",
+      "hadoop-hdfs-client-3.4.2.jar",
+      "hadoop-mapreduce-client-common-3.4.2.jar",
+      "hadoop-mapreduce-client-core-3.4.2.jar",
+      "hadoop-mapreduce-client-jobclient-3.4.2.jar",
+      "hadoop-shaded-guava-1.4.0.jar",
+      "hadoop-shaded-protobuf_3_25-1.4.0.jar",
+      "hadoop-yarn-api-3.4.2.jar",
+      "hadoop-yarn-client-3.4.2.jar",
+      "hadoop-yarn-common-3.4.2.jar"
+    ],
+    "plugin_dir_count": 78,
+    "plugin_jar_count": 533,
+    "conf_file_count": 35,
+    "bin_scripts": [
+      "crawl",
+      "nutch"
+    ],
+    "comparator_note": "katana ships as a single Go binary (~50 MB, 0 external jars, no JVM); numbers here are the JVM/Hadoop-crawler baseline"
+  },
+  "config_steps": {
+    "empty_agent_name_fetched_home": false,
+    "empty_agent_name_hit_count": 0,
+    "empty_agent_name_refusal_log": "2026-07-24 14:21:35,548 ERROR o.a.n.f.Fetcher [main] Fetcher: No agents listed in 'http.agent.name' property.",
+    "with_agent_name_fetched_home": true,
+    "with_agent_name_hit_count": 2,
+    "minimal_working_config": {
+      "files_touched": [
+        "conf/nutch-site.xml (http.agent.name + plugin.includes + scope)",
+        "conf/regex-urlfilter.txt (host scope rules)",
+        "seed url list file"
+      ],
+      "mandatory_property": "http.agent.name (ships empty; fetch refused until set)"
+    }
+  },
+  "per_phase_timing": {
+    "bin_nutch_bash_dispatch_seconds": {
+      "n": 3,
+      "min": 0.004,
+      "p50": 0.004,
+      "max": 0.005
+    },
+    "bash_dispatch_note": "bare `bin/nutch` prints usage from the shell script; no JVM starts -- this is NOT the JVM floor",
+    "effective_per_job_jvm_floor_seconds": 1.772,
+    "per_phase_seconds": {
+      "inject": {
+        "n": 3,
+        "min": 1.787,
+        "p50": 1.807,
+        "max": 1.83
+      },
+      "generate": {
+        "n": 3,
+        "min": 3.916,
+        "p50": 3.93,
+        "max": 3.987
+      },
+      "fetch": {
+        "n": 3,
+        "min": 2.788,
+        "p50": 2.817,
+        "max": 2.82
+      },
+      "parse": {
+        "n": 3,
+        "min": 1.772,
+        "p50": 1.782,
+        "max": 1.805
+      },
+      "updatedb": {
+        "n": 3,
+        "min": 1.806,
+        "p50": 1.809,
+        "max": 1.839
+      }
+    },
+    "one_round_total_seconds": {
+      "n": 3,
+      "min": 12.139,
+      "p50": 12.141,
+      "max": 12.215
+    },
+    "note": "one crawl 'round' = a fresh JVM per command (generate,fetch,parse,updatedb, after an initial inject); each pays the per-job JVM+Hadoop-init floor (~effective_per_job_jvm_floor_seconds), so most of a round's wall time is process/JVM startup, not fetching"
+  },
+  "run_completed_at": "2026-07-24T06:22:35.538762+00:00"
+}

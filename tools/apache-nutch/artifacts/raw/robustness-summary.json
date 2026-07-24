@@ -1,0 +1,69 @@
+{
+  "run_started_at": "2026-07-24T06:17:15.461172+00:00",
+  "tool": "apache-nutch",
+  "base_url": "http://127.0.0.1:52520",
+  "nutch_home": "<TMP>/claude-501/nutch-build/apache-nutch-1.22",
+  "robustness": {
+    "rounds_completed": 3,
+    "all_nongenerate_phases_rc0": true,
+    "failure_500": {
+      "fetched": true,
+      "crawldb": {
+        "status": "db_unfetched",
+        "protocol_code": 500
+      }
+    },
+    "broken_404": {
+      "fetched": true,
+      "crawldb": {
+        "status": "db_gone",
+        "protocol_code": 404
+      }
+    },
+    "home_still_fetched": true,
+    "class_A_pages_fetched": [
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/depth/1"
+    ],
+    "interpretation": "crawl continued past 500 and 404; each error URL carries a distinct crawldb status/protocol code"
+  },
+  "sitemap_behavior": {
+    "normal_crawl": {
+      "robots_txt_fetched": true,
+      "sitemap_xml_fetched": false,
+      "sitemap_loc_endpoints_fetched": [],
+      "auto_consumes_sitemap": false
+    },
+    "sitemap_command": {
+      "rc": 0,
+      "sitemap_xml_fetched": true,
+      "loc_endpoints_injected_to_crawldb": [
+        "/sitemap/hidden-1",
+        "/sitemap/hidden-2"
+      ],
+      "loc_recall": 1.0
+    },
+    "parity_note": "katana -kf requests robots/sitemap inside a normal crawl; Nutch separates it into an explicit `bin/nutch sitemap` step"
+  },
+  "politeness": {
+    "fast_delay_0": {
+      "delay_setting": 0.0,
+      "content_fetches": 10,
+      "min_gap": 0.002,
+      "median_gap": 0.002,
+      "max_gap": 10.436
+    },
+    "polite_delay_1": {
+      "delay_setting": 1.0,
+      "content_fetches": 10,
+      "min_gap": 1.006,
+      "median_gap": 1.009,
+      "max_gap": 10.436
+    },
+    "delay_is_honored": true,
+    "note": "median inter-fetch gap to the same host rises with fetcher.server.delay (threads.per.queue=1 isolates the effect)"
+  },
+  "run_completed_at": "2026-07-24T06:19:49.674990+00:00"
+}

@@ -1,0 +1,87 @@
+{
+  "run_started_at": "2026-07-24T06:22:36.030753+00:00",
+  "tool": "apache-nutch",
+  "primary_base_url": "http://127.0.0.1:54381",
+  "secondary_base_url": "http://localhost:54382",
+  "nutch_home": "<TMP>/claude-501/nutch-build/apache-nutch-1.22",
+  "depth": {
+    "per_round_count": [
+      {
+        "rounds": 2,
+        "rounds_completed": 2,
+        "depth_chain_fetched": [
+          "/depth/1"
+        ],
+        "deepest_fetched": "/depth/1"
+      },
+      {
+        "rounds": 3,
+        "rounds_completed": 3,
+        "depth_chain_fetched": [
+          "/depth/1",
+          "/depth/2"
+        ],
+        "deepest_fetched": "/depth/2"
+      },
+      {
+        "rounds": 4,
+        "rounds_completed": 4,
+        "depth_chain_fetched": [
+          "/depth/1",
+          "/depth/2",
+          "/depth/3"
+        ],
+        "deepest_fetched": "/depth/3"
+      }
+    ],
+    "depth_equals_rounds": true,
+    "note": "/depth/N is fetched only at round N+1 (round R fetches frontier discovered at round R-1); depth is set by how many rounds you run"
+  },
+  "scope": {
+    "default_external_on": {
+      "tag": "scope_default",
+      "db_ignore_external_links": "false",
+      "urlfilter_rules": [
+        "-^(file|ftp|mailto):",
+        "+."
+      ],
+      "primary_scope_seed_fetched": true,
+      "primary_inscope_fetched": true,
+      "external_url_crawldb_status": "db_fetched",
+      "secondary_out_hits_delta": 1,
+      "out_of_scope_host_fetched": true
+    },
+    "ignore_external": {
+      "tag": "scope_ignore",
+      "db_ignore_external_links": "true",
+      "urlfilter_rules": [
+        "-^(file|ftp|mailto):",
+        "+."
+      ],
+      "primary_scope_seed_fetched": true,
+      "primary_inscope_fetched": true,
+      "external_url_crawldb_status": "absent",
+      "secondary_out_hits_delta": 0,
+      "out_of_scope_host_fetched": false
+    },
+    "urlfilter_host_only": {
+      "tag": "scope_urlfilter",
+      "db_ignore_external_links": "false",
+      "urlfilter_rules": [
+        "+^http://127.0.0.1:",
+        "-."
+      ],
+      "primary_scope_seed_fetched": true,
+      "primary_inscope_fetched": true,
+      "external_url_crawldb_status": "absent",
+      "secondary_out_hits_delta": 0,
+      "out_of_scope_host_fetched": false
+    },
+    "interpretation": {
+      "shipped_default_stays_in_scope": false,
+      "ignore_external_blocks_out_host": true,
+      "urlfilter_blocks_out_host": true
+    }
+  },
+  "run_completed_at": "2026-07-24T06:25:35.329683+00:00"
+}

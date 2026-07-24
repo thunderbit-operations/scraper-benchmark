@@ -1,0 +1,361 @@
+{
+  "run_started_at": "2026-07-24T06:06:11.803140+00:00",
+  "tool": "apache-nutch",
+  "nutch_home": "<TMP>/claude-501/nutch-build/apache-nutch-1.22",
+  "java_home": "/opt/homebrew/opt/openjdk@17",
+  "rounds_per_crawl": 4,
+  "repeats": 3,
+  "repeat_runs": [
+    {
+      "repeat": 1,
+      "default_B_recall": 0.0,
+      "parsejs_B_recall": 1.0,
+      "default_A_recall": 1.0,
+      "default_C_found": false,
+      "parsejs_C_found": false
+    },
+    {
+      "repeat": 2,
+      "default_B_recall": 0.0,
+      "parsejs_B_recall": 1.0,
+      "default_A_recall": 1.0,
+      "default_C_found": false,
+      "parsejs_C_found": false
+    },
+    {
+      "repeat": 3,
+      "default_B_recall": 0.0,
+      "parsejs_B_recall": 1.0,
+      "default_A_recall": 1.0,
+      "default_C_found": false,
+      "parsejs_C_found": false
+    }
+  ],
+  "coverage_deterministic": true,
+  "base_url": "http://127.0.0.1:63464",
+  "ground_truth": {
+    "base_url": "http://127.0.0.1:63464",
+    "class_A_html": [
+      "/page/a",
+      "/page/b",
+      "/page/c",
+      "/depth/1"
+    ],
+    "class_A_depth_chain": [
+      "/depth/1",
+      "/depth/2",
+      "/depth/3"
+    ],
+    "class_B_js_literal": [
+      "/api/js-endpoint-7",
+      "/api/js-endpoint-8"
+    ],
+    "class_C_runtime_dom_only": "/runtime-only/endpoint42",
+    "known_file_sitemap": [
+      "/sitemap/hidden-1",
+      "/sitemap/hidden-2"
+    ],
+    "external_out_of_scope": "https://example.com/external-should-not-be-crawled"
+  },
+  "scenario_default": {
+    "tag": "default_r1",
+    "plugin_includes": "protocol-http|urlfilter-regex|parse-(html|tika)|scoring-opic|urlnormalizer-(pass|regex|basic)",
+    "rounds_completed": 4,
+    "total_crawl_seconds": 45.797,
+    "phase_returncodes": [
+      {
+        "phase": "inject",
+        "round": 0,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 4,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 4,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 4,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 4,
+        "rc": 0
+      }
+    ],
+    "server_side_hits": {
+      "/robots.txt": 4,
+      "/": 1,
+      "/page/a": 1,
+      "/page/b": 1,
+      "/page/c": 1,
+      "/depth/1": 1,
+      "/broken-xyz": 1,
+      "/failure/500": 1,
+      "/dynamic/runtime": 1,
+      "/static/app.js": 1,
+      "/depth/2": 1,
+      "/depth/3": 1
+    },
+    "class_recall": {
+      "A_html": {
+        "found": 4,
+        "expected": 4,
+        "recall": 1.0,
+        "missing": []
+      },
+      "A_depth_chain": {
+        "found": 3,
+        "expected": 3,
+        "recall": 1.0,
+        "missing": []
+      },
+      "B_js_literal": {
+        "found": 0,
+        "expected": 2,
+        "recall": 0.0,
+        "missing": [
+          "/api/js-endpoint-7",
+          "/api/js-endpoint-8"
+        ]
+      },
+      "C_runtime_dom_only": {
+        "found": false,
+        "path": "/runtime-only/endpoint42"
+      }
+    },
+    "crawldb_size": 11,
+    "note": ""
+  },
+  "scenario_parsejs": {
+    "tag": "parsejs_r1",
+    "plugin_includes": "protocol-http|urlfilter-regex|parse-(html|tika|js)|scoring-opic|urlnormalizer-(pass|regex|basic)",
+    "rounds_completed": 4,
+    "total_crawl_seconds": 45.002,
+    "phase_returncodes": [
+      {
+        "phase": "inject",
+        "round": 0,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 1,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 2,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 3,
+        "rc": 0
+      },
+      {
+        "phase": "generate",
+        "round": 4,
+        "rc": 0
+      },
+      {
+        "phase": "fetch",
+        "round": 4,
+        "rc": 0
+      },
+      {
+        "phase": "parse",
+        "round": 4,
+        "rc": 0
+      },
+      {
+        "phase": "updatedb",
+        "round": 4,
+        "rc": 0
+      }
+    ],
+    "server_side_hits": {
+      "/robots.txt": 4,
+      "/": 1,
+      "/page/a": 1,
+      "/page/b": 1,
+      "/page/c": 1,
+      "/depth/1": 1,
+      "/broken-xyz": 1,
+      "/failure/500": 1,
+      "/dynamic/runtime": 1,
+      "/static/app.js": 1,
+      "/api/js-endpoint-8": 1,
+      "/depth/2": 1,
+      "/api/js-endpoint-7": 1,
+      "/depth/3": 1
+    },
+    "class_recall": {
+      "A_html": {
+        "found": 4,
+        "expected": 4,
+        "recall": 1.0,
+        "missing": []
+      },
+      "A_depth_chain": {
+        "found": 3,
+        "expected": 3,
+        "recall": 1.0,
+        "missing": []
+      },
+      "B_js_literal": {
+        "found": 2,
+        "expected": 2,
+        "recall": 1.0,
+        "missing": []
+      },
+      "C_runtime_dom_only": {
+        "found": false,
+        "path": "/runtime-only/endpoint42"
+      }
+    },
+    "crawldb_size": 13,
+    "note": ""
+  },
+  "scenario_htmlunit_probe": {
+    "attempted": true,
+    "loaded_and_ran": true,
+    "rounds_completed": 1,
+    "A_html_recall": 0.0,
+    "B_js_literal_recall": 0.0,
+    "C_runtime_dom_found": false,
+    "total_crawl_seconds": 14.27,
+    "server_side_hits": {
+      "/robots.txt": 1,
+      "/": 2,
+      "/static/app.js": 1
+    }
+  },
+  "coverage_contrast": {
+    "default_covers": {
+      "A": 1.0,
+      "B": 0.0,
+      "C": false
+    },
+    "parsejs_covers": {
+      "A": 1.0,
+      "B": 1.0,
+      "C": false
+    },
+    "parsejs_recovers_B_without_browser": true,
+    "no_static_plugin_reaches_C": true,
+    "katana_parity_note": "default == katana standard (A only); parsejs == katana standard -jc (A+B, browserless JS-literal recovery); class C needs a JS-executing protocol (htmlunit/selenium) just as katana needs -headless"
+  },
+  "run_completed_at": "2026-07-24T06:11:13.947374+00:00"
+}
