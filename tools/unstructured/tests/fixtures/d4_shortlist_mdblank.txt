@@ -1,0 +1,12 @@
+The following zzsl_intro items were recorded during the short test run
+
+- zzsl1 one
+
+- zzsl2 two
+
+- zzsl3 three
+
+- zzsl4 four
+
+- zzsl5 five
+

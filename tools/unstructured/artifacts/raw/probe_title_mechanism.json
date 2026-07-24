@@ -1,0 +1,62 @@
+{
+  "probe": "title-vs-narrative mechanism (word-count x verb)",
+  "dispatch_order_note": "text.py _text_to_element: is_possible_narrative_text (L149) returns NarrativeText BEFORE is_possible_title (L155)",
+  "cases": [
+    {
+      "id": "5w_verb",
+      "text": "The team shipped the release",
+      "word_count": 5,
+      "declared_word_count": 5,
+      "declared_has_verb": true,
+      "partition_text_categories": [
+        "NarrativeText"
+      ],
+      "primary_category": "NarrativeText",
+      "internal_contains_verb": true,
+      "internal_is_possible_narrative_text": true,
+      "internal_is_possible_title": true
+    },
+    {
+      "id": "5w_noverb",
+      "text": "Quarterly regional vendor category summary",
+      "word_count": 5,
+      "declared_word_count": 5,
+      "declared_has_verb": false,
+      "partition_text_categories": [
+        "Title"
+      ],
+      "primary_category": "Title",
+      "internal_contains_verb": false,
+      "internal_is_possible_narrative_text": false,
+      "internal_is_possible_title": true
+    },
+    {
+      "id": "13w_verb",
+      "text": "This heading deliberately contains thirteen separate ordinary words exceeding the configured word limit",
+      "word_count": 13,
+      "declared_word_count": 13,
+      "declared_has_verb": true,
+      "partition_text_categories": [
+        "NarrativeText"
+      ],
+      "primary_category": "NarrativeText",
+      "internal_contains_verb": true,
+      "internal_is_possible_narrative_text": true,
+      "internal_is_possible_title": false
+    },
+    {
+      "id": "13w_noverb",
+      "text": "Quarterly regional vendor category product office contact record summary table appendix index glossary",
+      "word_count": 13,
+      "declared_word_count": 13,
+      "declared_has_verb": false,
+      "partition_text_categories": [
+        "UncategorizedText"
+      ],
+      "primary_category": "UncategorizedText",
+      "internal_contains_verb": false,
+      "internal_is_possible_narrative_text": false,
+      "internal_is_possible_title": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Never ship dependency trees / model caches — huge; reproduce from the pinned install.
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Model / NLP caches (spaCy, NLTK punkt/averaged_perceptron, HF) if they land locally
+nltk_data/
+.cache/
+*.model
+
+# Generated binary docx fixtures — regenerated deterministically by build_fixtures.py
+# (their internal zip timestamps vary; only extracted elements are asserted).
+tests/fixtures/*.docx
+
+# Logs / scratch (raw result JSON under artifacts/raw/ IS committed)
+artifacts/logs/
+*.log
+*.out
+.DS_Store

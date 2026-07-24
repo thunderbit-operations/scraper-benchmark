@@ -1,0 +1,52 @@
+{
+  "tool": "unstructured",
+  "fixture": "d7_large (canonical x60, 660 elements)",
+  "isolation": "one subprocess per format (RSS not cross-contaminated)",
+  "timing_caveat": "warm median + interval only; sibling workers may contaminate wall time; no faster/slower verdict is drawn from these numbers",
+  "results": {
+    "html": {
+      "n_elements": 660,
+      "reps": 6,
+      "cold_first_call_ms": 949.08,
+      "warm_p50_ms": 716.87,
+      "warm_min_ms": 714.6,
+      "warm_max_ms": 754.33,
+      "peak_rss_mb": 272.7,
+      "ru_maxrss_raw": 285982720,
+      "platform": "darwin"
+    },
+    "md": {
+      "n_elements": 660,
+      "reps": 6,
+      "cold_first_call_ms": 966.34,
+      "warm_p50_ms": 730.73,
+      "warm_min_ms": 730.04,
+      "warm_max_ms": 770.25,
+      "peak_rss_mb": 273.5,
+      "ru_maxrss_raw": 286752768,
+      "platform": "darwin"
+    },
+    "txt": {
+      "n_elements": 660,
+      "reps": 6,
+      "cold_first_call_ms": 1218.37,
+      "warm_p50_ms": 990.09,
+      "warm_min_ms": 989.86,
+      "warm_max_ms": 1028.06,
+      "peak_rss_mb": 263.3,
+      "ru_maxrss_raw": 276103168,
+      "platform": "darwin"
+    },
+    "docx": {
+      "n_elements": 660,
+      "reps": 6,
+      "cold_first_call_ms": 1240.17,
+      "warm_p50_ms": 1014.66,
+      "warm_min_ms": 1012.47,
+      "warm_max_ms": 1061.94,
+      "peak_rss_mb": 284.5,
+      "ru_maxrss_raw": 298369024,
+      "platform": "darwin"
+    }
+  }
+}

@@ -1,0 +1,4441 @@
+{
+  "d1_canonical": {
+    "name": "d1_canonical",
+    "formats": [
+      "html",
+      "md",
+      "txt",
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d1-t1",
+        "type": "Title",
+        "sentinel": "zztitle1",
+        "text": "Quarterly Operations Review zztitle1"
+      },
+      {
+        "id": "d1-n1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1",
+        "text": "Our team zznarr1 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2",
+        "text": "The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2",
+        "type": "Title",
+        "sentinel": "zztitle2",
+        "text": "Key Findings zztitle2"
+      },
+      {
+        "id": "d1-b1",
+        "type": "ListItem",
+        "sentinel": "zzitem1",
+        "text": "First zzitem1 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2",
+        "type": "ListItem",
+        "sentinel": "zzitem2",
+        "text": "Second zzitem2 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3",
+        "type": "ListItem",
+        "sentinel": "zzitem3",
+        "text": "Third zzitem3 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3",
+        "type": "Title",
+        "sentinel": "zztitle3",
+        "text": "Setup Steps zztitle3"
+      },
+      {
+        "id": "d1-o1",
+        "type": "ListItem",
+        "sentinel": "zznum1",
+        "text": "Install zznum1 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2",
+        "type": "ListItem",
+        "sentinel": "zznum2",
+        "text": "Run zznum2 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3",
+        "text": "In summary zznarr3 the tool performed consistently across all of the evaluated document formats."
+      }
+    ]
+  },
+  "d2_table": {
+    "name": "d2_table",
+    "formats": [
+      "html",
+      "md",
+      "txt",
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d2-t1",
+        "type": "Title",
+        "sentinel": "zztbltitle",
+        "text": "Benchmark Results zztbltitle"
+      },
+      {
+        "id": "d2-n1",
+        "type": "NarrativeText",
+        "sentinel": "zztblnarr",
+        "text": "The table zztblnarr below summarizes the measured throughput for every tool we tested."
+      },
+      {
+        "id": "d2-tab",
+        "type": "Table",
+        "sentinel": "zztblcell",
+        "text": "table with sentinel cell zztblcell",
+        "note": "txt has no table construct; expect NOT Table there"
+      }
+    ]
+  },
+  "d3_adversarial": {
+    "name": "d3_adversarial",
+    "formats": [
+      "html",
+      "md",
+      "txt",
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d3-over",
+        "type": "Title",
+        "sentinel": "zzover12",
+        "text": "This zzover12 heading deliberately contains thirteen separate ordinary words exceeding the configured limit",
+        "note": "13 words > title_max_word_length=12; structural h1/Heading should still be Title"
+      },
+      {
+        "id": "d3-caps",
+        "type": "Title",
+        "sentinel": "zzcaps",
+        "text": "SYSTEM ZZCAPS CONFIGURATION GUIDE",
+        "note": "all-caps heading; cap ratio > 0.5"
+      },
+      {
+        "id": "d3-verbless",
+        "type": "NarrativeText",
+        "sentinel": "zzverbless",
+        "text": "A zzverbless comprehensive catalogue of vendor names, product categories, regional offices and contact records",
+        "note": "no finite verb; is_possible_narrative_text should fail -> UncategorizedText in ALL carriers"
+      },
+      {
+        "id": "d3-nonalpha",
+        "type": "UncategorizedText",
+        "sentinel": "zznonalpha",
+        "text": "zznonalpha 12.5% :: 40/60 >> $$$ 3.14 ~~ 900",
+        "note": "high non-alpha ratio > 0.5; UncategorizedText is the DEFENSIBLE output (not scored as a NarrativeText miss) — kept as a consistency example"
+      },
+      {
+        "id": "d3-realnarr",
+        "type": "NarrativeText",
+        "sentinel": "zzrealnarr",
+        "text": "Finally zzrealnarr the reviewer summarized the outcome and approved the migration to the new pipeline.",
+        "note": "control: a real verb-bearing sentence, expect NarrativeText everywhere"
+      }
+    ]
+  },
+  "d4_shortlist_mdblank": {
+    "name": "d4_shortlist_mdblank",
+    "formats": [
+      "md",
+      "html",
+      "txt"
+    ],
+    "blocks": [
+      {
+        "id": "d4-p",
+        "type": "NarrativeText",
+        "sentinel": "zzsl_intro",
+        "text": "The following zzsl_intro items were recorded during the short test run"
+      },
+      {
+        "id": "d4-b1",
+        "type": "ListItem",
+        "sentinel": "zzsl1",
+        "text": "zzsl1 one"
+      },
+      {
+        "id": "d4-b2",
+        "type": "ListItem",
+        "sentinel": "zzsl2",
+        "text": "zzsl2 two"
+      },
+      {
+        "id": "d4-b3",
+        "type": "ListItem",
+        "sentinel": "zzsl3",
+        "text": "zzsl3 three"
+      },
+      {
+        "id": "d4-b4",
+        "type": "ListItem",
+        "sentinel": "zzsl4",
+        "text": "zzsl4 four"
+      },
+      {
+        "id": "d4-b5",
+        "type": "ListItem",
+        "sentinel": "zzsl5",
+        "text": "zzsl5 five"
+      }
+    ]
+  },
+  "d4_shortlist_mdlazy": {
+    "name": "d4_shortlist_mdlazy",
+    "formats": [
+      "md"
+    ],
+    "blocks": [
+      {
+        "id": "d4-p",
+        "type": "NarrativeText",
+        "sentinel": "zzsl_intro",
+        "text": "The following zzsl_intro items were recorded during the short test run"
+      },
+      {
+        "id": "d4-b1",
+        "type": "ListItem",
+        "sentinel": "zzsl1",
+        "text": "zzsl1 one"
+      },
+      {
+        "id": "d4-b2",
+        "type": "ListItem",
+        "sentinel": "zzsl2",
+        "text": "zzsl2 two"
+      },
+      {
+        "id": "d4-b3",
+        "type": "ListItem",
+        "sentinel": "zzsl3",
+        "text": "zzsl3 three"
+      },
+      {
+        "id": "d4-b4",
+        "type": "ListItem",
+        "sentinel": "zzsl4",
+        "text": "zzsl4 four"
+      },
+      {
+        "id": "d4-b5",
+        "type": "ListItem",
+        "sentinel": "zzsl5",
+        "text": "zzsl5 five"
+      }
+    ]
+  },
+  "d5_docx_style": {
+    "name": "d5_docx_style",
+    "formats": [
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d1-t1",
+        "type": "Title",
+        "sentinel": "zztitle1",
+        "text": "Quarterly Operations Review zztitle1"
+      },
+      {
+        "id": "d1-n1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1",
+        "text": "Our team zznarr1 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2",
+        "text": "The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2",
+        "type": "Title",
+        "sentinel": "zztitle2",
+        "text": "Key Findings zztitle2"
+      },
+      {
+        "id": "d1-b1",
+        "type": "ListItem",
+        "sentinel": "zzitem1",
+        "text": "First zzitem1 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2",
+        "type": "ListItem",
+        "sentinel": "zzitem2",
+        "text": "Second zzitem2 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3",
+        "type": "ListItem",
+        "sentinel": "zzitem3",
+        "text": "Third zzitem3 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3",
+        "type": "Title",
+        "sentinel": "zztitle3",
+        "text": "Setup Steps zztitle3"
+      },
+      {
+        "id": "d1-o1",
+        "type": "ListItem",
+        "sentinel": "zznum1",
+        "text": "Install zznum1 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2",
+        "type": "ListItem",
+        "sentinel": "zznum2",
+        "text": "Run zznum2 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3",
+        "text": "In summary zznarr3 the tool performed consistently across all of the evaluated document formats."
+      }
+    ],
+    "docx_bullet_mode": "style"
+  },
+  "d5_docx_dash": {
+    "name": "d5_docx_dash",
+    "formats": [
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d1-t1",
+        "type": "Title",
+        "sentinel": "zztitle1",
+        "text": "Quarterly Operations Review zztitle1"
+      },
+      {
+        "id": "d1-n1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1",
+        "text": "Our team zznarr1 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2",
+        "text": "The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2",
+        "type": "Title",
+        "sentinel": "zztitle2",
+        "text": "Key Findings zztitle2"
+      },
+      {
+        "id": "d1-b1",
+        "type": "ListItem",
+        "sentinel": "zzitem1",
+        "text": "First zzitem1 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2",
+        "type": "ListItem",
+        "sentinel": "zzitem2",
+        "text": "Second zzitem2 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3",
+        "type": "ListItem",
+        "sentinel": "zzitem3",
+        "text": "Third zzitem3 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3",
+        "type": "Title",
+        "sentinel": "zztitle3",
+        "text": "Setup Steps zztitle3"
+      },
+      {
+        "id": "d1-o1",
+        "type": "ListItem",
+        "sentinel": "zznum1",
+        "text": "Install zznum1 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2",
+        "type": "ListItem",
+        "sentinel": "zznum2",
+        "text": "Run zznum2 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3",
+        "text": "In summary zznarr3 the tool performed consistently across all of the evaluated document formats."
+      }
+    ],
+    "docx_bullet_mode": "dash"
+  },
+  "d5_docx_numpr": {
+    "name": "d5_docx_numpr",
+    "formats": [
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d1-t1",
+        "type": "Title",
+        "sentinel": "zztitle1",
+        "text": "Quarterly Operations Review zztitle1"
+      },
+      {
+        "id": "d1-n1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1",
+        "text": "Our team zznarr1 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2",
+        "text": "The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2",
+        "type": "Title",
+        "sentinel": "zztitle2",
+        "text": "Key Findings zztitle2"
+      },
+      {
+        "id": "d1-b1",
+        "type": "ListItem",
+        "sentinel": "zzitem1",
+        "text": "First zzitem1 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2",
+        "type": "ListItem",
+        "sentinel": "zzitem2",
+        "text": "Second zzitem2 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3",
+        "type": "ListItem",
+        "sentinel": "zzitem3",
+        "text": "Third zzitem3 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3",
+        "type": "Title",
+        "sentinel": "zztitle3",
+        "text": "Setup Steps zztitle3"
+      },
+      {
+        "id": "d1-o1",
+        "type": "ListItem",
+        "sentinel": "zznum1",
+        "text": "Install zznum1 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2",
+        "type": "ListItem",
+        "sentinel": "zznum2",
+        "text": "Run zznum2 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3",
+        "text": "In summary zznarr3 the tool performed consistently across all of the evaluated document formats."
+      }
+    ],
+    "docx_bullet_mode": "numpr"
+  },
+  "d7_large": {
+    "name": "d7_large",
+    "formats": [
+      "html",
+      "md",
+      "txt",
+      "docx"
+    ],
+    "blocks": [
+      {
+        "id": "d1-t1-r0",
+        "type": "Title",
+        "sentinel": "zztitle1z000",
+        "text": "Quarterly Operations Review zztitle1z000"
+      },
+      {
+        "id": "d1-n1-r0",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z000",
+        "text": "Our team zznarr1z000 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r0",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z000",
+        "text": "The engineers zznarr2z000 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r0",
+        "type": "Title",
+        "sentinel": "zztitle2z000",
+        "text": "Key Findings zztitle2z000"
+      },
+      {
+        "id": "d1-b1-r0",
+        "type": "ListItem",
+        "sentinel": "zzitem1z000",
+        "text": "First zzitem1z000 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r0",
+        "type": "ListItem",
+        "sentinel": "zzitem2z000",
+        "text": "Second zzitem2z000 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r0",
+        "type": "ListItem",
+        "sentinel": "zzitem3z000",
+        "text": "Third zzitem3z000 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r0",
+        "type": "Title",
+        "sentinel": "zztitle3z000",
+        "text": "Setup Steps zztitle3z000"
+      },
+      {
+        "id": "d1-o1-r0",
+        "type": "ListItem",
+        "sentinel": "zznum1z000",
+        "text": "Install zznum1z000 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r0",
+        "type": "ListItem",
+        "sentinel": "zznum2z000",
+        "text": "Run zznum2z000 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r0",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z000",
+        "text": "In summary zznarr3z000 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r1",
+        "type": "Title",
+        "sentinel": "zztitle1z001",
+        "text": "Quarterly Operations Review zztitle1z001"
+      },
+      {
+        "id": "d1-n1-r1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z001",
+        "text": "Our team zznarr1z001 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z001",
+        "text": "The engineers zznarr2z001 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r1",
+        "type": "Title",
+        "sentinel": "zztitle2z001",
+        "text": "Key Findings zztitle2z001"
+      },
+      {
+        "id": "d1-b1-r1",
+        "type": "ListItem",
+        "sentinel": "zzitem1z001",
+        "text": "First zzitem1z001 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r1",
+        "type": "ListItem",
+        "sentinel": "zzitem2z001",
+        "text": "Second zzitem2z001 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r1",
+        "type": "ListItem",
+        "sentinel": "zzitem3z001",
+        "text": "Third zzitem3z001 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r1",
+        "type": "Title",
+        "sentinel": "zztitle3z001",
+        "text": "Setup Steps zztitle3z001"
+      },
+      {
+        "id": "d1-o1-r1",
+        "type": "ListItem",
+        "sentinel": "zznum1z001",
+        "text": "Install zznum1z001 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r1",
+        "type": "ListItem",
+        "sentinel": "zznum2z001",
+        "text": "Run zznum2z001 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z001",
+        "text": "In summary zznarr3z001 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r2",
+        "type": "Title",
+        "sentinel": "zztitle1z002",
+        "text": "Quarterly Operations Review zztitle1z002"
+      },
+      {
+        "id": "d1-n1-r2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z002",
+        "text": "Our team zznarr1z002 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z002",
+        "text": "The engineers zznarr2z002 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r2",
+        "type": "Title",
+        "sentinel": "zztitle2z002",
+        "text": "Key Findings zztitle2z002"
+      },
+      {
+        "id": "d1-b1-r2",
+        "type": "ListItem",
+        "sentinel": "zzitem1z002",
+        "text": "First zzitem1z002 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r2",
+        "type": "ListItem",
+        "sentinel": "zzitem2z002",
+        "text": "Second zzitem2z002 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r2",
+        "type": "ListItem",
+        "sentinel": "zzitem3z002",
+        "text": "Third zzitem3z002 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r2",
+        "type": "Title",
+        "sentinel": "zztitle3z002",
+        "text": "Setup Steps zztitle3z002"
+      },
+      {
+        "id": "d1-o1-r2",
+        "type": "ListItem",
+        "sentinel": "zznum1z002",
+        "text": "Install zznum1z002 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r2",
+        "type": "ListItem",
+        "sentinel": "zznum2z002",
+        "text": "Run zznum2z002 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z002",
+        "text": "In summary zznarr3z002 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r3",
+        "type": "Title",
+        "sentinel": "zztitle1z003",
+        "text": "Quarterly Operations Review zztitle1z003"
+      },
+      {
+        "id": "d1-n1-r3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z003",
+        "text": "Our team zznarr1z003 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z003",
+        "text": "The engineers zznarr2z003 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r3",
+        "type": "Title",
+        "sentinel": "zztitle2z003",
+        "text": "Key Findings zztitle2z003"
+      },
+      {
+        "id": "d1-b1-r3",
+        "type": "ListItem",
+        "sentinel": "zzitem1z003",
+        "text": "First zzitem1z003 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r3",
+        "type": "ListItem",
+        "sentinel": "zzitem2z003",
+        "text": "Second zzitem2z003 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r3",
+        "type": "ListItem",
+        "sentinel": "zzitem3z003",
+        "text": "Third zzitem3z003 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r3",
+        "type": "Title",
+        "sentinel": "zztitle3z003",
+        "text": "Setup Steps zztitle3z003"
+      },
+      {
+        "id": "d1-o1-r3",
+        "type": "ListItem",
+        "sentinel": "zznum1z003",
+        "text": "Install zznum1z003 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r3",
+        "type": "ListItem",
+        "sentinel": "zznum2z003",
+        "text": "Run zznum2z003 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z003",
+        "text": "In summary zznarr3z003 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r4",
+        "type": "Title",
+        "sentinel": "zztitle1z004",
+        "text": "Quarterly Operations Review zztitle1z004"
+      },
+      {
+        "id": "d1-n1-r4",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z004",
+        "text": "Our team zznarr1z004 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r4",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z004",
+        "text": "The engineers zznarr2z004 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r4",
+        "type": "Title",
+        "sentinel": "zztitle2z004",
+        "text": "Key Findings zztitle2z004"
+      },
+      {
+        "id": "d1-b1-r4",
+        "type": "ListItem",
+        "sentinel": "zzitem1z004",
+        "text": "First zzitem1z004 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r4",
+        "type": "ListItem",
+        "sentinel": "zzitem2z004",
+        "text": "Second zzitem2z004 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r4",
+        "type": "ListItem",
+        "sentinel": "zzitem3z004",
+        "text": "Third zzitem3z004 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r4",
+        "type": "Title",
+        "sentinel": "zztitle3z004",
+        "text": "Setup Steps zztitle3z004"
+      },
+      {
+        "id": "d1-o1-r4",
+        "type": "ListItem",
+        "sentinel": "zznum1z004",
+        "text": "Install zznum1z004 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r4",
+        "type": "ListItem",
+        "sentinel": "zznum2z004",
+        "text": "Run zznum2z004 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r4",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z004",
+        "text": "In summary zznarr3z004 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r5",
+        "type": "Title",
+        "sentinel": "zztitle1z005",
+        "text": "Quarterly Operations Review zztitle1z005"
+      },
+      {
+        "id": "d1-n1-r5",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z005",
+        "text": "Our team zznarr1z005 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r5",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z005",
+        "text": "The engineers zznarr2z005 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r5",
+        "type": "Title",
+        "sentinel": "zztitle2z005",
+        "text": "Key Findings zztitle2z005"
+      },
+      {
+        "id": "d1-b1-r5",
+        "type": "ListItem",
+        "sentinel": "zzitem1z005",
+        "text": "First zzitem1z005 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r5",
+        "type": "ListItem",
+        "sentinel": "zzitem2z005",
+        "text": "Second zzitem2z005 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r5",
+        "type": "ListItem",
+        "sentinel": "zzitem3z005",
+        "text": "Third zzitem3z005 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r5",
+        "type": "Title",
+        "sentinel": "zztitle3z005",
+        "text": "Setup Steps zztitle3z005"
+      },
+      {
+        "id": "d1-o1-r5",
+        "type": "ListItem",
+        "sentinel": "zznum1z005",
+        "text": "Install zznum1z005 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r5",
+        "type": "ListItem",
+        "sentinel": "zznum2z005",
+        "text": "Run zznum2z005 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r5",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z005",
+        "text": "In summary zznarr3z005 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r6",
+        "type": "Title",
+        "sentinel": "zztitle1z006",
+        "text": "Quarterly Operations Review zztitle1z006"
+      },
+      {
+        "id": "d1-n1-r6",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z006",
+        "text": "Our team zznarr1z006 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r6",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z006",
+        "text": "The engineers zznarr2z006 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r6",
+        "type": "Title",
+        "sentinel": "zztitle2z006",
+        "text": "Key Findings zztitle2z006"
+      },
+      {
+        "id": "d1-b1-r6",
+        "type": "ListItem",
+        "sentinel": "zzitem1z006",
+        "text": "First zzitem1z006 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r6",
+        "type": "ListItem",
+        "sentinel": "zzitem2z006",
+        "text": "Second zzitem2z006 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r6",
+        "type": "ListItem",
+        "sentinel": "zzitem3z006",
+        "text": "Third zzitem3z006 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r6",
+        "type": "Title",
+        "sentinel": "zztitle3z006",
+        "text": "Setup Steps zztitle3z006"
+      },
+      {
+        "id": "d1-o1-r6",
+        "type": "ListItem",
+        "sentinel": "zznum1z006",
+        "text": "Install zznum1z006 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r6",
+        "type": "ListItem",
+        "sentinel": "zznum2z006",
+        "text": "Run zznum2z006 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r6",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z006",
+        "text": "In summary zznarr3z006 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r7",
+        "type": "Title",
+        "sentinel": "zztitle1z007",
+        "text": "Quarterly Operations Review zztitle1z007"
+      },
+      {
+        "id": "d1-n1-r7",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z007",
+        "text": "Our team zznarr1z007 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r7",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z007",
+        "text": "The engineers zznarr2z007 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r7",
+        "type": "Title",
+        "sentinel": "zztitle2z007",
+        "text": "Key Findings zztitle2z007"
+      },
+      {
+        "id": "d1-b1-r7",
+        "type": "ListItem",
+        "sentinel": "zzitem1z007",
+        "text": "First zzitem1z007 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r7",
+        "type": "ListItem",
+        "sentinel": "zzitem2z007",
+        "text": "Second zzitem2z007 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r7",
+        "type": "ListItem",
+        "sentinel": "zzitem3z007",
+        "text": "Third zzitem3z007 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r7",
+        "type": "Title",
+        "sentinel": "zztitle3z007",
+        "text": "Setup Steps zztitle3z007"
+      },
+      {
+        "id": "d1-o1-r7",
+        "type": "ListItem",
+        "sentinel": "zznum1z007",
+        "text": "Install zznum1z007 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r7",
+        "type": "ListItem",
+        "sentinel": "zznum2z007",
+        "text": "Run zznum2z007 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r7",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z007",
+        "text": "In summary zznarr3z007 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r8",
+        "type": "Title",
+        "sentinel": "zztitle1z008",
+        "text": "Quarterly Operations Review zztitle1z008"
+      },
+      {
+        "id": "d1-n1-r8",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z008",
+        "text": "Our team zznarr1z008 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r8",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z008",
+        "text": "The engineers zznarr2z008 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r8",
+        "type": "Title",
+        "sentinel": "zztitle2z008",
+        "text": "Key Findings zztitle2z008"
+      },
+      {
+        "id": "d1-b1-r8",
+        "type": "ListItem",
+        "sentinel": "zzitem1z008",
+        "text": "First zzitem1z008 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r8",
+        "type": "ListItem",
+        "sentinel": "zzitem2z008",
+        "text": "Second zzitem2z008 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r8",
+        "type": "ListItem",
+        "sentinel": "zzitem3z008",
+        "text": "Third zzitem3z008 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r8",
+        "type": "Title",
+        "sentinel": "zztitle3z008",
+        "text": "Setup Steps zztitle3z008"
+      },
+      {
+        "id": "d1-o1-r8",
+        "type": "ListItem",
+        "sentinel": "zznum1z008",
+        "text": "Install zznum1z008 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r8",
+        "type": "ListItem",
+        "sentinel": "zznum2z008",
+        "text": "Run zznum2z008 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r8",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z008",
+        "text": "In summary zznarr3z008 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r9",
+        "type": "Title",
+        "sentinel": "zztitle1z009",
+        "text": "Quarterly Operations Review zztitle1z009"
+      },
+      {
+        "id": "d1-n1-r9",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z009",
+        "text": "Our team zznarr1z009 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r9",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z009",
+        "text": "The engineers zznarr2z009 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r9",
+        "type": "Title",
+        "sentinel": "zztitle2z009",
+        "text": "Key Findings zztitle2z009"
+      },
+      {
+        "id": "d1-b1-r9",
+        "type": "ListItem",
+        "sentinel": "zzitem1z009",
+        "text": "First zzitem1z009 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r9",
+        "type": "ListItem",
+        "sentinel": "zzitem2z009",
+        "text": "Second zzitem2z009 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r9",
+        "type": "ListItem",
+        "sentinel": "zzitem3z009",
+        "text": "Third zzitem3z009 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r9",
+        "type": "Title",
+        "sentinel": "zztitle3z009",
+        "text": "Setup Steps zztitle3z009"
+      },
+      {
+        "id": "d1-o1-r9",
+        "type": "ListItem",
+        "sentinel": "zznum1z009",
+        "text": "Install zznum1z009 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r9",
+        "type": "ListItem",
+        "sentinel": "zznum2z009",
+        "text": "Run zznum2z009 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r9",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z009",
+        "text": "In summary zznarr3z009 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r10",
+        "type": "Title",
+        "sentinel": "zztitle1z010",
+        "text": "Quarterly Operations Review zztitle1z010"
+      },
+      {
+        "id": "d1-n1-r10",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z010",
+        "text": "Our team zznarr1z010 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r10",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z010",
+        "text": "The engineers zznarr2z010 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r10",
+        "type": "Title",
+        "sentinel": "zztitle2z010",
+        "text": "Key Findings zztitle2z010"
+      },
+      {
+        "id": "d1-b1-r10",
+        "type": "ListItem",
+        "sentinel": "zzitem1z010",
+        "text": "First zzitem1z010 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r10",
+        "type": "ListItem",
+        "sentinel": "zzitem2z010",
+        "text": "Second zzitem2z010 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r10",
+        "type": "ListItem",
+        "sentinel": "zzitem3z010",
+        "text": "Third zzitem3z010 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r10",
+        "type": "Title",
+        "sentinel": "zztitle3z010",
+        "text": "Setup Steps zztitle3z010"
+      },
+      {
+        "id": "d1-o1-r10",
+        "type": "ListItem",
+        "sentinel": "zznum1z010",
+        "text": "Install zznum1z010 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r10",
+        "type": "ListItem",
+        "sentinel": "zznum2z010",
+        "text": "Run zznum2z010 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r10",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z010",
+        "text": "In summary zznarr3z010 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r11",
+        "type": "Title",
+        "sentinel": "zztitle1z011",
+        "text": "Quarterly Operations Review zztitle1z011"
+      },
+      {
+        "id": "d1-n1-r11",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z011",
+        "text": "Our team zznarr1z011 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r11",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z011",
+        "text": "The engineers zznarr2z011 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r11",
+        "type": "Title",
+        "sentinel": "zztitle2z011",
+        "text": "Key Findings zztitle2z011"
+      },
+      {
+        "id": "d1-b1-r11",
+        "type": "ListItem",
+        "sentinel": "zzitem1z011",
+        "text": "First zzitem1z011 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r11",
+        "type": "ListItem",
+        "sentinel": "zzitem2z011",
+        "text": "Second zzitem2z011 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r11",
+        "type": "ListItem",
+        "sentinel": "zzitem3z011",
+        "text": "Third zzitem3z011 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r11",
+        "type": "Title",
+        "sentinel": "zztitle3z011",
+        "text": "Setup Steps zztitle3z011"
+      },
+      {
+        "id": "d1-o1-r11",
+        "type": "ListItem",
+        "sentinel": "zznum1z011",
+        "text": "Install zznum1z011 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r11",
+        "type": "ListItem",
+        "sentinel": "zznum2z011",
+        "text": "Run zznum2z011 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r11",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z011",
+        "text": "In summary zznarr3z011 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r12",
+        "type": "Title",
+        "sentinel": "zztitle1z012",
+        "text": "Quarterly Operations Review zztitle1z012"
+      },
+      {
+        "id": "d1-n1-r12",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z012",
+        "text": "Our team zznarr1z012 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r12",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z012",
+        "text": "The engineers zznarr2z012 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r12",
+        "type": "Title",
+        "sentinel": "zztitle2z012",
+        "text": "Key Findings zztitle2z012"
+      },
+      {
+        "id": "d1-b1-r12",
+        "type": "ListItem",
+        "sentinel": "zzitem1z012",
+        "text": "First zzitem1z012 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r12",
+        "type": "ListItem",
+        "sentinel": "zzitem2z012",
+        "text": "Second zzitem2z012 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r12",
+        "type": "ListItem",
+        "sentinel": "zzitem3z012",
+        "text": "Third zzitem3z012 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r12",
+        "type": "Title",
+        "sentinel": "zztitle3z012",
+        "text": "Setup Steps zztitle3z012"
+      },
+      {
+        "id": "d1-o1-r12",
+        "type": "ListItem",
+        "sentinel": "zznum1z012",
+        "text": "Install zznum1z012 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r12",
+        "type": "ListItem",
+        "sentinel": "zznum2z012",
+        "text": "Run zznum2z012 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r12",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z012",
+        "text": "In summary zznarr3z012 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r13",
+        "type": "Title",
+        "sentinel": "zztitle1z013",
+        "text": "Quarterly Operations Review zztitle1z013"
+      },
+      {
+        "id": "d1-n1-r13",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z013",
+        "text": "Our team zznarr1z013 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r13",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z013",
+        "text": "The engineers zznarr2z013 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r13",
+        "type": "Title",
+        "sentinel": "zztitle2z013",
+        "text": "Key Findings zztitle2z013"
+      },
+      {
+        "id": "d1-b1-r13",
+        "type": "ListItem",
+        "sentinel": "zzitem1z013",
+        "text": "First zzitem1z013 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r13",
+        "type": "ListItem",
+        "sentinel": "zzitem2z013",
+        "text": "Second zzitem2z013 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r13",
+        "type": "ListItem",
+        "sentinel": "zzitem3z013",
+        "text": "Third zzitem3z013 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r13",
+        "type": "Title",
+        "sentinel": "zztitle3z013",
+        "text": "Setup Steps zztitle3z013"
+      },
+      {
+        "id": "d1-o1-r13",
+        "type": "ListItem",
+        "sentinel": "zznum1z013",
+        "text": "Install zznum1z013 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r13",
+        "type": "ListItem",
+        "sentinel": "zznum2z013",
+        "text": "Run zznum2z013 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r13",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z013",
+        "text": "In summary zznarr3z013 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r14",
+        "type": "Title",
+        "sentinel": "zztitle1z014",
+        "text": "Quarterly Operations Review zztitle1z014"
+      },
+      {
+        "id": "d1-n1-r14",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z014",
+        "text": "Our team zznarr1z014 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r14",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z014",
+        "text": "The engineers zznarr2z014 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r14",
+        "type": "Title",
+        "sentinel": "zztitle2z014",
+        "text": "Key Findings zztitle2z014"
+      },
+      {
+        "id": "d1-b1-r14",
+        "type": "ListItem",
+        "sentinel": "zzitem1z014",
+        "text": "First zzitem1z014 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r14",
+        "type": "ListItem",
+        "sentinel": "zzitem2z014",
+        "text": "Second zzitem2z014 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r14",
+        "type": "ListItem",
+        "sentinel": "zzitem3z014",
+        "text": "Third zzitem3z014 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r14",
+        "type": "Title",
+        "sentinel": "zztitle3z014",
+        "text": "Setup Steps zztitle3z014"
+      },
+      {
+        "id": "d1-o1-r14",
+        "type": "ListItem",
+        "sentinel": "zznum1z014",
+        "text": "Install zznum1z014 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r14",
+        "type": "ListItem",
+        "sentinel": "zznum2z014",
+        "text": "Run zznum2z014 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r14",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z014",
+        "text": "In summary zznarr3z014 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r15",
+        "type": "Title",
+        "sentinel": "zztitle1z015",
+        "text": "Quarterly Operations Review zztitle1z015"
+      },
+      {
+        "id": "d1-n1-r15",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z015",
+        "text": "Our team zznarr1z015 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r15",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z015",
+        "text": "The engineers zznarr2z015 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r15",
+        "type": "Title",
+        "sentinel": "zztitle2z015",
+        "text": "Key Findings zztitle2z015"
+      },
+      {
+        "id": "d1-b1-r15",
+        "type": "ListItem",
+        "sentinel": "zzitem1z015",
+        "text": "First zzitem1z015 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r15",
+        "type": "ListItem",
+        "sentinel": "zzitem2z015",
+        "text": "Second zzitem2z015 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r15",
+        "type": "ListItem",
+        "sentinel": "zzitem3z015",
+        "text": "Third zzitem3z015 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r15",
+        "type": "Title",
+        "sentinel": "zztitle3z015",
+        "text": "Setup Steps zztitle3z015"
+      },
+      {
+        "id": "d1-o1-r15",
+        "type": "ListItem",
+        "sentinel": "zznum1z015",
+        "text": "Install zznum1z015 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r15",
+        "type": "ListItem",
+        "sentinel": "zznum2z015",
+        "text": "Run zznum2z015 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r15",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z015",
+        "text": "In summary zznarr3z015 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r16",
+        "type": "Title",
+        "sentinel": "zztitle1z016",
+        "text": "Quarterly Operations Review zztitle1z016"
+      },
+      {
+        "id": "d1-n1-r16",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z016",
+        "text": "Our team zznarr1z016 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r16",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z016",
+        "text": "The engineers zznarr2z016 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r16",
+        "type": "Title",
+        "sentinel": "zztitle2z016",
+        "text": "Key Findings zztitle2z016"
+      },
+      {
+        "id": "d1-b1-r16",
+        "type": "ListItem",
+        "sentinel": "zzitem1z016",
+        "text": "First zzitem1z016 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r16",
+        "type": "ListItem",
+        "sentinel": "zzitem2z016",
+        "text": "Second zzitem2z016 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r16",
+        "type": "ListItem",
+        "sentinel": "zzitem3z016",
+        "text": "Third zzitem3z016 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r16",
+        "type": "Title",
+        "sentinel": "zztitle3z016",
+        "text": "Setup Steps zztitle3z016"
+      },
+      {
+        "id": "d1-o1-r16",
+        "type": "ListItem",
+        "sentinel": "zznum1z016",
+        "text": "Install zznum1z016 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r16",
+        "type": "ListItem",
+        "sentinel": "zznum2z016",
+        "text": "Run zznum2z016 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r16",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z016",
+        "text": "In summary zznarr3z016 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r17",
+        "type": "Title",
+        "sentinel": "zztitle1z017",
+        "text": "Quarterly Operations Review zztitle1z017"
+      },
+      {
+        "id": "d1-n1-r17",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z017",
+        "text": "Our team zznarr1z017 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r17",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z017",
+        "text": "The engineers zznarr2z017 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r17",
+        "type": "Title",
+        "sentinel": "zztitle2z017",
+        "text": "Key Findings zztitle2z017"
+      },
+      {
+        "id": "d1-b1-r17",
+        "type": "ListItem",
+        "sentinel": "zzitem1z017",
+        "text": "First zzitem1z017 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r17",
+        "type": "ListItem",
+        "sentinel": "zzitem2z017",
+        "text": "Second zzitem2z017 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r17",
+        "type": "ListItem",
+        "sentinel": "zzitem3z017",
+        "text": "Third zzitem3z017 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r17",
+        "type": "Title",
+        "sentinel": "zztitle3z017",
+        "text": "Setup Steps zztitle3z017"
+      },
+      {
+        "id": "d1-o1-r17",
+        "type": "ListItem",
+        "sentinel": "zznum1z017",
+        "text": "Install zznum1z017 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r17",
+        "type": "ListItem",
+        "sentinel": "zznum2z017",
+        "text": "Run zznum2z017 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r17",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z017",
+        "text": "In summary zznarr3z017 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r18",
+        "type": "Title",
+        "sentinel": "zztitle1z018",
+        "text": "Quarterly Operations Review zztitle1z018"
+      },
+      {
+        "id": "d1-n1-r18",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z018",
+        "text": "Our team zznarr1z018 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r18",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z018",
+        "text": "The engineers zznarr2z018 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r18",
+        "type": "Title",
+        "sentinel": "zztitle2z018",
+        "text": "Key Findings zztitle2z018"
+      },
+      {
+        "id": "d1-b1-r18",
+        "type": "ListItem",
+        "sentinel": "zzitem1z018",
+        "text": "First zzitem1z018 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r18",
+        "type": "ListItem",
+        "sentinel": "zzitem2z018",
+        "text": "Second zzitem2z018 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r18",
+        "type": "ListItem",
+        "sentinel": "zzitem3z018",
+        "text": "Third zzitem3z018 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r18",
+        "type": "Title",
+        "sentinel": "zztitle3z018",
+        "text": "Setup Steps zztitle3z018"
+      },
+      {
+        "id": "d1-o1-r18",
+        "type": "ListItem",
+        "sentinel": "zznum1z018",
+        "text": "Install zznum1z018 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r18",
+        "type": "ListItem",
+        "sentinel": "zznum2z018",
+        "text": "Run zznum2z018 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r18",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z018",
+        "text": "In summary zznarr3z018 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r19",
+        "type": "Title",
+        "sentinel": "zztitle1z019",
+        "text": "Quarterly Operations Review zztitle1z019"
+      },
+      {
+        "id": "d1-n1-r19",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z019",
+        "text": "Our team zznarr1z019 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r19",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z019",
+        "text": "The engineers zznarr2z019 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r19",
+        "type": "Title",
+        "sentinel": "zztitle2z019",
+        "text": "Key Findings zztitle2z019"
+      },
+      {
+        "id": "d1-b1-r19",
+        "type": "ListItem",
+        "sentinel": "zzitem1z019",
+        "text": "First zzitem1z019 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r19",
+        "type": "ListItem",
+        "sentinel": "zzitem2z019",
+        "text": "Second zzitem2z019 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r19",
+        "type": "ListItem",
+        "sentinel": "zzitem3z019",
+        "text": "Third zzitem3z019 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r19",
+        "type": "Title",
+        "sentinel": "zztitle3z019",
+        "text": "Setup Steps zztitle3z019"
+      },
+      {
+        "id": "d1-o1-r19",
+        "type": "ListItem",
+        "sentinel": "zznum1z019",
+        "text": "Install zznum1z019 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r19",
+        "type": "ListItem",
+        "sentinel": "zznum2z019",
+        "text": "Run zznum2z019 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r19",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z019",
+        "text": "In summary zznarr3z019 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r20",
+        "type": "Title",
+        "sentinel": "zztitle1z020",
+        "text": "Quarterly Operations Review zztitle1z020"
+      },
+      {
+        "id": "d1-n1-r20",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z020",
+        "text": "Our team zznarr1z020 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r20",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z020",
+        "text": "The engineers zznarr2z020 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r20",
+        "type": "Title",
+        "sentinel": "zztitle2z020",
+        "text": "Key Findings zztitle2z020"
+      },
+      {
+        "id": "d1-b1-r20",
+        "type": "ListItem",
+        "sentinel": "zzitem1z020",
+        "text": "First zzitem1z020 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r20",
+        "type": "ListItem",
+        "sentinel": "zzitem2z020",
+        "text": "Second zzitem2z020 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r20",
+        "type": "ListItem",
+        "sentinel": "zzitem3z020",
+        "text": "Third zzitem3z020 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r20",
+        "type": "Title",
+        "sentinel": "zztitle3z020",
+        "text": "Setup Steps zztitle3z020"
+      },
+      {
+        "id": "d1-o1-r20",
+        "type": "ListItem",
+        "sentinel": "zznum1z020",
+        "text": "Install zznum1z020 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r20",
+        "type": "ListItem",
+        "sentinel": "zznum2z020",
+        "text": "Run zznum2z020 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r20",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z020",
+        "text": "In summary zznarr3z020 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r21",
+        "type": "Title",
+        "sentinel": "zztitle1z021",
+        "text": "Quarterly Operations Review zztitle1z021"
+      },
+      {
+        "id": "d1-n1-r21",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z021",
+        "text": "Our team zznarr1z021 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r21",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z021",
+        "text": "The engineers zznarr2z021 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r21",
+        "type": "Title",
+        "sentinel": "zztitle2z021",
+        "text": "Key Findings zztitle2z021"
+      },
+      {
+        "id": "d1-b1-r21",
+        "type": "ListItem",
+        "sentinel": "zzitem1z021",
+        "text": "First zzitem1z021 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r21",
+        "type": "ListItem",
+        "sentinel": "zzitem2z021",
+        "text": "Second zzitem2z021 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r21",
+        "type": "ListItem",
+        "sentinel": "zzitem3z021",
+        "text": "Third zzitem3z021 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r21",
+        "type": "Title",
+        "sentinel": "zztitle3z021",
+        "text": "Setup Steps zztitle3z021"
+      },
+      {
+        "id": "d1-o1-r21",
+        "type": "ListItem",
+        "sentinel": "zznum1z021",
+        "text": "Install zznum1z021 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r21",
+        "type": "ListItem",
+        "sentinel": "zznum2z021",
+        "text": "Run zznum2z021 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r21",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z021",
+        "text": "In summary zznarr3z021 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r22",
+        "type": "Title",
+        "sentinel": "zztitle1z022",
+        "text": "Quarterly Operations Review zztitle1z022"
+      },
+      {
+        "id": "d1-n1-r22",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z022",
+        "text": "Our team zznarr1z022 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r22",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z022",
+        "text": "The engineers zznarr2z022 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r22",
+        "type": "Title",
+        "sentinel": "zztitle2z022",
+        "text": "Key Findings zztitle2z022"
+      },
+      {
+        "id": "d1-b1-r22",
+        "type": "ListItem",
+        "sentinel": "zzitem1z022",
+        "text": "First zzitem1z022 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r22",
+        "type": "ListItem",
+        "sentinel": "zzitem2z022",
+        "text": "Second zzitem2z022 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r22",
+        "type": "ListItem",
+        "sentinel": "zzitem3z022",
+        "text": "Third zzitem3z022 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r22",
+        "type": "Title",
+        "sentinel": "zztitle3z022",
+        "text": "Setup Steps zztitle3z022"
+      },
+      {
+        "id": "d1-o1-r22",
+        "type": "ListItem",
+        "sentinel": "zznum1z022",
+        "text": "Install zznum1z022 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r22",
+        "type": "ListItem",
+        "sentinel": "zznum2z022",
+        "text": "Run zznum2z022 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r22",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z022",
+        "text": "In summary zznarr3z022 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r23",
+        "type": "Title",
+        "sentinel": "zztitle1z023",
+        "text": "Quarterly Operations Review zztitle1z023"
+      },
+      {
+        "id": "d1-n1-r23",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z023",
+        "text": "Our team zznarr1z023 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r23",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z023",
+        "text": "The engineers zznarr2z023 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r23",
+        "type": "Title",
+        "sentinel": "zztitle2z023",
+        "text": "Key Findings zztitle2z023"
+      },
+      {
+        "id": "d1-b1-r23",
+        "type": "ListItem",
+        "sentinel": "zzitem1z023",
+        "text": "First zzitem1z023 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r23",
+        "type": "ListItem",
+        "sentinel": "zzitem2z023",
+        "text": "Second zzitem2z023 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r23",
+        "type": "ListItem",
+        "sentinel": "zzitem3z023",
+        "text": "Third zzitem3z023 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r23",
+        "type": "Title",
+        "sentinel": "zztitle3z023",
+        "text": "Setup Steps zztitle3z023"
+      },
+      {
+        "id": "d1-o1-r23",
+        "type": "ListItem",
+        "sentinel": "zznum1z023",
+        "text": "Install zznum1z023 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r23",
+        "type": "ListItem",
+        "sentinel": "zznum2z023",
+        "text": "Run zznum2z023 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r23",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z023",
+        "text": "In summary zznarr3z023 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r24",
+        "type": "Title",
+        "sentinel": "zztitle1z024",
+        "text": "Quarterly Operations Review zztitle1z024"
+      },
+      {
+        "id": "d1-n1-r24",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z024",
+        "text": "Our team zznarr1z024 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r24",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z024",
+        "text": "The engineers zznarr2z024 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r24",
+        "type": "Title",
+        "sentinel": "zztitle2z024",
+        "text": "Key Findings zztitle2z024"
+      },
+      {
+        "id": "d1-b1-r24",
+        "type": "ListItem",
+        "sentinel": "zzitem1z024",
+        "text": "First zzitem1z024 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r24",
+        "type": "ListItem",
+        "sentinel": "zzitem2z024",
+        "text": "Second zzitem2z024 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r24",
+        "type": "ListItem",
+        "sentinel": "zzitem3z024",
+        "text": "Third zzitem3z024 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r24",
+        "type": "Title",
+        "sentinel": "zztitle3z024",
+        "text": "Setup Steps zztitle3z024"
+      },
+      {
+        "id": "d1-o1-r24",
+        "type": "ListItem",
+        "sentinel": "zznum1z024",
+        "text": "Install zznum1z024 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r24",
+        "type": "ListItem",
+        "sentinel": "zznum2z024",
+        "text": "Run zznum2z024 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r24",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z024",
+        "text": "In summary zznarr3z024 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r25",
+        "type": "Title",
+        "sentinel": "zztitle1z025",
+        "text": "Quarterly Operations Review zztitle1z025"
+      },
+      {
+        "id": "d1-n1-r25",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z025",
+        "text": "Our team zznarr1z025 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r25",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z025",
+        "text": "The engineers zznarr2z025 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r25",
+        "type": "Title",
+        "sentinel": "zztitle2z025",
+        "text": "Key Findings zztitle2z025"
+      },
+      {
+        "id": "d1-b1-r25",
+        "type": "ListItem",
+        "sentinel": "zzitem1z025",
+        "text": "First zzitem1z025 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r25",
+        "type": "ListItem",
+        "sentinel": "zzitem2z025",
+        "text": "Second zzitem2z025 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r25",
+        "type": "ListItem",
+        "sentinel": "zzitem3z025",
+        "text": "Third zzitem3z025 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r25",
+        "type": "Title",
+        "sentinel": "zztitle3z025",
+        "text": "Setup Steps zztitle3z025"
+      },
+      {
+        "id": "d1-o1-r25",
+        "type": "ListItem",
+        "sentinel": "zznum1z025",
+        "text": "Install zznum1z025 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r25",
+        "type": "ListItem",
+        "sentinel": "zznum2z025",
+        "text": "Run zznum2z025 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r25",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z025",
+        "text": "In summary zznarr3z025 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r26",
+        "type": "Title",
+        "sentinel": "zztitle1z026",
+        "text": "Quarterly Operations Review zztitle1z026"
+      },
+      {
+        "id": "d1-n1-r26",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z026",
+        "text": "Our team zznarr1z026 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r26",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z026",
+        "text": "The engineers zznarr2z026 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r26",
+        "type": "Title",
+        "sentinel": "zztitle2z026",
+        "text": "Key Findings zztitle2z026"
+      },
+      {
+        "id": "d1-b1-r26",
+        "type": "ListItem",
+        "sentinel": "zzitem1z026",
+        "text": "First zzitem1z026 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r26",
+        "type": "ListItem",
+        "sentinel": "zzitem2z026",
+        "text": "Second zzitem2z026 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r26",
+        "type": "ListItem",
+        "sentinel": "zzitem3z026",
+        "text": "Third zzitem3z026 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r26",
+        "type": "Title",
+        "sentinel": "zztitle3z026",
+        "text": "Setup Steps zztitle3z026"
+      },
+      {
+        "id": "d1-o1-r26",
+        "type": "ListItem",
+        "sentinel": "zznum1z026",
+        "text": "Install zznum1z026 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r26",
+        "type": "ListItem",
+        "sentinel": "zznum2z026",
+        "text": "Run zznum2z026 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r26",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z026",
+        "text": "In summary zznarr3z026 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r27",
+        "type": "Title",
+        "sentinel": "zztitle1z027",
+        "text": "Quarterly Operations Review zztitle1z027"
+      },
+      {
+        "id": "d1-n1-r27",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z027",
+        "text": "Our team zznarr1z027 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r27",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z027",
+        "text": "The engineers zznarr2z027 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r27",
+        "type": "Title",
+        "sentinel": "zztitle2z027",
+        "text": "Key Findings zztitle2z027"
+      },
+      {
+        "id": "d1-b1-r27",
+        "type": "ListItem",
+        "sentinel": "zzitem1z027",
+        "text": "First zzitem1z027 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r27",
+        "type": "ListItem",
+        "sentinel": "zzitem2z027",
+        "text": "Second zzitem2z027 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r27",
+        "type": "ListItem",
+        "sentinel": "zzitem3z027",
+        "text": "Third zzitem3z027 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r27",
+        "type": "Title",
+        "sentinel": "zztitle3z027",
+        "text": "Setup Steps zztitle3z027"
+      },
+      {
+        "id": "d1-o1-r27",
+        "type": "ListItem",
+        "sentinel": "zznum1z027",
+        "text": "Install zznum1z027 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r27",
+        "type": "ListItem",
+        "sentinel": "zznum2z027",
+        "text": "Run zznum2z027 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r27",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z027",
+        "text": "In summary zznarr3z027 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r28",
+        "type": "Title",
+        "sentinel": "zztitle1z028",
+        "text": "Quarterly Operations Review zztitle1z028"
+      },
+      {
+        "id": "d1-n1-r28",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z028",
+        "text": "Our team zznarr1z028 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r28",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z028",
+        "text": "The engineers zznarr2z028 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r28",
+        "type": "Title",
+        "sentinel": "zztitle2z028",
+        "text": "Key Findings zztitle2z028"
+      },
+      {
+        "id": "d1-b1-r28",
+        "type": "ListItem",
+        "sentinel": "zzitem1z028",
+        "text": "First zzitem1z028 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r28",
+        "type": "ListItem",
+        "sentinel": "zzitem2z028",
+        "text": "Second zzitem2z028 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r28",
+        "type": "ListItem",
+        "sentinel": "zzitem3z028",
+        "text": "Third zzitem3z028 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r28",
+        "type": "Title",
+        "sentinel": "zztitle3z028",
+        "text": "Setup Steps zztitle3z028"
+      },
+      {
+        "id": "d1-o1-r28",
+        "type": "ListItem",
+        "sentinel": "zznum1z028",
+        "text": "Install zznum1z028 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r28",
+        "type": "ListItem",
+        "sentinel": "zznum2z028",
+        "text": "Run zznum2z028 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r28",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z028",
+        "text": "In summary zznarr3z028 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r29",
+        "type": "Title",
+        "sentinel": "zztitle1z029",
+        "text": "Quarterly Operations Review zztitle1z029"
+      },
+      {
+        "id": "d1-n1-r29",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z029",
+        "text": "Our team zznarr1z029 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r29",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z029",
+        "text": "The engineers zznarr2z029 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r29",
+        "type": "Title",
+        "sentinel": "zztitle2z029",
+        "text": "Key Findings zztitle2z029"
+      },
+      {
+        "id": "d1-b1-r29",
+        "type": "ListItem",
+        "sentinel": "zzitem1z029",
+        "text": "First zzitem1z029 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r29",
+        "type": "ListItem",
+        "sentinel": "zzitem2z029",
+        "text": "Second zzitem2z029 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r29",
+        "type": "ListItem",
+        "sentinel": "zzitem3z029",
+        "text": "Third zzitem3z029 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r29",
+        "type": "Title",
+        "sentinel": "zztitle3z029",
+        "text": "Setup Steps zztitle3z029"
+      },
+      {
+        "id": "d1-o1-r29",
+        "type": "ListItem",
+        "sentinel": "zznum1z029",
+        "text": "Install zznum1z029 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r29",
+        "type": "ListItem",
+        "sentinel": "zznum2z029",
+        "text": "Run zznum2z029 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r29",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z029",
+        "text": "In summary zznarr3z029 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r30",
+        "type": "Title",
+        "sentinel": "zztitle1z030",
+        "text": "Quarterly Operations Review zztitle1z030"
+      },
+      {
+        "id": "d1-n1-r30",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z030",
+        "text": "Our team zznarr1z030 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r30",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z030",
+        "text": "The engineers zznarr2z030 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r30",
+        "type": "Title",
+        "sentinel": "zztitle2z030",
+        "text": "Key Findings zztitle2z030"
+      },
+      {
+        "id": "d1-b1-r30",
+        "type": "ListItem",
+        "sentinel": "zzitem1z030",
+        "text": "First zzitem1z030 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r30",
+        "type": "ListItem",
+        "sentinel": "zzitem2z030",
+        "text": "Second zzitem2z030 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r30",
+        "type": "ListItem",
+        "sentinel": "zzitem3z030",
+        "text": "Third zzitem3z030 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r30",
+        "type": "Title",
+        "sentinel": "zztitle3z030",
+        "text": "Setup Steps zztitle3z030"
+      },
+      {
+        "id": "d1-o1-r30",
+        "type": "ListItem",
+        "sentinel": "zznum1z030",
+        "text": "Install zznum1z030 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r30",
+        "type": "ListItem",
+        "sentinel": "zznum2z030",
+        "text": "Run zznum2z030 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r30",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z030",
+        "text": "In summary zznarr3z030 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r31",
+        "type": "Title",
+        "sentinel": "zztitle1z031",
+        "text": "Quarterly Operations Review zztitle1z031"
+      },
+      {
+        "id": "d1-n1-r31",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z031",
+        "text": "Our team zznarr1z031 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r31",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z031",
+        "text": "The engineers zznarr2z031 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r31",
+        "type": "Title",
+        "sentinel": "zztitle2z031",
+        "text": "Key Findings zztitle2z031"
+      },
+      {
+        "id": "d1-b1-r31",
+        "type": "ListItem",
+        "sentinel": "zzitem1z031",
+        "text": "First zzitem1z031 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r31",
+        "type": "ListItem",
+        "sentinel": "zzitem2z031",
+        "text": "Second zzitem2z031 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r31",
+        "type": "ListItem",
+        "sentinel": "zzitem3z031",
+        "text": "Third zzitem3z031 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r31",
+        "type": "Title",
+        "sentinel": "zztitle3z031",
+        "text": "Setup Steps zztitle3z031"
+      },
+      {
+        "id": "d1-o1-r31",
+        "type": "ListItem",
+        "sentinel": "zznum1z031",
+        "text": "Install zznum1z031 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r31",
+        "type": "ListItem",
+        "sentinel": "zznum2z031",
+        "text": "Run zznum2z031 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r31",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z031",
+        "text": "In summary zznarr3z031 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r32",
+        "type": "Title",
+        "sentinel": "zztitle1z032",
+        "text": "Quarterly Operations Review zztitle1z032"
+      },
+      {
+        "id": "d1-n1-r32",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z032",
+        "text": "Our team zznarr1z032 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r32",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z032",
+        "text": "The engineers zznarr2z032 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r32",
+        "type": "Title",
+        "sentinel": "zztitle2z032",
+        "text": "Key Findings zztitle2z032"
+      },
+      {
+        "id": "d1-b1-r32",
+        "type": "ListItem",
+        "sentinel": "zzitem1z032",
+        "text": "First zzitem1z032 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r32",
+        "type": "ListItem",
+        "sentinel": "zzitem2z032",
+        "text": "Second zzitem2z032 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r32",
+        "type": "ListItem",
+        "sentinel": "zzitem3z032",
+        "text": "Third zzitem3z032 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r32",
+        "type": "Title",
+        "sentinel": "zztitle3z032",
+        "text": "Setup Steps zztitle3z032"
+      },
+      {
+        "id": "d1-o1-r32",
+        "type": "ListItem",
+        "sentinel": "zznum1z032",
+        "text": "Install zznum1z032 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r32",
+        "type": "ListItem",
+        "sentinel": "zznum2z032",
+        "text": "Run zznum2z032 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r32",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z032",
+        "text": "In summary zznarr3z032 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r33",
+        "type": "Title",
+        "sentinel": "zztitle1z033",
+        "text": "Quarterly Operations Review zztitle1z033"
+      },
+      {
+        "id": "d1-n1-r33",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z033",
+        "text": "Our team zznarr1z033 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r33",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z033",
+        "text": "The engineers zznarr2z033 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r33",
+        "type": "Title",
+        "sentinel": "zztitle2z033",
+        "text": "Key Findings zztitle2z033"
+      },
+      {
+        "id": "d1-b1-r33",
+        "type": "ListItem",
+        "sentinel": "zzitem1z033",
+        "text": "First zzitem1z033 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r33",
+        "type": "ListItem",
+        "sentinel": "zzitem2z033",
+        "text": "Second zzitem2z033 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r33",
+        "type": "ListItem",
+        "sentinel": "zzitem3z033",
+        "text": "Third zzitem3z033 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r33",
+        "type": "Title",
+        "sentinel": "zztitle3z033",
+        "text": "Setup Steps zztitle3z033"
+      },
+      {
+        "id": "d1-o1-r33",
+        "type": "ListItem",
+        "sentinel": "zznum1z033",
+        "text": "Install zznum1z033 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r33",
+        "type": "ListItem",
+        "sentinel": "zznum2z033",
+        "text": "Run zznum2z033 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r33",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z033",
+        "text": "In summary zznarr3z033 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r34",
+        "type": "Title",
+        "sentinel": "zztitle1z034",
+        "text": "Quarterly Operations Review zztitle1z034"
+      },
+      {
+        "id": "d1-n1-r34",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z034",
+        "text": "Our team zznarr1z034 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r34",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z034",
+        "text": "The engineers zznarr2z034 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r34",
+        "type": "Title",
+        "sentinel": "zztitle2z034",
+        "text": "Key Findings zztitle2z034"
+      },
+      {
+        "id": "d1-b1-r34",
+        "type": "ListItem",
+        "sentinel": "zzitem1z034",
+        "text": "First zzitem1z034 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r34",
+        "type": "ListItem",
+        "sentinel": "zzitem2z034",
+        "text": "Second zzitem2z034 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r34",
+        "type": "ListItem",
+        "sentinel": "zzitem3z034",
+        "text": "Third zzitem3z034 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r34",
+        "type": "Title",
+        "sentinel": "zztitle3z034",
+        "text": "Setup Steps zztitle3z034"
+      },
+      {
+        "id": "d1-o1-r34",
+        "type": "ListItem",
+        "sentinel": "zznum1z034",
+        "text": "Install zznum1z034 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r34",
+        "type": "ListItem",
+        "sentinel": "zznum2z034",
+        "text": "Run zznum2z034 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r34",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z034",
+        "text": "In summary zznarr3z034 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r35",
+        "type": "Title",
+        "sentinel": "zztitle1z035",
+        "text": "Quarterly Operations Review zztitle1z035"
+      },
+      {
+        "id": "d1-n1-r35",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z035",
+        "text": "Our team zznarr1z035 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r35",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z035",
+        "text": "The engineers zznarr2z035 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r35",
+        "type": "Title",
+        "sentinel": "zztitle2z035",
+        "text": "Key Findings zztitle2z035"
+      },
+      {
+        "id": "d1-b1-r35",
+        "type": "ListItem",
+        "sentinel": "zzitem1z035",
+        "text": "First zzitem1z035 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r35",
+        "type": "ListItem",
+        "sentinel": "zzitem2z035",
+        "text": "Second zzitem2z035 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r35",
+        "type": "ListItem",
+        "sentinel": "zzitem3z035",
+        "text": "Third zzitem3z035 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r35",
+        "type": "Title",
+        "sentinel": "zztitle3z035",
+        "text": "Setup Steps zztitle3z035"
+      },
+      {
+        "id": "d1-o1-r35",
+        "type": "ListItem",
+        "sentinel": "zznum1z035",
+        "text": "Install zznum1z035 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r35",
+        "type": "ListItem",
+        "sentinel": "zznum2z035",
+        "text": "Run zznum2z035 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r35",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z035",
+        "text": "In summary zznarr3z035 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r36",
+        "type": "Title",
+        "sentinel": "zztitle1z036",
+        "text": "Quarterly Operations Review zztitle1z036"
+      },
+      {
+        "id": "d1-n1-r36",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z036",
+        "text": "Our team zznarr1z036 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r36",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z036",
+        "text": "The engineers zznarr2z036 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r36",
+        "type": "Title",
+        "sentinel": "zztitle2z036",
+        "text": "Key Findings zztitle2z036"
+      },
+      {
+        "id": "d1-b1-r36",
+        "type": "ListItem",
+        "sentinel": "zzitem1z036",
+        "text": "First zzitem1z036 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r36",
+        "type": "ListItem",
+        "sentinel": "zzitem2z036",
+        "text": "Second zzitem2z036 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r36",
+        "type": "ListItem",
+        "sentinel": "zzitem3z036",
+        "text": "Third zzitem3z036 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r36",
+        "type": "Title",
+        "sentinel": "zztitle3z036",
+        "text": "Setup Steps zztitle3z036"
+      },
+      {
+        "id": "d1-o1-r36",
+        "type": "ListItem",
+        "sentinel": "zznum1z036",
+        "text": "Install zznum1z036 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r36",
+        "type": "ListItem",
+        "sentinel": "zznum2z036",
+        "text": "Run zznum2z036 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r36",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z036",
+        "text": "In summary zznarr3z036 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r37",
+        "type": "Title",
+        "sentinel": "zztitle1z037",
+        "text": "Quarterly Operations Review zztitle1z037"
+      },
+      {
+        "id": "d1-n1-r37",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z037",
+        "text": "Our team zznarr1z037 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r37",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z037",
+        "text": "The engineers zznarr2z037 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r37",
+        "type": "Title",
+        "sentinel": "zztitle2z037",
+        "text": "Key Findings zztitle2z037"
+      },
+      {
+        "id": "d1-b1-r37",
+        "type": "ListItem",
+        "sentinel": "zzitem1z037",
+        "text": "First zzitem1z037 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r37",
+        "type": "ListItem",
+        "sentinel": "zzitem2z037",
+        "text": "Second zzitem2z037 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r37",
+        "type": "ListItem",
+        "sentinel": "zzitem3z037",
+        "text": "Third zzitem3z037 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r37",
+        "type": "Title",
+        "sentinel": "zztitle3z037",
+        "text": "Setup Steps zztitle3z037"
+      },
+      {
+        "id": "d1-o1-r37",
+        "type": "ListItem",
+        "sentinel": "zznum1z037",
+        "text": "Install zznum1z037 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r37",
+        "type": "ListItem",
+        "sentinel": "zznum2z037",
+        "text": "Run zznum2z037 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r37",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z037",
+        "text": "In summary zznarr3z037 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r38",
+        "type": "Title",
+        "sentinel": "zztitle1z038",
+        "text": "Quarterly Operations Review zztitle1z038"
+      },
+      {
+        "id": "d1-n1-r38",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z038",
+        "text": "Our team zznarr1z038 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r38",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z038",
+        "text": "The engineers zznarr2z038 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r38",
+        "type": "Title",
+        "sentinel": "zztitle2z038",
+        "text": "Key Findings zztitle2z038"
+      },
+      {
+        "id": "d1-b1-r38",
+        "type": "ListItem",
+        "sentinel": "zzitem1z038",
+        "text": "First zzitem1z038 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r38",
+        "type": "ListItem",
+        "sentinel": "zzitem2z038",
+        "text": "Second zzitem2z038 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r38",
+        "type": "ListItem",
+        "sentinel": "zzitem3z038",
+        "text": "Third zzitem3z038 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r38",
+        "type": "Title",
+        "sentinel": "zztitle3z038",
+        "text": "Setup Steps zztitle3z038"
+      },
+      {
+        "id": "d1-o1-r38",
+        "type": "ListItem",
+        "sentinel": "zznum1z038",
+        "text": "Install zznum1z038 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r38",
+        "type": "ListItem",
+        "sentinel": "zznum2z038",
+        "text": "Run zznum2z038 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r38",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z038",
+        "text": "In summary zznarr3z038 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r39",
+        "type": "Title",
+        "sentinel": "zztitle1z039",
+        "text": "Quarterly Operations Review zztitle1z039"
+      },
+      {
+        "id": "d1-n1-r39",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z039",
+        "text": "Our team zznarr1z039 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r39",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z039",
+        "text": "The engineers zznarr2z039 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r39",
+        "type": "Title",
+        "sentinel": "zztitle2z039",
+        "text": "Key Findings zztitle2z039"
+      },
+      {
+        "id": "d1-b1-r39",
+        "type": "ListItem",
+        "sentinel": "zzitem1z039",
+        "text": "First zzitem1z039 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r39",
+        "type": "ListItem",
+        "sentinel": "zzitem2z039",
+        "text": "Second zzitem2z039 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r39",
+        "type": "ListItem",
+        "sentinel": "zzitem3z039",
+        "text": "Third zzitem3z039 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r39",
+        "type": "Title",
+        "sentinel": "zztitle3z039",
+        "text": "Setup Steps zztitle3z039"
+      },
+      {
+        "id": "d1-o1-r39",
+        "type": "ListItem",
+        "sentinel": "zznum1z039",
+        "text": "Install zznum1z039 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r39",
+        "type": "ListItem",
+        "sentinel": "zznum2z039",
+        "text": "Run zznum2z039 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r39",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z039",
+        "text": "In summary zznarr3z039 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r40",
+        "type": "Title",
+        "sentinel": "zztitle1z040",
+        "text": "Quarterly Operations Review zztitle1z040"
+      },
+      {
+        "id": "d1-n1-r40",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z040",
+        "text": "Our team zznarr1z040 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r40",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z040",
+        "text": "The engineers zznarr2z040 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r40",
+        "type": "Title",
+        "sentinel": "zztitle2z040",
+        "text": "Key Findings zztitle2z040"
+      },
+      {
+        "id": "d1-b1-r40",
+        "type": "ListItem",
+        "sentinel": "zzitem1z040",
+        "text": "First zzitem1z040 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r40",
+        "type": "ListItem",
+        "sentinel": "zzitem2z040",
+        "text": "Second zzitem2z040 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r40",
+        "type": "ListItem",
+        "sentinel": "zzitem3z040",
+        "text": "Third zzitem3z040 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r40",
+        "type": "Title",
+        "sentinel": "zztitle3z040",
+        "text": "Setup Steps zztitle3z040"
+      },
+      {
+        "id": "d1-o1-r40",
+        "type": "ListItem",
+        "sentinel": "zznum1z040",
+        "text": "Install zznum1z040 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r40",
+        "type": "ListItem",
+        "sentinel": "zznum2z040",
+        "text": "Run zznum2z040 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r40",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z040",
+        "text": "In summary zznarr3z040 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r41",
+        "type": "Title",
+        "sentinel": "zztitle1z041",
+        "text": "Quarterly Operations Review zztitle1z041"
+      },
+      {
+        "id": "d1-n1-r41",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z041",
+        "text": "Our team zznarr1z041 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r41",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z041",
+        "text": "The engineers zznarr2z041 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r41",
+        "type": "Title",
+        "sentinel": "zztitle2z041",
+        "text": "Key Findings zztitle2z041"
+      },
+      {
+        "id": "d1-b1-r41",
+        "type": "ListItem",
+        "sentinel": "zzitem1z041",
+        "text": "First zzitem1z041 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r41",
+        "type": "ListItem",
+        "sentinel": "zzitem2z041",
+        "text": "Second zzitem2z041 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r41",
+        "type": "ListItem",
+        "sentinel": "zzitem3z041",
+        "text": "Third zzitem3z041 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r41",
+        "type": "Title",
+        "sentinel": "zztitle3z041",
+        "text": "Setup Steps zztitle3z041"
+      },
+      {
+        "id": "d1-o1-r41",
+        "type": "ListItem",
+        "sentinel": "zznum1z041",
+        "text": "Install zznum1z041 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r41",
+        "type": "ListItem",
+        "sentinel": "zznum2z041",
+        "text": "Run zznum2z041 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r41",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z041",
+        "text": "In summary zznarr3z041 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r42",
+        "type": "Title",
+        "sentinel": "zztitle1z042",
+        "text": "Quarterly Operations Review zztitle1z042"
+      },
+      {
+        "id": "d1-n1-r42",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z042",
+        "text": "Our team zznarr1z042 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r42",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z042",
+        "text": "The engineers zznarr2z042 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r42",
+        "type": "Title",
+        "sentinel": "zztitle2z042",
+        "text": "Key Findings zztitle2z042"
+      },
+      {
+        "id": "d1-b1-r42",
+        "type": "ListItem",
+        "sentinel": "zzitem1z042",
+        "text": "First zzitem1z042 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r42",
+        "type": "ListItem",
+        "sentinel": "zzitem2z042",
+        "text": "Second zzitem2z042 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r42",
+        "type": "ListItem",
+        "sentinel": "zzitem3z042",
+        "text": "Third zzitem3z042 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r42",
+        "type": "Title",
+        "sentinel": "zztitle3z042",
+        "text": "Setup Steps zztitle3z042"
+      },
+      {
+        "id": "d1-o1-r42",
+        "type": "ListItem",
+        "sentinel": "zznum1z042",
+        "text": "Install zznum1z042 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r42",
+        "type": "ListItem",
+        "sentinel": "zznum2z042",
+        "text": "Run zznum2z042 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r42",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z042",
+        "text": "In summary zznarr3z042 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r43",
+        "type": "Title",
+        "sentinel": "zztitle1z043",
+        "text": "Quarterly Operations Review zztitle1z043"
+      },
+      {
+        "id": "d1-n1-r43",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z043",
+        "text": "Our team zznarr1z043 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r43",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z043",
+        "text": "The engineers zznarr2z043 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r43",
+        "type": "Title",
+        "sentinel": "zztitle2z043",
+        "text": "Key Findings zztitle2z043"
+      },
+      {
+        "id": "d1-b1-r43",
+        "type": "ListItem",
+        "sentinel": "zzitem1z043",
+        "text": "First zzitem1z043 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r43",
+        "type": "ListItem",
+        "sentinel": "zzitem2z043",
+        "text": "Second zzitem2z043 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r43",
+        "type": "ListItem",
+        "sentinel": "zzitem3z043",
+        "text": "Third zzitem3z043 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r43",
+        "type": "Title",
+        "sentinel": "zztitle3z043",
+        "text": "Setup Steps zztitle3z043"
+      },
+      {
+        "id": "d1-o1-r43",
+        "type": "ListItem",
+        "sentinel": "zznum1z043",
+        "text": "Install zznum1z043 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r43",
+        "type": "ListItem",
+        "sentinel": "zznum2z043",
+        "text": "Run zznum2z043 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r43",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z043",
+        "text": "In summary zznarr3z043 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r44",
+        "type": "Title",
+        "sentinel": "zztitle1z044",
+        "text": "Quarterly Operations Review zztitle1z044"
+      },
+      {
+        "id": "d1-n1-r44",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z044",
+        "text": "Our team zznarr1z044 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r44",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z044",
+        "text": "The engineers zznarr2z044 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r44",
+        "type": "Title",
+        "sentinel": "zztitle2z044",
+        "text": "Key Findings zztitle2z044"
+      },
+      {
+        "id": "d1-b1-r44",
+        "type": "ListItem",
+        "sentinel": "zzitem1z044",
+        "text": "First zzitem1z044 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r44",
+        "type": "ListItem",
+        "sentinel": "zzitem2z044",
+        "text": "Second zzitem2z044 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r44",
+        "type": "ListItem",
+        "sentinel": "zzitem3z044",
+        "text": "Third zzitem3z044 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r44",
+        "type": "Title",
+        "sentinel": "zztitle3z044",
+        "text": "Setup Steps zztitle3z044"
+      },
+      {
+        "id": "d1-o1-r44",
+        "type": "ListItem",
+        "sentinel": "zznum1z044",
+        "text": "Install zznum1z044 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r44",
+        "type": "ListItem",
+        "sentinel": "zznum2z044",
+        "text": "Run zznum2z044 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r44",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z044",
+        "text": "In summary zznarr3z044 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r45",
+        "type": "Title",
+        "sentinel": "zztitle1z045",
+        "text": "Quarterly Operations Review zztitle1z045"
+      },
+      {
+        "id": "d1-n1-r45",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z045",
+        "text": "Our team zznarr1z045 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r45",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z045",
+        "text": "The engineers zznarr2z045 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r45",
+        "type": "Title",
+        "sentinel": "zztitle2z045",
+        "text": "Key Findings zztitle2z045"
+      },
+      {
+        "id": "d1-b1-r45",
+        "type": "ListItem",
+        "sentinel": "zzitem1z045",
+        "text": "First zzitem1z045 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r45",
+        "type": "ListItem",
+        "sentinel": "zzitem2z045",
+        "text": "Second zzitem2z045 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r45",
+        "type": "ListItem",
+        "sentinel": "zzitem3z045",
+        "text": "Third zzitem3z045 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r45",
+        "type": "Title",
+        "sentinel": "zztitle3z045",
+        "text": "Setup Steps zztitle3z045"
+      },
+      {
+        "id": "d1-o1-r45",
+        "type": "ListItem",
+        "sentinel": "zznum1z045",
+        "text": "Install zznum1z045 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r45",
+        "type": "ListItem",
+        "sentinel": "zznum2z045",
+        "text": "Run zznum2z045 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r45",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z045",
+        "text": "In summary zznarr3z045 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r46",
+        "type": "Title",
+        "sentinel": "zztitle1z046",
+        "text": "Quarterly Operations Review zztitle1z046"
+      },
+      {
+        "id": "d1-n1-r46",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z046",
+        "text": "Our team zznarr1z046 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r46",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z046",
+        "text": "The engineers zznarr2z046 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r46",
+        "type": "Title",
+        "sentinel": "zztitle2z046",
+        "text": "Key Findings zztitle2z046"
+      },
+      {
+        "id": "d1-b1-r46",
+        "type": "ListItem",
+        "sentinel": "zzitem1z046",
+        "text": "First zzitem1z046 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r46",
+        "type": "ListItem",
+        "sentinel": "zzitem2z046",
+        "text": "Second zzitem2z046 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r46",
+        "type": "ListItem",
+        "sentinel": "zzitem3z046",
+        "text": "Third zzitem3z046 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r46",
+        "type": "Title",
+        "sentinel": "zztitle3z046",
+        "text": "Setup Steps zztitle3z046"
+      },
+      {
+        "id": "d1-o1-r46",
+        "type": "ListItem",
+        "sentinel": "zznum1z046",
+        "text": "Install zznum1z046 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r46",
+        "type": "ListItem",
+        "sentinel": "zznum2z046",
+        "text": "Run zznum2z046 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r46",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z046",
+        "text": "In summary zznarr3z046 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r47",
+        "type": "Title",
+        "sentinel": "zztitle1z047",
+        "text": "Quarterly Operations Review zztitle1z047"
+      },
+      {
+        "id": "d1-n1-r47",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z047",
+        "text": "Our team zznarr1z047 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r47",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z047",
+        "text": "The engineers zznarr2z047 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r47",
+        "type": "Title",
+        "sentinel": "zztitle2z047",
+        "text": "Key Findings zztitle2z047"
+      },
+      {
+        "id": "d1-b1-r47",
+        "type": "ListItem",
+        "sentinel": "zzitem1z047",
+        "text": "First zzitem1z047 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r47",
+        "type": "ListItem",
+        "sentinel": "zzitem2z047",
+        "text": "Second zzitem2z047 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r47",
+        "type": "ListItem",
+        "sentinel": "zzitem3z047",
+        "text": "Third zzitem3z047 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r47",
+        "type": "Title",
+        "sentinel": "zztitle3z047",
+        "text": "Setup Steps zztitle3z047"
+      },
+      {
+        "id": "d1-o1-r47",
+        "type": "ListItem",
+        "sentinel": "zznum1z047",
+        "text": "Install zznum1z047 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r47",
+        "type": "ListItem",
+        "sentinel": "zznum2z047",
+        "text": "Run zznum2z047 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r47",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z047",
+        "text": "In summary zznarr3z047 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r48",
+        "type": "Title",
+        "sentinel": "zztitle1z048",
+        "text": "Quarterly Operations Review zztitle1z048"
+      },
+      {
+        "id": "d1-n1-r48",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z048",
+        "text": "Our team zznarr1z048 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r48",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z048",
+        "text": "The engineers zznarr2z048 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r48",
+        "type": "Title",
+        "sentinel": "zztitle2z048",
+        "text": "Key Findings zztitle2z048"
+      },
+      {
+        "id": "d1-b1-r48",
+        "type": "ListItem",
+        "sentinel": "zzitem1z048",
+        "text": "First zzitem1z048 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r48",
+        "type": "ListItem",
+        "sentinel": "zzitem2z048",
+        "text": "Second zzitem2z048 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r48",
+        "type": "ListItem",
+        "sentinel": "zzitem3z048",
+        "text": "Third zzitem3z048 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r48",
+        "type": "Title",
+        "sentinel": "zztitle3z048",
+        "text": "Setup Steps zztitle3z048"
+      },
+      {
+        "id": "d1-o1-r48",
+        "type": "ListItem",
+        "sentinel": "zznum1z048",
+        "text": "Install zznum1z048 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r48",
+        "type": "ListItem",
+        "sentinel": "zznum2z048",
+        "text": "Run zznum2z048 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r48",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z048",
+        "text": "In summary zznarr3z048 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r49",
+        "type": "Title",
+        "sentinel": "zztitle1z049",
+        "text": "Quarterly Operations Review zztitle1z049"
+      },
+      {
+        "id": "d1-n1-r49",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z049",
+        "text": "Our team zznarr1z049 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r49",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z049",
+        "text": "The engineers zznarr2z049 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r49",
+        "type": "Title",
+        "sentinel": "zztitle2z049",
+        "text": "Key Findings zztitle2z049"
+      },
+      {
+        "id": "d1-b1-r49",
+        "type": "ListItem",
+        "sentinel": "zzitem1z049",
+        "text": "First zzitem1z049 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r49",
+        "type": "ListItem",
+        "sentinel": "zzitem2z049",
+        "text": "Second zzitem2z049 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r49",
+        "type": "ListItem",
+        "sentinel": "zzitem3z049",
+        "text": "Third zzitem3z049 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r49",
+        "type": "Title",
+        "sentinel": "zztitle3z049",
+        "text": "Setup Steps zztitle3z049"
+      },
+      {
+        "id": "d1-o1-r49",
+        "type": "ListItem",
+        "sentinel": "zznum1z049",
+        "text": "Install zznum1z049 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r49",
+        "type": "ListItem",
+        "sentinel": "zznum2z049",
+        "text": "Run zznum2z049 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r49",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z049",
+        "text": "In summary zznarr3z049 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r50",
+        "type": "Title",
+        "sentinel": "zztitle1z050",
+        "text": "Quarterly Operations Review zztitle1z050"
+      },
+      {
+        "id": "d1-n1-r50",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z050",
+        "text": "Our team zznarr1z050 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r50",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z050",
+        "text": "The engineers zznarr2z050 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r50",
+        "type": "Title",
+        "sentinel": "zztitle2z050",
+        "text": "Key Findings zztitle2z050"
+      },
+      {
+        "id": "d1-b1-r50",
+        "type": "ListItem",
+        "sentinel": "zzitem1z050",
+        "text": "First zzitem1z050 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r50",
+        "type": "ListItem",
+        "sentinel": "zzitem2z050",
+        "text": "Second zzitem2z050 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r50",
+        "type": "ListItem",
+        "sentinel": "zzitem3z050",
+        "text": "Third zzitem3z050 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r50",
+        "type": "Title",
+        "sentinel": "zztitle3z050",
+        "text": "Setup Steps zztitle3z050"
+      },
+      {
+        "id": "d1-o1-r50",
+        "type": "ListItem",
+        "sentinel": "zznum1z050",
+        "text": "Install zznum1z050 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r50",
+        "type": "ListItem",
+        "sentinel": "zznum2z050",
+        "text": "Run zznum2z050 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r50",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z050",
+        "text": "In summary zznarr3z050 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r51",
+        "type": "Title",
+        "sentinel": "zztitle1z051",
+        "text": "Quarterly Operations Review zztitle1z051"
+      },
+      {
+        "id": "d1-n1-r51",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z051",
+        "text": "Our team zznarr1z051 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r51",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z051",
+        "text": "The engineers zznarr2z051 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r51",
+        "type": "Title",
+        "sentinel": "zztitle2z051",
+        "text": "Key Findings zztitle2z051"
+      },
+      {
+        "id": "d1-b1-r51",
+        "type": "ListItem",
+        "sentinel": "zzitem1z051",
+        "text": "First zzitem1z051 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r51",
+        "type": "ListItem",
+        "sentinel": "zzitem2z051",
+        "text": "Second zzitem2z051 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r51",
+        "type": "ListItem",
+        "sentinel": "zzitem3z051",
+        "text": "Third zzitem3z051 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r51",
+        "type": "Title",
+        "sentinel": "zztitle3z051",
+        "text": "Setup Steps zztitle3z051"
+      },
+      {
+        "id": "d1-o1-r51",
+        "type": "ListItem",
+        "sentinel": "zznum1z051",
+        "text": "Install zznum1z051 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r51",
+        "type": "ListItem",
+        "sentinel": "zznum2z051",
+        "text": "Run zznum2z051 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r51",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z051",
+        "text": "In summary zznarr3z051 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r52",
+        "type": "Title",
+        "sentinel": "zztitle1z052",
+        "text": "Quarterly Operations Review zztitle1z052"
+      },
+      {
+        "id": "d1-n1-r52",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z052",
+        "text": "Our team zznarr1z052 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r52",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z052",
+        "text": "The engineers zznarr2z052 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r52",
+        "type": "Title",
+        "sentinel": "zztitle2z052",
+        "text": "Key Findings zztitle2z052"
+      },
+      {
+        "id": "d1-b1-r52",
+        "type": "ListItem",
+        "sentinel": "zzitem1z052",
+        "text": "First zzitem1z052 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r52",
+        "type": "ListItem",
+        "sentinel": "zzitem2z052",
+        "text": "Second zzitem2z052 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r52",
+        "type": "ListItem",
+        "sentinel": "zzitem3z052",
+        "text": "Third zzitem3z052 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r52",
+        "type": "Title",
+        "sentinel": "zztitle3z052",
+        "text": "Setup Steps zztitle3z052"
+      },
+      {
+        "id": "d1-o1-r52",
+        "type": "ListItem",
+        "sentinel": "zznum1z052",
+        "text": "Install zznum1z052 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r52",
+        "type": "ListItem",
+        "sentinel": "zznum2z052",
+        "text": "Run zznum2z052 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r52",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z052",
+        "text": "In summary zznarr3z052 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r53",
+        "type": "Title",
+        "sentinel": "zztitle1z053",
+        "text": "Quarterly Operations Review zztitle1z053"
+      },
+      {
+        "id": "d1-n1-r53",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z053",
+        "text": "Our team zznarr1z053 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r53",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z053",
+        "text": "The engineers zznarr2z053 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r53",
+        "type": "Title",
+        "sentinel": "zztitle2z053",
+        "text": "Key Findings zztitle2z053"
+      },
+      {
+        "id": "d1-b1-r53",
+        "type": "ListItem",
+        "sentinel": "zzitem1z053",
+        "text": "First zzitem1z053 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r53",
+        "type": "ListItem",
+        "sentinel": "zzitem2z053",
+        "text": "Second zzitem2z053 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r53",
+        "type": "ListItem",
+        "sentinel": "zzitem3z053",
+        "text": "Third zzitem3z053 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r53",
+        "type": "Title",
+        "sentinel": "zztitle3z053",
+        "text": "Setup Steps zztitle3z053"
+      },
+      {
+        "id": "d1-o1-r53",
+        "type": "ListItem",
+        "sentinel": "zznum1z053",
+        "text": "Install zznum1z053 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r53",
+        "type": "ListItem",
+        "sentinel": "zznum2z053",
+        "text": "Run zznum2z053 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r53",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z053",
+        "text": "In summary zznarr3z053 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r54",
+        "type": "Title",
+        "sentinel": "zztitle1z054",
+        "text": "Quarterly Operations Review zztitle1z054"
+      },
+      {
+        "id": "d1-n1-r54",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z054",
+        "text": "Our team zznarr1z054 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r54",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z054",
+        "text": "The engineers zznarr2z054 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r54",
+        "type": "Title",
+        "sentinel": "zztitle2z054",
+        "text": "Key Findings zztitle2z054"
+      },
+      {
+        "id": "d1-b1-r54",
+        "type": "ListItem",
+        "sentinel": "zzitem1z054",
+        "text": "First zzitem1z054 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r54",
+        "type": "ListItem",
+        "sentinel": "zzitem2z054",
+        "text": "Second zzitem2z054 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r54",
+        "type": "ListItem",
+        "sentinel": "zzitem3z054",
+        "text": "Third zzitem3z054 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r54",
+        "type": "Title",
+        "sentinel": "zztitle3z054",
+        "text": "Setup Steps zztitle3z054"
+      },
+      {
+        "id": "d1-o1-r54",
+        "type": "ListItem",
+        "sentinel": "zznum1z054",
+        "text": "Install zznum1z054 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r54",
+        "type": "ListItem",
+        "sentinel": "zznum2z054",
+        "text": "Run zznum2z054 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r54",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z054",
+        "text": "In summary zznarr3z054 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r55",
+        "type": "Title",
+        "sentinel": "zztitle1z055",
+        "text": "Quarterly Operations Review zztitle1z055"
+      },
+      {
+        "id": "d1-n1-r55",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z055",
+        "text": "Our team zznarr1z055 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r55",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z055",
+        "text": "The engineers zznarr2z055 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r55",
+        "type": "Title",
+        "sentinel": "zztitle2z055",
+        "text": "Key Findings zztitle2z055"
+      },
+      {
+        "id": "d1-b1-r55",
+        "type": "ListItem",
+        "sentinel": "zzitem1z055",
+        "text": "First zzitem1z055 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r55",
+        "type": "ListItem",
+        "sentinel": "zzitem2z055",
+        "text": "Second zzitem2z055 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r55",
+        "type": "ListItem",
+        "sentinel": "zzitem3z055",
+        "text": "Third zzitem3z055 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r55",
+        "type": "Title",
+        "sentinel": "zztitle3z055",
+        "text": "Setup Steps zztitle3z055"
+      },
+      {
+        "id": "d1-o1-r55",
+        "type": "ListItem",
+        "sentinel": "zznum1z055",
+        "text": "Install zznum1z055 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r55",
+        "type": "ListItem",
+        "sentinel": "zznum2z055",
+        "text": "Run zznum2z055 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r55",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z055",
+        "text": "In summary zznarr3z055 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r56",
+        "type": "Title",
+        "sentinel": "zztitle1z056",
+        "text": "Quarterly Operations Review zztitle1z056"
+      },
+      {
+        "id": "d1-n1-r56",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z056",
+        "text": "Our team zznarr1z056 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r56",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z056",
+        "text": "The engineers zznarr2z056 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r56",
+        "type": "Title",
+        "sentinel": "zztitle2z056",
+        "text": "Key Findings zztitle2z056"
+      },
+      {
+        "id": "d1-b1-r56",
+        "type": "ListItem",
+        "sentinel": "zzitem1z056",
+        "text": "First zzitem1z056 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r56",
+        "type": "ListItem",
+        "sentinel": "zzitem2z056",
+        "text": "Second zzitem2z056 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r56",
+        "type": "ListItem",
+        "sentinel": "zzitem3z056",
+        "text": "Third zzitem3z056 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r56",
+        "type": "Title",
+        "sentinel": "zztitle3z056",
+        "text": "Setup Steps zztitle3z056"
+      },
+      {
+        "id": "d1-o1-r56",
+        "type": "ListItem",
+        "sentinel": "zznum1z056",
+        "text": "Install zznum1z056 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r56",
+        "type": "ListItem",
+        "sentinel": "zznum2z056",
+        "text": "Run zznum2z056 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r56",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z056",
+        "text": "In summary zznarr3z056 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r57",
+        "type": "Title",
+        "sentinel": "zztitle1z057",
+        "text": "Quarterly Operations Review zztitle1z057"
+      },
+      {
+        "id": "d1-n1-r57",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z057",
+        "text": "Our team zznarr1z057 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r57",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z057",
+        "text": "The engineers zznarr2z057 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r57",
+        "type": "Title",
+        "sentinel": "zztitle2z057",
+        "text": "Key Findings zztitle2z057"
+      },
+      {
+        "id": "d1-b1-r57",
+        "type": "ListItem",
+        "sentinel": "zzitem1z057",
+        "text": "First zzitem1z057 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r57",
+        "type": "ListItem",
+        "sentinel": "zzitem2z057",
+        "text": "Second zzitem2z057 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r57",
+        "type": "ListItem",
+        "sentinel": "zzitem3z057",
+        "text": "Third zzitem3z057 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r57",
+        "type": "Title",
+        "sentinel": "zztitle3z057",
+        "text": "Setup Steps zztitle3z057"
+      },
+      {
+        "id": "d1-o1-r57",
+        "type": "ListItem",
+        "sentinel": "zznum1z057",
+        "text": "Install zznum1z057 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r57",
+        "type": "ListItem",
+        "sentinel": "zznum2z057",
+        "text": "Run zznum2z057 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r57",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z057",
+        "text": "In summary zznarr3z057 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r58",
+        "type": "Title",
+        "sentinel": "zztitle1z058",
+        "text": "Quarterly Operations Review zztitle1z058"
+      },
+      {
+        "id": "d1-n1-r58",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z058",
+        "text": "Our team zznarr1z058 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r58",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z058",
+        "text": "The engineers zznarr2z058 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r58",
+        "type": "Title",
+        "sentinel": "zztitle2z058",
+        "text": "Key Findings zztitle2z058"
+      },
+      {
+        "id": "d1-b1-r58",
+        "type": "ListItem",
+        "sentinel": "zzitem1z058",
+        "text": "First zzitem1z058 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r58",
+        "type": "ListItem",
+        "sentinel": "zzitem2z058",
+        "text": "Second zzitem2z058 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r58",
+        "type": "ListItem",
+        "sentinel": "zzitem3z058",
+        "text": "Third zzitem3z058 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r58",
+        "type": "Title",
+        "sentinel": "zztitle3z058",
+        "text": "Setup Steps zztitle3z058"
+      },
+      {
+        "id": "d1-o1-r58",
+        "type": "ListItem",
+        "sentinel": "zznum1z058",
+        "text": "Install zznum1z058 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r58",
+        "type": "ListItem",
+        "sentinel": "zznum2z058",
+        "text": "Run zznum2z058 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r58",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z058",
+        "text": "In summary zznarr3z058 the tool performed consistently across all of the evaluated document formats."
+      },
+      {
+        "id": "d1-t1-r59",
+        "type": "Title",
+        "sentinel": "zztitle1z059",
+        "text": "Quarterly Operations Review zztitle1z059"
+      },
+      {
+        "id": "d1-n1-r59",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1z059",
+        "text": "Our team zznarr1z059 evaluated fourteen scraping tools during the pilot and recorded every result carefully."
+      },
+      {
+        "id": "d1-n2-r59",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2z059",
+        "text": "The engineers zznarr2z059 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "d1-t2-r59",
+        "type": "Title",
+        "sentinel": "zztitle2z059",
+        "text": "Key Findings zztitle2z059"
+      },
+      {
+        "id": "d1-b1-r59",
+        "type": "ListItem",
+        "sentinel": "zzitem1z059",
+        "text": "First zzitem1z059 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "d1-b2-r59",
+        "type": "ListItem",
+        "sentinel": "zzitem2z059",
+        "text": "Second zzitem2z059 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "d1-b3-r59",
+        "type": "ListItem",
+        "sentinel": "zzitem3z059",
+        "text": "Third zzitem3z059 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "d1-t3-r59",
+        "type": "Title",
+        "sentinel": "zztitle3z059",
+        "text": "Setup Steps zztitle3z059"
+      },
+      {
+        "id": "d1-o1-r59",
+        "type": "ListItem",
+        "sentinel": "zznum1z059",
+        "text": "Install zznum1z059 the project dependencies from the lockfile"
+      },
+      {
+        "id": "d1-o2-r59",
+        "type": "ListItem",
+        "sentinel": "zznum2z059",
+        "text": "Run zznum2z059 the extractor against the sample corpus"
+      },
+      {
+        "id": "d1-n3-r59",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3z059",
+        "text": "In summary zznarr3z059 the tool performed consistently across all of the evaluated document formats."
+      }
+    ]
+  }
+}
