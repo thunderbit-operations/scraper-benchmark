@@ -1,0 +1,9 @@
+[
+{"label":"nc_js_default","http":200,"time_s":4.812073,"bytes":1193,"recall_of_8":8,"cached_snapshot":false,"not_fully_loaded":false}
+{"label":"nc_js_direct","http":200,"time_s":0.990601,"bytes":348,"recall_of_8":0,"cached_snapshot":false,"not_fully_loaded":false}
+{"label":"nc_js_browser","http":200,"time_s":1.939166,"bytes":1193,"recall_of_8":8,"cached_snapshot":false,"not_fully_loaded":false}
+{"label":"nc_js_browser_wait","http":200,"time_s":1.771834,"bytes":1193,"recall_of_8":8,"cached_snapshot":false,"not_fully_loaded":false}
+{"label":"nc_static_default","http":200,"time_s":1.692219,"bytes":1787,"recall_of_8":8,"cached_snapshot":false,"not_fully_loaded":false}
+{"label":"nc_static_direct","http":200,"time_s":0.941508,"bytes":1787,"recall_of_8":8,"cached_snapshot":false,"not_fully_loaded":false}
+{"label":"cached_js","http":200,"time_s":0.956340,"bytes":1193,"recall_of_8":8,"cached_snapshot":false,"not_fully_loaded":false}
+]

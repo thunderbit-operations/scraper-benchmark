@@ -1,0 +1,13 @@
+# Logs / scratch (the .md / .ndjson / .txt / .json response artifacts under
+# artifacts/raw/ ARE committed — they are the evidence base).
+artifacts/logs/
+*.log
+.DS_Store
+
+# Python scratch
+__pycache__/
+*.pyc
+
+# Never commit a key — the harness reads it from $JINA_KEY at run time.
+.env
+*.key

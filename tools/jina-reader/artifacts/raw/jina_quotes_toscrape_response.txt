@@ -1,0 +1,25 @@
+# Jina Reader anonymous request attempt
+# Target: https://quotes.toscrape.com/
+# Endpoint: https://r.jina.ai/https://quotes.toscrape.com/
+# Timestamp (UTC): 2026-07-10T07:42:08Z
+# Egress: 95.169.4.109 (AS25820 IT7 Networks, Los Angeles) per ipinfo.io
+# --- HTTP response (headers + body) ---
+HTTP/1.0 200 Connection established
+
+HTTP/2 401 
+date: Fri, 10 Jul 2026 07:42:11 GMT
+content-type: application/json; charset=utf-8
+content-length: 371
+vary: *
+server: cloudflare
+x-cloud-trace-context: dca2918671b17326b4e7f809ef9974bc/15162181203134700340
+traceparent: 00-dca2918671b17326b4e7f809ef9974bc-d26ae378b8f2db34-00
+via: 1.1 google
+alt-svc: h3=":443"; ma=86400
+cf-cache-status: DYNAMIC
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=bNYUvYB6a8xItuFIejeTMgKEXXBA0%2FhoY30%2BQIH43ALfnSLZ41P0sOh%2BItNz686m%2BM3YqREY%2BoTnoOTwWB%2FnVUnTAX2DYTK98uafAWgbcyCzxFDACCuhk9ZRqQ%3D%3D"}]}
+cf-ray: a18dee297bfc43e7-EWR
+
+{"data":null,"code":401,"name":"AuthenticationRequiredError","status":40103,"message":"You have been blocked from performing anonymous queries due to bad network reputation (AS7922). Please authenticate.","readableMessage":"AuthenticationRequiredError: You have been blocked from performing anonymous queries due to bad network reputation (AS7922). Please authenticate."}
+# --- curl meta: HTTP 401, 1.372251s, 371 bytes ---

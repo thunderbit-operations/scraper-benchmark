@@ -1,0 +1,55 @@
+{
+  "ground_truth_authors": 8,
+  "rows": [
+    {
+      "label": "nc_js_default",
+      "bytes": 1193,
+      "recall_of_8": 8,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    },
+    {
+      "label": "nc_js_direct",
+      "bytes": 348,
+      "recall_of_8": 0,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    },
+    {
+      "label": "nc_js_browser",
+      "bytes": 1193,
+      "recall_of_8": 8,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    },
+    {
+      "label": "nc_js_browser_wait",
+      "bytes": 1193,
+      "recall_of_8": 8,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    },
+    {
+      "label": "nc_static_default",
+      "bytes": 1787,
+      "recall_of_8": 8,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    },
+    {
+      "label": "nc_static_direct",
+      "bytes": 1787,
+      "recall_of_8": 8,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    },
+    {
+      "label": "cached_js",
+      "bytes": 1193,
+      "recall_of_8": 8,
+      "cached_snapshot": false,
+      "not_fully_loaded": false
+    }
+  ],
+  "consistent_with_shipped_matrix": true
+}
