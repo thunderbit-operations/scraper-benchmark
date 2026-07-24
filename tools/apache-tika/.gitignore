@@ -1,0 +1,29 @@
+# --- never ship the Tika binary (67 MB fat jar). Reproduce by downloading it into vendor/
+# (exact URL + sha256 in metadata-snapshot.md). ---
+vendor/
+*.jar
+
+# venv used only to GENERATE fixtures (reportlab / python-docx / odfpy) — not part of the
+# tool under test; reproduce from the pinned install in metadata-snapshot.md.
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Regenerated binary fixtures — the .docx / .odt zips and the .pdf carry non-deterministic
+# internal timestamps, so only their EXTRACTED text/metadata is asserted; the bytes are
+# rebuilt deterministically by build_fixtures.py, never committed.
+tests/fixtures/*.docx
+tests/fixtures/*.pdf
+tests/fixtures/*.odt
+
+# Regenerated adversarial fixture trees (copies / truncations of the above) — rebuilt by
+# build_fixtures.py from the canonical carriers.
+tests/fixtures/mime/
+tests/fixtures/robust/
+
+# Logs / scratch (raw result JSON under artifacts/raw/ IS committed as evidence).
+artifacts/logs/
+*.log
+*.out
+.DS_Store

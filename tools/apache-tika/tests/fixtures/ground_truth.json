@@ -1,0 +1,330 @@
+{
+  "canonical": {
+    "name": "canonical",
+    "formats": [
+      "html",
+      "md",
+      "txt",
+      "docx",
+      "pdf",
+      "rtf",
+      "odt",
+      "xml"
+    ],
+    "blocks": [
+      {
+        "id": "c-t1",
+        "type": "Title",
+        "sentinel": "zztitle1",
+        "text": "Quarterly Operations Review zztitle1"
+      },
+      {
+        "id": "c-n1",
+        "type": "NarrativeText",
+        "sentinel": "zznarr1",
+        "text": "Our team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result."
+      },
+      {
+        "id": "c-n2",
+        "type": "NarrativeText",
+        "sentinel": "zznarr2",
+        "text": "The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation."
+      },
+      {
+        "id": "c-t2",
+        "type": "Title",
+        "sentinel": "zztitle2",
+        "text": "Key Findings zztitle2"
+      },
+      {
+        "id": "c-b1",
+        "type": "ListItem",
+        "sentinel": "zzitem1",
+        "text": "First zzitem1 the parser handled malformed markup without crashing"
+      },
+      {
+        "id": "c-b2",
+        "type": "ListItem",
+        "sentinel": "zzitem2",
+        "text": "Second zzitem2 it preserved the original list ordering throughout"
+      },
+      {
+        "id": "c-b3",
+        "type": "ListItem",
+        "sentinel": "zzitem3",
+        "text": "Third zzitem3 it exported clean readable plain text reliably"
+      },
+      {
+        "id": "c-t3",
+        "type": "Title",
+        "sentinel": "zztitle3",
+        "text": "Setup Steps zztitle3"
+      },
+      {
+        "id": "c-o1",
+        "type": "ListItem",
+        "sentinel": "zznum1",
+        "text": "Install zznum1 the project dependencies from the lockfile"
+      },
+      {
+        "id": "c-o2",
+        "type": "ListItem",
+        "sentinel": "zznum2",
+        "text": "Run zznum2 the extractor against the sample corpus"
+      },
+      {
+        "id": "c-n3",
+        "type": "NarrativeText",
+        "sentinel": "zznarr3",
+        "text": "In summary zznarr3 the tool performed consistently across every evaluated document format."
+      }
+    ],
+    "blocks_by_format": {
+      "html": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "md": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "txt": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "docx": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "pdf": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "rtf": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "odt": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ],
+      "xml": [
+        "c-t1",
+        "c-n1",
+        "c-n2",
+        "c-t2",
+        "c-b1",
+        "c-b2",
+        "c-b3",
+        "c-t3",
+        "c-o1",
+        "c-o2",
+        "c-n3"
+      ]
+    },
+    "metadata": {
+      "author": "Ada Lovelace zzmauth",
+      "title": "Analytical Engine Report zzmtitle",
+      "created": "2021-03-15T09:30:00Z"
+    },
+    "metadata_applicability": {
+      "html": {
+        "author": true,
+        "title": true,
+        "created": false
+      },
+      "md": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "txt": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "docx": {
+        "author": true,
+        "title": true,
+        "created": true
+      },
+      "pdf": {
+        "author": true,
+        "title": true,
+        "created": false
+      },
+      "rtf": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "odt": {
+        "author": true,
+        "title": true,
+        "created": true
+      },
+      "xml": {
+        "author": false,
+        "title": false,
+        "created": false
+      }
+    }
+  },
+  "table": {
+    "name": "table",
+    "formats": [
+      "html",
+      "md",
+      "txt",
+      "docx",
+      "csv",
+      "xml"
+    ],
+    "blocks": [
+      {
+        "id": "t-t1",
+        "type": "Title",
+        "sentinel": "zztbltitle",
+        "text": "Benchmark Results zztbltitle"
+      },
+      {
+        "id": "t-n1",
+        "type": "NarrativeText",
+        "sentinel": "zztblnarr",
+        "text": "The table zztblnarr below summarizes the measured throughput for every tool we tested."
+      },
+      {
+        "id": "t-tab",
+        "type": "Table",
+        "sentinel": "zztblcell",
+        "text": "table with sentinel cells"
+      }
+    ],
+    "blocks_by_format": {
+      "html": [
+        "t-t1",
+        "t-n1",
+        "t-tab"
+      ],
+      "md": [
+        "t-t1",
+        "t-n1",
+        "t-tab"
+      ],
+      "txt": [
+        "t-t1",
+        "t-n1",
+        "t-tab"
+      ],
+      "docx": [
+        "t-t1",
+        "t-n1",
+        "t-tab"
+      ],
+      "csv": [
+        "t-tab"
+      ],
+      "xml": [
+        "t-t1",
+        "t-n1",
+        "t-tab"
+      ]
+    },
+    "metadata": null,
+    "metadata_applicability": {
+      "html": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "md": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "txt": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "docx": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "csv": {
+        "author": false,
+        "title": false,
+        "created": false
+      },
+      "xml": {
+        "author": false,
+        "title": false,
+        "created": false
+      }
+    }
+  }
+}

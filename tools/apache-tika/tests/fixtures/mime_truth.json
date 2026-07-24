@@ -1,0 +1,93 @@
+{
+  "entries": [
+    {
+      "tag": "pdf",
+      "true_media_type": "application/pdf",
+      "has_magic": true,
+      "variants": {
+        "correct_ext": "m_pdf.pdf",
+        "lying_ext": "m_pdf_lying.txt",
+        "no_ext": "m_pdf_noext"
+      },
+      "lying_ext_is": "txt"
+    },
+    {
+      "tag": "docx",
+      "true_media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "has_magic": true,
+      "variants": {
+        "correct_ext": "m_docx.docx",
+        "lying_ext": "m_docx_lying.jpg",
+        "no_ext": "m_docx_noext"
+      },
+      "lying_ext_is": "jpg"
+    },
+    {
+      "tag": "rtf",
+      "true_media_type": "application/rtf",
+      "has_magic": true,
+      "variants": {
+        "correct_ext": "m_rtf.rtf",
+        "lying_ext": "m_rtf_lying.html",
+        "no_ext": "m_rtf_noext"
+      },
+      "lying_ext_is": "html"
+    },
+    {
+      "tag": "html",
+      "true_media_type": "text/html",
+      "has_magic": true,
+      "variants": {
+        "correct_ext": "m_html.html",
+        "lying_ext": "m_html_lying.csv",
+        "no_ext": "m_html_noext"
+      },
+      "lying_ext_is": "csv"
+    },
+    {
+      "tag": "xml",
+      "true_media_type": "application/xml",
+      "has_magic": true,
+      "variants": {
+        "correct_ext": "m_xml.xml",
+        "lying_ext": "m_xml_lying.txt",
+        "no_ext": "m_xml_noext"
+      },
+      "lying_ext_is": "txt"
+    },
+    {
+      "tag": "md",
+      "true_media_type": "text/markdown",
+      "has_magic": false,
+      "variants": {
+        "correct_ext": "m_md.md",
+        "lying_ext": "m_md_lying.pdf",
+        "no_ext": "m_md_noext"
+      },
+      "lying_ext_is": "pdf"
+    },
+    {
+      "tag": "txt",
+      "true_media_type": "text/plain",
+      "has_magic": false,
+      "variants": {
+        "correct_ext": "m_txt.txt",
+        "lying_ext": "m_txt_lying.pdf",
+        "no_ext": "m_txt_noext"
+      },
+      "lying_ext_is": "pdf"
+    },
+    {
+      "tag": "csv",
+      "true_media_type": "text/csv",
+      "has_magic": false,
+      "variants": {
+        "correct_ext": "m_csv.csv",
+        "lying_ext": "m_csv_lying.txt",
+        "no_ext": "m_csv_noext"
+      },
+      "lying_ext_is": "txt"
+    }
+  ],
+  "note": "true_media_type is the ideal report; magic-less text formats (md/txt/csv) legitimately fall back to text/plain when the extension is absent or lies — that is the measured behavior, not a bug."
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<block type="Title">Benchmark Results zztbltitle</block>
+<block type="NarrativeText">The table zztblnarr below summarizes the measured throughput for every tool we tested.</block>
+<table>
+<row><cell>Tool</cell><cell>Throughput</cell></row>
+<row><cell>zztblcell_alpha</cell><cell>120</cell></row>
+<row><cell>zztblcell_beta</cell><cell>95</cell></row>
+</table>
+</document>

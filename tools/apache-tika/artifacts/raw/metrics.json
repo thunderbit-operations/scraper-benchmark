@@ -1,0 +1,599 @@
+{
+  "tool": "apache-tika",
+  "versions": {
+    "tika": "Apache Tika 3.3.2",
+    "java": "openjdk version \"26.0.1\" 2026-04-21",
+    "python": "3.12.13",
+    "jar": "tika-app-3.3.2.jar"
+  },
+  "computed_at": "2026-07-24T06:03:41.386585+00:00",
+  "content_and_metadata": {
+    "canonical": {
+      "html": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "text/html; charset=UTF-8",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {
+          "author": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          },
+          "title": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          }
+        }
+      },
+      "md": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "text/markdown; charset=ISO-8859-1",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "txt": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "text/plain; charset=ISO-8859-1",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "docx": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {
+          "author": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          },
+          "title": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          },
+          "created": {
+            "applicable": true,
+            "recovered_exact": true,
+            "value_present": true,
+            "value": "2021-03-15T09:30:00Z"
+          }
+        }
+      },
+      "pdf": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "application/pdf",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {
+          "author": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          },
+          "title": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          }
+        }
+      },
+      "rtf": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "application/rtf",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "odt": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "application/vnd.oasis.opendocument.text",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {
+          "author": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          },
+          "title": {
+            "applicable": true,
+            "recovered": true,
+            "value_key_present": true
+          },
+          "created": {
+            "applicable": true,
+            "recovered_exact": true,
+            "value_present": true,
+            "value": "2021-03-15T09:30:00"
+          }
+        }
+      },
+      "xml": {
+        "content_recall": 1.0,
+        "blocks_total": 11,
+        "blocks_found": 11,
+        "missing_sentinels": [],
+        "detected_content_type": "application/xml",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      }
+    },
+    "table": {
+      "html": {
+        "content_recall": 1.0,
+        "blocks_total": 3,
+        "blocks_found": 3,
+        "missing_sentinels": [],
+        "detected_content_type": "text/html; charset=UTF-8",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "md": {
+        "content_recall": 1.0,
+        "blocks_total": 3,
+        "blocks_found": 3,
+        "missing_sentinels": [],
+        "detected_content_type": "text/markdown; charset=ISO-8859-1",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "txt": {
+        "content_recall": 1.0,
+        "blocks_total": 3,
+        "blocks_found": 3,
+        "missing_sentinels": [],
+        "detected_content_type": "text/plain; charset=ISO-8859-1",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "docx": {
+        "content_recall": 1.0,
+        "blocks_total": 3,
+        "blocks_found": 3,
+        "missing_sentinels": [],
+        "detected_content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "csv": {
+        "content_recall": 1.0,
+        "blocks_total": 1,
+        "blocks_found": 1,
+        "missing_sentinels": [],
+        "detected_content_type": "text/plain; charset=ISO-8859-1",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      },
+      "xml": {
+        "content_recall": 1.0,
+        "blocks_total": 3,
+        "blocks_found": 3,
+        "missing_sentinels": [],
+        "detected_content_type": "application/xml",
+        "text_exit": 0,
+        "determinism_text_identical": true,
+        "metadata_fields": {}
+      }
+    }
+  },
+  "mime_detection": {
+    "rows": [
+      {
+        "tag": "pdf",
+        "true_media_type": "application/pdf",
+        "has_magic": true,
+        "lying_ext_is": "txt",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "application/pdf",
+            "exact": true,
+            "text_family": false
+          },
+          "correct_ext/from_stream": {
+            "detected": "application/pdf",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/with_filename": {
+            "detected": "application/pdf",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/from_stream": {
+            "detected": "application/pdf",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/with_filename": {
+            "detected": "application/pdf",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/from_stream": {
+            "detected": "application/pdf",
+            "exact": true,
+            "text_family": false
+          }
+        }
+      },
+      {
+        "tag": "docx",
+        "true_media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "has_magic": true,
+        "lying_ext_is": "jpg",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "exact": true,
+            "text_family": false
+          },
+          "correct_ext/from_stream": {
+            "detected": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/with_filename": {
+            "detected": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/from_stream": {
+            "detected": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/with_filename": {
+            "detected": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/from_stream": {
+            "detected": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "exact": true,
+            "text_family": false
+          }
+        }
+      },
+      {
+        "tag": "rtf",
+        "true_media_type": "application/rtf",
+        "has_magic": true,
+        "lying_ext_is": "html",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "application/rtf",
+            "exact": true,
+            "text_family": false
+          },
+          "correct_ext/from_stream": {
+            "detected": "application/rtf",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/with_filename": {
+            "detected": "application/rtf",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/from_stream": {
+            "detected": "application/rtf",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/with_filename": {
+            "detected": "application/rtf",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/from_stream": {
+            "detected": "application/rtf",
+            "exact": true,
+            "text_family": false
+          }
+        }
+      },
+      {
+        "tag": "html",
+        "true_media_type": "text/html",
+        "has_magic": true,
+        "lying_ext_is": "csv",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "text/html",
+            "exact": true,
+            "text_family": true
+          },
+          "correct_ext/from_stream": {
+            "detected": "text/html",
+            "exact": true,
+            "text_family": true
+          },
+          "lying_ext/with_filename": {
+            "detected": "text/html",
+            "exact": true,
+            "text_family": true
+          },
+          "lying_ext/from_stream": {
+            "detected": "text/html",
+            "exact": true,
+            "text_family": true
+          },
+          "no_ext/with_filename": {
+            "detected": "text/html",
+            "exact": true,
+            "text_family": true
+          },
+          "no_ext/from_stream": {
+            "detected": "text/html",
+            "exact": true,
+            "text_family": true
+          }
+        }
+      },
+      {
+        "tag": "xml",
+        "true_media_type": "application/xml",
+        "has_magic": true,
+        "lying_ext_is": "txt",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "application/xml",
+            "exact": true,
+            "text_family": false
+          },
+          "correct_ext/from_stream": {
+            "detected": "application/xml",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/with_filename": {
+            "detected": "application/xml",
+            "exact": true,
+            "text_family": false
+          },
+          "lying_ext/from_stream": {
+            "detected": "application/xml",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/with_filename": {
+            "detected": "application/xml",
+            "exact": true,
+            "text_family": false
+          },
+          "no_ext/from_stream": {
+            "detected": "application/xml",
+            "exact": true,
+            "text_family": false
+          }
+        }
+      },
+      {
+        "tag": "md",
+        "true_media_type": "text/markdown",
+        "has_magic": false,
+        "lying_ext_is": "pdf",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "text/markdown",
+            "exact": true,
+            "text_family": true
+          },
+          "correct_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "lying_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "lying_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "no_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "no_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          }
+        }
+      },
+      {
+        "tag": "txt",
+        "true_media_type": "text/plain",
+        "has_magic": false,
+        "lying_ext_is": "pdf",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": true,
+            "text_family": true
+          },
+          "correct_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": true,
+            "text_family": true
+          },
+          "lying_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": true,
+            "text_family": true
+          },
+          "lying_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": true,
+            "text_family": true
+          },
+          "no_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": true,
+            "text_family": true
+          },
+          "no_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": true,
+            "text_family": true
+          }
+        }
+      },
+      {
+        "tag": "csv",
+        "true_media_type": "text/csv",
+        "has_magic": false,
+        "lying_ext_is": "txt",
+        "cells": {
+          "correct_ext/with_filename": {
+            "detected": "text/csv",
+            "exact": true,
+            "text_family": true
+          },
+          "correct_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "lying_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "lying_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "no_ext/with_filename": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          },
+          "no_ext/from_stream": {
+            "detected": "text/plain",
+            "exact": false,
+            "text_family": true
+          }
+        }
+      }
+    ],
+    "summary": {
+      "magic_bearing_cells": 30,
+      "magic_bearing_exact": 30,
+      "magic_bearing_exact_rate": 1.0,
+      "magicless_cells": 18,
+      "magicless_collapsed_to_text_plain": 10
+    }
+  },
+  "robustness": {
+    "rows": [
+      {
+        "name": "empty.txt",
+        "case": "empty",
+        "extraction_exit_zero": false,
+        "detection_exit_zero": true,
+        "text_exception": "Exception in thread \"main\" org.apache.tika.exception.ZeroByteFileException: InputStream must have > 0 bytes",
+        "exits": {
+          "text": 1,
+          "metadata": 1,
+          "detect_fn": 0,
+          "detect_stream": 0
+        },
+        "detect_with_filename": "text/plain",
+        "detect_from_stream": "application/octet-stream",
+        "detected_encoding": null,
+        "sentinel_survives": null
+      },
+      {
+        "name": "truncated.pdf",
+        "case": "truncated_pdf",
+        "extraction_exit_zero": false,
+        "detection_exit_zero": true,
+        "text_exception": "Exception in thread \"main\" org.apache.tika.exception.TikaException: TIKA-198: Illegal IOException from org.apache.tika.parser.pdf.PDFParser@5c8eee0f",
+        "exits": {
+          "text": 1,
+          "metadata": 1,
+          "detect_fn": 0,
+          "detect_stream": 0
+        },
+        "detect_with_filename": "application/pdf",
+        "detect_from_stream": "application/pdf",
+        "detected_encoding": null,
+        "sentinel_survives": null
+      },
+      {
+        "name": "truncated.docx",
+        "case": "truncated_docx",
+        "extraction_exit_zero": false,
+        "detection_exit_zero": true,
+        "text_exception": "FATAL [main] 14:03:38,381 org.apache.poi.util.XMLHelper :2:311:XML document structures must start and end within the same entity.",
+        "exits": {
+          "text": 1,
+          "metadata": 1,
+          "detect_fn": 0,
+          "detect_stream": 0
+        },
+        "detect_with_filename": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "detect_from_stream": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "detected_encoding": null,
+        "sentinel_survives": null
+      },
+      {
+        "name": "utf8_nobom.txt",
+        "case": "utf8_no_bom",
+        "extraction_exit_zero": true,
+        "detection_exit_zero": true,
+        "text_exception": null,
+        "exits": {
+          "text": 0,
+          "metadata": 0,
+          "detect_fn": 0,
+          "detect_stream": 0
+        },
+        "detect_with_filename": "text/plain",
+        "detect_from_stream": "text/plain",
+        "detected_encoding": "UTF-8",
+        "sentinel_survives": true
+      }
+    ]
+  }
+}

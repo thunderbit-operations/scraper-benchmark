@@ -1,0 +1,655 @@
+{
+  "tool": "apache-tika",
+  "versions": {
+    "tika": "Apache Tika 3.3.2",
+    "java": "openjdk version \"26.0.1\" 2026-04-21",
+    "python": "3.12.13",
+    "jar": "tika-app-3.3.2.jar"
+  },
+  "run_started_at": "2026-07-24T06:02:43.007649+00:00",
+  "content": {
+    "canonical": {
+      "html": {
+        "text": "\nQuarterly Operations Review zztitle1\n\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\n\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\n\nKey Findings zztitle2\n\n\n\tFirst zzitem1 the parser handled malformed markup without crashing\n\n\tSecond zzitem2 it preserved the original list ordering throughout\n\n\tThird zzitem3 it exported clean readable plain text reliably\n\n\n\nSetup Steps zztitle3\n\n\n\tInstall zznum1 the project dependencies from the lockfile\n\n\tRun zznum2 the extractor against the sample corpus\n\n\n\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.html.JSoupParser"
+          ],
+          "dc:title": "Analytical Engine Report zzmtitle",
+          "author": "Ada Lovelace zzmauth",
+          "Content-Encoding": "UTF-8",
+          "dc:creator": "Ada Lovelace zzmauth",
+          "resourceName": "canonical.html",
+          "X-TIKA:detectedEncoding": "UTF-8",
+          "Content-Length": "983",
+          "X-TIKA:encodingDetector": "HtmlEncodingDetector",
+          "Content-Language": "en",
+          "Content-Type": "text/html; charset=UTF-8"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "md": {
+        "text": "# Quarterly Operations Review zztitle1\n\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\n\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\n\n## Key Findings zztitle2\n\n- First zzitem1 the parser handled malformed markup without crashing\n- Second zzitem2 it preserved the original list ordering throughout\n- Third zzitem3 it exported clean readable plain text reliably\n\n## Setup Steps zztitle3\n\n1. Install zznum1 the project dependencies from the lockfile\n2. Run zznum2 the extractor against the sample corpus\n\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.csv.TextAndCSVParser"
+          ],
+          "Content-Encoding": "ISO-8859-1",
+          "resourceName": "canonical.md",
+          "X-TIKA:detectedEncoding": "ISO-8859-1",
+          "Content-Length": "706",
+          "X-TIKA:encodingDetector": "UniversalEncodingDetector",
+          "Content-Type": "text/markdown; charset=ISO-8859-1"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "txt": {
+        "text": "Quarterly Operations Review zztitle1\n\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\n\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\n\nKey Findings zztitle2\n\n- First zzitem1 the parser handled malformed markup without crashing\n\n- Second zzitem2 it preserved the original list ordering throughout\n\n- Third zzitem3 it exported clean readable plain text reliably\n\nSetup Steps zztitle3\n\n1. Install zznum1 the project dependencies from the lockfile\n\n1. Run zznum2 the extractor against the sample corpus\n\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.csv.TextAndCSVParser"
+          ],
+          "Content-Encoding": "ISO-8859-1",
+          "resourceName": "canonical.txt",
+          "X-TIKA:detectedEncoding": "ISO-8859-1",
+          "Content-Length": "701",
+          "X-TIKA:encodingDetector": "UniversalEncodingDetector",
+          "Content-Type": "text/plain; charset=ISO-8859-1"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "docx": {
+        "text": "Quarterly Operations Review zztitle1\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\nKey Findings zztitle2\nFirst zzitem1 the parser handled malformed markup without crashing\nSecond zzitem2 it preserved the original list ordering throughout\nThird zzitem3 it exported clean readable plain text reliably\nSetup Steps zztitle3\nInstall zznum1 the project dependencies from the lockfile\nRun zznum2 the extractor against the sample corpus\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "cp:revision": "1",
+          "dc:description": "generated by python-docx",
+          "extended-properties:AppVersion": "14.0000",
+          "extended-properties:Application": "Microsoft Macintosh Word",
+          "dc:creator": "Ada Lovelace zzmauth",
+          "xmpTPg:NPages": "1",
+          "resourceName": "canonical.docx",
+          "dcterms:created": "2021-03-15T09:30:00Z",
+          "dcterms:modified": "2013-12-23T23:15:00Z",
+          "extended-properties:Template": "Normal.dotm",
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.microsoft.ooxml.OOXMLParser",
+            "org.apache.tika.parser.microsoft.ooxml.xwpf.XWPFEventBasedWordExtractor"
+          ],
+          "dc:title": "Analytical Engine Report zzmtitle",
+          "extended-properties:DocSecurityString": "None",
+          "Content-Length": "37083",
+          "meta:page-count": "1",
+          "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "pdf": {
+        "text": "\nQuarterly Operations Review zztitle1\n\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\n\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\n\nKey Findings zztitle2\n\n- First zzitem1 the parser handled malformed markup without crashing\n\n- Second zzitem2 it preserved the original list ordering throughout\n\n- Third zzitem3 it exported clean readable plain text reliably\n\nSetup Steps zztitle3\n\n1. Install zznum1 the project dependencies from the lockfile\n\n1. Run zznum2 the extractor against the sample corpus\n\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "pdf:unmappedUnicodeCharsPerPage": "0",
+          "pdf:PDFVersion": "1.3",
+          "pdf:docinfo:title": "Analytical Engine Report zzmtitle",
+          "xmp:CreatorTool": "anonymous",
+          "pdf:hasXFA": "false",
+          "access_permission:modify_annotations": "true",
+          "pdf:incrementalUpdateCount": "0",
+          "dc:creator": "Ada Lovelace zzmauth",
+          "dcterms:created": "2026-07-24T06:02:42Z",
+          "dcterms:modified": "2026-07-24T06:02:42Z",
+          "dc:format": "application/pdf; version=1.3",
+          "pdf:docinfo:creator_tool": "anonymous",
+          "access_permission:fill_in_form": "true",
+          "pdf:docinfo:modified": "2026-07-24T06:02:42Z",
+          "pdf:hasCollection": "false",
+          "pdf:encrypted": "false",
+          "dc:title": "Analytical Engine Report zzmtitle",
+          "X-TIKA:versionCount": "0",
+          "Content-Length": "1919",
+          "pdf:docinfo:subject": "unspecified",
+          "pdf:hasMarkedContent": "false",
+          "Content-Type": "application/pdf",
+          "access_permission:can_print_faithful": "true",
+          "pdf:docinfo:creator": "Ada Lovelace zzmauth",
+          "pdf:producer": "ReportLab PDF Library - (opensource)",
+          "dc:subject": "unspecified",
+          "access_permission:extract_for_accessibility": "true",
+          "access_permission:assemble_document": "true",
+          "xmpTPg:NPages": "1",
+          "resourceName": "canonical.pdf",
+          "pdf:hasXMP": "false",
+          "pdf:charsPerPage": "679",
+          "access_permission:extract_content": "true",
+          "access_permission:can_print": "true",
+          "pdf:docinfo:trapped": "False",
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.pdf.PDFParser"
+          ],
+          "pdf:eofOffsets": "1919",
+          "access_permission:can_modify": "true",
+          "pdf:docinfo:producer": "ReportLab PDF Library - (opensource)",
+          "pdf:docinfo:created": "2026-07-24T06:02:42Z"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "rtf": {
+        "text": "Quarterly Operations Review zztitle1\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\nKey Findings zztitle2\n- First zzitem1 the parser handled malformed markup without crashing\n- Second zzitem2 it preserved the original list ordering throughout\n- Third zzitem3 it exported clean readable plain text reliably\nSetup Steps zztitle3\n1. Install zznum1 the project dependencies from the lockfile\n1. Run zznum2 the extractor against the sample corpus\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.microsoft.rtf.RTFParser"
+          ],
+          "resourceName": "canonical.rtf",
+          "Content-Length": "754",
+          "Content-Type": "application/rtf"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "odt": {
+        "text": "Quarterly Operations Review zztitle1\nOur team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\nThe engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\nKey Findings zztitle2\n- First zzitem1 the parser handled malformed markup without crashing\n- Second zzitem2 it preserved the original list ordering throughout\n- Third zzitem3 it exported clean readable plain text reliably\nSetup Steps zztitle3\n1. Install zznum1 the project dependencies from the lockfile\n1. Run zznum2 the extractor against the sample corpus\nIn summary zznarr3 the tool performed consistently across every evaluated document format.\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.odf.OpenDocumentParser"
+          ],
+          "dc:title": "Analytical Engine Report zzmtitle",
+          "odf:version": "1.2",
+          "dc:creator": "Ada Lovelace zzmauth",
+          "generator": "ODFPY/1.4.1",
+          "resourceName": "canonical.odt",
+          "dcterms:created": "2021-03-15T09:30:00",
+          "Content-Length": "1995",
+          "Content-Type": "application/vnd.oasis.opendocument.text"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "xml": {
+        "text": " \n Quarterly Operations Review zztitle1\n Our team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.\n The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.\n Key Findings zztitle2\n First zzitem1 the parser handled malformed markup without crashing\n Second zzitem2 it preserved the original list ordering throughout\n Third zzitem3 it exported clean readable plain text reliably\n Setup Steps zztitle3\n Install zznum1 the project dependencies from the lockfile\n Run zznum2 the extractor against the sample corpus\n In summary zznarr3 the tool performed consistently across every evaluated document format.\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.xml.DcXMLParser"
+          ],
+          "resourceName": "canonical.xml",
+          "Content-Length": "1087",
+          "Content-Type": "application/xml"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      }
+    },
+    "table": {
+      "html": {
+        "text": "\nBenchmark Results zztbltitle\n\nThe table zztblnarr below summarizes the measured throughput for every tool we tested.\n\n\n\tTool\tThroughput\n\n\tzztblcell_alpha\t120\n\n\tzztblcell_beta\t95\n\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.html.JSoupParser"
+          ],
+          "dc:title": "fixture",
+          "Content-Encoding": "UTF-8",
+          "resourceName": "table.html",
+          "X-TIKA:detectedEncoding": "UTF-8",
+          "Content-Length": "393",
+          "X-TIKA:encodingDetector": "HtmlEncodingDetector",
+          "Content-Language": "en",
+          "Content-Type": "text/html; charset=UTF-8"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "md": {
+        "text": "# Benchmark Results zztbltitle\n\nThe table zztblnarr below summarizes the measured throughput for every tool we tested.\n\n| Tool | Throughput |\n| --- | --- |\n| zztblcell_alpha | 120 |\n| zztblcell_beta | 95 |\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.csv.TextAndCSVParser"
+          ],
+          "Content-Encoding": "ISO-8859-1",
+          "resourceName": "table.md",
+          "X-TIKA:detectedEncoding": "ISO-8859-1",
+          "Content-Length": "207",
+          "X-TIKA:encodingDetector": "UniversalEncodingDetector",
+          "Content-Type": "text/markdown; charset=ISO-8859-1"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "txt": {
+        "text": "Benchmark Results zztbltitle\n\nThe table zztblnarr below summarizes the measured throughput for every tool we tested.\n\nTool  Throughput\nzztblcell_alpha  120\nzztblcell_beta  95\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.csv.TextAndCSVParser"
+          ],
+          "Content-Encoding": "ISO-8859-1",
+          "resourceName": "table.txt",
+          "X-TIKA:detectedEncoding": "ISO-8859-1",
+          "Content-Length": "176",
+          "X-TIKA:encodingDetector": "UniversalEncodingDetector",
+          "Content-Type": "text/plain; charset=ISO-8859-1"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "docx": {
+        "text": "Benchmark Results zztbltitle\nThe table zztblnarr below summarizes the measured throughput for every tool we tested.\n\tTool\tThroughput\n\tzztblcell_alpha\t120\n\tzztblcell_beta\t95\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "cp:revision": "1",
+          "dc:description": "generated by python-docx",
+          "extended-properties:AppVersion": "14.0000",
+          "extended-properties:Application": "Microsoft Macintosh Word",
+          "dc:creator": "python-docx",
+          "xmpTPg:NPages": "1",
+          "resourceName": "table.docx",
+          "dcterms:created": "2013-12-23T23:15:00Z",
+          "dcterms:modified": "2013-12-23T23:15:00Z",
+          "extended-properties:Template": "Normal.dotm",
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.microsoft.ooxml.OOXMLParser",
+            "org.apache.tika.parser.microsoft.ooxml.xwpf.XWPFEventBasedWordExtractor"
+          ],
+          "extended-properties:DocSecurityString": "None",
+          "Content-Length": "36852",
+          "meta:page-count": "1",
+          "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "csv": {
+        "text": "Tool,Throughput\nzztblcell_alpha,120\nzztblcell_beta,95\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.csv.TextAndCSVParser"
+          ],
+          "Content-Encoding": "ISO-8859-1",
+          "resourceName": "table.csv",
+          "X-TIKA:detectedEncoding": "ISO-8859-1",
+          "Content-Length": "54",
+          "X-TIKA:encodingDetector": "UniversalEncodingDetector",
+          "Content-Type": "text/plain; charset=ISO-8859-1"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      },
+      "xml": {
+        "text": " \n Benchmark Results zztbltitle\n The table zztblnarr below summarizes the measured throughput for every tool we tested.\n \n  Tool Throughput\n  zztblcell_alpha 120\n  zztblcell_beta 95\n\n\n",
+        "text_exit": 0,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.xml.DcXMLParser"
+          ],
+          "resourceName": "table.xml",
+          "Content-Length": "421",
+          "Content-Type": "application/xml"
+        },
+        "metadata_exit": 0,
+        "determinism_text_identical": true
+      }
+    }
+  },
+  "mime": {
+    "entries": [
+      {
+        "tag": "pdf",
+        "true_media_type": "application/pdf",
+        "has_magic": true,
+        "lying_ext_is": "txt",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "application/pdf",
+            "with_filename_exit": 0,
+            "from_stream": "application/pdf",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "application/pdf",
+            "with_filename_exit": 0,
+            "from_stream": "application/pdf",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "application/pdf",
+            "with_filename_exit": 0,
+            "from_stream": "application/pdf",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "docx",
+        "true_media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "has_magic": true,
+        "lying_ext_is": "jpg",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "with_filename_exit": 0,
+            "from_stream": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "with_filename_exit": 0,
+            "from_stream": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "with_filename_exit": 0,
+            "from_stream": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "rtf",
+        "true_media_type": "application/rtf",
+        "has_magic": true,
+        "lying_ext_is": "html",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "application/rtf",
+            "with_filename_exit": 0,
+            "from_stream": "application/rtf",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "application/rtf",
+            "with_filename_exit": 0,
+            "from_stream": "application/rtf",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "application/rtf",
+            "with_filename_exit": 0,
+            "from_stream": "application/rtf",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "html",
+        "true_media_type": "text/html",
+        "has_magic": true,
+        "lying_ext_is": "csv",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "text/html",
+            "with_filename_exit": 0,
+            "from_stream": "text/html",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "text/html",
+            "with_filename_exit": 0,
+            "from_stream": "text/html",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "text/html",
+            "with_filename_exit": 0,
+            "from_stream": "text/html",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "xml",
+        "true_media_type": "application/xml",
+        "has_magic": true,
+        "lying_ext_is": "txt",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "application/xml",
+            "with_filename_exit": 0,
+            "from_stream": "application/xml",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "application/xml",
+            "with_filename_exit": 0,
+            "from_stream": "application/xml",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "application/xml",
+            "with_filename_exit": 0,
+            "from_stream": "application/xml",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "md",
+        "true_media_type": "text/markdown",
+        "has_magic": false,
+        "lying_ext_is": "pdf",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "text/markdown",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "txt",
+        "true_media_type": "text/plain",
+        "has_magic": false,
+        "lying_ext_is": "pdf",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          }
+        }
+      },
+      {
+        "tag": "csv",
+        "true_media_type": "text/csv",
+        "has_magic": false,
+        "lying_ext_is": "txt",
+        "detect": {
+          "correct_ext": {
+            "with_filename": "text/csv",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          },
+          "lying_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          },
+          "no_ext": {
+            "with_filename": "text/plain",
+            "with_filename_exit": 0,
+            "from_stream": "text/plain",
+            "from_stream_exit": 0
+          }
+        }
+      }
+    ]
+  },
+  "robustness": {
+    "entries": [
+      {
+        "name": "empty.txt",
+        "case": "empty",
+        "spec": {
+          "name": "empty.txt",
+          "case": "empty",
+          "expect_no_crash": true,
+          "true_media_type": null
+        },
+        "text": "",
+        "text_exit": 1,
+        "text_exception": "Exception in thread \"main\" org.apache.tika.exception.ZeroByteFileException: InputStream must have > 0 bytes",
+        "metadata": {
+          "_parse_error": true,
+          "_raw": ""
+        },
+        "metadata_exit": 1,
+        "detect_with_filename": "text/plain",
+        "detect_with_filename_exit": 0,
+        "detect_from_stream": "application/octet-stream",
+        "detect_from_stream_exit": 0,
+        "detected_content_type_meta": null,
+        "detected_encoding_meta": null
+      },
+      {
+        "name": "truncated.pdf",
+        "case": "truncated_pdf",
+        "spec": {
+          "name": "truncated.pdf",
+          "case": "truncated_pdf",
+          "expect_no_crash": true,
+          "true_media_type": "application/pdf"
+        },
+        "text": "",
+        "text_exit": 1,
+        "text_exception": "Exception in thread \"main\" org.apache.tika.exception.TikaException: TIKA-198: Illegal IOException from org.apache.tika.parser.pdf.PDFParser@5c8eee0f",
+        "metadata": {
+          "_parse_error": true,
+          "_raw": ""
+        },
+        "metadata_exit": 1,
+        "detect_with_filename": "application/pdf",
+        "detect_with_filename_exit": 0,
+        "detect_from_stream": "application/pdf",
+        "detect_from_stream_exit": 0,
+        "detected_content_type_meta": null,
+        "detected_encoding_meta": null
+      },
+      {
+        "name": "truncated.docx",
+        "case": "truncated_docx",
+        "spec": {
+          "name": "truncated.docx",
+          "case": "truncated_docx",
+          "expect_no_crash": true,
+          "true_media_type_family": "zip/ooxml"
+        },
+        "text": "",
+        "text_exit": 1,
+        "text_exception": "FATAL [main] 14:03:38,381 org.apache.poi.util.XMLHelper :2:311:XML document structures must start and end within the same entity.",
+        "metadata": {
+          "_parse_error": true,
+          "_raw": ""
+        },
+        "metadata_exit": 1,
+        "detect_with_filename": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "detect_with_filename_exit": 0,
+        "detect_from_stream": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "detect_from_stream_exit": 0,
+        "detected_content_type_meta": null,
+        "detected_encoding_meta": null
+      },
+      {
+        "name": "utf8_nobom.txt",
+        "case": "utf8_no_bom",
+        "spec": {
+          "name": "utf8_nobom.txt",
+          "case": "utf8_no_bom",
+          "expect_no_crash": true,
+          "true_media_type": "text/plain",
+          "sentinel": "zzutf8",
+          "must_contain": "日本語テスト",
+          "true_charset_family": "UTF-8"
+        },
+        "text": "Charset zzutf8 probe: café — naïve — Ω ≈ π — 日本語テスト.\n\n",
+        "text_exit": 0,
+        "text_exception": null,
+        "metadata": {
+          "X-TIKA:Parsed-By": [
+            "org.apache.tika.parser.CompositeParser",
+            "org.apache.tika.parser.DefaultParser",
+            "org.apache.tika.parser.csv.TextAndCSVParser"
+          ],
+          "Content-Encoding": "UTF-8",
+          "resourceName": "utf8_nobom.txt",
+          "X-TIKA:detectedEncoding": "UTF-8",
+          "Content-Length": "77",
+          "X-TIKA:encodingDetector": "UniversalEncodingDetector",
+          "Content-Type": "text/plain; charset=UTF-8"
+        },
+        "metadata_exit": 0,
+        "detect_with_filename": "text/plain",
+        "detect_with_filename_exit": 0,
+        "detect_from_stream": "text/plain",
+        "detect_from_stream_exit": 0,
+        "detected_content_type_meta": "text/plain; charset=UTF-8",
+        "detected_encoding_meta": "UTF-8"
+      }
+    ]
+  },
+  "run_completed_at": "2026-07-24T06:03:41.351540+00:00"
+}

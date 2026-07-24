@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<block type="Title">Quarterly Operations Review zztitle1</block>
+<block type="NarrativeText">Our team zznarr1 evaluated fourteen extraction tools during the pilot and recorded every result.</block>
+<block type="NarrativeText">The engineers zznarr2 compared latency and memory across each candidate before writing the recommendation.</block>
+<block type="Title">Key Findings zztitle2</block>
+<block type="ListItem">First zzitem1 the parser handled malformed markup without crashing</block>
+<block type="ListItem">Second zzitem2 it preserved the original list ordering throughout</block>
+<block type="ListItem">Third zzitem3 it exported clean readable plain text reliably</block>
+<block type="Title">Setup Steps zztitle3</block>
+<block type="ListItem">Install zznum1 the project dependencies from the lockfile</block>
+<block type="ListItem">Run zznum2 the extractor against the sample corpus</block>
+<block type="NarrativeText">In summary zznarr3 the tool performed consistently across every evaluated document format.</block>
+</document>

@@ -1,0 +1,31 @@
+{
+  "entries": [
+    {
+      "name": "empty.txt",
+      "case": "empty",
+      "expect_no_crash": true,
+      "true_media_type": null
+    },
+    {
+      "name": "truncated.pdf",
+      "case": "truncated_pdf",
+      "expect_no_crash": true,
+      "true_media_type": "application/pdf"
+    },
+    {
+      "name": "truncated.docx",
+      "case": "truncated_docx",
+      "expect_no_crash": true,
+      "true_media_type_family": "zip/ooxml"
+    },
+    {
+      "name": "utf8_nobom.txt",
+      "case": "utf8_no_bom",
+      "expect_no_crash": true,
+      "true_media_type": "text/plain",
+      "sentinel": "zzutf8",
+      "must_contain": "日本語テスト",
+      "true_charset_family": "UTF-8"
+    }
+  ]
+}
