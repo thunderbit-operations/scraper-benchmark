@@ -1,0 +1,20 @@
+# Never commit the local virtualenv (recreate via the README).
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ArchiveBox data dirs are per-run local state and contain archive PRODUCTS
+# (rendered HTML/PDF/screenshots/WARC) + sqlite index — never commit them.
+tests/data/
+tests/data_*/
+
+# Run logs may carry absolute local paths — the JSON summaries carry the numbers.
+*.log
+*.out
+*.stdout
+artifacts/logs/
+
+# OS noise
+.DS_Store

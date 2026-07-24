@@ -1,0 +1,23 @@
+{
+  "add_returncode": 0,
+  "clean_exit": true,
+  "config": "ROBUSTNESS_500",
+  "elapsed_s_observational": 10.72,
+  "extractor_statuses": {
+    "archive_org": "failed",
+    "dom": "succeeded",
+    "favicon": "succeeded",
+    "git": "not-run",
+    "headers": "succeeded",
+    "htmltotext": "not-run",
+    "media": "not-run",
+    "mercury": "failed",
+    "pdf": "succeeded",
+    "readability": "succeeded",
+    "screenshot": "succeeded",
+    "singlefile": "succeeded",
+    "title": "succeeded",
+    "wget": "failed"
+  },
+  "snapshot_created": true
+}

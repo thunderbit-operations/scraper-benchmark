@@ -1,0 +1,19 @@
+{
+  "defaults": {
+    "SAVE_ARCHIVE_DOTORG": "",
+    "SAVE_DOM": "True",
+    "SAVE_FAVICON": "True",
+    "SAVE_GIT": "True",
+    "SAVE_HEADERS": "True",
+    "SAVE_HTMLTOTEXT": "True",
+    "SAVE_MEDIA": "True",
+    "SAVE_MERCURY": "True",
+    "SAVE_PDF": "True",
+    "SAVE_READABILITY": "True",
+    "SAVE_SCREENSHOT": "True",
+    "SAVE_SINGLEFILE": "True",
+    "SAVE_TITLE": "True",
+    "SAVE_WGET": "True"
+  },
+  "image": "archivebox/archivebox:latest"
+}

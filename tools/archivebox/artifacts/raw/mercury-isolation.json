@@ -1,0 +1,19 @@
+{
+  "config": "MERCURY_ISOLATION",
+  "dynamic_page_fetches_by_config": {
+    "mercury_only": {
+      "/dynamic": 2
+    },
+    "readability_only": {
+      "/dynamic": 1,
+      "/favicon.ico": 1,
+      "/static/app.js": 1
+    },
+    "wget_only": {
+      "/dynamic": 1,
+      "/favicon.ico": 1,
+      "/static/app.js": 1
+    }
+  },
+  "interpretation": "server-side hit count on /dynamic per single-extractor config"
+}

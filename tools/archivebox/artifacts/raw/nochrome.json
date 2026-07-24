@@ -1,0 +1,104 @@
+{
+  "analysis": {
+    "outputs": {
+      "dom": {
+        "bytes": 0,
+        "kind": "rendered-html",
+        "status": "not-run",
+        "tokens": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": false
+        }
+      },
+      "htmltotext": {
+        "bytes": 230,
+        "kind": "page-text",
+        "status": "not-run",
+        "tokens": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": true
+        }
+      },
+      "mercury": {
+        "bytes": 80,
+        "kind": "article-text",
+        "status": "succeeded",
+        "tokens": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": true
+        }
+      },
+      "pdf": {
+        "bytes": 0,
+        "kind": "visual+textlayer",
+        "status": "not-run",
+        "text_method": "absent",
+        "tokens": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": false
+        }
+      },
+      "readability": {
+        "bytes": 95,
+        "kind": "article-text",
+        "status": "succeeded",
+        "tokens": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": true
+        }
+      },
+      "screenshot": {
+        "bytes": 0,
+        "kind": "visual-pixels",
+        "note": "binary image; visual-only, OCR out of scope",
+        "status": "not-run",
+        "tokens": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": false
+        }
+      },
+      "singlefile": {
+        "bytes": 0,
+        "kind": "rendered-html",
+        "status": "not-run",
+        "tokens": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": false
+        }
+      },
+      "wget": {
+        "bytes": 8491,
+        "kind": "byte-mirror",
+        "status": "succeeded",
+        "tokens": {
+          "BOILER": true,
+          "JSLIT": true,
+          "RUNTIME": false,
+          "STATIC": true
+        }
+      }
+    },
+    "snapshot": "~/Documents/claude/scraper-benchmark/tools/archivebox/tests/data/nochrome/archive/1784873981.961203",
+    "url": "host.docker.internal:50590/dynamic"
+  },
+  "config": "NOCHROME",
+  "server_hits": {
+    "/dynamic": 4,
+    "/favicon.ico": 1,
+    "/static/app.js": 1
+  }
+}

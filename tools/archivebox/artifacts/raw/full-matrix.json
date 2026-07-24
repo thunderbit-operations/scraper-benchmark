@@ -1,0 +1,319 @@
+{
+  "config": "FULL",
+  "image": "archivebox/archivebox:latest",
+  "pages": {
+    "dynamic": {
+      "analysis": {
+        "outputs": {
+          "dom": {
+            "bytes": 1131,
+            "kind": "rendered-html",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": true,
+              "STATIC": true
+            }
+          },
+          "htmltotext": {
+            "bytes": 281,
+            "kind": "page-text",
+            "status": "not-run",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": true,
+              "STATIC": true
+            }
+          },
+          "mercury": {
+            "bytes": 80,
+            "kind": "article-text",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": false,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "pdf": {
+            "bytes": 34546,
+            "kind": "visual+textlayer",
+            "status": "succeeded",
+            "text_method": "pypdf",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": true,
+              "STATIC": true
+            }
+          },
+          "readability": {
+            "bytes": 144,
+            "kind": "article-text",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": false,
+              "JSLIT": false,
+              "RUNTIME": true,
+              "STATIC": true
+            }
+          },
+          "screenshot": {
+            "bytes": 40346,
+            "kind": "visual-pixels",
+            "note": "binary image; visual-only, OCR out of scope",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": false,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": false
+            }
+          },
+          "singlefile": {
+            "bytes": 1071,
+            "kind": "rendered-html",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": true,
+              "STATIC": true
+            }
+          },
+          "wget": {
+            "bytes": 8504,
+            "kind": "byte-mirror",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": true,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          }
+        },
+        "snapshot": "~/Documents/claude/scraper-benchmark/tools/archivebox/tests/data/full/archive/1784873691.559867",
+        "url": "host.docker.internal:50590/dynamic"
+      },
+      "elapsed_s_observational": 11.11,
+      "server_hits": {
+        "/dynamic": 8,
+        "/favicon.ico": 6,
+        "/static/app.js": 5
+      }
+    },
+    "static": {
+      "analysis": {
+        "outputs": {
+          "dom": {
+            "bytes": 488,
+            "kind": "rendered-html",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "htmltotext": {
+            "bytes": 255,
+            "kind": "page-text",
+            "status": "not-run",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "mercury": {
+            "bytes": 104,
+            "kind": "article-text",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": false,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "pdf": {
+            "bytes": 32737,
+            "kind": "visual+textlayer",
+            "status": "succeeded",
+            "text_method": "pypdf",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "readability": {
+            "bytes": 119,
+            "kind": "article-text",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": false,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "screenshot": {
+            "bytes": 37906,
+            "kind": "visual-pixels",
+            "note": "binary image; visual-only, OCR out of scope",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": false,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": false
+            }
+          },
+          "singlefile": {
+            "bytes": 1023,
+            "kind": "rendered-html",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          },
+          "wget": {
+            "bytes": 5642,
+            "kind": "byte-mirror",
+            "status": "succeeded",
+            "tokens": {
+              "BOILER": true,
+              "JSLIT": false,
+              "RUNTIME": false,
+              "STATIC": true
+            }
+          }
+        },
+        "snapshot": "~/Documents/claude/scraper-benchmark/tools/archivebox/tests/data/full/archive/1784873680.925895",
+        "url": "host.docker.internal:50590/static"
+      },
+      "elapsed_s_observational": 10.42,
+      "server_hits": {
+        "/favicon.ico": 6,
+        "/static": 8
+      }
+    }
+  },
+  "stability": {
+    "repeat_matrices": [
+      {
+        "dom": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "htmltotext": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "mercury": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": true
+        },
+        "pdf": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "readability": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "screenshot": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": false
+        },
+        "singlefile": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "wget": {
+          "BOILER": true,
+          "JSLIT": true,
+          "RUNTIME": false,
+          "STATIC": true
+        }
+      },
+      {
+        "dom": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "htmltotext": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "mercury": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": true
+        },
+        "pdf": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "readability": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "screenshot": {
+          "BOILER": false,
+          "JSLIT": false,
+          "RUNTIME": false,
+          "STATIC": false
+        },
+        "singlefile": {
+          "BOILER": true,
+          "JSLIT": false,
+          "RUNTIME": true,
+          "STATIC": true
+        },
+        "wget": {
+          "BOILER": true,
+          "JSLIT": true,
+          "RUNTIME": false,
+          "STATIC": true
+        }
+      }
+    ],
+    "runs": 2,
+    "token_matrix_identical_across_runs": true
+  }
+}
